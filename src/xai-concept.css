@@ -1,17 +1,20 @@
 /* Local design study. Loaded only with ?concept=xai in Vite development. */
 @media (prefers-reduced-motion:no-preference) {
   html[data-concept="xai"] .concept-nav--skip-intro + .tracker-shell .tracker-title {
-    animation:concept-return-enter 500ms cubic-bezier(.22,1,.36,1) both;
+    animation:concept-return-enter 800ms cubic-bezier(.22,1,.36,1) both;
   }
-  html[data-concept="xai"] #root .concept-nav--skip-intro + .tracker-shell main > header .tracker-description {
-    animation:concept-return-enter 450ms cubic-bezier(.22,1,.36,1) 100ms both !important;
-  }
+  html[data-concept="xai"] #root .concept-nav--skip-intro + .tracker-shell main > header .tracker-description { animation-delay:120ms; }
+  html[data-concept="xai"] #root .concept-nav--skip-intro + .tracker-shell main > .tracker-last-updated { animation-delay:180ms; }
+  html[data-concept="xai"] #root .concept-nav--skip-intro + .tracker-shell main > .tracker-summary-stage { animation-delay:180ms; }
+  html[data-concept="xai"] #root .concept-nav--skip-intro + .tracker-shell main > .discovery-controls { animation-delay:260ms; }
+  html[data-concept="xai"] #root .concept-nav--skip-intro + .tracker-shell main > #projects { animation-delay:340ms; }
+  html[data-concept="xai"] #root .concept-nav--skip-intro + .tracker-shell main > .site-footer { animation-delay:340ms; }
 }
 @keyframes concept-return-enter {
   from { opacity:0; translate:0 16px; }
   to { opacity:1; translate:0 0; }
 }
-html[data-concept="xai"] .concept-nav--skip-intro + .tracker-shell :is(.tracker-title-context,.tracker-title-word,.tracker-description,.tracker-last-updated,.tracker-summary-stage,.discovery-controls,#projects,.site-footer) {
+html[data-concept="xai"] .concept-nav--skip-intro + .tracker-shell :is(.tracker-title-context,.tracker-title-word) {
   animation:none !important; opacity:1; visibility:visible !important; transform:none !important; filter:none !important;
 }
 html[data-concept="xai"] .concept-nav--skip-intro + .tracker-shell .tracker-title-product::after {
@@ -228,13 +231,14 @@ html[data-concept="xai"] .tracker-last-updated > span { display:inline-block; pa
   html[data-concept="xai"] .updates-shell .tracker-title-product::after { transform-origin:left center; animation:concept-underline-enter 650ms cubic-bezier(.22,1,.36,1) 300ms both; }
   html[data-concept="xai"] .updates-shell .tracker-description { animation:concept-copy-enter 450ms ease-out 300ms both; }
   html[data-concept="xai"] .concept-nav--ready + .tracker-shell .tracker-description {
-    animation:concept-copy-enter 450ms ease-out 5020ms both;
+    --copy-enter-rise:20px;
+    animation:concept-copy-enter 580ms cubic-bezier(.22,1,.36,1) 300ms both;
   }
-  html[data-concept="xai"] .concept-nav--ready + .tracker-shell main > .tracker-last-updated { animation:concept-section-enter 480ms cubic-bezier(.22,1,.36,1) 5140ms both; }
-  html[data-concept="xai"] .concept-nav--ready + .tracker-shell main > .tracker-summary-stage { animation:concept-section-enter 520ms cubic-bezier(.22,1,.36,1) 5260ms both; }
-  html[data-concept="xai"] .concept-nav--ready + .tracker-shell main > .discovery-controls { animation:concept-section-enter 520ms cubic-bezier(.22,1,.36,1) 5380ms both; }
-  html[data-concept="xai"] .concept-nav--ready + .tracker-shell main > #projects { animation:concept-section-enter 560ms cubic-bezier(.22,1,.36,1) 5500ms both; }
-  html[data-concept="xai"] .concept-nav--ready + .tracker-shell main > .site-footer { animation:concept-section-enter 520ms cubic-bezier(.22,1,.36,1) 5600ms both; }
+  html[data-concept="xai"] .concept-nav--ready + .tracker-shell main > .tracker-last-updated { animation:concept-section-enter 580ms cubic-bezier(.22,1,.36,1) 380ms both; }
+  html[data-concept="xai"] .concept-nav--ready + .tracker-shell main > .tracker-summary-stage { animation:concept-section-enter 620ms cubic-bezier(.22,1,.36,1) 460ms both; }
+  html[data-concept="xai"] .concept-nav--ready + .tracker-shell main > .discovery-controls { animation:concept-section-enter 620ms cubic-bezier(.22,1,.36,1) 560ms both; }
+  html[data-concept="xai"] .concept-nav--ready + .tracker-shell main > #projects { animation:concept-section-enter 620ms cubic-bezier(.22,1,.36,1) 660ms both; }
+  html[data-concept="xai"] .concept-nav--ready + .tracker-shell main > .site-footer { animation:concept-section-enter 520ms cubic-bezier(.22,1,.36,1) 740ms both; }
 }
 .tracker-word-rotator { display:inline-block; position:relative; width:var(--word-width-3, auto); vertical-align:baseline; }
 .tracker-word-sizer { visibility:hidden; white-space:nowrap; }
@@ -277,11 +281,11 @@ html[data-concept="xai"] .tracker-last-updated > span { display:inline-block; pa
   to { opacity:1; transform:none; filter:blur(0); }
 }
 @keyframes concept-copy-enter {
-  from { opacity:0; visibility:hidden; transform:translateY(6px); }
+  from { opacity:0; visibility:hidden; transform:translateY(var(--copy-enter-rise,6px)); }
   to { opacity:1; visibility:visible; transform:none; }
 }
 @keyframes concept-section-enter {
-  from { opacity:0; visibility:hidden; transform:translateY(10px); }
+  from { opacity:0; visibility:hidden; transform:translateY(30px); }
   to { opacity:1; visibility:visible; transform:none; }
 }
 html[data-concept="xai"] .summary-wrap { padding:22px 0; border-top:1px solid var(--border); border-bottom:1px solid var(--border); }
