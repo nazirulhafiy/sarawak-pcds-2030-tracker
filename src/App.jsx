@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+import { createContext, useContext, useEffect, useRef, useState } from "react";
 
 import {
   ECONOMIC_SECTOR_IDS,
@@ -252,7 +252,10 @@ function formatLastUpdated(value, language = DEFAULT_LANGUAGE) {
   }).format(new Date(Date.UTC(year, month - 1, day)));
 }
 
+const MetricEntranceContext = createContext(true);
+
 function useCountUp(target, duration = 1400) {
+  const entranceStarted = useContext(MetricEntranceContext);
   const [displayValue, setDisplayValue] = useState(0);
 
   useEffect(() => {
@@ -262,6 +265,7 @@ function useCountUp(target, duration = 1400) {
     }
 
     let frameId = null;
+    if (!entranceStarted) return;
     let startTime = null;
     const animate = (timestamp) => {
       if (startTime === null) {
@@ -284,7 +288,7 @@ function useCountUp(target, duration = 1400) {
         window.cancelAnimationFrame(frameId);
       }
     };
-  }, [duration, target]);
+  }, [duration, target, entranceStarted]);
 
   return displayValue;
 }
@@ -1491,6 +1495,7 @@ function renderIntroParagraph(paragraph, programmeName) {
 }
 
 export default function App({ language = DEFAULT_LANGUAGE, onNavigate, headingRef, concept = false }) {
+  const [summaryEntranceStarted, setSummaryEntranceStarted] = useState(false);
   useEffect(() => {
     if (!concept || !('IntersectionObserver' in window)) return;
     const grid = document.getElementById('project-card-grid');
@@ -1953,13 +1958,20 @@ export default function App({ language = DEFAULT_LANGUAGE, onNavigate, headingRe
           </NavigationPillLink>}
         </p>
 
-        <div className="tracker-summary-stage" style={{ marginBottom: "24px" }}>
+        <div className="tracker-summary-stage" style={{ marginBottom: "24px" }}
+          onAnimationStart={(event) => {
+            if (event.target === event.currentTarget && event.animationName === 'concept-section-enter') {
+              setSummaryEntranceStarted(true);
+            }
+          }}>
+          <MetricEntranceContext.Provider value={!concept || summaryEntranceStarted}>
           <SummaryMetrics
             activeFilter={activeFilter}
             onFilter={handleStatusFilter}
             rows={rows}
             copy={copy}
           />
+          </MetricEntranceContext.Provider>
         </div>
 
         <DiscoveryControls
