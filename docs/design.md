@@ -4,8 +4,8 @@
 
 V2 is the default local and Preview interface. Its active behavior is documented in
 [the V2 guide](v2.md). Earlier design notes below also describe V1, which remains on
-Production until release approval. The x.ai name is a historical design reference;
-internal `concept` identifiers remain for compatibility, not as an optional Preview mode.
+Production until release approval. Internal `concept` identifiers select the interface
+during builds; V2 is not an optional Preview mode.
 
 ## Current Design Direction
 
