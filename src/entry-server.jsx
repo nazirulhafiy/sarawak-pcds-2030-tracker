@@ -9,5 +9,5 @@ export function getStaticRoutes() {
 
 export function render(pathname = '/') {
   const route = resolveRoute(pathname)
-  return renderToString(<Site route={route} concept={import.meta.env.VITE_DESIGN_CONCEPT === 'xai'} />)
+  return renderToString(<Site route={route} concept={import.meta.env.VITE_DESIGN_CONCEPT === 'v2'} />)
 }

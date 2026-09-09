@@ -1,10 +1,10 @@
-# Archived x.ai design study
+# Archived V2 design study
 
 This file is historical. Branch, deployment and pending-review statements below
 describe the original experiment. Use [the V2 guide](v2.md) for current maintenance,
 build and release instructions. V2 is now the default Preview interface.
 
-Local concept requested on 5 September 2026. Open `/?concept=xai` with the Vite development server.
+Local concept requested on 5 September 2026. Open `/?concept=v2` with the Vite development server.
 
 The reference homepage was reviewed in the in-app browser. Its white surface, centred large headline,
 wide spacing, rounded actions and softly outlined panels inform this study. PCDS retains teal accents,
@@ -44,7 +44,7 @@ The hero uses reduced vertical spacing while retaining the headline size: deskto
 48px above and 24px below; mobile padding is 32px above and 20px below. The gap after the date
 is 36px on desktop and 24px on mobile.
 It is not the public release design. The query switch is development-only. A separate v2 build
-sets `VITE_DESIGN_CONCEPT=xai` and runs `npm run build:preview`. Both client and server rendering
+sets `VITE_DESIGN_CONCEPT=v2` and runs `npm run build:preview`. Both client and server rendering
 use this flag. Normal builds without the flag retain the existing design.
 The planned unlisted address is `v2.pcds2030.com`, on a separate Vercel project. It is not private.
 Preview builds and the Vercel response header use noindex. Do not link v2 from the public site.

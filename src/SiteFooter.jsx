@@ -23,7 +23,7 @@ export default function SiteFooter({ copy, currentPage, language, onNavigate, co
   const trackerRouteId = language === "ms" ? "tracker-ms" : "tracker-en";
   const updatesRouteId = language === "ms" ? "updates-ms" : "updates";
   const aboutRouteId = language === "ms" ? "about-ms" : "about";
-  const footerHref = (id) => getRouteHref(id) + (concept ? '?concept=xai' : '');
+  const footerHref = (id) => getRouteHref(id) + (concept && import.meta.env.VITE_DESIGN_CONCEPT !== 'v2' ? '?concept=v2' : '');
   const independentParts = copy.footer.independent.split("hafiy.my");
   const methodologyMarker = " Status";
   const methodologyParts = copy.footer.methodology.split(methodologyMarker);

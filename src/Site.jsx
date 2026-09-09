@@ -111,10 +111,14 @@ export default function Site({ route, concept = false }) {
     const nextRoute = getRouteById(routeId);
     const pageChanged = nextRoute.page !== activeRoute.page;
 
+    const navigationQuery = new URLSearchParams(window.location.search);
+    if (import.meta.env.VITE_DESIGN_CONCEPT === 'v2') navigationQuery.delete('concept');
+    else if (concept) navigationQuery.set('concept', 'v2');
+    const queryString = navigationQuery.toString();
     window.history.pushState(
       {},
       "",
-      `${getRouteHref(routeId, import.meta.env.BASE_URL)}${concept ? `?${new URLSearchParams({ ...Object.fromEntries(new URLSearchParams(window.location.search)), concept: "xai" })}` : ""}${hash ? `#${hash}` : ""}`
+      `${getRouteHref(routeId, import.meta.env.BASE_URL)}${queryString ? `?${queryString}` : ""}${hash ? `#${hash}` : ""}`
     );
     setActiveRoute(nextRoute);
 
@@ -154,14 +158,14 @@ export default function Site({ route, concept = false }) {
         onAnimationEnd={(event) => {
           if (event.animationName === "concept-logo-enter") setNavIntroDone(true);
         }}>
-        <a className="concept-brand" href="/?concept=xai" onClick={(event) => navigate(event, activeRoute.language === "ms" ? "tracker-ms" : "tracker-en")} aria-label="PCDS 2030 Project Tracker home">
+        <a className="concept-brand" href={import.meta.env.VITE_DESIGN_CONCEPT === "v2" ? "/" : "/?concept=v2"} onClick={(event) => navigate(event, activeRoute.language === "ms" ? "tracker-ms" : "tracker-en")} aria-label="PCDS 2030 Project Tracker home">
           <img src="/favicon-production-browser.png?v=20260804d" alt="" width="32" height="32" />
           <span className="concept-brand-name" aria-hidden="true">{Array.from("PCDS 2030 Project Tracker").map((letter, index) => <span key={index} className="concept-brand-letter" style={{ "--letter-index": index }}>{letter === " " ? "\u00a0" : letter}</span>)}</span>
         </a>
         <div id="concept-navigation-links" className={`concept-links${menuOpen ? " concept-links--open" : ""}`}>
-          <a aria-current={activeRoute.page === 'tracker' ? 'page' : undefined} href={getRouteHref(activeRoute.language === "ms" ? "tracker-ms" : "tracker-en") + "?concept=xai"} onClick={(event) => navigate(event, activeRoute.language === "ms" ? "tracker-ms" : "tracker-en")}>{activeRoute.language === "ms" ? "Projek" : "Projects"}</a>
-          <a aria-current={activeRoute.page === 'updates' ? 'page' : undefined} href={getRouteHref(activeRoute.language === "ms" ? "updates-ms" : "updates") + "?concept=xai"} onClick={(event) => navigate(event, activeRoute.language === "ms" ? "updates-ms" : "updates")}>{activeRoute.language === "ms" ? "Kemas kini" : "Updates"}</a>
-          <a aria-current={activeRoute.page === 'about' ? 'page' : undefined} href={getRouteHref(activeRoute.language === "ms" ? "about-ms" : "about") + "?concept=xai"} onClick={(event) => navigate(event, activeRoute.language === "ms" ? "about-ms" : "about")}>{activeRoute.language === "ms" ? "Tentang" : "About"}</a>
+          <a aria-current={activeRoute.page === 'tracker' ? 'page' : undefined} href={getRouteHref(activeRoute.language === "ms" ? "tracker-ms" : "tracker-en") + (import.meta.env.VITE_DESIGN_CONCEPT === "v2" ? "" : "?concept=v2")} onClick={(event) => navigate(event, activeRoute.language === "ms" ? "tracker-ms" : "tracker-en")}>{activeRoute.language === "ms" ? "Projek" : "Projects"}</a>
+          <a aria-current={activeRoute.page === 'updates' ? 'page' : undefined} href={getRouteHref(activeRoute.language === "ms" ? "updates-ms" : "updates") + (import.meta.env.VITE_DESIGN_CONCEPT === "v2" ? "" : "?concept=v2")} onClick={(event) => navigate(event, activeRoute.language === "ms" ? "updates-ms" : "updates")}>{activeRoute.language === "ms" ? "Kemas kini" : "Updates"}</a>
+          <a aria-current={activeRoute.page === 'about' ? 'page' : undefined} href={getRouteHref(activeRoute.language === "ms" ? "about-ms" : "about") + (import.meta.env.VITE_DESIGN_CONCEPT === "v2" ? "" : "?concept=v2")} onClick={(event) => navigate(event, activeRoute.language === "ms" ? "about-ms" : "about")}>{activeRoute.language === "ms" ? "Tentang" : "About"}</a>
           <div className="concept-language-menu">
             <LanguageToggle copy={copy} language={activeRoute.language} englishRouteId={activeRoute.page === "about" ? "about" : activeRoute.page === "updates" ? "updates" : "tracker-en"} malayRouteId={activeRoute.page === "about" ? "about-ms" : activeRoute.page === "updates" ? "updates-ms" : "tracker-ms"} onNavigate={navigate} />
           </div>
