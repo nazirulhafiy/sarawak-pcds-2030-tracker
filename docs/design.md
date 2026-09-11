@@ -1,5 +1,12 @@
 # Design Notes
 
+## V2 Preview
+
+V2 is the default local and Preview interface. Its active behavior is documented in
+[the V2 guide](v2.md). Earlier design notes below also describe the historical V1 design.
+V2 is approved for Production. Internal `concept` identifiers select the interface
+during builds; V2 is not an optional Preview mode.
+
 ## Current Design Direction
 
 The current site is a compact civic-data tracker. It should feel clear, restrained, and evidence-oriented rather than promotional.

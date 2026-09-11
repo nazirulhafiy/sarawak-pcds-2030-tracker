@@ -27,4 +27,16 @@
     <xhtml:link rel="alternate" hreflang="ms-MY" href="https://pcds2030.com/bm/updates/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://pcds2030.com/updates/" />
   </url>
+  <url>
+    <loc>https://pcds2030.com/about/</loc>
+    <xhtml:link rel="alternate" hreflang="en-MY" href="https://pcds2030.com/about/" />
+    <xhtml:link rel="alternate" hreflang="ms-MY" href="https://pcds2030.com/bm/about/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pcds2030.com/about/" />
+  </url>
+  <url>
+    <loc>https://pcds2030.com/bm/about/</loc>
+    <xhtml:link rel="alternate" hreflang="en-MY" href="https://pcds2030.com/about/" />
+    <xhtml:link rel="alternate" hreflang="ms-MY" href="https://pcds2030.com/bm/about/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pcds2030.com/about/" />
+  </url>
 </urlset>

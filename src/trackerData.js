@@ -1,5 +1,5 @@
 // ─── DATA ───────────────────────────────────────────────────────────────────
-export const LAST_UPDATED = "2026-09-07";
+export const LAST_UPDATED = "2026-09-08";
 
 const PCDS_SUMMARY = {
   name: "PCDS 2030 — Overarching Framework",
@@ -919,12 +919,15 @@ export const SECTORS = [
           { date: "2021", text: "Phase 1 construction commenced", done: true },
           { date: "2025-09-11", text: "Phase 2 officially launched", done: true },
           { date: "2026-04", text: "Phase 1 reached 70.05 percent progress", done: true },
-          { date: "2027", text: "Phase 1 reaches completion", done: false },
+          { date: "2026-06-11", text: "Phase 1 reached 71.16 percent progress", done: true },
+          { date: "2026-06-11", text: "Phase 2 reached 11.39 percent physical progress", done: true },
+          { date: "2027-03-16", text: "Phase 1 reaches completion", done: false },
           { date: "2029", text: "Phase 2 reaches completion", done: false },
         ],
         sources: [
           { label: "The Star — SSLR Phase 2 launched (Sep 2025)", url: "https://www.thestar.com.my/news/nation/2025/09/12/anwar-launches-second-phase-of-sslr-project" },
           { label: "DayakDaily — SSLR Phase 1 and 2 progress (May 2026)", url: "https://dayakdaily.com/sarawaks-first-2-24km-highway-tunnel-in-sarawak-sabah-link-road-phase-2-to-cut-22-4km-route-to-7km/" },
+          { label: "DayakDaily — SSLR Phase 1 at 71.16% and Phase 2 at 11.39% (Jun 2026)", url: "https://dayakdaily.com/sarawaks-first-road-tunnel-at-bukit-pagon-lawas-advances-as-sslr-phase-2-hits-11-39-pct/" },
         ],
       },
     ],
@@ -1247,15 +1250,19 @@ export const SECTORS = [
         lead: "PT Kayan Hydropower Nusantara / Sarawak Energy-led consortium",
         value: "US$2.6 billion",
         summary:
-          "A US$2.6 billion, 1,375MW hydropower project in North Kalimantan developed by PT Kayan Hydropower Nusantara, a joint venture involving Sarawak Energy, Adaro Energy Indonesia and Kayan Patria Pratama. It is intended to support regional power supply and cross-border energy development.",
+          "A US$2.6 billion, 1,375MW hydropower project in North Kalimantan developed by PT Kayan Hydropower Nusantara, a joint venture involving Sarawak Energy, Adaro Energy Indonesia and Kayan Patria Pratama. Access roads were reported completed during early works; the developer is targeting commercial operation in 2030, with financial close still unconfirmed.",
         milestones: [
           { date: "2023-03-01", text: "Groundbreaking ceremony held", done: true },
           { date: "2023-10-31", text: "Early works reported underway", done: true },
-          { date: "2029", text: "First power", done: false },
+          { date: "2025-03", text: "Access roads were reported completed", done: true },
+          { date: "TBD", text: "Project reaches financial close", done: false },
+          { date: "2030", text: "Commercial operations begin", done: false },
         ],
         sources: [
           { label: "Sarawak Energy — Mentarang Induk groundbreaking (Mar 2023)", url: "https://www.sarawakenergy.com/media-info/media-releases/2023/sarawak-moves-closer-to-regional-powerhouse-aspiration-through-hydropower-venture-in-indonesia" },
           { label: "Office of the Premier — Early works underway (Oct 2023)", url: "https://premier.sarawak.gov.my/web/subpage/news_view/5662" },
+          { label: "Petromindo — Access roads complete; Q1 2026 financial-close and 2030 COD targets (Mar 2025)", url: "https://www.petromindo.com/news/article/kayan-hydropower-targets-q1-2026-financial-close-for-major-hydropower-project" },
+          { label: "Kompas — Below 5% progress; February 2026 financial-close and 2030 COD targets (Mar 2025)", url: "https://www.kompas.id/artikel/en-alamtri-mengejar-aluminium-dan-pembangkit-hidro" },
         ],
       },
       {

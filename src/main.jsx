@@ -30,9 +30,15 @@ if (navigationEntry?.type === 'reload') {
 
 const container = document.getElementById('root')
 const route = resolveRoute(window.location.pathname, import.meta.env.BASE_URL)
+const requestedConcept = new URLSearchParams(window.location.search).get('concept')
+const showConcept = import.meta.env.VITE_DESIGN_CONCEPT === 'v2' || (import.meta.env.DEV && requestedConcept === 'v2')
+if (showConcept) {
+  await import('./v2-interface.css')
+  document.documentElement.dataset.concept = 'v2'
+}
 const app = (
   <StrictMode>
-    <Site route={route} />
+    <Site route={route} concept={showConcept} />
   </StrictMode>
 )
 

@@ -26,7 +26,7 @@ function formatUpdateDate(value, language) {
   }).format(new Date(Date.UTC(year, month - 1, day)));
 }
 
-export default function UpdatesPage({ language, onNavigate, headingRef }) {
+export default function UpdatesPage({ language, onNavigate, headingRef, concept = false }) {
   const copy = getUiCopy(language);
   const updates = getUpdateHistory(language);
   const environment = getAppEnvironment();
@@ -131,7 +131,7 @@ export default function UpdatesPage({ language, onNavigate, headingRef }) {
           </p>
 
           <h1
-            className="updates-title page-heading"
+            className={`updates-title page-heading${concept ? ' tracker-title' : ''}`}
             ref={headingRef}
             tabIndex={-1}
             style={{
@@ -142,10 +142,10 @@ export default function UpdatesPage({ language, onNavigate, headingRef }) {
               lineHeight: 1.04,
             }}
           >
-            PCDS 2030
-            <br />
-            <span style={{ color: "var(--brand)" }}>
-              {copy.updatesPage.title}
+            <span className={concept ? 'tracker-title-context' : undefined}>PCDS 2030</span>
+            {!concept && <br />}
+            <span className={concept ? 'tracker-title-product' : undefined} style={{ color: "var(--brand)" }}>
+              {concept ? (language === 'ms' ? 'Kemas Kini Tracker' : 'Tracker Updates') : copy.updatesPage.title}
             </span>
           </h1>
           <p
@@ -244,6 +244,7 @@ export default function UpdatesPage({ language, onNavigate, headingRef }) {
         </section>
 
         <SiteFooter
+          concept={concept}
           copy={copy}
           currentPage="updates"
           language={language}

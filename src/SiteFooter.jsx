@@ -2,7 +2,7 @@ import { getRouteHref } from "./routes.js";
 
 const HAFIY_URL = "https://hafiy.my";
 const CONTACT_URL =
-  "mailto:nazirul@hafiy.my?subject=PCDS%202030%20Project%20Tracker";
+  "mailto:contact@pcds2030.com?subject=PCDS%202030%20Project%20Tracker";
 
 function FooterLink({ children, currentPage, href, onClick, page }) {
   const isCurrentPage = currentPage === page;
@@ -19,9 +19,11 @@ function FooterLink({ children, currentPage, href, onClick, page }) {
   );
 }
 
-export default function SiteFooter({ copy, currentPage, language, onNavigate }) {
+export default function SiteFooter({ copy, currentPage, language, onNavigate, concept = false }) {
   const trackerRouteId = language === "ms" ? "tracker-ms" : "tracker-en";
   const updatesRouteId = language === "ms" ? "updates-ms" : "updates";
+  const aboutRouteId = language === "ms" ? "about-ms" : "about";
+  const footerHref = (id) => getRouteHref(id) + (concept && import.meta.env.VITE_DESIGN_CONCEPT !== 'v2' ? '?concept=v2' : '');
   const independentParts = copy.footer.independent.split("hafiy.my");
   const methodologyMarker = " Status";
   const methodologyParts = copy.footer.methodology.split(methodologyMarker);
@@ -51,23 +53,24 @@ export default function SiteFooter({ copy, currentPage, language, onNavigate }) 
             <li>
               <FooterLink
                 currentPage={currentPage}
-                href={getRouteHref(trackerRouteId)}
+                href={footerHref(trackerRouteId)}
                 onClick={(event) => onNavigate(event, trackerRouteId)}
                 page="tracker"
               >
-                {copy.footer.tracker}
+                {concept ? (language === 'ms' ? 'Projek' : 'Projects') : copy.footer.tracker}
               </FooterLink>
             </li>
             <li>
               <FooterLink
                 currentPage={currentPage}
-                href={getRouteHref(updatesRouteId)}
+                href={footerHref(updatesRouteId)}
                 onClick={(event) => onNavigate(event, updatesRouteId)}
                 page="updates"
               >
                 {copy.footer.updates}
               </FooterLink>
             </li>
+            {concept && <li><FooterLink currentPage={currentPage} href={footerHref(aboutRouteId)} onClick={(event) => onNavigate(event, aboutRouteId)} page="about">{language === 'ms' ? 'Tentang' : 'About'}</FooterLink></li>}
             <li>
               <a className="site-footer-link" href={CONTACT_URL}>
                 {copy.footer.contact}

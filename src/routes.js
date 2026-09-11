@@ -15,6 +15,16 @@ const updatesAlternates = [
 ];
 
 export const STATIC_ROUTES = [
+  ...['en', 'ms'].map((language) => ({
+    id: language === 'en' ? 'about' : 'about-ms', page: 'about',
+    path: language === 'en' ? '/about/' : '/bm/about/', language,
+    locale: language === 'en' ? 'en_MY' : 'ms_MY',
+    metadata: {
+      title: language === 'en' ? 'About | PCDS 2030 Project Tracker' : 'Tentang | PCDS 2030 Project Tracker',
+      description: language === 'en' ? 'Purpose, public sources and status definitions for the independent PCDS 2030 Project Tracker.' : 'Tujuan, sumber awam dan takrif status bagi platform pemantauan bebas PCDS 2030.',
+    },
+    alternates: [{ hreflang: 'en-MY', routeId: 'about' }, { hreflang: 'ms-MY', routeId: 'about-ms' }, { hreflang: 'x-default', routeId: 'about' }],
+  })),
   {
     id: "tracker-en",
     page: "tracker",
@@ -62,7 +72,7 @@ export const STATIC_ROUTES = [
 ];
 
 export function getRouteById(routeId) {
-  return STATIC_ROUTES.find((route) => route.id === routeId) || STATIC_ROUTES[0];
+  return STATIC_ROUTES.find((route) => route.id === routeId) || STATIC_ROUTES.find((route) => route.id === 'tracker-en');
 }
 
 export function getRouteCanonical(route) {
@@ -92,7 +102,7 @@ export function resolveRoute(pathname = "/", base = "/") {
 
   return (
     STATIC_ROUTES.find((route) => route.path === normalizedPath) ||
-    STATIC_ROUTES[0]
+    STATIC_ROUTES.find((route) => route.id === 'tracker-en')
   );
 }
 

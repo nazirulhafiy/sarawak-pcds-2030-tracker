@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+import { createContext, useContext, useEffect, useRef, useState } from "react";
 
 import {
   ECONOMIC_SECTOR_IDS,
@@ -154,6 +154,47 @@ function getMilestoneCountLabel(row, copy) {
   return copy.milestones.count(row.doneMilestones, row.totalMilestones, row.statusMeta.group);
 }
 
+function TrackerWordCycle({ finalWord }) {
+  const ref = useRef(null);
+  useEffect(() => {
+    const element = ref.current;
+    const measure = () => {
+      element.querySelectorAll('.tracker-word-rotator-track > span').forEach((word, index) => {
+        element.style.setProperty(`--word-width-${index}`, `${word.offsetWidth}px`);
+      });
+    };
+    const observer = new ResizeObserver(measure);
+    element.querySelectorAll('.tracker-word-rotator-track > span').forEach(word => observer.observe(word));
+    measure();
+    return () => observer.disconnect();
+  }, []);
+  return <span ref={ref} className="tracker-word-rotator" aria-label={finalWord}>
+    <span className="tracker-word-sizer" aria-hidden="true">{finalWord}</span>
+    <span className="tracker-word-rotator-track" aria-hidden="true">
+      {['Status', 'Milestones', 'Links', finalWord].map((word, wordIndex) => (
+        <span key={wordIndex} style={{ '--word-start': `${300 + wordIndex * 1400}ms` }}>
+          {Array.from(word).map((letter, index) => <span className="tracker-cycle-letter" key={index} style={{ '--letter-delay': `${index * 28}ms` }}>{letter}</span>)}
+        </span>
+      ))}
+    </span>
+  </span>;
+}
+
+function renderTrackerHeroTitle(title, concept = false) {
+  const match = title.match(/^(.*?)(Tracker)$/i);
+
+  if (!match) {
+    return title;
+  }
+
+  return <>
+    <span className="tracker-title-word tracker-title-word-prefix">{match[1].trim()}</span>{" "}
+    <span className="tracker-title-word tracker-title-word-accent">
+      {concept ? <TrackerWordCycle finalWord={match[2]} /> : match[2]}
+    </span>
+  </>;
+}
+
 function getProjectRows(sectors, copy) {
   return sectors.filter((sector) => !sector.isOverview).flatMap((sector) => {
     const kind = ECONOMIC_SECTOR_IDS.has(sector.id) ? "sector" : "enabler";
@@ -211,7 +252,10 @@ function formatLastUpdated(value, language = DEFAULT_LANGUAGE) {
   }).format(new Date(Date.UTC(year, month - 1, day)));
 }
 
+const MetricEntranceContext = createContext(true);
+
 function useCountUp(target, duration = 1400) {
+  const entranceStarted = useContext(MetricEntranceContext);
   const [displayValue, setDisplayValue] = useState(0);
 
   useEffect(() => {
@@ -221,6 +265,7 @@ function useCountUp(target, duration = 1400) {
     }
 
     let frameId = null;
+    if (!entranceStarted) return;
     let startTime = null;
     const animate = (timestamp) => {
       if (startTime === null) {
@@ -243,7 +288,7 @@ function useCountUp(target, duration = 1400) {
         window.cancelAnimationFrame(frameId);
       }
     };
-  }, [duration, target]);
+  }, [duration, target, entranceStarted]);
 
   return displayValue;
 }
@@ -1449,7 +1494,71 @@ function renderIntroParagraph(paragraph, programmeName) {
   );
 }
 
-export default function App({ language = DEFAULT_LANGUAGE, onNavigate, headingRef }) {
+export default function App({ language = DEFAULT_LANGUAGE, onNavigate, headingRef, concept = false }) {
+  const [summaryEntranceStarted, setSummaryEntranceStarted] = useState(false);
+  useEffect(() => {
+    if (!concept || !('IntersectionObserver' in window)) return;
+    const grid = document.getElementById('project-card-grid');
+    if (!grid) return;
+    const motion = window.matchMedia('(prefers-reduced-motion: reduce)');
+    const mobileEntrance = window.matchMedia('(max-width: 760px)').matches;
+    const seen = new Set();
+    const pending = new Set();
+    const reveal = (card) => {
+      if (!pending.delete(card)) return false;
+      card.style.removeProperty('opacity');
+      return true;
+    };
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(({ target, isIntersecting }) => {
+        if (!isIntersecting) return;
+        observer.unobserve(target);
+        const wasHidden = reveal(target);
+        if (seen.has(target.id)) return;
+        seen.add(target.id);
+        if (motion.matches || grid.className.includes('--filter-')) return;
+        const cards = [...grid.querySelectorAll('.project-card')];
+        const index = cards.indexOf(target);
+        const previous = cards[index - 1];
+        const secondInRow = previous && Math.abs(previous.offsetTop - target.offsetTop) < 2;
+        // Fast scrolling can deliver the observer callback after the card is visible.
+        // Never hide a card that the user can already see.
+        const alreadyVisible = target.getBoundingClientRect().top < window.innerHeight;
+        target.animate([
+          { opacity: wasHidden ? 0 : alreadyVisible ? 1 : 0, translate: mobileEntrance ? '0 20px' : '0 12px' },
+          { opacity: 1, translate: '0 0' },
+        ], { duration: 450, delay: !alreadyVisible && secondInRow ? 70 : 0, easing: 'cubic-bezier(.22,1,.36,1)', fill: 'backwards' });
+      });
+    }, { threshold: 0, rootMargin: mobileEntrance ? '0px 0px -16px 0px' : '0px 0px 64px 0px' });
+    const observeCards = () => grid.querySelectorAll('.project-card').forEach((card) => {
+      if (seen.has(card.id)) { reveal(card); return; }
+      if (mobileEntrance && !motion.matches && !grid.className.includes('--filter-') && card.getBoundingClientRect().top >= window.innerHeight && !pending.has(card)) {
+        pending.add(card);
+        card.style.opacity = '0';
+      }
+      observer.observe(card);
+    });
+    observeCards();
+    const mutations = new MutationObserver(observeCards);
+    mutations.observe(grid, { childList: true });
+    const stopMotion = () => {
+      if (motion.matches) {
+        [...pending].forEach(reveal);
+        grid.querySelectorAll('.project-card').forEach((card) => card.getAnimations().forEach((animation) => animation.cancel()));
+      }
+    };
+    const revealFocused = (event) => {
+      const card = event.target.closest('.project-card');
+      if (card && pending.has(card)) {
+        reveal(card);
+        seen.add(card.id);
+        observer.unobserve(card);
+      }
+    };
+    grid.addEventListener('focusin', revealFocused);
+    motion.addEventListener('change', stopMotion);
+    return () => { observer.disconnect(); mutations.disconnect(); [...pending].forEach(reveal); grid.removeEventListener('focusin', revealFocused); motion.removeEventListener('change', stopMotion); };
+  }, [concept]);
   const [activeFilter, setActiveFilter] = useState("all");
   const [activeClassificationFilter, setActiveClassificationFilter] = useState("all");
   const [searchQuery, setSearchQuery] = useState(getInitialSearchQuery);
@@ -1563,7 +1672,7 @@ export default function App({ language = DEFAULT_LANGUAGE, onNavigate, headingRe
   };
   return (
     <div
-      className="app-shell"
+      className={`app-shell${concept ? " tracker-shell" : ""}`}
       style={{
         minHeight: "100vh",
         backgroundColor: "var(--page-bg)",
@@ -1797,7 +1906,7 @@ export default function App({ language = DEFAULT_LANGUAGE, onNavigate, headingRe
               className="tracker-title-product"
               style={{ color: "var(--brand)", fontSize: "48px", lineHeight: 1.04 }}
             >
-              {copy.header.title}
+              {renderTrackerHeroTitle(copy.header.title, concept)}
             </span>
           </h1>
           <div
@@ -1828,7 +1937,7 @@ export default function App({ language = DEFAULT_LANGUAGE, onNavigate, headingRe
             lineHeight: 1.4,
           }}
         >
-          <NavigationPillLink
+          {concept ? <span>{copy.header.lastUpdated} {lastUpdatedLabel}</span> : <NavigationPillLink
             className="tracker-updates-link"
             href={getRouteHref(language === "ms" ? "updates-ms" : "updates")}
             onClick={(event) =>
@@ -1846,16 +1955,23 @@ export default function App({ language = DEFAULT_LANGUAGE, onNavigate, headingRe
             >
               {"\u2197\uFE0E"}
             </span>
-          </NavigationPillLink>
+          </NavigationPillLink>}
         </p>
 
-        <div style={{ marginBottom: "24px" }}>
+        <div className="tracker-summary-stage" style={{ marginBottom: "24px" }}
+          onAnimationStart={(event) => {
+            if (event.target === event.currentTarget && event.animationName === 'concept-section-enter') {
+              setSummaryEntranceStarted(true);
+            }
+          }}>
+          <MetricEntranceContext.Provider value={!concept || summaryEntranceStarted}>
           <SummaryMetrics
             activeFilter={activeFilter}
             onFilter={handleStatusFilter}
             rows={rows}
             copy={copy}
           />
+          </MetricEntranceContext.Provider>
         </div>
 
         <DiscoveryControls
@@ -1886,6 +2002,7 @@ export default function App({ language = DEFAULT_LANGUAGE, onNavigate, headingRe
         </section>
 
         <SiteFooter
+          concept={concept}
           copy={copy}
           currentPage="tracker"
           language={language}

@@ -39,7 +39,7 @@ Additional repository source material:
 
 Global fields:
 
-- `LAST_UPDATED`: one manually maintained ISO date string for the tracker data freshness indicator. Current value: `2026-09-07`.
+- `LAST_UPDATED`: one manually maintained ISO date string for the tracker data freshness indicator. Current value: `2026-09-08`.
 - `SECTORS`: the main data array. It contains PCDS economic sectors, enablers, and a framework overview entry.
 - `ECONOMIC_SECTOR_IDS`: set used by the UI to label rows as `Sector`.
 - `ENABLER_IDS`: set listing the PCDS enabler category ids. It is exported but not currently imported by `src/App.jsx`.
@@ -490,7 +490,7 @@ This map records the earlier source-audit set. The 10 provisional additions reva
 ### Provisional Additions Revalidated on 10 July 2026
 
 - Pan Borneo Highway Sarawak Phase 1 - `In Progress`; value: RM16.5 billion construction cost. DanaInfra's official project page records 99.98 percent completion as of 30 June 2026 and confirms that 10 of 11 work packages were complete, with the remaining package scheduled for 2029. Sarawak Tribune's December 2025 report gives Q1 2029 as the more precise completion target after water-pipe replacement and scope negotiations. The open milestone therefore remains `2029-Q1`; sources: DanaInfra, The Edge Malaysia, and Sarawak Tribune. DanaInfra's financing figures do not replace the RM16.5 billion construction cost.
-- Sarawak-Sabah Link Road - `In Progress`; Phase 1 reached 70.05 percent and Phase 2 reached 10.55 percent in April 2026; next milestone: expected Phase 1 completion in 2027; sources: The Star and DayakDaily.
+- Sarawak-Sabah Link Road - `In Progress`; Phase 1 reached 71.16 percent and Phase 2 reached 11.39 percent physical progress as of 11 June 2026; Phase 1 completion is scheduled for 16 March 2027 and Phase 2 for 2029; sources: The Star and DayakDaily.
 - Miri Port Kuala Baram Capital Dredging - `In Progress`; value: RM238 million contract; physical progress reached about 55 percent in April 2026; next milestone: dredging completion in October 2026; sources: MIPD, DayakDaily, and Dredging Today.
 - Bau Gold Project - `Planning`; value: RM1.38 billion projected upstream investment in the PCDS 2030 Highlights 2023 report, corroborated by DayakDaily in November 2024. The separate RM24.3 billion in-ground gold value is a resource valuation and is excluded from the reported-value field. Besra completed an independent technical review, received conditional Jugan mining-lease renewal terms and formally accepted the conditional renewal offer on 31 July 2026; next milestone: finalised mining lease conditions; sources: DayakDaily and Besra Gold company disclosures.
 - Special Needs Community Centre - `Planning`; value: RM30 million for Phase 1 in Samarahan. JKR Sarawak's live tender list records state tender T/388/07/2026 and a 23 September 2026 closing date, confirming that the July tender milestone was reached. The letter of award and May 2028 completion remain open; sources: JKR Sarawak, DayakDaily and Borneo Post. The 27 August 2026 six-card audit found the tender still unawarded.
@@ -529,7 +529,7 @@ This map records the earlier source-audit set. The 10 provisional additions reva
 ### Sustainability Vision 2030 Energy Projects Added on 13 July 2026
 
 - Sejingkat Battery Energy Storage System - `Operational`; 60MW/82MWh facility energised in December 2024 and publicly announced as commissioned in February 2025. Routine grid services and performance monitoring are operational activities rather than open delivery milestones, so the commissioned facility displays as `Completed`; source: Sarawak Energy.
-- Mentarang Induk Hydroelectric Project - `In Progress`; US$2.6 billion, 1,375MW cross-border hydropower venture in North Kalimantan; groundbreaking and early works were reported in 2023, while current physical progress remains unclear. Sarawak Energy supports the value, identity, groundbreaking and 2029 first-power target, while the Office of the Premier supports early works; the PT Kayan Hydropower Nusantara page was removed from the live card because it currently renders an error shell and adds no unique field evidence.
+- Mentarang Induk Hydroelectric Project - `In Progress`; US$2.6 billion, 1,375MW cross-border hydropower venture in North Kalimantan; groundbreaking and early works were reported in 2023, and access roads were reported completed by March 2025. The developer is targeting commercial operation in 2030, with financial close still unconfirmed after an earlier Q1 2026 aim. Sarawak Energy supports the value, identity and groundbreaking; the Office of the Premier supports early works; Petromindo and Kompas support the access-road and 2030 COD schedule. The PT Kayan Hydropower Nusantara page remains omitted from the live card because it currently renders an error shell and adds no unique field evidence.
 - Sarawak-Singapore Electricity Interconnection - `In Progress`; Sarawak Energy confirmed that a techno-commercial study with Sembcorp and Singapore Power was under way in March 2023. Conditional approval was obtained in October 2025 for around 1GW of renewable power exports, with further regulatory approvals and licences still required; sources: Sarawak Energy.
 
 ### Sarawak 13th Malaysia Plan Projects Added on 28 July 2026

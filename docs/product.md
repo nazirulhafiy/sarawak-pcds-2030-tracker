@@ -2,6 +2,10 @@
 
 ## Product
 
+The V2 Preview interface includes English and Malay About pages at `/about/` and
+`/bm/about/`. They explain scope, public sources, status definitions, milestone limits,
+independence and correction contact details. The public site is not being promoted to v2.
+
 PCDS 2030 Project Tracker is an independent public tracker for major Sarawak development projects connected to the Post COVID-19 Development Strategy 2030.
 
 The site presents a scan-first view of major projects, their current status, next visible milestone,

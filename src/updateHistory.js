@@ -170,6 +170,16 @@ const updateDefinitions = [
   },
   {
     date: "2026-06-11",
+    projectName: "Sarawak-Sabah Link Road",
+    description: {
+      en: "JKR reported SSLR Phase 1 at 71.16 percent completion and Phase 2 at 11.39 percent physical progress as of 11 June 2026, with Phase 1 completion scheduled for 16 March 2027.",
+      ms: "JKR melaporkan SSLR Fasa 1 pada 71.16 peratus siap dan Fasa 2 pada 11.39 peratus kemajuan fizikal setakat 11 Jun 2026, dengan penyiapan Fasa 1 dijadualkan pada 16 Mac 2027.",
+    },
+    sourceUrl:
+      "https://dayakdaily.com/sarawaks-first-road-tunnel-at-bukit-pagon-lawas-advances-as-sslr-phase-2-hits-11-39-pct/",
+  },
+  {
+    date: "2026-06-11",
     projectName: "FR21 Jalan Serian-Tebedu-Indonesia Border Upgrade",
     description: {
       en: "JKR closed a retender for FR21 civil and structural consultancy, including road-safety audit and traffic-impact assessment.",
@@ -470,6 +480,16 @@ const updateDefinitions = [
     },
     sourceUrl:
       "https://premierdept.sarawak.gov.my/web/subpage/news_view/19825/UKAS",
+  },
+  {
+    date: "2025-03-20",
+    projectName: "Mentarang Induk Hydroelectric Project",
+    description: {
+      en: "PT Kayan Hydropower Nusantara said access roads were completed and restated a 2030 commercial-operation target, with financial close still pending confirmation after the earlier Q1 2026 aim.",
+      ms: "PT Kayan Hydropower Nusantara menyatakan jalan akses telah siap dan menegaskan semula sasaran operasi komersial 2030, dengan penutupan kewangan masih menunggu pengesahan selepas sasaran Q1 2026 yang lebih awal.",
+    },
+    sourceUrl:
+      "https://www.petromindo.com/news/article/kayan-hydropower-targets-q1-2026-financial-close-for-major-hydropower-project",
   },
   {
     date: "2024-11-06",

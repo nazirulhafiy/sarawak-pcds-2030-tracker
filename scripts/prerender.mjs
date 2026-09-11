@@ -11,10 +11,11 @@ import { tmpdir } from "node:os";
 import { dirname, join, resolve } from "node:path";
 import { pathToFileURL } from "node:url";
 
-import { build } from "vite";
+import { build, loadEnv } from "vite";
 
 const mode = process.argv[2] || "production";
 const projectRoot = resolve(".");
+const concept = loadEnv(mode, projectRoot).VITE_DESIGN_CONCEPT === "v2";
 const distIndexPath = resolve("dist/index.html");
 const serverOutDir = await mkdtemp(join(tmpdir(), "pcds-tracker-prerender-"));
 const productionOrigin = "https://pcds2030.com";
@@ -185,6 +186,12 @@ try {
   );
   const routes = getStaticRoutes();
   const template = await readFile(distIndexPath, "utf8");
+  let conceptStylesheet;
+  if (concept) {
+    const assets = await readdir(resolve("dist/assets"));
+    conceptStylesheet = assets.find((file) => /^v2-interface-.*\.css$/.test(file));
+    if (!conceptStylesheet) throw new Error("V2 stylesheet was not generated.");
+  }
   const rootMarker = '<div id="root"></div>';
 
   if (!template.includes(rootMarker)) {
@@ -193,7 +200,12 @@ try {
 
   for (const route of routes) {
     const appHtml = render(route.path);
-    const routeTemplate = applyRouteMetadata(template, route, routes);
+    let routeTemplate = applyRouteMetadata(template, route, routes);
+    if (concept) {
+      routeTemplate = routeTemplate
+        .replace(/<html lang="([^"]*)">/, '<html lang="$1" data-concept="v2">')
+        .replace('</head>', `    <link rel="stylesheet" crossorigin href="/assets/${conceptStylesheet}" />\n  </head>`);
+    }
     const output = routeTemplate.replace(
       rootMarker,
       `<div id="root">${appHtml}</div>`

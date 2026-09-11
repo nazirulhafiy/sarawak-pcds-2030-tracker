@@ -21,6 +21,9 @@ This repository is the PCDS 2030 Project Tracker, a Vite and React static site.
 ## Branch Workflow
 
 - `preview` is the normal development branch.
+- V2 is the default interface on Preview and in local development. Start new work from the latest `origin/preview`, not `codex/v2-review`.
+- Cursor data updates use focused branches and pull requests into `preview`. Follow `docs/data-methodology.md`; preserve the V2 interface and build configuration.
+- Codex maintains interface behavior and release workflow. See `docs/v2.md` for the migration and release contract.
 - `main` is the production branch.
 - Preview deploys to `https://preview.pcds2030.com` through Vercel.
 - Production deploys to `https://pcds2030.com` through GitHub Pages.

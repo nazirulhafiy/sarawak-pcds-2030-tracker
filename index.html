@@ -10,6 +10,62 @@
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon-%MODE%.png?v=20260804c" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="theme-color" content="#ffffff" />
+    <style>
+      /* Keep the concept navbar stable while its route-specific stylesheet loads. */
+      .concept-nav {
+        box-sizing: border-box;
+        display: flex;
+        align-items: center;
+        gap: 52px;
+        width: calc(100% - 48px);
+        max-width: 1232px;
+        height: 64px;
+        margin: 0 auto;
+        padding: 16px 0;
+        position: sticky;
+        top: 0;
+        z-index: 40;
+        background: var(--page-bg, #ffffff);
+      }
+      .concept-nav .concept-brand {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex: 0 0 32px;
+      }
+      .concept-brand img {
+        display: block;
+        width: 32px;
+        height: 32px;
+        object-fit: contain;
+        opacity: 0;
+      }
+      .concept-brand-name {
+        position: absolute;
+        left: 40px;
+        width: max-content;
+        max-width: calc(100vw - 88px);
+        white-space: nowrap;
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+      }
+      .concept-nav > div { display: flex; gap: 30px; }
+      .concept-nav > .concept-links,
+      .concept-nav > .concept-utilities {
+        opacity: 0;
+        visibility: hidden;
+      }
+      .concept-nav > .concept-links { flex: 1; align-items: center; }
+      .concept-nav > .concept-utilities { margin-left: auto; gap: 8px; align-items: center; }
+      .concept-menu-toggle { display: none; }
+      @media (max-width: 760px) {
+        .concept-nav { width: calc(100% - 32px); gap: 12px; }
+        .concept-nav > .concept-links { display: none; }
+        .concept-nav > .concept-utilities { gap: 4px; }
+      }
+    </style>
     <script>
       (() => {
         try {
