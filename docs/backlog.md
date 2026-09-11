@@ -2,9 +2,7 @@
 
 ## V2 release review
 
-- Review V2 on Preview before authorizing production promotion.
-- At production promotion, enable V2 explicitly for the production build and verify all six routes and SEO metadata.
-- Remove the remaining `v2` DNS record. The Vercel domain mapping is removed; retain the old deployment for recovery.
+- V2 production promotion was approved on 11 September 2026. Retain the old review deployment for recovery; its custom domain and DNS record have been removed.
 
 This file lists outstanding work only. Completed behavior belongs in `docs/product.md`,
 `docs/design.md`, the data methodology, and Git history rather than remaining mixed into the
