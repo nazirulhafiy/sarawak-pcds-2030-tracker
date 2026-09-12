@@ -174,9 +174,10 @@ Current interactions:
 - Refreshing any site route returns the document to the top. This reset is limited to reloads so
   browser back/forward restoration and deliberate in-page anchor navigation keep their existing behavior.
 - After the reader moves beyond the opening viewport, a compact fixed Back to top control appears in
-  the lower-right corner on tracker and update-history routes. It uses the shared neutral control
-  surface, brand-coloured arrow, focus ring and localized EN/BM accessible label. On mobile it becomes
-  a 40px icon-only arrow button with a teal brand surface and theme-aware contrast. Activation scrolls
+  the lower-right corner on tracker and update-history routes. It uses an inverse theme: a dark
+  surface on light pages and a light surface on dark pages, with contrasting text and a teal arrow.
+  It retains its focus ring and localized EN/BM accessible label. On mobile it becomes
+  a 40px icon-only arrow button with the same inverse theme. Activation scrolls
   smoothly to the page start, or immediately when reduced motion is preferred. In Preview and
   development it sits above the environment badge rather than overlapping it.
 - `EN | BM` controls switch the hydrated presentation without a document reload and retain real
