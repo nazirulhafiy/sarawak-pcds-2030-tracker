@@ -1,5 +1,7 @@
 import SiteFooter from './SiteFooter.jsx';
+import { getAppEnvironment } from './environment.js';
 import { getUiCopy } from './localization.js';
+import { EnvironmentBadge } from './SiteControls.jsx';
 
 const content = {
   en: {
@@ -32,6 +34,8 @@ const content = {
 
 export default function AboutPage({ language, onNavigate, headingRef }) {
   const text = content[language] || content.en;
+  const copy = getUiCopy(language);
+  const environment = getAppEnvironment();
   return <div className="app-shell">
     <main className="concept-about">
       <header><h1 className="page-heading" ref={headingRef} tabIndex={-1}>{language === 'en' ? <>About this <span className="concept-about-title-accent">tracker</span></> : text.title}</h1><p>{text.intro}</p></header>
@@ -39,7 +43,8 @@ export default function AboutPage({ language, onNavigate, headingRef }) {
         {text.sections.map(([title, body]) => <section key={title}><h2>{title}</h2><p>{body}</p></section>)}
         <section><h2>{text.contact}</h2><p>{text.contactText}</p><a href="mailto:contact@pcds2030.com?subject=PCDS%202030%20correction">contact@pcds2030.com</a></section>
       </div>
-      <SiteFooter concept currentPage="about" copy={getUiCopy(language)} language={language} onNavigate={onNavigate} />
+      <SiteFooter concept currentPage="about" copy={copy} language={language} onNavigate={onNavigate} />
     </main>
+    <EnvironmentBadge environment={environment} copy={copy} />
   </div>;
 }

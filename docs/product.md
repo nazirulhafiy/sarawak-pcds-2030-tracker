@@ -2,9 +2,9 @@
 
 ## Product
 
-The V2 Preview interface includes English and Malay About pages at `/about/` and
+The V2 interface includes English and Malay About pages at `/about/` and
 `/bm/about/`. They explain scope, public sources, status definitions, milestone limits,
-independence and correction contact details. The public site is not being promoted to v2.
+independence and correction contact details. V2 is the current Preview and Production interface.
 
 PCDS 2030 Project Tracker is an independent public tracker for major Sarawak development projects connected to the Post COVID-19 Development Strategy 2030.
 
