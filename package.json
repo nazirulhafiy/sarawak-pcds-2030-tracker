@@ -9,6 +9,7 @@
     "build:preview": "vite build --mode preview && node scripts/prerender.mjs preview && node scripts/write-cname.mjs preview",
     "check:content": "node scripts/validate-tracker-data.mjs",
     "check:links": "node scripts/check-source-links.mjs",
+    "check:release": "node scripts/check-release-readiness.mjs",
     "icons:generate": "node scripts/generate-environment-favicons.mjs",
     "lint": "eslint .",
     "preview": "vite preview",

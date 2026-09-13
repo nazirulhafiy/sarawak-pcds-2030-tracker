@@ -61,6 +61,7 @@ Useful checks and build commands:
 npm run lint           # Check the code
 npm run check:content   # Validate tracker and editorial content
 npm run check:links     # Report public source links that need manual review
+npm run check:release   # Validate the exact remote Preview tip before Production
 npm run build:preview  # Build the Preview version
 npm run build          # Build the Production version
 npm run preview        # Serve the latest build locally
@@ -78,17 +79,33 @@ Changes go through Preview before reaching the public website:
 | Preview | Review before release | [preview.pcds2030.com](https://preview.pcds2030.com) | `preview` |
 | Production | Public website | [pcds2030.com](https://pcds2030.com) | `main` |
 
-Normal workflow:
+Normal development workflow:
 
-1. Make a focused change on the `preview` branch.
+1. Make a focused change on a branch from the latest `origin/preview`.
 2. For content changes, complete the [data review checklist](docs/data-review-checklist.md), then run `npm run check:content`, `npm run lint`, and `npm run build:preview`.
-3. Push to `preview` and review the Preview website.
-4. Promote approved changes to `main` for Production.
+3. Merge the focused change into `preview`. A Preview push validates both the Preview and Production builds.
+4. Review and approve the deployed Preview website.
+5. Promote only the exact approved Preview snapshot to `main` for Production.
+
+After Preview approval, use this release method:
+
+```bash
+git fetch --prune origin
+git switch preview
+git pull --ff-only origin preview
+npm run check:release
+git push origin origin/preview:main
+```
+
+The final push is fast-forward only because Git rejects a non-fast-forward update. If another GitHub
+process creates a separate merge commit on `main`, merge `main` back into `preview` immediately
+before more work starts. This keeps the two branches on one clear history.
 
 Preview deploys through Vercel. Production deploys through GitHub Pages. Preview is marked `noindex` so search engines should only index the Production website.
 
 GitHub Actions keeps validation separate from Production deployment. Pull requests to `preview` or
-`main` run read-only content, lint, and matching-environment build checks. Only a push to `main` or
+`main` run read-only content, lint, and relevant build checks. Each push to `preview` runs both the
+Preview and Production builds. Only a push to `main` or
 an explicitly started Production workflow can deploy to GitHub Pages. Actions are pinned to reviewed
 commits, with Dependabot proposing weekly GitHub Actions updates to `preview` for review.
 
