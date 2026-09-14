@@ -229,6 +229,16 @@ const updateDefinitions = [
   },
   {
     date: "2026-05-18",
+    projectName: "Sarawak-Singapore Electricity Interconnection",
+    description: {
+      en: "Utility Minister Julaihi told the DUN that commercial discussions and technical development had commenced after National Security Council approval in December 2025 and Singapore Maritime and Port Authority approval in February 2026.",
+      ms: "Menteri Utiliti Julaihi memberitahu DUN bahawa perbincangan komersial dan pembangunan teknikal telah dimulakan selepas kelulusan Majlis Keselamatan Negara pada Disember 2025 dan kelulusan Maritime and Port Authority Singapura pada Februari 2026.",
+    },
+    sourceUrl:
+      "https://www.thestar.com.my/news/nation/2026/05/18/sarawak-in-talks-to-export-power-to-borneo-singapore",
+  },
+  {
+    date: "2026-05-18",
     projectName: "KUTS — Kuching Urban Transportation System",
     description: {
       en: "KUTS Phase 1 reached 38.2 percent physical progress by 30 April 2026. Pilot operations are scheduled for the fourth quarter of 2026 before full commercial operations in 2027.",
