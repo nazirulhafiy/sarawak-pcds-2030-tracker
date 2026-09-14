@@ -1,5 +1,5 @@
 // ─── DATA ───────────────────────────────────────────────────────────────────
-export const LAST_UPDATED = "2026-09-08";
+export const LAST_UPDATED = "2026-09-14";
 
 const PCDS_SUMMARY = {
   name: "PCDS 2030 — Overarching Framework",
@@ -387,11 +387,15 @@ export const SECTORS = [
         milestones: [
           { date: "2023-03", text: "Forest-carbon study permit was granted", done: true },
           { date: "2024-12-09", text: "Sarawak's first forest carbon licence was issued", done: true },
+          { date: "2025-01", text: "Verra public-comment period opened for project validation", done: true },
+          { date: "TBD", text: "Verra validation reaches completion", done: false },
           { date: "TBD", text: "Independently verified carbon credits are issued", done: false },
         ],
         sources: [
           { label: "The Edge Malaysia - Marudi forest-carbon study permit (Mar 2023)", url: "https://theedgemalaysia.com/node/659392" },
           { label: "Sarawak Tribune - First forest carbon licence issued (Dec 2024)", url: "https://www.sarawaktribune.com/sarawak-awards-first-carbon-licence-strengthening-environmental-and-economic-commitments/" },
+          { label: "Verra - Marudi project public-comment listing (Jan 2025)", url: "https://verra.org/projects-open-for-public-comment-january-6-2025/" },
+          { label: "The Edge Malaysia - Marudi in final stages of Verra validation (Jan 2026 weekly)", url: "https://theedgemalaysia.com/node/787365" },
           { label: "SaraCarbon - Marudi project scope and management", url: "https://saracarbon.com/marudi/" },
         ],
       },
@@ -1004,16 +1008,22 @@ export const SECTORS = [
         lead: "Sarawak Energy / Sembcorp Utilities",
         value: "Not disclosed",
         summary:
-          "A proposed cross-border electricity link to export around 1GW of renewable power from Sarawak to Singapore. It is intended to support regional energy trade and connect Sarawak's renewable resources with Singapore's electricity market.",
+          "A cross-border electricity link to export around 1GW of renewable power from Sarawak to Singapore through a subsea cable of more than 700km. National Security Council and Singapore Maritime and Port Authority clearances have enabled commercial discussions and technical development toward regional renewable-power trade.",
         milestones: [
           { date: "2023-03-04", text: "Techno-commercial study was under way", done: true },
-          { date: "2025-10-17", text: "Conditional approval obtained", done: true },
-          { date: "TBD", text: "Project secures further regulatory approvals and licences", done: false },
-          { date: "2035", text: "Electricity exports begin", done: false },
+          { date: "2024-02", text: "Malaysian Cabinet approval was obtained", done: true },
+          { date: "2025-10-17", text: "Singapore EMA conditional approval was obtained", done: true },
+          { date: "2025-12", text: "National Security Council approved subsea survey works", done: true },
+          { date: "2026-02", text: "Singapore MPA approval was obtained", done: true },
+          { date: "TBD", text: "Remaining licences and commercial close advance", done: false },
+          { date: "2032-2035", text: "Electricity exports begin", done: false },
         ],
         sources: [
           { label: "Sarawak Energy — Techno-commercial study under way (Mar 2023)", url: "https://www.sarawakenergy.com/media-info/media-releases/2023/sarawak-moves-closer-to-regional-powerhouse-aspiration-through-hydropower-venture-in-indonesia" },
-          { label: "Sarawak Energy — Conditional approval (Oct 2025)", url: "https://www.sarawakenergy.com/media-info/media-releases/2025/sarawak-singapore-interconnection-project-receives-conditional-approval-from-energy-market-authority-of-singapore-to-proceed-to-next-phase" },
+          { label: "Sarawak Energy — EMA conditional approval (Oct 2025)", url: "https://www.sarawakenergy.com/media-info/media-releases/2025/sarawak-singapore-interconnection-project-receives-conditional-approval-from-energy-market-authority-of-singapore-to-proceed-to-next-phase" },
+          { label: "The Star — MKN and MPA clearances; commercial talks begun (May 2026)", url: "https://www.thestar.com.my/news/nation/2026/05/18/sarawak-in-talks-to-export-power-to-borneo-singapore" },
+          { label: "DayakDaily — Premier on 2032-2035 export window and NSC/MPA support (May 2026)", url: "https://dayakdaily.com/premier-sarawak-singapore-partnership-poised-to-become-asean-green-energy-model/" },
+          { label: "Sarawak Rivers Board — Cabinet, EMA and MKN survey milestones (Jul 2026)", url: "https://srb.sarawak.gov.my/web/subpage/news_view/903" },
         ],
       },
     ],

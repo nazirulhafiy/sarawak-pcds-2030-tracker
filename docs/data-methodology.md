@@ -39,7 +39,7 @@ Additional repository source material:
 
 Global fields:
 
-- `LAST_UPDATED`: one manually maintained ISO date string for the tracker data freshness indicator. Current value: `2026-09-08`.
+- `LAST_UPDATED`: one manually maintained ISO date string for the tracker data freshness indicator. Current value: `2026-09-14`.
 - `SECTORS`: the main data array. It contains PCDS economic sectors, enablers, and a framework overview entry.
 - `ECONOMIC_SECTOR_IDS`: set used by the UI to label rows as `Sector`.
 - `ENABLER_IDS`: set listing the PCDS enabler category ids. It is exported but not currently imported by `src/App.jsx`.
@@ -293,6 +293,9 @@ Parked 13MP / zone candidate-pool re-review (1 September 2026):
 Weekly milestone audit (7 September 2026):
 `docs/project-audits/2026-09-07-weekly-milestone.md`. Six Planning / In Progress cards were reviewed. Only the Miri Combined Cycle Gas Turbine (CCGT) Power Plant received a page-backed field change: the M701F gas-turbine installation.
 
+Weekly milestone audit (14 September 2026):
+`docs/project-audits/2026-09-14-weekly-milestone.md`. Inventory-ranked Planning / In Progress batch. Accepted page-backed updates for Sarawak-Singapore Electricity Interconnection (Cabinet, MKN, MPA milestones) and Marudi Forest Conservation and Restoration Project (Verra public-comment and open validation milestones).
+
 ## Project Summary Writing Standard
 
 - Write each summary as a concise introduction to what the project is, where it is, its defining scope or capacity, its purpose, and why it matters. Two short sentences are usually enough.
@@ -530,7 +533,7 @@ This map records the earlier source-audit set. The 10 provisional additions reva
 
 - Sejingkat Battery Energy Storage System - `Operational`; 60MW/82MWh facility energised in December 2024 and publicly announced as commissioned in February 2025. Routine grid services and performance monitoring are operational activities rather than open delivery milestones, so the commissioned facility displays as `Completed`; source: Sarawak Energy.
 - Mentarang Induk Hydroelectric Project - `In Progress`; US$2.6 billion, 1,375MW cross-border hydropower venture in North Kalimantan; groundbreaking and early works were reported in 2023, and access roads were reported completed by March 2025. The developer is targeting commercial operation in 2030, with financial close still unconfirmed after an earlier Q1 2026 aim. Sarawak Energy supports the value, identity and groundbreaking; the Office of the Premier supports early works; Petromindo and Kompas support the access-road and 2030 COD schedule. The PT Kayan Hydropower Nusantara page remains omitted from the live card because it currently renders an error shell and adds no unique field evidence.
-- Sarawak-Singapore Electricity Interconnection - `In Progress`; Sarawak Energy confirmed that a techno-commercial study with Sembcorp and Singapore Power was under way in March 2023. Conditional approval was obtained in October 2025 for around 1GW of renewable power exports, with further regulatory approvals and licences still required; sources: Sarawak Energy.
+- Sarawak-Singapore Electricity Interconnection - `In Progress`; Sarawak Energy confirmed that a techno-commercial study with Sembcorp and Singapore Power was under way in March 2023. Malaysian Cabinet approval was obtained in February 2024. Singapore EMA conditional approval followed in October 2025 for around 1GW of renewable power exports. National Security Council approved subsea survey works in December 2025 and Singapore's Maritime and Port Authority approved in February 2026, after which commercial discussions and technical development commenced; exports are targeted between 2032 and 2035. Sources: Sarawak Energy, The Star, DayakDaily, Sarawak Rivers Board.
 
 ### Sarawak 13th Malaysia Plan Projects Added on 28 July 2026
 
