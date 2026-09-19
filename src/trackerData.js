@@ -1,5 +1,5 @@
 // ─── DATA ───────────────────────────────────────────────────────────────────
-export const LAST_UPDATED = "2026-09-14";
+export const LAST_UPDATED = "2026-09-20";
 
 const PCDS_SUMMARY = {
   name: "PCDS 2030 — Overarching Framework",
@@ -745,8 +745,10 @@ export const SECTORS = [
         milestones: [
           { date: "2020", text: "Sarawak Infectious Disease Centre was established", done: true },
           { date: "2024-02", text: "Research organisation began operating", done: true },
+          { date: "2024-03", text: "Samarahan campus construction began", done: true },
           { date: "2025-10", text: "Campus construction reached 40.19 percent", done: true },
-          { date: "2026-10", text: "Samarahan campus reaches completion", done: false },
+          { date: "2026-05-18", text: "Headquarters reached 80 percent completion", done: true },
+          { date: "2027-Q3", text: "Samarahan campus reaches official launch", done: false },
         ],
         sources: [
           { label: "SIDC - Organisation and research mission", url: "https://sidc.org.my/" },
@@ -754,6 +756,9 @@ export const SECTORS = [
           { label: "DayakDaily - Campus progress and completion target (Dec 2025)", url: "https://dayakdaily.com/sarawak-infectious-disease-centre-to-be-completed-by-oct-2026/" },
           { label: "DayakDaily — RM300 million investment, campus nearing completion (Aug 2026)", url: "https://dayakdaily.com/sarawaks-rm300-mln-disease-centre-nears-completion-to-drive-research-prepare-for-the-next-covid/" },
           { label: "Borneo Post — More than RM300 million invested, campus nearing completion (Aug 2026)", url: "https://www.theborneopost.com/2026/08/10/premier-urges-regency-specialist-hospital-kuching-to-work-with-sidc-on-tropical-disease-research/" },
+          { label: "Sarawak Tribune — Headquarters reached 80 percent (May 2026)", url: "https://www.sarawaktribune.com/sidc-headquarters-reaches-80-pct-completion/" },
+          { label: "DayakDaily — Official launch scheduled for Q3 2027 (Sep 2026)", url: "https://dayakdaily.com/sarawak-infectious-disease-centre-construction-expected-to-complete-by-q3-2027/" },
+          { label: "Sarawak Tribune — Official launch scheduled for Q3 2027 (Sep 2026)", url: "https://www.sarawaktribune.com/sidc-targets-2027-launch-eyes-regional-pandemic-preparedness-hub/" },
         ],
       },
     ],
@@ -1046,6 +1051,7 @@ export const SECTORS = [
         milestones: [
           { date: "2024-06-19", text: "RM238M dredging contract awarded", done: true },
           { date: "2026-04-25", text: "Physical progress reached about 55 percent", done: true },
+          { date: "2026-06-30", text: "Physical progress reached 69 percent", done: true },
           { date: "2026-10", text: "Dredging reaches completion", done: false },
         ],
         sources: [
@@ -1054,6 +1060,7 @@ export const SECTORS = [
           { label: "MIPD — Kuala Baram works ahead of schedule (Nov 2025)", url: "https://mipd.sarawak.gov.my/web/subpage/news_view/508" },
           { label: "DayakDaily — Dredging reaches 55% progress (Apr 2026)", url: "https://dayakdaily.com/premier-miri-port-dredging-project-55-pct-complete-channel-extension-up-to-10km-under-study/" },
           { label: "Dredging Today — Dredging in full swing (May 2026)", url: "https://www.dredgingtoday.com/2026/05/08/dredging-work-on-kuala-baram-delta-access-channel-in-full-swing/" },
+          { label: "Sarawak Rivers Board — 69% progress as of 30 June (Jul 2026)", url: "https://srb.sarawak.gov.my/web/subpage/news_view/896" },
         ],
       },
       {

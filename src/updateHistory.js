@@ -3,6 +3,16 @@ import { localizeSectors } from "./localization.js";
 
 const updateDefinitions = [
   {
+    date: "2026-09-10",
+    projectName: "Sarawak Infectious Disease Centre",
+    description: {
+      en: "SIDC's CEO said the Samarahan facility is scheduled for official launch in the third quarter of 2027, superseding the earlier October 2026 campus-completion target.",
+      ms: "Ketua pegawai eksekutif SIDC berkata kemudahan Samarahan dijadualkan dilancarkan secara rasmi pada suku ketiga 2027, menggantikan sasaran penyiapan kampus Oktober 2026 yang lebih awal.",
+    },
+    sourceUrl:
+      "https://dayakdaily.com/sarawak-infectious-disease-centre-construction-expected-to-complete-by-q3-2027/",
+  },
+  {
     date: "2026-08-17",
     projectName: "Coastal Road Network and Second Trunk Road (CSTR)",
     description: {
@@ -109,6 +119,15 @@ const updateDefinitions = [
     },
     sourceUrl:
       "https://www.theborneopost.com/2026/07/19/oseic-helps-over-500-kids-progress-to-formal-education/",
+  },
+  {
+    date: "2026-07-08",
+    projectName: "Miri Port Kuala Baram Capital Dredging",
+    description: {
+      en: "Sarawak Rivers Board recorded 69 percent overall progress as of 30 June 2026, three percentage points ahead of schedule, while October 2026 completion remains the open target.",
+      ms: "Lembaga Sungai-Sungai Sarawak merekodkan 69 peratus kemajuan keseluruhan setakat 30 Jun 2026, tiga peratus mendahului jadual, manakala penyiapan Oktober 2026 kekal sebagai sasaran terbuka.",
+    },
+    sourceUrl: "https://srb.sarawak.gov.my/web/subpage/news_view/896",
   },
   {
     date: "2026-07-07",
