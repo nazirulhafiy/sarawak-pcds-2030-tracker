@@ -39,7 +39,7 @@ Additional repository source material:
 
 Global fields:
 
-- `LAST_UPDATED`: one manually maintained ISO date string for the tracker data freshness indicator. Current value: `2026-09-14`.
+- `LAST_UPDATED`: one manually maintained ISO date string for the tracker data freshness indicator. Current value: `2026-09-20`.
 - `SECTORS`: the main data array. It contains PCDS economic sectors, enablers, and a framework overview entry.
 - `ECONOMIC_SECTOR_IDS`: set used by the UI to label rows as `Sector`.
 - `ENABLER_IDS`: set listing the PCDS enabler category ids. It is exported but not currently imported by `src/App.jsx`.
@@ -296,6 +296,9 @@ Weekly milestone audit (7 September 2026):
 Weekly milestone audit (14 September 2026):
 `docs/project-audits/2026-09-14-weekly-milestone.md`. Inventory-ranked Planning / In Progress batch. Accepted page-backed updates for Sarawak-Singapore Electricity Interconnection (Cabinet, MKN, MPA milestones) and Marudi Forest Conservation and Restoration Project (Verra public-comment and open validation milestones).
 
+Weekly milestone audit (20 September 2026):
+`docs/project-audits/2026-09-20-weekly-milestone.md`. Inventory-ranked Planning / In Progress batch. Accepted page-backed updates for Sarawak Infectious Disease Centre (Q3 2027 official launch) and Miri Port Kuala Baram Capital Dredging (69 percent progress as of 30 June 2026).
+
 ## Project Summary Writing Standard
 
 - Write each summary as a concise introduction to what the project is, where it is, its defining scope or capacity, its purpose, and why it matters. Two short sentences are usually enough.
@@ -494,11 +497,11 @@ This map records the earlier source-audit set. The 10 provisional additions reva
 
 - Pan Borneo Highway Sarawak Phase 1 - `In Progress`; value: RM16.5 billion construction cost. DanaInfra's official project page records 99.98 percent completion as of 30 June 2026 and confirms that 10 of 11 work packages were complete, with the remaining package scheduled for 2029. Sarawak Tribune's December 2025 report gives Q1 2029 as the more precise completion target after water-pipe replacement and scope negotiations. The open milestone therefore remains `2029-Q1`; sources: DanaInfra, The Edge Malaysia, and Sarawak Tribune. DanaInfra's financing figures do not replace the RM16.5 billion construction cost.
 - Sarawak-Sabah Link Road - `In Progress`; Phase 1 reached 71.16 percent and Phase 2 reached 11.39 percent physical progress as of 11 June 2026; Phase 1 completion is scheduled for 16 March 2027 and Phase 2 for 2029; sources: The Star and DayakDaily.
-- Miri Port Kuala Baram Capital Dredging - `In Progress`; value: RM238 million contract; physical progress reached about 55 percent in April 2026; next milestone: dredging completion in October 2026; sources: MIPD, DayakDaily, and Dredging Today.
+- Miri Port Kuala Baram Capital Dredging - `In Progress`; value: RM238 million contract; physical progress reached 69 percent as of 30 June 2026, after about 55 percent on 25 April 2026; next milestone: dredging completion in October 2026; sources: MIPD, DayakDaily, Dredging Today, and Sarawak Rivers Board. The RM208.9 million figure on later official pages is not used to replace the RM238 million June 2024 contract award. Dated decision record: [weekly milestone audit](project-audits/2026-09-20-weekly-milestone.md).
 - Bau Gold Project - `Planning`; value: RM1.38 billion projected upstream investment in the PCDS 2030 Highlights 2023 report, corroborated by DayakDaily in November 2024. The separate RM24.3 billion in-ground gold value is a resource valuation and is excluded from the reported-value field. Besra completed an independent technical review, received conditional Jugan mining-lease renewal terms and formally accepted the conditional renewal offer on 31 July 2026; next milestone: finalised mining lease conditions; sources: DayakDaily and Besra Gold company disclosures.
 - Special Needs Community Centre - `Planning`; value: RM30 million for Phase 1 in Samarahan. JKR Sarawak's live tender list records state tender T/388/07/2026 and a 23 September 2026 closing date, confirming that the July tender milestone was reached. The letter of award and May 2028 completion remain open; sources: JKR Sarawak, DayakDaily and Borneo Post. The 27 August 2026 six-card audit found the tender still unawarded.
 - Sarawak Bioindustrial Park - `In Progress`; value: RM10 million combined Budget 2026 allocation for the park and SBC Bioprocess Commercial Centre. Sarawak Biodiversity Centre confirms that Central Hub construction commenced on 13 August 2026 with a 24-month construction period; the August 2028 target applies to the Central Hub, not automatically to the separate Bioprocess Commercial Centre. Anchor-partner selection and combined facility operations remain open.
-- Sarawak Infectious Disease Centre - `In Progress`; value: `RM300 million`. Opened 10 August 2026 reports quote the Premier that the Sarawak government had invested more than RM300 million to establish the centre, which was nearing completion. The amount is a government investment, not the 2026 RM72 million construction-and-operations allocation or the older RM200 million commitment. The October 2026 campus-completion milestone remains open pending formal confirmation; sources: SIDC, DayakDaily, and Borneo Post. Dated decision record: [six-card live audit](project-audits/2026-08-27-six-card-live-audit.md). The 2 September 2026 re-review found no campus-completion or commissioning page and left the card unchanged.
+- Sarawak Infectious Disease Centre - `In Progress`; value: `RM300 million`. Opened 10 August 2026 reports quote the Premier that the Sarawak government had invested more than RM300 million to establish the centre. The amount is a government investment, not the 2026 RM72 million construction-and-operations allocation, the older RM200 million commitment, or the May 2026 RM143 million development figure. Campus construction began in March 2024 and reached 80 percent on 18 May 2026. The CEO's 10 September 2026 statement schedules official launch for Q3 2027 and supersedes the October 2026 campus-completion target; sources: SIDC, DayakDaily, Borneo Post, and Sarawak Tribune. Dated decision record: [weekly milestone audit](project-audits/2026-09-20-weekly-milestone.md).
 - Bintulu-Samalaju Gas Pipeline - `In Progress`; value: RM1 billion committed; offshore work was reported complete in October 2025 and pre-commissioning activity was publicly notified in May 2026; next milestone: progressive commercial operations expected from 2027; sources: The Star, Bintulu Port Authority, and Sarawak Tribune.
 - Sarawak Agrotechnology Park - `In Progress`; value: RM19.5 million Budget 2026 allocation for further development of Semenggok and Tarat. Official M-FICORD reporting confirms that a coral-shrimp farm at SARTECH Tarat has operated since 2022, while wider development of both sites remains incomplete; next milestone: completion of Semenggok and Tarat site development; sources: M-FICORD, Sarawak Tribune, and DayakDaily. The DayakDaily budget article is broader than SARTECH but contains an exact project-specific allocation line.
 - Sungai Baji Agropark - `In Progress`; value: `RM180 million`, retained from the PCDS 2030 AIP as a user-approved planned state-funding figure comprising RM29 million approved under RMK-12 and an estimated RM151 million for the remaining area, pending an accessible online value source. December 2025 reporting states that infrastructure and agricultural components were complete by October 2025 and that LCDA appointed an anchor company on 14 May 2025. Operations were expected in Q1 2026 and commercial production in Q3 2026, but neither milestone is marked complete without a confirming public update; live sources: DID Sarawak and TVS.
@@ -593,7 +596,7 @@ Current public display counts:
 - Planning: 9.
 - Ongoing: 37.
 - Completed: 9.
-- Milestones: 168 completed out of 251 active-project milestones.
+- Milestones: 178 completed out of 263 active-project milestones.
 
 Milestone completion is calculated from each milestone's manual `done` boolean:
 
