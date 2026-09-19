@@ -121,6 +121,15 @@ const updateDefinitions = [
       "https://www.theborneopost.com/2026/07/19/oseic-helps-over-500-kids-progress-to-formal-education/",
   },
   {
+    date: "2026-07-08",
+    projectName: "Miri Port Kuala Baram Capital Dredging",
+    description: {
+      en: "Sarawak Rivers Board recorded 69 percent overall progress as of 30 June 2026, three percentage points ahead of schedule, while October 2026 completion remains the open target.",
+      ms: "Lembaga Sungai-Sungai Sarawak merekodkan 69 peratus kemajuan keseluruhan setakat 30 Jun 2026, tiga peratus mendahului jadual, manakala penyiapan Oktober 2026 kekal sebagai sasaran terbuka.",
+    },
+    sourceUrl: "https://srb.sarawak.gov.my/web/subpage/news_view/896",
+  },
+  {
     date: "2026-07-07",
     projectName: "Sarawak Cancer Centre",
     description: {
@@ -129,15 +138,6 @@ const updateDefinitions = [
     },
     sourceUrl:
       "https://dayakdaily.com/sarawak-cancer-centre-targets-2032-completion-as-design-and-build-tender-process-begins/",
-  },
-  {
-    date: "2026-07-08",
-    projectName: "Miri Port Kuala Baram Capital Dredging",
-    description: {
-      en: "Sarawak Rivers Board recorded 69 percent overall progress as of 30 June 2026, three percentage points ahead of schedule, while October 2026 completion remains the open target.",
-      ms: "Lembaga Sungai-Sungai Sarawak merekodkan 69 peratus kemajuan keseluruhan setakat 30 Jun 2026, tiga peratus mendahului jadual, manakala penyiapan Oktober 2026 kekal sebagai sasaran terbuka.",
-    },
-    sourceUrl: "https://srb.sarawak.gov.my/web/subpage/news_view/896",
   },
   {
     date: "2026-07-03",
