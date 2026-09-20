@@ -9,7 +9,7 @@ for the independent PCDS 2030 Project Tracker at
 
 The workflow has two roles:
 
-1. Research Bot is the coordinator. It owns the Monday schedule, the
+1. Maintainer Bot is the coordinator. It owns the Monday schedule, the
    launch of exactly one Cloud Agent, and result reporting.
 2. One Cursor Cloud Agent runs discovery and then implementation as two
    sequential stages in a single run.
@@ -38,7 +38,7 @@ remains the execution procedure for audits. Weekly automation invokes
 that procedure in Stage A then Stage B mode. Interactive `/audit-…`
 runs stay opt-in and PR-only unless a later maintenance task updates
 the skill. This contract is what authorises `preview_merge` for weekly
-Research Bot launches.
+Maintainer Bot launches.
 
 During a weekly content run, Stage B may modify only:
 
@@ -60,7 +60,7 @@ the Cloud Agent. Use ordinary web search and opened public pages only.
 
 ## Coordinator
 
-Research Bot is the coordinator. It must:
+Maintainer Bot is the coordinator. It must:
 
 1. Run Mondays at 10:00 in the `Asia/Kuching` time zone.
 2. Read the latest contract from `origin/preview` before it starts a
@@ -73,13 +73,13 @@ Research Bot is the coordinator. It must:
 7. Confirm the terminal Cloud Agent result and the remote Git state
    before it reports merge success.
 
-Research Bot must not search sources, write card copy, merge, or push
+Maintainer Bot must not search sources, write card copy, merge, or push
 as a local-clone substitute for the Cloud Agent. It must never promote
 to `main`.
 
 ## Cloud Agent Run
 
-Research Bot injects
+Maintainer Bot injects
 [`automation/prompts/weekly-milestone-agent.md`](../automation/prompts/weekly-milestone-agent.md).
 The Cloud Agent must run Stage A first. It must run Stage B only when
 Stage A accepted at least one page-backed milestone or field change.
@@ -198,7 +198,7 @@ The Cloud Agent result must state:
 - commit SHAs and the confirmed remote `preview` tip when merged; and
 - exact blockers or caveats.
 
-Research Bot must not report merge success unless it independently
+Maintainer Bot must not report merge success unless it independently
 confirms the terminal Cloud Agent result and the remote Git state.
 
 ## Migration Note
