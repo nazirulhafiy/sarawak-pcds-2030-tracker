@@ -24,7 +24,7 @@ Also read, and use as working records:
 You are already in this repository. Do the work yourself.
 
 - Run inventory, searches, source-page checks, edits, localisation, lint, content checks, and Preview build in this checkout.
-- Do not ask a separate research bot, sandbox clone, or human to perform those steps unless Nazirul explicitly redirects the work.
+- Do not ask a separate bot, sandbox clone, or human to perform those steps unless Nazirul explicitly redirects the work.
 - Prefer the `preview` branch. Open a PR into `preview`. Never merge. Never promote to `main`. Never touch Codex branches.
 - Do not edit DNS, Vercel, GitHub Pages, generated `dist/`, or PCDS source PDFs.
 - Google AI Mode, AI Overviews, snippets, and search summaries are discovery-only. They are not evidence and must not be cited as live-card sources.

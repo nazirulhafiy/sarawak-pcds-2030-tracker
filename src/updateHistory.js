@@ -3,6 +3,16 @@ import { localizeSectors } from "./localization.js";
 
 const updateDefinitions = [
   {
+    date: "2026-09-21",
+    projectName: "SCORE — Sarawak Corridor of Renewable Energy",
+    description: {
+      en: "The SCORE card now matches existing public reporting: May 2025 investment attracted and jobs created, 243 rural infrastructure projects underway, and a 2030 Miri–Marudi–Mulu road completion target.",
+      ms: "Kad SCORE kini menepati laporan awam sedia ada: pelaburan ditarik dan pekerjaan diwujudkan pada Mei 2025, 243 projek infrastruktur luar bandar sedang dilaksanakan, dan sasaran penyiapan jalan Miri–Marudi–Mulu pada 2030.",
+    },
+    sourceUrl:
+      "https://www.sarawaktribune.com/recoda-drives-rm4-5-billion-infrastructure-push-strengthens-rural-connectivity/",
+  },
+  {
     date: "2026-09-10",
     projectName: "Sarawak Infectious Disease Centre",
     description: {
@@ -334,6 +344,16 @@ const updateDefinitions = [
     },
     sourceUrl:
       "https://dayakdaily.com/premier-miri-port-dredging-project-55-pct-complete-channel-extension-up-to-10km-under-study/",
+  },
+  {
+    date: "2026-04-01",
+    projectName: "SCORE — Sarawak Corridor of Renewable Energy",
+    description: {
+      en: "The Deputy Premier said approved investments in SCORE had reached RM151.5 billion across 655 projects, with the potential to generate more than 60,000 jobs.",
+      ms: "Timbalan Premier berkata pelaburan yang diluluskan di SCORE telah mencecah RM151.5 bilion merentasi 655 projek, dengan potensi menjana lebih 60,000 peluang pekerjaan.",
+    },
+    sourceUrl:
+      "https://www.sarawaktribune.com/recoda-drives-rm4-5-billion-infrastructure-push-strengthens-rural-connectivity/",
   },
   {
     date: "2026-04-01",
