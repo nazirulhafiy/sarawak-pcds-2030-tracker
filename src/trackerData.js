@@ -857,11 +857,10 @@ export const SECTORS = [
         lead: "RECODA",
         value: "RM151.5 billion",
         summary:
-          "An economic corridor linking the Samalaju, Tanjung Manis, Mukah, Baram and Tunoh growth nodes. Approved investment has reached RM151.5 billion across 655 projects, and SCORE supports industrial development and rural and interior delivery through RECODA, URDA, HDA and NRDA.",
+          "An economic corridor linking the Samalaju, Tanjung Manis, Mukah, Baram and Tunoh growth nodes. Approved investment has reached RM151.5 billion across 655 projects, and SCORE supports industrial development and rural and interior delivery through RECODA, URDA, HDA and NRDA, with 243 critical rural infrastructure projects worth RM4.5 billion underway as of April 2026.",
         milestones: [
           { date: "2025-05-10", text: "More than RM125B investment attracted and 53,000 jobs created", done: true },
-          { date: "2026-04-01", text: "RM151.5B approved investment and 655 projects reported", done: true },
-          { date: "2026-04-01", text: "243 critical rural infrastructure projects worth RM4.5B underway (URDA, HDA, NRDA)", done: true },
+          { date: "2026-04-01", text: "Approved investment reaches RM151.5B across 655 projects", done: true },
           { date: "2030", text: "Miri–Marudi–Mulu road (142 km) reaches completion", done: false },
           { date: "TBD", text: "URDA, HDA and NRDA complete rural infrastructure", done: false },
         ],
