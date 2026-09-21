@@ -337,6 +337,16 @@ const updateDefinitions = [
   },
   {
     date: "2026-04-01",
+    projectName: "SCORE — Sarawak Corridor of Renewable Energy",
+    description: {
+      en: "The Deputy Premier said approved investments in SCORE had reached RM151.5 billion across 655 projects, with the potential to generate more than 60,000 jobs.",
+      ms: "Timbalan Premier berkata pelaburan yang diluluskan di SCORE telah mencecah RM151.5 bilion merentasi 655 projek, dengan potensi menjana lebih 60,000 peluang pekerjaan.",
+    },
+    sourceUrl:
+      "https://www.sarawaktribune.com/recoda-drives-rm4-5-billion-infrastructure-push-strengthens-rural-connectivity/",
+  },
+  {
+    date: "2026-04-01",
     projectName: "PETRONAS Kasawari Carbon Capture and Storage Project",
     description: {
       en: "PETRONAS said it was examining whether the Kasawari project's first carbon dioxide injection could be brought forward to 2027.",

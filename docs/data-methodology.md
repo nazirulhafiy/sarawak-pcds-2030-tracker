@@ -39,7 +39,7 @@ Additional repository source material:
 
 Global fields:
 
-- `LAST_UPDATED`: one manually maintained ISO date string for the tracker data freshness indicator. Current value: `2026-09-20`.
+- `LAST_UPDATED`: one manually maintained ISO date string for the tracker data freshness indicator. Current value: `2026-09-21`.
 - `SECTORS`: the main data array. It contains PCDS economic sectors, enablers, and a framework overview entry.
 - `ECONOMIC_SECTOR_IDS`: set used by the UI to label rows as `Sector`.
 - `ENABLER_IDS`: set listing the PCDS enabler category ids. It is exported but not currently imported by `src/App.jsx`.
@@ -299,6 +299,9 @@ Weekly milestone audit (14 September 2026):
 Weekly milestone audit (20 September 2026):
 `docs/project-audits/2026-09-20-weekly-milestone.md`. Inventory-ranked Planning / In Progress batch. Accepted page-backed updates for Sarawak Infectious Disease Centre (Q3 2027 official launch) and Miri Port Kuala Baram Capital Dredging (69 percent progress as of 30 June 2026).
 
+Weekly milestone audit (21 September 2026):
+`docs/project-audits/2026-09-21-weekly-milestone.md`. Inventory-ranked Planning / In Progress batch. Accepted a page-backed update for SCORE — Sarawak Corridor of Renewable Energy (RM151.5 billion approved investment).
+
 ## Project Summary Writing Standard
 
 - Write each summary as a concise introduction to what the project is, where it is, its defining scope or capacity, its purpose, and why it matters. Two short sentences are usually enough.
@@ -418,12 +421,16 @@ This map records the earlier source-audit set. The 10 provisional additions reva
 
 - Current dashboard status: `In Progress`
 - Current next milestone: Industrial parks expand and attract investment
+- Current dashboard value: `RM151.5 billion`, the Deputy Premier's 1 April 2026 figure for approved SCORE investments across 655 projects.
 - Sources currently used:
 - [DayakDaily - SCORE: RM125B investment, 53K jobs (May 2025)](https://dayakdaily.com/score-fuels-sarawaks-economic-growth-with-rm125-bln-investment-53000-jobs-created/) - Publisher: DayakDaily; type: news report; date: 10 May 2025; supports investments surpassing RM125 billion, more than 53,000 jobs, Samalaju industrial-park growth, and RM4.5 billion for 247 rural infrastructure projects through HDA, NRDA and URDA.
 - [RECODA - PBM Miri 2025 SCORE update (Jul 2025)](https://recoda.gov.my/pbm-miri-2025-transforming-sarawak-through-score/) - Publisher: RECODA; type: official agency page; date: 15 Jul 2025; repeats more than RM125 billion and over 53,000 jobs, and says 247 infrastructure projects are currently underway through HDA, NRDA and URDA.
-- [DayakDaily - RECODA implementing 243 rural infrastructure projects (Apr 2026)](https://dayakdaily.com/243-critical-projects-worth-rm4-5-bln-to-boost-infrastructure-devt-rural-connectivity-across-sarawak/) - Publisher: DayakDaily; type: news report of a TVS account; date: 2 Apr 2026; supports continuing URDA, HDA and NRDA implementation of 243 funded rural projects. It does not mark those projects complete.
+- [DayakDaily - RECODA implementing 243 rural infrastructure projects (Apr 2026)](https://dayakdaily.com/243-critical-projects-worth-rm4-5-bln-to-boost-infrastructure-devt-rural-connectivity-across-sarawak/) - Publisher: DayakDaily; type: news report of a TVS account; date: 2 Apr 2026; supports continuing URDA, HDA and NRDA implementation of 243 funded rural projects. It does not mark those projects complete and omits the RM151.5 billion approved-investment figure from the same Rindok Raya speech.
+- [Sarawak Tribune - SCORE approved investment RM151.5B (Apr 2026)](https://www.sarawaktribune.com/recoda-drives-rm4-5-billion-infrastructure-push-strengthens-rural-connectivity/) - Publisher: Sarawak Tribune; type: news report; date: 1 Apr 2026; quotes the Deputy Premier that approved investments in SCORE have reached RM151.5 billion, involving 655 projects with the potential to generate over 60,000 jobs.
+- [Suara Sarawak - Pelaburan diluluskan SCORE RM151.5 bilion (Apr 2026)](https://suarasarawak.my/recoda-diamanah-laksana-243-projek-infrastruktur-asas-kritikal/) - Publisher: Suara Sarawak; type: news report of the same Rindok Raya speech; date: 1 Apr 2026; independently repeats the RM151.5 billion approved-investment, 655-project, and more-than-60,000-jobs wording.
 - [RECODA official site](https://recoda.gov.my/) - Publisher: RECODA; type: official agency site; date: not encoded in label; supports lead/agency context and corridor identity.
-- Gaps or uncertainty: SCORE is an umbrella programme. Opened pages do not give a dated industrial-park or rural-package completion event. A 1–2 April 2026 Rindok Raya claim of RM151.5 billion approved investment and 60,000 potential jobs was opened on Jiwa Bakti but omitted from DayakDaily’s same-event report, so the displayed value stays RM125 billion pending a second opened reputable or official page.
+- Value decision: `RM151.5 billion`. The amount is displayed as approved investment, not realised capital expenditure. The summary carries the approved-investment qualifier and the 655-project scope. The May 2025 / July 2025 more-than-RM125-billion figure is retained as a completed historical milestone.
+- Gaps or uncertainty: SCORE is an umbrella programme. Opened pages do not give a dated industrial-park or rural-package completion event. Official RECODA pages opened in this review still state the older RM125 billion figure. Four northern-region project handovers on 8 April 2026 do not close the statewide URDA, HDA and NRDA rural-infrastructure outcome.
 
 ### KUTS - Kuching Urban Transportation System
 
@@ -596,7 +603,7 @@ Current public display counts:
 - Planning: 9.
 - Ongoing: 37.
 - Completed: 9.
-- Milestones: 178 completed out of 263 active-project milestones.
+- Milestones: 179 completed out of 264 active-project milestones.
 
 Milestone completion is calculated from each milestone's manual `done` boolean:
 
