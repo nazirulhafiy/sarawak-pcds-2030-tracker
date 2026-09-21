@@ -138,3 +138,23 @@ Add a 2026-04-01 SCORE entry. The revised approved-investment total is a materia
 - `npm run lint`
 - `npm run build:preview`
 - `git diff --check`
+
+## SCORE card polish (Nazirul-approved, 2026-09-21)
+
+Follow-up wording/structure polish only. No new research claims, no value/status/lead change, no other cards. Nazirul approved all three polishes in Maintainer Bot chat.
+
+| # | Current (preview tip before polish) | Proposed | Effect |
+| --- | --- | --- | --- |
+| 1 | `2025-05-10` done: More than RM125B investment and 53,000 jobs reported | `2025-05-10` done: More than RM125B investment attracted and 53,000 jobs created | Align May 2025 wording with DayakDaily / RECODA (investment attracted / jobs created) |
+| 2 | (absent) | `2026-04-01` done: 243 critical rural infrastructure projects worth RM4.5B underway (URDA, HDA, NRDA) | Add completed rural checkpoint after the Apr 2026 investment row. Evidence already on the card: Tribune 1 Apr 2026, DayakDaily 2 Apr 2026, Suara Sarawak. Do **not** mark the remaining URDA/HDA/NRDA completion row as done. |
+| 3 | `TBD` open: Industrial parks expand and attract investment | `2030` open: Miri–Marudi–Mulu road (142 km) reaches completion | Replace the vague industrial-parks Next with the Tribune 1 Apr 2026 142 km / 2030 road target |
+
+Final milestone order after polish:
+
+1. `2025-05-10` done — More than RM125B investment attracted and 53,000 jobs created
+2. `2026-04-01` done — RM151.5B approved investment and 655 projects reported
+3. `2026-04-01` done — 243 critical rural infrastructure projects worth RM4.5B underway (URDA, HDA, NRDA)
+4. `2030` open — Miri–Marudi–Mulu road (142 km) reaches completion
+5. `TBD` open — URDA, HDA and NRDA complete rural infrastructure
+
+Unchanged: `value` RM151.5 billion; `status` In Progress; `lead` RECODA; remaining rural-infrastructure outcome stays open. No new sources added.
