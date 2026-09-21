@@ -421,6 +421,7 @@ This map records the earlier source-audit set. The 10 provisional additions reva
 
 - Current dashboard status: `In Progress`
 - Current next milestone: Miri–Marudi–Mulu road (142 km) reaches completion
+- Current latest completed milestone: Approved investment reaches RM151.5B across 655 projects (`2026-04-01`, the Deputy Premier speech as-of / achievement date, not a later press date)
 - Current dashboard value: `RM151.5 billion`, the Deputy Premier's 1 April 2026 figure for approved SCORE investments across 655 projects.
 - Sources currently used:
 - [DayakDaily - SCORE: RM125B investment, 53K jobs (May 2025)](https://dayakdaily.com/score-fuels-sarawaks-economic-growth-with-rm125-bln-investment-53000-jobs-created/) - Publisher: DayakDaily; type: news report; date: 10 May 2025; supports investments surpassing RM125 billion, more than 53,000 jobs, Samalaju industrial-park growth, and RM4.5 billion for 247 rural infrastructure projects through HDA, NRDA and URDA.
@@ -430,7 +431,7 @@ This map records the earlier source-audit set. The 10 provisional additions reva
 - [Suara Sarawak - Pelaburan diluluskan SCORE RM151.5 bilion (Apr 2026)](https://suarasarawak.my/recoda-diamanah-laksana-243-projek-infrastruktur-asas-kritikal/) - Publisher: Suara Sarawak; type: news report of the same Rindok Raya speech; date: 1 Apr 2026; independently repeats the RM151.5 billion approved-investment, 655-project, and more-than-60,000-jobs wording.
 - [RECODA official site](https://recoda.gov.my/) - Publisher: RECODA; type: official agency site; date: not encoded in label; supports lead/agency context and corridor identity.
 - Value decision: `RM151.5 billion`. The amount is displayed as approved investment, not realised capital expenditure. The summary carries the approved-investment qualifier and the 655-project scope. The May 2025 / July 2025 more-than-RM125-billion figure is retained as a completed historical milestone.
-- Gaps or uncertainty: SCORE is an umbrella programme. The 243 rural-infrastructure projects remain underway, not complete, so the statewide URDA, HDA and NRDA rural-infrastructure outcome stays open. Official RECODA pages opened in this review still state the older RM125 billion figure. Four northern-region project handovers on 8 April 2026 do not close that remaining rural-infrastructure outcome.
+- Gaps or uncertainty: SCORE is an umbrella programme. The 243 rural-infrastructure projects remain underway, not complete, so the statewide URDA, HDA and NRDA rural-infrastructure outcome stays open. That April 2026 243 / RM4.5 billion snapshot is supporting context in the summary and sources, not a done milestone: status snapshots such as "underway" are not completed outcomes, and done-milestone dates are event, completion, or source as-of achievement dates rather than press dates. Official RECODA pages opened in this review still state the older RM125 billion figure. Four northern-region project handovers on 8 April 2026 do not close that remaining rural-infrastructure outcome.
 
 ### KUTS - Kuching Urban Transportation System
 

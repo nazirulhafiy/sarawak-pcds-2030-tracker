@@ -158,3 +158,21 @@ Final milestone order after polish:
 5. `TBD` open — URDA, HDA and NRDA complete rural infrastructure
 
 Unchanged: `value` RM151.5 billion; `status` In Progress; `lead` RECODA; remaining rural-infrastructure outcome stays open. No new sources added.
+
+## SCORE date-convention correction (Nazirul-approved, 2026-09-21)
+
+Nazirul approved this exact correction in Maintainer Bot chat on 21 Sep 2026. Done-milestone dates are the event, completion, or source as-of achievement date, not a later press date. Status snapshots such as "underway" must not be done milestones.
+
+| # | After polish (#69) | Correction | Effect |
+| --- | --- | --- | --- |
+| 1 | `2026-04-01` done: 243 critical rural infrastructure projects worth RM4.5B underway (URDA, HDA, NRDA) | Deleted | "Underway" is a status snapshot, not a completed outcome. The open TBD rural-infrastructure row remains the delivery outcome. DayakDaily 243 article stays as supporting context. |
+| 2 | `2026-04-01` done: RM151.5B approved investment and 655 projects reported | `2026-04-01` done: Approved investment reaches RM151.5B across 655 projects | Past-tense achievement wording. Keep 1 Apr 2026 as the Deputy Premier speech as-of / achievement date, not a separate press date. |
+
+Final milestone order after this correction:
+
+1. `2025-05-10` done — More than RM125B investment attracted and 53,000 jobs created
+2. `2026-04-01` done — Approved investment reaches RM151.5B across 655 projects
+3. `2030` open — Miri–Marudi–Mulu road (142 km) reaches completion
+4. `TBD` open — URDA, HDA and NRDA complete rural infrastructure
+
+Unchanged: `value` RM151.5 billion; `status` In Progress; `lead` RECODA; remaining rural-infrastructure outcome stays open. Summary adds a short clause that 243 critical rural infrastructure projects worth RM4.5 billion remain underway as of April 2026. Matching BM strings updated. No `updateHistory.js` entry: this is an editorial convention correction, not a new public development (the 2026-04-01 approved-investment Updates item already exists).
