@@ -1,5 +1,5 @@
 // ─── DATA ───────────────────────────────────────────────────────────────────
-export const LAST_UPDATED = "2026-09-20";
+export const LAST_UPDATED = "2026-09-21";
 
 const PCDS_SUMMARY = {
   name: "PCDS 2030 — Overarching Framework",
@@ -855,11 +855,12 @@ export const SECTORS = [
         status: "In Progress",
         statusColor: "#d97706",
         lead: "RECODA",
-        value: "RM125 billion",
+        value: "RM151.5 billion",
         summary:
-          "An economic corridor linking the Samalaju, Tanjung Manis, Mukah, Baram and Tunoh growth nodes. With more than RM125 billion in cumulative investment, SCORE supports industrial development and rural and interior delivery through RECODA, URDA, HDA and NRDA.",
+          "An economic corridor linking the Samalaju, Tanjung Manis, Mukah, Baram and Tunoh growth nodes. Approved investment has reached RM151.5 billion across 655 projects, and SCORE supports industrial development and rural and interior delivery through RECODA, URDA, HDA and NRDA.",
         milestones: [
           { date: "2025-05-10", text: "More than RM125B investment and 53,000 jobs reported", done: true },
+          { date: "2026-04-01", text: "RM151.5B approved investment and 655 projects reported", done: true },
           { date: "TBD", text: "Industrial parks expand and attract investment", done: false },
           { date: "TBD", text: "URDA, HDA and NRDA complete rural infrastructure", done: false },
         ],
@@ -867,6 +868,8 @@ export const SECTORS = [
           { label: "DayakDaily — SCORE: RM125B investment, 53K jobs (May 2025)", url: "https://dayakdaily.com/score-fuels-sarawaks-economic-growth-with-rm125-bln-investment-53000-jobs-created/" },
           { label: "RECODA — SCORE attracted more than RM125B and 247 rural projects underway (Jul 2025)", url: "https://recoda.gov.my/pbm-miri-2025-transforming-sarawak-through-score/" },
           { label: "DayakDaily — RECODA implementing 243 rural infrastructure projects (Apr 2026)", url: "https://dayakdaily.com/243-critical-projects-worth-rm4-5-bln-to-boost-infrastructure-devt-rural-connectivity-across-sarawak/" },
+          { label: "Sarawak Tribune — SCORE approved investment RM151.5B (Apr 2026)", url: "https://www.sarawaktribune.com/recoda-drives-rm4-5-billion-infrastructure-push-strengthens-rural-connectivity/" },
+          { label: "Suara Sarawak — Pelaburan diluluskan SCORE RM151.5 bilion (Apr 2026)", url: "https://suarasarawak.my/recoda-diamanah-laksana-243-projek-infrastruktur-asas-kritikal/" },
           { label: "RECODA official site", url: "https://recoda.gov.my/" },
         ],
       },
