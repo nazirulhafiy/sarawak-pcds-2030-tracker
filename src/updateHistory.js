@@ -3,6 +3,16 @@ import { localizeSectors } from "./localization.js";
 
 const updateDefinitions = [
   {
+    date: "2026-09-21",
+    projectName: "SCORE — Sarawak Corridor of Renewable Energy",
+    description: {
+      en: "The SCORE card now matches existing public reporting: May 2025 investment attracted and jobs created, 243 rural infrastructure projects underway, and a 2030 Miri–Marudi–Mulu road completion target.",
+      ms: "Kad SCORE kini menepati laporan awam sedia ada: pelaburan ditarik dan pekerjaan diwujudkan pada Mei 2025, 243 projek infrastruktur luar bandar sedang dilaksanakan, dan sasaran penyiapan jalan Miri–Marudi–Mulu pada 2030.",
+    },
+    sourceUrl:
+      "https://www.sarawaktribune.com/recoda-drives-rm4-5-billion-infrastructure-push-strengthens-rural-connectivity/",
+  },
+  {
     date: "2026-09-10",
     projectName: "Sarawak Infectious Disease Centre",
     description: {
