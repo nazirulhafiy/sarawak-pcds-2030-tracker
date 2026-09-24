@@ -122,8 +122,14 @@ the named event is publicly confirmed, or a later official date replaces the cur
 
 ## 3. Nice To Have
 
-No items currently recorded. Visual-regression screenshots and empty-sectors UI were discarded
-with the matching Notion polish cards on 2 September 2026.
+### Restore a contributors and developers README section when collaborators exist
+
+- What needs to be done: Restore a short contributors and developers section in `README.md` once collaborators exist. Point readers at the existing docs: [V2 maintenance and release](docs/v2.md), plus local run and release steps already documented in the project docs.
+- Why it matters: That section was removed from the public README while there is no collaborator audience. The docs remain the source of truth until it is restored.
+- Suggested first task: No action until collaborators exist.
+
+Visual-regression screenshots and empty-sectors UI were discarded with the matching Notion polish
+cards on 2 September 2026.
 
 ## 4. Technical Cleanup
 
