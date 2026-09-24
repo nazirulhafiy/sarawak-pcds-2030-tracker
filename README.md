@@ -1,13 +1,10 @@
 # PCDS 2030 Project Tracker
 
-V2 is now the default interface for local development and Preview. Read the
-[V2 maintenance and release guide](docs/v2.md). Start all new work from the latest
-`preview` branch. Cursor data changes should use pull requests into `preview`.
-V2 is approved for Production. The production build enables it through `.env.production`.
+An independent public tracker for major projects tied to Sarawak’s Post COVID-19 Development Strategy 2030 (PCDS 2030).
 
-An independent public tracker for major projects connected to Sarawak's Post COVID-19 Development Strategy 2030 (PCDS 2030).
+It gathers publicly available project details in one place so you can scan status, milestones, and source links without hunting through separate announcements.
 
-**View the tracker: [pcds2030.com](https://pcds2030.com)**
+**View the live tracker: [pcds2030.com](https://pcds2030.com)**
 
 ## What this tracker does
 
@@ -41,6 +38,11 @@ Because the process is manual:
 See the [data methodology](docs/data-methodology.md) for more detail.
 
 ## For contributors and developers
+
+V2 is now the default interface for local development and Preview. Read the
+[V2 maintenance and release guide](docs/v2.md). Start all new work from the latest
+`preview` branch. Cursor data changes should use pull requests into `preview`.
+V2 is approved for Production. The production build enables it through `.env.production`.
 
 The website is a static [Vite](https://vite.dev/) and [React](https://react.dev/) app. It has no backend or database. Most tracker interface code is in `src/App.jsx`, the hand-maintained project data is in `src/trackerData.js`, BM presentation copy is in `src/localization.js`, and editorial update entries are in `src/updateHistory.js`.
 
