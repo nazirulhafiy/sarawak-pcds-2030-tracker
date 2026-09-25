@@ -18,6 +18,7 @@ Miri, CSSC Bintulu, and KUTS watch-only. Dated record:
 [six-card live audit, 2 September re-review](project-audits/2026-08-27-six-card-live-audit.md#2-september-2026-re-review-four-live-card-monitor-triggers).
 The 28-day Production SEO baseline was established on 2 September 2026. Monthly Search Console
 rechecks are tracked in Notion, not here. The how-to checklist remains in `docs/seo-measurement.md`.
+On 25 September 2026, the public README `Current limitations` section was removed as redundant with How the information is maintained.
 
 ## Release blockers
 

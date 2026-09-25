@@ -36,13 +36,3 @@ Because the process is manual:
 - a project's displayed status may simplify a more detailed real-world situation.
 
 See the [data methodology](docs/data-methodology.md) for more detail.
-
-## Current limitations
-
-- Data updates are manual. A report-only source-link checker flags unavailable links for manual review.
-- Project facts are maintained in the codebase rather than a content management system.
-- Automated content checks validate structure and consistency. The source-link checker tests
-  availability without blocking releases, while factual accuracy and flagged links still require
-  manual review.
-
-See the [backlog](docs/backlog.md) for the current list of known issues and recommended next tasks.
