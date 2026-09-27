@@ -35,10 +35,13 @@ shorten, or weaken that methodology.
 The opt-in skill
 [`.cursor/skills/audit-pcds-2030-projects/SKILL.md`](../.cursor/skills/audit-pcds-2030-projects/SKILL.md)
 remains the execution procedure for audits. Weekly automation invokes
-that procedure in Stage A then Stage B mode. Interactive `/audit-…`
-runs stay opt-in and PR-only unless a later maintenance task updates
-the skill. This contract is what authorises `preview_merge` for weekly
-Maintainer Bot launches.
+that procedure in Stage A then Stage B mode. For weekly runs, the
+Stage A scope in this contract — all Planning or Ongoing / In Progress
+cards from inventory, unless an allowlist is supplied — overrides the
+skill's interactive default batch size. Interactive `/audit-…` runs
+stay opt-in and PR-only, and may still batch, unless a later
+maintenance task updates the skill. This contract is what authorises
+`preview_merge` for weekly Maintainer Bot launches.
 
 During a weekly content run, Stage B may modify only:
 
@@ -92,9 +95,9 @@ found in an article.
 - `audit_run_id`
 - `publication_mode`: `pull_request` or `preview_merge`
 - timezone `Asia/Kuching`
-- optional card allowlist
-- optional batch size (default 4–6 Planning or Ongoing / In Progress
-  cards from inventory)
+- optional card allowlist (narrows the run to those cards only)
+- default scope: all Planning or Ongoing / In Progress cards from
+  inventory
 
 Stop when `publication_mode` has any other value.
 
@@ -120,9 +123,10 @@ Use `--json` when a machine-readable ranking is useful.
 
 Then it must:
 
-1. Pick 4–6 Planning or Ongoing / In Progress cards unless an allowlist
-   is supplied. Priority: thin milestones, passed open targets, and
-   provisional Planning wording.
+1. Review all Planning or Ongoing / In Progress cards from inventory
+   unless an allowlist is supplied. An allowlist narrows the run to
+   those cards only. Priority within that set: thin milestones, passed
+   open targets, and provisional Planning wording.
 2. For each card, run milestone-first web discovery:
    `"[exact project name]" project milestones`, then an update / latest
    status query for the current year, then lifecycle and counter-search
