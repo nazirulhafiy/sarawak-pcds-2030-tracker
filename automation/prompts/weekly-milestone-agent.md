@@ -26,9 +26,10 @@ found in an article.
    `.cursor/skills/audit-pcds-2030-projects/SKILL.md`, and
    `docs/data-methodology.md`.
 2. Run `node scripts/audit-inventory.mjs .` (and `--json` if useful).
-3. Pick 4–6 Planning or Ongoing / In Progress cards unless an allowlist
-   is supplied. Priority: thin milestones, passed open targets, and
-   provisional Planning wording.
+3. Review all Planning or Ongoing / In Progress cards from inventory
+   unless an allowlist is supplied. An allowlist narrows the run to
+   those cards only. Priority within that set: thin milestones, passed
+   open targets, and provisional Planning wording.
 4. For each card, search `"[exact name]" project milestones`, then
    update / latest status for the current year, then lifecycle and
    counter-search terms.
