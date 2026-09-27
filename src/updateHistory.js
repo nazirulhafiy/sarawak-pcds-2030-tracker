@@ -4,6 +4,16 @@ import { localizeSectors } from "./localization.js";
 const updateDefinitions = [
   {
     date: "2026-09-21",
+    projectName: "Miri Port Kuala Baram Capital Dredging",
+    description: {
+      en: "Miri Port Authority said the Kuala Baram dredging project had reached about 90 percent physical progress on 21 September 2026 and was ahead of the contract schedule. Completion is expected by the end of 2026.",
+      ms: "Pihak Berkuasa Pelabuhan Miri menyatakan projek pengorekan Kuala Baram mencapai kira-kira 90 peratus kemajuan fizikal pada 21 September 2026 dan mendahului jadual kontrak. Penyiapan dijangka menjelang akhir 2026.",
+    },
+    sourceUrl:
+      "https://dayakdaily.com/kuala-baram-dredging-works-near-completion-at-90-pct-ahead-of-schedule/",
+  },
+  {
+    date: "2026-09-21",
     projectName: "SCORE — Sarawak Corridor of Renewable Energy",
     description: {
       en: "The SCORE card now matches existing public reporting: May 2025 investment attracted and jobs created, 243 rural infrastructure projects underway, and a 2030 Miri–Marudi–Mulu road completion target.",
@@ -21,6 +31,15 @@ const updateDefinitions = [
     },
     sourceUrl:
       "https://dayakdaily.com/sarawak-infectious-disease-centre-construction-expected-to-complete-by-q3-2027/",
+  },
+  {
+    date: "2026-08-26",
+    projectName: "Community Social Support Centre (CSSC) Network",
+    description: {
+      en: "Bintulu Development Authority handed the community support centre keys to the ministry, which authorised SORCS to manage the centre. Operations are expected by the end of 2026.",
+      ms: "Lembaga Kemajuan Bintulu menyerahkan kunci pusat sokongan komuniti kepada kementerian, yang memberi kuasa kepada SORCS untuk mengurus pusat itu. Operasi dijangka menjelang akhir 2026.",
+    },
+    sourceUrl: "https://sarawak.sinchew.com.my/news/20260827/sarawak/7792203",
   },
   {
     date: "2026-08-17",

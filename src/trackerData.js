@@ -1,5 +1,5 @@
 // ─── DATA ───────────────────────────────────────────────────────────────────
-export const LAST_UPDATED = "2026-09-21";
+export const LAST_UPDATED = "2026-09-27";
 
 const PCDS_SUMMARY = {
   name: "PCDS 2030 — Overarching Framework",
@@ -541,7 +541,8 @@ export const SECTORS = [
           { date: "2025-11-07", text: "Sibu centre was launched and handed to its operator", done: true },
           { date: "2026-03-17", text: "Kuching centre operational", done: true },
           { date: "2026-07-02", text: "Bintulu furniture-supply quotation was called", done: true },
-          { date: "TBD", text: "Bintulu centre begins operations", done: false },
+          { date: "2026-08-26", text: "Bintulu centre keys were handed to the ministry and SORCS", done: true },
+          { date: "2026-Q4", text: "Bintulu centre begins operations", done: false },
           { date: "TBD", text: "Additional divisional centres begin operations", done: false },
         ],
         sources: [
@@ -549,6 +550,7 @@ export const SECTORS = [
           { label: "Borneo Post - Sibu centre launch and operator handover (Nov 2025)", url: "https://www.theborneopost.com/2025/11/08/community-social-support-centre-launched-in-sibu/" },
           { label: "UKAS - Kuching operations and Sibu-Bintulu rollout (Mar 2026)", url: "https://ukas.sarawak.gov.my/web/subpage/news_view/36445" },
           { label: "JKR Sarawak - Bintulu furniture-supply quotation (Jul 2026)", url: "https://jkr.sarawak.gov.my/web/subpage/webpage_view/465" },
+          { label: "Sin Chew - Bintulu CSS and TTG keys handed to the ministry (Aug 2026)", url: "https://sarawak.sinchew.com.my/news/20260827/sarawak/7792203" },
         ],
       },
     ],
@@ -1055,7 +1057,8 @@ export const SECTORS = [
           { date: "2024-06-19", text: "RM238M dredging contract awarded", done: true },
           { date: "2026-04-25", text: "Physical progress reached about 55 percent", done: true },
           { date: "2026-06-30", text: "Physical progress reached 69 percent", done: true },
-          { date: "2026-10", text: "Dredging reaches completion", done: false },
+          { date: "2026-09-21", text: "Physical progress reached about 90 percent", done: true },
+          { date: "2026-Q4", text: "Dredging reaches completion", done: false },
         ],
         sources: [
           { label: "Dredging Today — Kuala Baram contract award (Jun 2024)", url: "https://www.dredgingtoday.com/2024/06/19/malaysian-chinese-jv-wins-miri-port-dredging-contract/" },
@@ -1064,6 +1067,8 @@ export const SECTORS = [
           { label: "DayakDaily — Dredging reaches 55% progress (Apr 2026)", url: "https://dayakdaily.com/premier-miri-port-dredging-project-55-pct-complete-channel-extension-up-to-10km-under-study/" },
           { label: "Dredging Today — Dredging in full swing (May 2026)", url: "https://www.dredgingtoday.com/2026/05/08/dredging-work-on-kuala-baram-delta-access-channel-in-full-swing/" },
           { label: "Sarawak Rivers Board — 69% progress as of 30 June (Jul 2026)", url: "https://srb.sarawak.gov.my/web/subpage/news_view/896" },
+          { label: "DayakDaily — About 90% physical progress (Sep 2026)", url: "https://dayakdaily.com/kuala-baram-dredging-works-near-completion-at-90-pct-ahead-of-schedule/" },
+          { label: "DayakDaily — End-2026 completion expected (Sep 2026)", url: "https://dayakdaily.com/kuala-baram-dredging-project-eyes-end-2026-finish-ahead-of-march-2027-deadline/" },
         ],
       },
       {
