@@ -445,6 +445,10 @@ export const SECTORS = [
           { date: "2026-05-13", text: "Conditional lease-renewal terms received", done: true },
           { date: "2026-07-31", text: "Conditional renewal offer formally accepted", done: true },
           { date: "TBD", text: "Finalisation of mining lease conditions", done: false },
+          { date: "TBD", text: "Final mining lease is issued", done: false },
+          { date: "TBD", text: "Development and construction begins", done: false },
+          { date: "TBD", text: "Plant commissioning begins", done: false },
+          { date: "TBD", text: "First gold production begins", done: false },
         ],
         sources: [
           { label: "DayakDaily - RM1.38B projected upstream investment (Nov 2024)", url: "https://dayakdaily.com/baus-3-3-mln-ounce-gold-find-ranks-sarawak-13th-in-asia-valued-at-rm24-3-bln/" },
