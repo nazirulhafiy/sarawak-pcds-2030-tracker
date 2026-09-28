@@ -1365,7 +1365,7 @@ export const SECTORS = [
           { date: "2024-07-25", text: "In-principle approval for Baram solar agrovoltaic initiative", done: true },
           { date: "2025-08-11", text: "Heads of Agreement signed for Baram DeepTech Energy Programme partners", done: true },
           { date: "2026-03-29", text: "Project scope and estimate announced", done: true },
-          { date: "TBD", text: "Final investment decision and key site approvals secured", done: false },
+          { date: "TBD", text: "Final investment decision and key site approvals", done: false },
           { date: "TBD", text: "Construction begins", done: false },
           { date: "TBD", text: "Agriculture and paddy components enter operation", done: false },
           { date: "TBD", text: "Logistics hub enters operation", done: false },
