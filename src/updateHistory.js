@@ -3,6 +3,15 @@ import { localizeSectors } from "./localization.js";
 
 const updateDefinitions = [
   {
+    date: "2026-09-30",
+    projectName: "Coastal Road Network and Second Trunk Road (CSTR)",
+    description: {
+      en: "JKR Sarawak said the Sejingkat Bridge will open to road users at 10am on 5 October 2026, following a pre-opening ceremony. The earlier 1 October traffic target is superseded.",
+      ms: "JKR Sarawak berkata Jambatan Sejingkat akan dibuka kepada pengguna jalan raya pada pukul 10 pagi 5 Oktober 2026, selepas majlis pra-pembukaan. Sasaran lalu lintas 1 Oktober yang lebih awal digantikan.",
+    },
+    sourceUrl: "https://dayakdaily.com/sejingkat-bridge-to-open-to-road-users-on-oct-5/",
+  },
+  {
     date: "2026-09-21",
     projectName: "Miri Port Kuala Baram Capital Dredging",
     description: {
