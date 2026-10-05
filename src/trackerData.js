@@ -1,5 +1,5 @@
 // ─── DATA ───────────────────────────────────────────────────────────────────
-export const LAST_UPDATED = "2026-09-27";
+export const LAST_UPDATED = "2026-10-05";
 
 const PCDS_SUMMARY = {
   name: "PCDS 2030 — Overarching Framework",
@@ -822,13 +822,14 @@ export const SECTORS = [
           "A statewide road, bridge and rehabilitation programme comprising the Coastal Road Network and Second Trunk Road. Their respective RM5.42 billion and RM5.58 billion values form a combined RM11 billion programme, including the active Sejingkat Bridge package.",
         milestones: [
           { date: "2026-08-17", text: "Sejingkat Bridge construction remained on track", done: true },
-          { date: "2026-10-01", text: "Sejingkat Bridge opens to traffic", done: false },
+          { date: "2026-10-05", text: "Sejingkat Bridge opens to traffic", done: false },
           { date: "2026-10-22", text: "Sejingkat Bridge reaches contractual completion", done: false },
           { date: "TBD", text: "Remaining CSTR road and bridge packages reach completion", done: false },
         ],
         sources: [
           { label: "InvestSarawak — CSTR component values and reported progress", url: "https://investsarawak.gov.my/sarawaks-coastal-road-network-77-9-pct-complete-second-trunk-roadprogressing-with-15-projects-underway/" },
           { label: "DayakDaily — Sejingkat Bridge opening and contractual completion (Aug 2026)", url: "https://dayakdaily.com/sejingkat-bridge-on-track-to-open-to-traffic-by-oct-1/" },
+          { label: "DayakDaily — JKR sets Sejingkat Bridge opening for 5 October (Sep 2026)", url: "https://dayakdaily.com/sejingkat-bridge-to-open-to-road-users-on-oct-5/" },
         ],
       },
       {
