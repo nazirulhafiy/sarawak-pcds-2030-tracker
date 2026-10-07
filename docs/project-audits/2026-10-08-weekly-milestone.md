@@ -34,6 +34,18 @@ Remaining cards in that last row: Samalaju SME Cluster; Lubok Punggor AgriHub an
 
 Rejected identity collisions: the Pan Borneo Sabah audit findings, and the separate Pan Borneo Sarawak Redline pavement upgrade targeted for early 2028. Neither is Work Package 11 at Lambir.
 
+## Stage A claim table (accepted cards)
+
+Opened pages only. Claims below are the accepted statements from this run. Monitor and no-change cards are not listed here.
+
+| Project | URL | Visible date | Visible claim | Supported field | Confidence |
+| --- | --- | --- | --- | --- | --- |
+| Coastal Road Network and Second Trunk Road (CSTR) | https://dayakdaily.com/sejingkat-bridge-opens-to-public-12-of-sarawaks-21-mega-bridges-now-complete/ | 5 October 2026, 13:39 | The Sejingkat Bridge opened to the public that day after the soft-opening ceremony, and 12 of 21 mega bridges are complete. | `2026-10-05` / `Sejingkat Bridge opened to traffic` (`done: true`) | High |
+| Coastal Road Network and Second Trunk Road (CSTR) | https://www.thestar.com.my/news/nation/2026/10/05/sarawak-targets-late-2027-completion-for-remaining-coastal-trunk-road-bridges | 5 October 2026, 1:56pm MYT | Official opening of the Sejingkat Bridge on 5 October 2026, and late 2027 for the remaining nine major coastal and Second Trunk Road bridges. | Sejingkat opening done; open year-level `2027` / `Remaining nine major bridges reach completion`. Contractual completion on 22 October 2026 stays open. | High |
+| SMD Semiconductor — GaN Chip Development | https://dayakdaily.com/swak-unveils-keteq-gan-first-locally-designed-gan-power-semiconductor-chip-at-idecs-2026/ | 5 October 2026, 15:01 | The Premier unveiled keteq.GaN at the IDECS 2026 opening. The page does not state that global IP registration or commercial production has started. | `2026-10-05` / `Premier unveiled keteq.GaN at IDECS` (`done: true`). Global IP registration and commercialisation stay open. | High |
+| Pan Borneo Highway Sarawak Phase 1 | https://theedgemalaysia.com/node/820481 | Kuala Lumpur, 5 October 2026 | As of 31 March 2026, Work Package 11 at Lambir was 99.9 percent complete, and an extension of time granted on 27 July 2026 moved completion to 31 December 2028. This is the single source citing the Auditor General's report for that date. | Completed `2026-03-31` / `Work Package 11 reached 99.9 percent completion`; open completion `2029-Q1` → `2028-12-31` | High |
+| Pan Borneo Highway Sarawak Phase 1 | https://www.malaymail.com/news/malaysia/2026/10/05/audit-dept-flags-continued-delays-rm514m-in-unauthorised-variation-orders-on-sabah-pan-borneo-highway/237748 | 5 October 2026, 12:15pm MYT | The National Audit Department said Work Package 11 was 99.9 percent complete as of 31 March 2026. This page does not repeat the 31 December 2028 date. | Confirms the 99.9 percent milestone only. Does not support `2028-12-31`. | High |
+
 ## Implemented cards
 
 ### Coastal Road Network and Second Trunk Road (CSTR)
