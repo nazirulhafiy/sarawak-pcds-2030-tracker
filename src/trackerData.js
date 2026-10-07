@@ -1,5 +1,5 @@
 // ─── DATA ───────────────────────────────────────────────────────────────────
-export const LAST_UPDATED = "2026-10-05";
+export const LAST_UPDATED = "2026-10-08";
 
 const PCDS_SUMMARY = {
   name: "PCDS 2030 — Overarching Framework",
@@ -42,6 +42,7 @@ export const SECTORS = [
         milestones: [
           { date: "2026-Q1", text: "Premier announced GaN chip development success", done: true },
           { date: "2026-08-13", text: "Linyang integration and commercialisation MoA signed", done: true },
+          { date: "2026-10-05", text: "Premier unveiled keteq.GaN at IDECS", done: true },
           { date: "TBD", text: "Global IP registration", done: false },
           { date: "TBD", text: "Commercialisation begins", done: false },
         ],
@@ -50,6 +51,7 @@ export const SECTORS = [
           { label: "DayakDaily — keteq.GaN and AI converter unveiled (Oct 2025)", url: "https://dayakdaily.com/smd-semiconductor-unveils-keteq-gan-ai-convertor-in-london-cementing-sarawak-as-tech-leader/" },
           { label: "DayakDaily — Keteq AI chip secures global IP rights (Oct 2025)", url: "https://dayakdaily.com/sarawak-designed-keteq-ai-chip-set-to-secure-global-ip-rights-by-early-2026/" },
           { label: "SMD Semiconductor — Linyang integration and commercialisation MoA (Aug 2026)", url: "https://smdsemiconductor.com/smd-linyang-partner-to-bring-sarawak-semiconductor-technologies-to-global-markets" },
+          { label: "DayakDaily — Premier unveiled keteq.GaN at IDECS 2026 (Oct 2026)", url: "https://dayakdaily.com/swak-unveils-keteq-gan-first-locally-designed-gan-power-semiconductor-chip-at-idecs-2026/" },
         ],
       },
       {
@@ -822,14 +824,17 @@ export const SECTORS = [
           "A statewide road, bridge and rehabilitation programme comprising the Coastal Road Network and Second Trunk Road. Their respective RM5.42 billion and RM5.58 billion values form a combined RM11 billion programme, including the active Sejingkat Bridge package.",
         milestones: [
           { date: "2026-08-17", text: "Sejingkat Bridge construction remained on track", done: true },
-          { date: "2026-10-05", text: "Sejingkat Bridge opens to traffic", done: false },
+          { date: "2026-10-05", text: "Sejingkat Bridge opened to traffic", done: true },
           { date: "2026-10-22", text: "Sejingkat Bridge reaches contractual completion", done: false },
+          { date: "2027", text: "Remaining nine major bridges reach completion", done: false },
           { date: "TBD", text: "Remaining CSTR road and bridge packages reach completion", done: false },
         ],
         sources: [
           { label: "InvestSarawak — CSTR component values and reported progress", url: "https://investsarawak.gov.my/sarawaks-coastal-road-network-77-9-pct-complete-second-trunk-roadprogressing-with-15-projects-underway/" },
           { label: "DayakDaily — Sejingkat Bridge opening and contractual completion (Aug 2026)", url: "https://dayakdaily.com/sejingkat-bridge-on-track-to-open-to-traffic-by-oct-1/" },
           { label: "DayakDaily — JKR sets Sejingkat Bridge opening for 5 October (Sep 2026)", url: "https://dayakdaily.com/sejingkat-bridge-to-open-to-road-users-on-oct-5/" },
+          { label: "DayakDaily — Sejingkat Bridge opened to the public (Oct 2026)", url: "https://dayakdaily.com/sejingkat-bridge-opens-to-public-12-of-sarawaks-21-mega-bridges-now-complete/" },
+          { label: "The Star — Sejingkat Bridge opened; remaining bridges targeted for late 2027 (Oct 2026)", url: "https://www.thestar.com.my/news/nation/2026/10/05/sarawak-targets-late-2027-completion-for-remaining-coastal-trunk-road-bridges" },
         ],
       },
       {
@@ -918,12 +923,15 @@ export const SECTORS = [
           { date: "2016", text: "Phase 1 construction commenced", done: true },
           { date: "2023-12", text: "Phase 1 reached 98.6 percent completion", done: true },
           { date: "2025-10", text: "Ten work packages completed and opened", done: true },
-          { date: "2029-Q1", text: "Work Package 11 reaches full completion", done: false },
+          { date: "2026-03-31", text: "Work Package 11 reached 99.9 percent completion", done: true },
+          { date: "2028-12-31", text: "Work Package 11 reaches full completion", done: false },
         ],
         sources: [
           { label: "The Edge Malaysia — RM16.5B construction cost explained (Feb 2020)", url: "https://theedgemalaysia.com/article/rm165b-represents-only-sarawaks-pan-borneo-highway-construction-cost" },
-          { label: "Sarawak Tribune — Phase 1 at 99.98%, WP11 completion scheduled for Q1 2029 (Dec 2025)", url: "https://www.sarawaktribune.com/pan-borneo-highway-phase-1-in-sarawak-nears-full-completion/" },
+          { label: "Sarawak Tribune — Earlier Q1 2029 WP11 schedule (Dec 2025)", url: "https://www.sarawaktribune.com/pan-borneo-highway-phase-1-in-sarawak-nears-full-completion/" },
           { label: "DanaInfra — Ten of 11 packages complete as of Jun 2026", url: "https://www.danainfra.com.my/index.php/pan-borneo-sarawak-project" },
+          { label: "The Edge — AG report: WP11 at 99.9 percent, completion extended to 31 December 2028 (Oct 2026)", url: "https://theedgemalaysia.com/node/820481" },
+          { label: "Malay Mail — JAN: WP11 at 99.9 percent as of 31 March 2026 (Oct 2026)", url: "https://www.malaymail.com/news/malaysia/2026/10/05/audit-dept-flags-continued-delays-rm514m-in-unauthorised-variation-orders-on-sabah-pan-borneo-highway/237748" },
         ],
       },
       {

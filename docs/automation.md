@@ -50,8 +50,9 @@ During a weekly content run, Stage B may modify only:
 - `src/updateHistory.js` when the change is material
 - `docs/project-audits/YYYY-MM-DD-*.md` when the methodology requires a
   dated record
-- `docs/data-methodology.md` only if a selected source map or
-  dated-review pointer must stay accurate after the card change
+- `docs/data-methodology.md` when dashboard facts change, so
+  `LAST_UPDATED`, the selected source map, and any dated-review
+  pointer stay in sync with the card change
 
 The Cloud Agent must not modify the UI shell, V2 redesign files, DNS,
 Vercel, GitHub Pages, generated `dist/`, PCDS source PDFs, or unrelated
@@ -179,9 +180,11 @@ content change, commit, or push. Return `no_update`.
 If all checks pass:
 
 - `pull_request`: open a PR into `preview` and do not merge.
-- `preview_merge`: open a PR into `preview`, merge after checks
-  (squash is acceptable if that is the repository habit), and confirm
-  that the remote `preview` tip contains the merged commit.
+- `preview_merge`: open a PR into `preview`, wait until every GitHub
+  check on that PR has finished and passed, then merge (squash is
+  acceptable if that is the repository habit), and confirm that the
+  remote `preview` tip contains the merged commit. Do not merge while
+  any check is still pending or has failed.
 
 Never touch `main`. Never touch Codex branches.
 

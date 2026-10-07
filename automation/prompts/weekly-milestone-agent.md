@@ -51,8 +51,11 @@ Run this stage only after Stage A accepted page-backed changes.
 4. Complete `npm run check:content`, `npm run lint`,
    `npm run build:preview`, and `git diff --check`.
 5. If no accepted change remains, make no changes, commit, or push.
-6. Publish only in the supplied publication mode and only after all
-   checks pass. Never touch `main`. Never touch Codex branches.
+6. Publish only in the supplied publication mode. For `preview_merge`,
+   wait until every GitHub check on the pull request has finished and
+   passed before merging. Keep `docs/data-methodology.md` in sync when
+   dashboard facts change. Never touch `main`. Never touch Codex
+   branches.
 7. Return the exact result contract defined in `docs/automation.md`,
    including Stage A and Stage B outcomes.
 
