@@ -3,6 +3,33 @@ import { localizeSectors } from "./localization.js";
 
 const updateDefinitions = [
   {
+    date: "2026-10-05",
+    projectName: "Pan Borneo Highway Sarawak Phase 1",
+    description: {
+      en: "The Auditor General's Report 2/2026 said Work Package 11 at Lambir was 99.9 percent complete as of 31 March 2026. An extension of time granted on 27 July 2026 moved full completion to 31 December 2028, superseding the earlier first-quarter 2029 target.",
+      ms: "Laporan Ketua Audit Negara 2/2026 menyatakan Pakej Kerja 11 di Lambir siap 99.9 peratus setakat 31 Mac 2026. Lanjutan masa yang diluluskan pada 27 Julai 2026 memindahkan penyiapan penuh ke 31 Disember 2028, menggantikan sasaran suku pertama 2029 yang lebih awal.",
+    },
+    sourceUrl: "https://theedgemalaysia.com/node/820481",
+  },
+  {
+    date: "2026-10-05",
+    projectName: "SMD Semiconductor — GaN Chip Development",
+    description: {
+      en: "Premier Abang Johari unveiled keteq.GaN, SMD Semiconductor's locally designed gallium nitride power chip, at the opening of IDECS 2026. Global IP registration and commercialisation remain open.",
+      ms: "Premier Abang Johari melancarkan keteq.GaN, cip kuasa galium nitrida rekaan tempatan SMD Semiconductor, pada pembukaan IDECS 2026. Pendaftaran harta intelek global dan pengkomersialan kekal terbuka.",
+    },
+    sourceUrl: "https://dayakdaily.com/swak-unveils-keteq-gan-first-locally-designed-gan-power-semiconductor-chip-at-idecs-2026/",
+  },
+  {
+    date: "2026-10-05",
+    projectName: "Coastal Road Network and Second Trunk Road (CSTR)",
+    description: {
+      en: "The Sejingkat Bridge opened to the public on 5 October 2026 after a soft-opening ceremony. Contractual completion on 22 October and the rest of the CSTR programme remain open. The remaining nine major bridges are targeted for late 2027.",
+      ms: "Jambatan Sejingkat dibuka kepada orang ramai pada 5 Oktober 2026 selepas majlis pra-pembukaan. Penyiapan kontrak pada 22 Oktober dan program CSTR yang selebihnya kekal terbuka. Sembilan jambatan utama yang berbaki disasarkan menjelang akhir 2027.",
+    },
+    sourceUrl: "https://dayakdaily.com/sejingkat-bridge-opens-to-public-12-of-sarawaks-21-mega-bridges-now-complete/",
+  },
+  {
     date: "2026-09-30",
     projectName: "Coastal Road Network and Second Trunk Road (CSTR)",
     description: {

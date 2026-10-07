@@ -308,6 +308,9 @@ Content audit (27 September 2026):
 Weekly milestone audit (5 October 2026):
 `docs/project-audits/2026-10-05-weekly-milestone.md`. All Planning and In Progress cards were reviewed. The only accepted page-backed change is the Sejingkat Bridge package on Coastal Road Network and Second Trunk Road (CSTR): JKR Sarawak set the public opening for 5 October 2026, superseding the 1 October target. The opening is not marked complete.
 
+Weekly milestone audit (8 October 2026):
+`docs/project-audits/2026-10-08-weekly-milestone.md`. All Planning and In Progress cards were reviewed. Accepted page-backed updates: Sejingkat Bridge opened to traffic on 5 October 2026, with the remaining nine major CSTR bridges targeted for late 2027; SMD Semiconductor unveiled keteq.GaN at IDECS 2026; Pan Borneo Highway Sarawak Phase 1 Work Package 11 was 99.9 percent complete as of 31 March 2026, with full completion extended to 31 December 2028.
+
 ## Project Summary Writing Standard
 
 - Write each summary as a concise introduction to what the project is, where it is, its defining scope or capacity, its purpose, and why it matters. Two short sentences are usually enough.
@@ -347,7 +350,8 @@ This map records the earlier source-audit set. The 10 provisional additions reva
 - [DayakDaily - keteq.GaN and AI converter unveiled (Oct 2025)](https://dayakdaily.com/smd-semiconductor-unveils-keteq-gan-ai-convertor-in-london-cementing-sarawak-as-tech-leader/) - Publisher: DayakDaily; type: news report; date: Oct 2025; appears to support platform/product unveiling claims.
 - [DayakDaily - Keteq AI chip secures global IP rights (Oct 2025)](https://dayakdaily.com/sarawak-designed-keteq-ai-chip-set-to-secure-global-ip-rights-by-early-2026/) - Publisher: DayakDaily; type: news report; date: Oct 2025; appears to support the IP-rights/commercialisation pathway.
 - [SMD Semiconductor - Linyang integration and commercialisation MoA (Aug 2026)](https://smdsemiconductor.com/smd-linyang-partner-to-bring-sarawak-semiconductor-technologies-to-global-markets) - Publisher: SMD Semiconductor; type: project-owner announcement; date: 13 Aug 2026; directly supports the signed MoA and its technical evaluation, integration, qualification, and commercialisation scope.
-- Decision: the Linyang MoA is a completed agreement milestone. It does not confirm global IP registration or the start of commercial production, so both delivery outcomes remain open.
+- [DayakDaily - Premier unveiled keteq.GaN at IDECS 2026 (Oct 2026)](https://dayakdaily.com/swak-unveils-keteq-gan-first-locally-designed-gan-power-semiconductor-chip-at-idecs-2026/) - Publisher: DayakDaily; type: news report; date: 5 Oct 2026; directly supports the completed IDECS unveiling. It does not state that global IP registration or commercial production has occurred.
+- Decision: the Linyang MoA and the 5 October 2026 IDECS unveiling are completed milestones. Neither confirms global IP registration or the start of commercial production, so both delivery outcomes remain open.
 - Gaps or uncertainty: the timing of global IP registration and actual commercialisation remains unconfirmed.
 
 ### Rambungan Sustainable Shrimp Aquaculture Project
