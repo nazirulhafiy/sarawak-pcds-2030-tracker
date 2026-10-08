@@ -499,6 +499,15 @@ const updateDefinitions = [
       "https://dayakdaily.com/sarawak-climate-and-energy-diplomacy-unit-to-lead-all-regional-and-international-climate-energy-engagements/",
   },
   {
+    date: "2025-12-02",
+    projectName: "Sarawak Agrotechnology Park",
+    description: {
+      en: "DID Sarawak reported that land clearing for production plots at SARTECH Tarat and Semenggok had been fully completed, and that the Sarawak Land Development Board had been appointed as the managing agent.",
+      ms: "JPS Sarawak melaporkan bahawa pembersihan tanah untuk lot pengeluaran di SARTECH Tarat dan Semenggok telah siap sepenuhnya, dan Lembaga Kemajuan Tanah Sarawak telah dilantik sebagai ejen pengurusan.",
+    },
+    sourceUrl: "https://did.sarawak.gov.my/web/subpage/news_view/897",
+  },
+  {
     date: "2025-12-01",
     projectName: "Sarawak Infectious Disease Centre",
     description: {
@@ -514,6 +523,16 @@ const updateDefinitions = [
     description: {
       en: "The Sarawak Budget 2026 allocated RM19.5 million to develop the Sarawak Agrotechnology Park sites at Semenggok and Tarat.",
       ms: "Belanjawan Sarawak 2026 memperuntukkan RM19.5 juta untuk membangunkan tapak Taman Agroteknologi Sarawak di Semenggok dan Tarat.",
+    },
+    sourceUrl:
+      "https://dayakdaily.com/sarawak-budget-2026-nearly-rm300-mil-allocated-to-modernise-agriculture-boost-food-security/",
+  },
+  {
+    date: "2025-11-24",
+    projectName: "Lubok Punggor AgriHub and Mid Sadong 1 Irrigation Project",
+    description: {
+      en: "Budget 2026 allocated RM25.1 million for rehabilitation of the Mid Sadong 1 (Lubok Punggor) Scheme. The card's RM30 million initial project value is unchanged.",
+      ms: "Belanjawan 2026 memperuntukkan RM25.1 juta untuk pemulihan Skim Mid Sadong 1 (Lubok Punggor). Nilai projek fasa awal RM30 juta pada kad kekal tidak berubah.",
     },
     sourceUrl:
       "https://dayakdaily.com/sarawak-budget-2026-nearly-rm300-mil-allocated-to-modernise-agriculture-boost-food-security/",

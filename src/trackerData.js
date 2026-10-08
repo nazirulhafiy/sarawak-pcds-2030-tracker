@@ -112,15 +112,17 @@ export const SECTORS = [
         lead: "Sarawak Government / Department of Irrigation and Drainage Sarawak",
         value: "RM30 million",
         summary:
-          "A RM30 million initial project at Lubok Punggor, Gedong, covering irrigation infrastructure for 54.4 hectares of paddy fields. Its AgriHub scope includes irrigation and drainage upgrades, a water reservoir, warehouse and machinery workshop to support modern paddy production.",
+          "A RM30 million initial project at Lubok Punggor, Gedong, covering irrigation infrastructure for 54.4 hectares of paddy fields. Its AgriHub scope includes irrigation and drainage upgrades, a water reservoir, warehouse and machinery workshop to support modern paddy production. Budget 2026 separately allocated RM25.1 million for Mid Sadong 1 (Lubok Punggor) rehabilitation.",
         milestones: [
           { date: "2024-02", text: "RM30 million initial project was approved", done: true },
           { date: "2024-11-29", text: "Mid Sadong 1 Rehabilitation Scheme was launched", done: true },
+          { date: "2025-11-24", text: "RM25.1M Budget 2026 allocation for Mid Sadong 1 announced", done: true },
           { date: "2026-03-08", text: "Land compensation was handed to 119 recipients", done: true },
           { date: "TBD", text: "AgriHub and irrigation works reach completion", done: false },
         ],
         sources: [
           { label: "DID Sarawak - RM30M irrigation project and 54.4-hectare scope (Nov 2024)", url: "https://did.sarawak.gov.my/web/subpage/news_view/821" },
+          { label: "DayakDaily — RM25.1M Mid Sadong 1 Budget 2026 allocation (Nov 2025)", url: "https://dayakdaily.com/sarawak-budget-2026-nearly-rm300-mil-allocated-to-modernise-agriculture-boost-food-security/" },
           { label: "UKAS - AgriHub compensation and construction scope (Mar 2026)", url: "https://ukas.sarawak.gov.my/web/subpage/news_view/35719" },
         ],
       },
@@ -128,20 +130,22 @@ export const SECTORS = [
         name: "Sarawak Agrotechnology Park",
         status: "In Progress",
         statusColor: "#d97706",
-        lead: "Sarawak Government",
+        lead: "Sarawak Government / Sarawak Land Development Board (managing agent)",
         value: "RM19.5 million",
         summary:
-          "Technology-based agriculture sites at Semenggok and Tarat, including a coral-shrimp farm at SARTECH Tarat. Budget 2026 allocates RM19.5 million for further development of both sites to support agricultural innovation and commercialisation.",
+          "Technology-based agriculture sites at Semenggok and Tarat, including a coral-shrimp farm at SARTECH Tarat. Budget 2026 allocates RM19.5 million for further development of both sites to support agricultural innovation and commercialisation. SLDB is the managing agent after land clearing for production plots was completed.",
         milestones: [
           { date: "2022", text: "Coral shrimp farm began operating at SARTECH Tarat", done: true },
           { date: "2022-11-22", text: "RM5M allocated to Semenggok and Tarat", done: true },
           { date: "2025-11-24", text: "RM19.5M development allocation announced", done: true },
+          { date: "2025-12-02", text: "Land clearing for production plots at Semenggok and Tarat completed", done: true },
           { date: "TBD", text: "Semenggok and Tarat site development reaches completion", done: false },
         ],
         sources: [
           { label: "M-FICORD - Operating agriculture at SARTECH Tarat (May 2024)", url: "https://mficord.sarawak.gov.my/web/subpage/news_view/1370" },
           { label: "Sarawak Tribune — Semenggok and Tarat SARTECH allocations (Nov 2022)", url: "https://www.sarawaktribune.com/state-government-vigorously-pursuing-smart-agriculture-initiative/" },
           { label: "DayakDaily — RM19.5M SARTECH allocation in Budget 2026 (Nov 2025)", url: "https://dayakdaily.com/sarawak-budget-2026-nearly-rm300-mil-allocated-to-modernise-agriculture-boost-food-security/" },
+          { label: "DID Sarawak — SARTECH land clearing complete and SLDB managing agent (Dec 2025)", url: "https://did.sarawak.gov.my/web/subpage/news_view/897" },
         ],
       },
       {
