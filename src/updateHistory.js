@@ -3,16 +3,6 @@ import { localizeSectors } from "./localization.js";
 
 const updateDefinitions = [
   {
-    date: "2026-10-01",
-    projectName: "Kuching Low-Carbon Hub",
-    description: {
-      en: "PETROS entered a Joint Development Agreement with Höegh Evi for the Kuching LNG Terminal as part of the Kuching Low-Carbon Hub, targeting first gas by the end of 2029.",
-      ms: "PETROS menandatangani Perjanjian Pembangunan Bersama dengan Höegh Evi untuk Terminal LNG Kuching sebagai sebahagian daripada Hab Rendah Karbon Kuching, dengan sasaran gas pertama menjelang akhir 2029.",
-    },
-    sourceUrl:
-      "https://www.petroleumsarawak.com/publications/2026/1-october-2026-petros-and-hoegh-evi-partner-to-develop-kuching-lng-terminal",
-  },
-  {
     date: "2026-10-05",
     projectName: "Pan Borneo Highway Sarawak Phase 1",
     description: {
@@ -38,6 +28,16 @@ const updateDefinitions = [
       ms: "Jambatan Sejingkat dibuka kepada orang ramai pada 5 Oktober 2026 selepas majlis pra-pembukaan. Penyiapan kontrak pada 22 Oktober dan program CSTR yang selebihnya kekal terbuka. Sembilan jambatan utama yang berbaki disasarkan menjelang akhir 2027.",
     },
     sourceUrl: "https://dayakdaily.com/sejingkat-bridge-opens-to-public-12-of-sarawaks-21-mega-bridges-now-complete/",
+  },
+  {
+    date: "2026-10-01",
+    projectName: "Kuching Low-Carbon Hub",
+    description: {
+      en: "PETROS entered a Joint Development Agreement with Höegh Evi for the Kuching LNG Terminal as part of the Kuching Low-Carbon Hub, targeting first gas by the end of 2029.",
+      ms: "PETROS menandatangani Perjanjian Pembangunan Bersama dengan Höegh Evi untuk Terminal LNG Kuching sebagai sebahagian daripada Hab Rendah Karbon Kuching, dengan sasaran gas pertama menjelang akhir 2029.",
+    },
+    sourceUrl:
+      "https://www.petroleumsarawak.com/publications/2026/1-october-2026-petros-and-hoegh-evi-partner-to-develop-kuching-lng-terminal",
   },
   {
     date: "2026-09-30",
