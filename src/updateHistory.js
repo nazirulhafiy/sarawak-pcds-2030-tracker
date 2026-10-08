@@ -30,6 +30,16 @@ const updateDefinitions = [
     sourceUrl: "https://dayakdaily.com/sejingkat-bridge-opens-to-public-12-of-sarawaks-21-mega-bridges-now-complete/",
   },
   {
+    date: "2026-10-01",
+    projectName: "Kuching Low-Carbon Hub",
+    description: {
+      en: "PETROS entered a Joint Development Agreement with Höegh Evi for the Kuching LNG Terminal as part of the Kuching Low-Carbon Hub, targeting first gas by the end of 2029.",
+      ms: "PETROS menandatangani Perjanjian Pembangunan Bersama dengan Höegh Evi untuk Terminal LNG Kuching sebagai sebahagian daripada Hab Rendah Karbon Kuching, dengan sasaran gas pertama menjelang akhir 2029.",
+    },
+    sourceUrl:
+      "https://www.petroleumsarawak.com/publications/2026/1-october-2026-petros-and-hoegh-evi-partner-to-develop-kuching-lng-terminal",
+  },
+  {
     date: "2026-09-30",
     projectName: "Coastal Road Network and Second Trunk Road (CSTR)",
     description: {
@@ -101,11 +111,11 @@ const updateDefinitions = [
     date: "2026-08-13",
     projectName: "Sarawak Bioindustrial Park",
     description: {
-      en: "Construction of the Sarawak Bioindustrial Park Central Hub officially commenced after the foundation-laying ceremony. The 24-month construction period targets completion in August 2028.",
-      ms: "Pembinaan Hab Pusat Taman Bioindustri Sarawak dimulakan secara rasmi selepas majlis peletakan asas. Tempoh pembinaan 24 bulan menyasarkan penyiapan pada Ogos 2028.",
+      en: "Construction of the Sarawak Bioindustrial Park Central Hub officially commenced after the foundation-laying ceremony, and BioVerde exchanged eight industry collaboration agreements and MoUs. The 24-month construction period targets completion in August 2028. Anchor and research partner selection remains open where partners are still exploring facilities.",
+      ms: "Pembinaan Hab Pusat Taman Bioindustri Sarawak dimulakan secara rasmi selepas majlis peletakan asas, dan BioVerde menukar lapan perjanjian kerjasama serta MoU industri. Tempoh pembinaan 24 bulan menyasarkan penyiapan pada Ogos 2028. Pemilihan rakan peneraju dan penyelidikan kekal terbuka di mana rakan masih meneroka kemudahan.",
     },
     sourceUrl:
-      "https://www.sbc.org.my/component/content/article/1226-premier-officiates-foundation-laying-for-100-acre-sarawak-bioindustrial-park?catid=50&Itemid=201",
+      "https://dayakdaily.com/sarawak-bioindustrial-parks-central-hub-to-start-construction-target-completion-in-24-months/",
   },
   {
     date: "2026-08-10",
