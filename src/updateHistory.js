@@ -111,18 +111,8 @@ const updateDefinitions = [
     date: "2026-08-13",
     projectName: "Sarawak Bioindustrial Park",
     description: {
-      en: "Construction of the Sarawak Bioindustrial Park Central Hub officially commenced after the foundation-laying ceremony. The 24-month construction period targets completion in August 2028.",
-      ms: "Pembinaan Hab Pusat Taman Bioindustri Sarawak dimulakan secara rasmi selepas majlis peletakan asas. Tempoh pembinaan 24 bulan menyasarkan penyiapan pada Ogos 2028.",
-    },
-    sourceUrl:
-      "https://www.sbc.org.my/component/content/article/1226-premier-officiates-foundation-laying-for-100-acre-sarawak-bioindustrial-park?catid=50&Itemid=201",
-  },
-  {
-    date: "2026-08-13",
-    projectName: "Sarawak Bioindustrial Park",
-    description: {
-      en: "At the Central Hub foundation-laying ceremony, BioVerde exchanged eight industry collaboration agreements and MoUs. Anchor and research partner selection remains open where partners are still exploring facilities.",
-      ms: "Pada majlis pecah tanah Hab Pusat, BioVerde menukar lapan perjanjian kerjasama dan MoU industri. Pemilihan rakan peneraju dan penyelidikan kekal terbuka di mana rakan masih meneroka kemudahan.",
+      en: "Construction of the Sarawak Bioindustrial Park Central Hub officially commenced after the foundation-laying ceremony, and BioVerde exchanged eight industry collaboration agreements and MoUs. The 24-month construction period targets completion in August 2028. Anchor and research partner selection remains open where partners are still exploring facilities.",
+      ms: "Pembinaan Hab Pusat Taman Bioindustri Sarawak dimulakan secara rasmi selepas majlis peletakan asas, dan BioVerde menukar lapan perjanjian kerjasama serta MoU industri. Tempoh pembinaan 24 bulan menyasarkan penyiapan pada Ogos 2028. Pemilihan rakan peneraju dan penyelidikan kekal terbuka di mana rakan masih meneroka kemudahan.",
     },
     sourceUrl:
       "https://dayakdaily.com/sarawak-bioindustrial-parks-central-hub-to-start-construction-target-completion-in-24-months/",
