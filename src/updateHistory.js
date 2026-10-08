@@ -30,6 +30,16 @@ const updateDefinitions = [
     sourceUrl: "https://dayakdaily.com/sejingkat-bridge-opens-to-public-12-of-sarawaks-21-mega-bridges-now-complete/",
   },
   {
+    date: "2026-10-01",
+    projectName: "Kuching Low-Carbon Hub",
+    description: {
+      en: "PETROS entered a Joint Development Agreement with Höegh Evi for the Kuching LNG Terminal as part of the Kuching Low-Carbon Hub, targeting first gas by the end of 2029.",
+      ms: "PETROS menandatangani Perjanjian Pembangunan Bersama dengan Höegh Evi untuk Terminal LNG Kuching sebagai sebahagian daripada Hab Rendah Karbon Kuching, dengan sasaran gas pertama menjelang akhir 2029.",
+    },
+    sourceUrl:
+      "https://www.petroleumsarawak.com/publications/2026/1-october-2026-petros-and-hoegh-evi-partner-to-develop-kuching-lng-terminal",
+  },
+  {
     date: "2026-09-30",
     projectName: "Coastal Road Network and Second Trunk Road (CSTR)",
     description: {
@@ -101,11 +111,11 @@ const updateDefinitions = [
     date: "2026-08-13",
     projectName: "Sarawak Bioindustrial Park",
     description: {
-      en: "Construction of the Sarawak Bioindustrial Park Central Hub officially commenced after the foundation-laying ceremony. The 24-month construction period targets completion in August 2028.",
-      ms: "Pembinaan Hab Pusat Taman Bioindustri Sarawak dimulakan secara rasmi selepas majlis peletakan asas. Tempoh pembinaan 24 bulan menyasarkan penyiapan pada Ogos 2028.",
+      en: "Construction of the Sarawak Bioindustrial Park Central Hub officially commenced after the foundation-laying ceremony, and BioVerde exchanged eight industry collaboration agreements and MoUs. The 24-month construction period targets completion in August 2028. Anchor and research partner selection remains open where partners are still exploring facilities.",
+      ms: "Pembinaan Hab Pusat Taman Bioindustri Sarawak dimulakan secara rasmi selepas majlis peletakan asas, dan BioVerde menukar lapan perjanjian kerjasama serta MoU industri. Tempoh pembinaan 24 bulan menyasarkan penyiapan pada Ogos 2028. Pemilihan rakan peneraju dan penyelidikan kekal terbuka di mana rakan masih meneroka kemudahan.",
     },
     sourceUrl:
-      "https://www.sbc.org.my/component/content/article/1226-premier-officiates-foundation-laying-for-100-acre-sarawak-bioindustrial-park?catid=50&Itemid=201",
+      "https://dayakdaily.com/sarawak-bioindustrial-parks-central-hub-to-start-construction-target-completion-in-24-months/",
   },
   {
     date: "2026-08-10",
@@ -499,6 +509,15 @@ const updateDefinitions = [
       "https://dayakdaily.com/sarawak-climate-and-energy-diplomacy-unit-to-lead-all-regional-and-international-climate-energy-engagements/",
   },
   {
+    date: "2025-12-02",
+    projectName: "Sarawak Agrotechnology Park",
+    description: {
+      en: "DID Sarawak reported that land clearing for production plots at SARTECH Tarat and Semenggok had been fully completed, and that the Sarawak Land Development Board had been appointed as the managing agent.",
+      ms: "JPS Sarawak melaporkan bahawa pembersihan tanah untuk lot pengeluaran di SARTECH Tarat dan Semenggok telah siap sepenuhnya, dan Lembaga Kemajuan Tanah Sarawak telah dilantik sebagai ejen pengurusan.",
+    },
+    sourceUrl: "https://did.sarawak.gov.my/web/subpage/news_view/897",
+  },
+  {
     date: "2025-12-01",
     projectName: "Sarawak Infectious Disease Centre",
     description: {
@@ -514,6 +533,16 @@ const updateDefinitions = [
     description: {
       en: "The Sarawak Budget 2026 allocated RM19.5 million to develop the Sarawak Agrotechnology Park sites at Semenggok and Tarat.",
       ms: "Belanjawan Sarawak 2026 memperuntukkan RM19.5 juta untuk membangunkan tapak Taman Agroteknologi Sarawak di Semenggok dan Tarat.",
+    },
+    sourceUrl:
+      "https://dayakdaily.com/sarawak-budget-2026-nearly-rm300-mil-allocated-to-modernise-agriculture-boost-food-security/",
+  },
+  {
+    date: "2025-11-24",
+    projectName: "Lubok Punggor AgriHub and Mid Sadong 1 Irrigation Project",
+    description: {
+      en: "Budget 2026 allocated RM25.1 million for rehabilitation of the Mid Sadong 1 (Lubok Punggor) Scheme. The card's RM30 million initial project value is unchanged.",
+      ms: "Belanjawan 2026 memperuntukkan RM25.1 juta untuk pemulihan Skim Mid Sadong 1 (Lubok Punggor). Nilai projek fasa awal RM30 juta pada kad kekal tidak berubah.",
     },
     sourceUrl:
       "https://dayakdaily.com/sarawak-budget-2026-nearly-rm300-mil-allocated-to-modernise-agriculture-boost-food-security/",

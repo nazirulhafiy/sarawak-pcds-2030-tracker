@@ -112,15 +112,17 @@ export const SECTORS = [
         lead: "Sarawak Government / Department of Irrigation and Drainage Sarawak",
         value: "RM30 million",
         summary:
-          "A RM30 million initial project at Lubok Punggor, Gedong, covering irrigation infrastructure for 54.4 hectares of paddy fields. Its AgriHub scope includes irrigation and drainage upgrades, a water reservoir, warehouse and machinery workshop to support modern paddy production.",
+          "A RM30 million initial project at Lubok Punggor, Gedong, covering irrigation infrastructure for 54.4 hectares of paddy fields. Its AgriHub scope includes irrigation and drainage upgrades, a water reservoir, warehouse and machinery workshop to support modern paddy production. Budget 2026 separately allocated RM25.1 million for Mid Sadong 1 (Lubok Punggor) rehabilitation.",
         milestones: [
           { date: "2024-02", text: "RM30 million initial project was approved", done: true },
           { date: "2024-11-29", text: "Mid Sadong 1 Rehabilitation Scheme was launched", done: true },
+          { date: "2025-11-24", text: "RM25.1M Budget 2026 allocation for Mid Sadong 1 announced", done: true },
           { date: "2026-03-08", text: "Land compensation was handed to 119 recipients", done: true },
           { date: "TBD", text: "AgriHub and irrigation works reach completion", done: false },
         ],
         sources: [
           { label: "DID Sarawak - RM30M irrigation project and 54.4-hectare scope (Nov 2024)", url: "https://did.sarawak.gov.my/web/subpage/news_view/821" },
+          { label: "DayakDaily — RM25.1M Mid Sadong 1 Budget 2026 allocation (Nov 2025)", url: "https://dayakdaily.com/sarawak-budget-2026-nearly-rm300-mil-allocated-to-modernise-agriculture-boost-food-security/" },
           { label: "UKAS - AgriHub compensation and construction scope (Mar 2026)", url: "https://ukas.sarawak.gov.my/web/subpage/news_view/35719" },
         ],
       },
@@ -128,20 +130,22 @@ export const SECTORS = [
         name: "Sarawak Agrotechnology Park",
         status: "In Progress",
         statusColor: "#d97706",
-        lead: "Sarawak Government",
+        lead: "Sarawak Government / Sarawak Land Development Board (managing agent)",
         value: "RM19.5 million",
         summary:
-          "Technology-based agriculture sites at Semenggok and Tarat, including a coral-shrimp farm at SARTECH Tarat. Budget 2026 allocates RM19.5 million for further development of both sites to support agricultural innovation and commercialisation.",
+          "Technology-based agriculture sites at Semenggok and Tarat, including a coral-shrimp farm at SARTECH Tarat. Budget 2026 allocates RM19.5 million for further development of both sites to support agricultural innovation and commercialisation. SLDB is the managing agent after land clearing for production plots was completed.",
         milestones: [
           { date: "2022", text: "Coral shrimp farm began operating at SARTECH Tarat", done: true },
           { date: "2022-11-22", text: "RM5M allocated to Semenggok and Tarat", done: true },
           { date: "2025-11-24", text: "RM19.5M development allocation announced", done: true },
+          { date: "2025-12-02", text: "Land clearing for production plots at Semenggok and Tarat completed", done: true },
           { date: "TBD", text: "Semenggok and Tarat site development reaches completion", done: false },
         ],
         sources: [
           { label: "M-FICORD - Operating agriculture at SARTECH Tarat (May 2024)", url: "https://mficord.sarawak.gov.my/web/subpage/news_view/1370" },
           { label: "Sarawak Tribune — Semenggok and Tarat SARTECH allocations (Nov 2022)", url: "https://www.sarawaktribune.com/state-government-vigorously-pursuing-smart-agriculture-initiative/" },
           { label: "DayakDaily — RM19.5M SARTECH allocation in Budget 2026 (Nov 2025)", url: "https://dayakdaily.com/sarawak-budget-2026-nearly-rm300-mil-allocated-to-modernise-agriculture-boost-food-security/" },
+          { label: "DID Sarawak — SARTECH land clearing complete and SLDB managing agent (Dec 2025)", url: "https://did.sarawak.gov.my/web/subpage/news_view/897" },
         ],
       },
       {
@@ -660,6 +664,7 @@ export const SECTORS = [
           { date: "2025-11-24", text: "RM10M combined Budget 2026 allocation announced", done: true },
           { date: "2026-06-15", text: "Combined delivery-package tender awarded", done: true },
           { date: "2026-08-13", text: "Central Hub construction officially commenced", done: true },
+          { date: "2026-08-13", text: "Eight industry collaboration agreements were exchanged", done: true },
           { date: "TBD", text: "Anchor and research partner selection", done: false },
           { date: "2028-08", text: "Central Hub construction reaches completion", done: false },
           { date: "TBD", text: "Combined facilities begin operations", done: false },
@@ -671,6 +676,7 @@ export const SECTORS = [
           { label: "SBC — Organisational grouping of both facilities (Feb 2026)", url: "https://sbc.org.my/index.php/about-sbc/organisation-chart" },
           { label: "JKR Sarawak — Combined delivery-package tender award (Jun 2026)", url: "https://jkr.sarawak.gov.my/web/subpage/webpage_view/403" },
           { label: "SBC — Central Hub construction commenced (Aug 2026)", url: "https://www.sbc.org.my/component/content/article/1226-premier-officiates-foundation-laying-for-100-acre-sarawak-bioindustrial-park?catid=50&Itemid=201" },
+          { label: "DayakDaily — Eight industry collaboration agreements exchanged (Aug 2026)", url: "https://dayakdaily.com/sarawak-bioindustrial-parks-central-hub-to-start-construction-target-completion-in-24-months/" },
           { label: "BioVerde — Sarawak Bioindustrial Park under development", url: "https://www.bioverde.com.my/sbp" },
           { label: "BioVerde — About BioVerde Technologies", url: "https://www.bioverde.com.my/about" },
         ],
@@ -892,15 +898,17 @@ export const SECTORS = [
         lead: "PETROS",
         value: "Not disclosed",
         summary:
-          "The proposed Kuching Low-Carbon Hub at Tanjung Embang is a strategic zone for low-carbon industry, trade and logistics, led by PETROS with China Jiangsu International and Sumitomo as anchor partners. It sits alongside the separately tracked New Kuching International Airport and Tanjung Embang Deep-Sea Port; a hub-wide capital cost has not been disclosed.",
+          "The proposed Kuching Low-Carbon Hub at Tanjung Embang is a strategic zone for low-carbon industry, trade and logistics, led by PETROS with China Jiangsu International and Sumitomo as anchor partners. PETROS and Höegh Evi have a Joint Development Agreement for the Kuching LNG Terminal within the hub. It sits alongside the separately tracked New Kuching International Airport and Tanjung Embang Deep-Sea Port; a hub-wide capital cost has not been disclosed.",
         milestones: [
           { date: "2024-11", text: "Launched at the Sarawak Gas Roadmap Summit", done: true },
           { date: "2025-05-20", text: "PETROS and CJI signed a Strategic Cooperation Agreement", done: true },
           { date: "2025-10-20", text: "Named a proposed strategic zone", done: true },
           { date: "2025-12-11", text: "PETROS and CJI signed a Framework Agreement", done: true },
           { date: "2025-12-17", text: "PETROS and Sumitomo advanced hub co-development", done: true },
+          { date: "2026-10-01", text: "PETROS and Höegh Evi signed Kuching LNG Terminal JDA", done: true },
           { date: "TBD", text: "Detailed masterplan reaches finalisation", done: false },
           { date: "2027", text: "Physical and infrastructure development begins through PPP", done: false },
+          { date: "2029", text: "Kuching LNG Terminal reaches first gas", done: false },
         ],
         sources: [
           { label: "The Edge Malaysia — KLCH launched at Gas Roadmap Summit; PETROS-CJI pact (May 2025)", url: "https://theedgemalaysia.com/node/755927" },
@@ -909,6 +917,7 @@ export const SECTORS = [
           { label: "DayakDaily — PETROS-CJI Framework Agreement (Dec 2025)", url: "https://dayakdaily.com/petros-cji-ink-framework-agreement-to-advance-kuching-low-carbon-hub-development/" },
           { label: "PETROS — Sumitomo co-development of KLCH (Dec 2025)", url: "https://www.petroleumsarawak.com/publications/2025/17-dec-2025-petros-and-sumitomo-corporation-advance-co-development-of-kuching-low-carbon-hub" },
           { label: "DayakDaily — Detailed masterplan being finalised; 2027 PPP works (May 2026)", url: "https://dayakdaily.com/tanjung-embangs-kuching-low-carbon-hub-positioned-as-future-low-carbon-industrial-trade-and-logistic-hub/" },
+          { label: "PETROS — Höegh Evi Kuching LNG Terminal JDA (Oct 2026)", url: "https://www.petroleumsarawak.com/publications/2026/1-october-2026-petros-and-hoegh-evi-partner-to-develop-kuching-lng-terminal" },
         ],
       },
       {
