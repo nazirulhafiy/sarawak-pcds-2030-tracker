@@ -664,6 +664,7 @@ export const SECTORS = [
           { date: "2025-11-24", text: "RM10M combined Budget 2026 allocation announced", done: true },
           { date: "2026-06-15", text: "Combined delivery-package tender awarded", done: true },
           { date: "2026-08-13", text: "Central Hub construction officially commenced", done: true },
+          { date: "2026-08-13", text: "Eight industry collaboration agreements were exchanged", done: true },
           { date: "TBD", text: "Anchor and research partner selection", done: false },
           { date: "2028-08", text: "Central Hub construction reaches completion", done: false },
           { date: "TBD", text: "Combined facilities begin operations", done: false },
@@ -675,6 +676,7 @@ export const SECTORS = [
           { label: "SBC — Organisational grouping of both facilities (Feb 2026)", url: "https://sbc.org.my/index.php/about-sbc/organisation-chart" },
           { label: "JKR Sarawak — Combined delivery-package tender award (Jun 2026)", url: "https://jkr.sarawak.gov.my/web/subpage/webpage_view/403" },
           { label: "SBC — Central Hub construction commenced (Aug 2026)", url: "https://www.sbc.org.my/component/content/article/1226-premier-officiates-foundation-laying-for-100-acre-sarawak-bioindustrial-park?catid=50&Itemid=201" },
+          { label: "DayakDaily — Eight industry collaboration agreements exchanged (Aug 2026)", url: "https://dayakdaily.com/sarawak-bioindustrial-parks-central-hub-to-start-construction-target-completion-in-24-months/" },
           { label: "BioVerde — Sarawak Bioindustrial Park under development", url: "https://www.bioverde.com.my/sbp" },
           { label: "BioVerde — About BioVerde Technologies", url: "https://www.bioverde.com.my/about" },
         ],
@@ -896,15 +898,17 @@ export const SECTORS = [
         lead: "PETROS",
         value: "Not disclosed",
         summary:
-          "The proposed Kuching Low-Carbon Hub at Tanjung Embang is a strategic zone for low-carbon industry, trade and logistics, led by PETROS with China Jiangsu International and Sumitomo as anchor partners. It sits alongside the separately tracked New Kuching International Airport and Tanjung Embang Deep-Sea Port; a hub-wide capital cost has not been disclosed.",
+          "The proposed Kuching Low-Carbon Hub at Tanjung Embang is a strategic zone for low-carbon industry, trade and logistics, led by PETROS with China Jiangsu International and Sumitomo as anchor partners. PETROS and Höegh Evi have a Joint Development Agreement for the Kuching LNG Terminal within the hub. It sits alongside the separately tracked New Kuching International Airport and Tanjung Embang Deep-Sea Port; a hub-wide capital cost has not been disclosed.",
         milestones: [
           { date: "2024-11", text: "Launched at the Sarawak Gas Roadmap Summit", done: true },
           { date: "2025-05-20", text: "PETROS and CJI signed a Strategic Cooperation Agreement", done: true },
           { date: "2025-10-20", text: "Named a proposed strategic zone", done: true },
           { date: "2025-12-11", text: "PETROS and CJI signed a Framework Agreement", done: true },
           { date: "2025-12-17", text: "PETROS and Sumitomo advanced hub co-development", done: true },
+          { date: "2026-10-01", text: "PETROS and Höegh Evi signed Kuching LNG Terminal JDA", done: true },
           { date: "TBD", text: "Detailed masterplan reaches finalisation", done: false },
           { date: "2027", text: "Physical and infrastructure development begins through PPP", done: false },
+          { date: "2029", text: "Kuching LNG Terminal reaches first gas", done: false },
         ],
         sources: [
           { label: "The Edge Malaysia — KLCH launched at Gas Roadmap Summit; PETROS-CJI pact (May 2025)", url: "https://theedgemalaysia.com/node/755927" },
@@ -913,6 +917,7 @@ export const SECTORS = [
           { label: "DayakDaily — PETROS-CJI Framework Agreement (Dec 2025)", url: "https://dayakdaily.com/petros-cji-ink-framework-agreement-to-advance-kuching-low-carbon-hub-development/" },
           { label: "PETROS — Sumitomo co-development of KLCH (Dec 2025)", url: "https://www.petroleumsarawak.com/publications/2025/17-dec-2025-petros-and-sumitomo-corporation-advance-co-development-of-kuching-low-carbon-hub" },
           { label: "DayakDaily — Detailed masterplan being finalised; 2027 PPP works (May 2026)", url: "https://dayakdaily.com/tanjung-embangs-kuching-low-carbon-hub-positioned-as-future-low-carbon-industrial-trade-and-logistic-hub/" },
+          { label: "PETROS — Höegh Evi Kuching LNG Terminal JDA (Oct 2026)", url: "https://www.petroleumsarawak.com/publications/2026/1-october-2026-petros-and-hoegh-evi-partner-to-develop-kuching-lng-terminal" },
         ],
       },
       {

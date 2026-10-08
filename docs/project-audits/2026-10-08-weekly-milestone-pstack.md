@@ -21,6 +21,8 @@ All 46 Planning or In Progress cards from inventory. No allowlist. An earlier sa
 | --- | --- | --- | --- |
 | Sarawak Agrotechnology Park | Update recommended | High | Opened DID Sarawak 2 Dec 2025 page: land clearing for production plots at SARTECH Tarat and Semenggok fully completed; SLDB appointed managing agent. |
 | Lubok Punggor AgriHub and Mid Sadong 1 Irrigation Project | Update recommended | High | Opened Budget 2026 speech PDF and DayakDaily budget report: RM25.1 million for Mid Sadong 1 (Lubok Punggor) rehabilitation. Card value stays RM30 million. |
+| Kuching Low-Carbon Hub | Update recommended | High | Opened PETROS 1 Oct 2026 page: Höegh Evi JDA for Kuching LNG Terminal as part of KLCH; first gas targeted end-2029. |
+| Sarawak Bioindustrial Park | Update recommended | High | Opened DayakDaily 13 Aug 2026: eight industry collaboration agreements exchanged at foundation ceremony; partner selection stays open. |
 | KUTS Sungai Kuap final girder | No card change | High | Methodology already declined adding the 28 Aug 2026 girder as a card field. |
 | Baleh face-slab pour | No card change | Medium | PowerChina pages confirm Aug 2026 panel pour; card keeps Sarawak Energy key-milestone lifecycle. |
 | Remaining Planning and In Progress cards | No card change | Medium | Milestone-first and 2026 status searches did not produce a newer project-specific page that changes a displayed field. |
@@ -33,7 +35,9 @@ All 46 Planning or In Progress cards from inventory. No allowlist. An earlier sa
 | Sarawak Agrotechnology Park | same | Posted 02 Dec 2025 | SLDB has been appointed as the managing agent. | `lead` adds SLDB managing agent | High |
 | Lubok Punggor AgriHub and Mid Sadong 1 Irrigation Project | https://dayakdaily.com/sarawak-budget-2026-nearly-rm300-mil-allocated-to-modernise-agriculture-boost-food-security/ | 24 Nov 2025 (Budget speech day; article body) | RM25.1 million for rehabilitation of the Mid Sadong 1 (Lubok Punggor) Scheme. | New done milestone `2025-11-24`; summary note; value unchanged | High |
 | Lubok Punggor AgriHub and Mid Sadong 1 Irrigation Project | Premier Supply (2026) Bill speech PDF | Monday 24 Nov 2025 | Same RM25.1 million Mid Sadong 1 (Lubok Punggor) line. | Corroborates the DayakDaily allocation milestone | High |
+| Kuching Low-Carbon Hub | https://www.petroleumsarawak.com/publications/2026/1-october-2026-petros-and-hoegh-evi-partner-to-develop-kuching-lng-terminal | 1 October 2026 | PETROS–Höegh Evi JDA for the Kuching LNG Terminal as part of KLCH; first gas targeted by end-2029. | New done JDA milestone; open first-gas 2029; summary | High |
+| Sarawak Bioindustrial Park | https://dayakdaily.com/sarawak-bioindustrial-parks-central-hub-to-start-construction-target-completion-in-24-months/ | 13 August 2026 | Eight strategic collaboration agreements / MoUs exchanged at the foundation ceremony. | New done milestone; partner selection stays open | High |
 
 ## Update-history decision
 
-Both changes are material public developments, so `src/updateHistory.js` has entries dated to the source event days. `LAST_UPDATED` remains `2026-10-08`.
+All four card changes are material public developments, so `src/updateHistory.js` has entries dated to the source event days. `LAST_UPDATED` remains `2026-10-08`.
