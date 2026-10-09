@@ -46,10 +46,10 @@ jobs:
       - name: List changed files
         id: changed
         run: |
-          git fetch origin "${{ github.event.pull_request.base.ref }}" --depth=1
+          git fetch --no-tags --prune --no-recurse-submodules \
+            origin "${{ github.event.pull_request.base.sha }}"
           git diff --name-only \
-            "${{ github.event.pull_request.base.sha }}" \
-            "${{ github.event.pull_request.head.sha }}" > changed-files.txt
+            "${{ github.event.pull_request.base.sha }}...${{ github.event.pull_request.head.sha }}" > changed-files.txt
           cat changed-files.txt
 
       - name: Require docs/ for watched UI changes
