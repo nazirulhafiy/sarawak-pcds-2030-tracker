@@ -13,6 +13,9 @@ import {
 import UpdatesPage from "./UpdatesPage.jsx";
 import { LanguageToggle, ThemeToggle } from "./SiteControls.jsx";
 import { applyDocumentTheme } from "./theme.js";
+import { getAppEnvironment } from "./environment.js";
+
+const BRAND_FAVICON_SRC = `/favicon-${getAppEnvironment().name}-browser.png?v=20260804d`;
 
 export default function Site({ route, concept = false }) {
   const [activeRoute, setActiveRoute] = useState(route);
@@ -159,7 +162,7 @@ export default function Site({ route, concept = false }) {
           if (event.animationName === "concept-logo-enter") setNavIntroDone(true);
         }}>
         <a className="concept-brand" href={import.meta.env.VITE_DESIGN_CONCEPT === "v2" ? "/" : "/?concept=v2"} onClick={(event) => navigate(event, activeRoute.language === "ms" ? "tracker-ms" : "tracker-en")} aria-label="PCDS 2030 Project Tracker home">
-          <img src="/favicon-production-browser.png?v=20260804d" alt="" width="32" height="32" />
+          <img src={BRAND_FAVICON_SRC} alt="" width="32" height="32" />
           <span className="concept-brand-name" aria-hidden="true">{Array.from("PCDS 2030 Project Tracker").map((letter, index) => <span key={index} className="concept-brand-letter" style={{ "--letter-index": index }}>{letter === " " ? "\u00a0" : letter}</span>)}</span>
         </a>
         <div id="concept-navigation-links" className={`concept-links${menuOpen ? " concept-links--open" : ""}`}>
