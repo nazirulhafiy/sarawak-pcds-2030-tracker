@@ -383,3 +383,5 @@ social-preview branding.
 - Keep the update history editorial and source-led. Do not style it as a product changelog or
   promotional news feed.
 - Test any card or typography change on mobile before release.
+- Capture review screenshots with [`tools/shots.mjs`](screenshots.md): 3× phone viewport, crop to
+  the affected UI, light and dark themes.
