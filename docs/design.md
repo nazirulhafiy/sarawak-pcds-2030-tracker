@@ -346,6 +346,12 @@ the same design. Every browser candidate uses a browser-specific filename so Saf
 previous icon under the same asset path. The 180px Apple touch icon retains the complete `S` and
 chart artwork on the existing dark rounded tile, where the extra detail has enough room to read.
 
+Preview and production builds copy the matching environment assets onto the default root paths
+browsers and hosting dashboards probe (`/favicon.ico`, `/favicon-browser.png`,
+`/apple-touch-icon.png`, and the 16/32/48px PNG aliases). Environment-specific filenames remain in
+the build output for explicit HTML links; only the default aliases change per deployment. The V2
+navigation logo and its SSR preload use the same environment-coloured browser PNG.
+
 Link previews use dedicated 1200 by 630 images rather than a favicon fallback. The card keeps the
 simplified `S`, the restrained editorial palette, the tracker title, and a short projects,
 milestones, and public-sources descriptor. Production is teal, Preview is purple and explicitly
