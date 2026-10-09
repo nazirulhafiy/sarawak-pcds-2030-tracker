@@ -46,6 +46,7 @@ This repository is the PCDS 2030 Project Tracker, a Vite and React static site.
 - Update docs when changing product behavior, design direction, deployment workflow, or data structure.
 - Put product intent and audience changes in `docs/product.md`.
 - Put visual and interaction guidance in `docs/design.md`.
+- Any change to how the site looks or behaves (layout, colours, fonts, icons, motion, interactions, content structure) must update `docs/design.md`, or the relevant doc in `docs/`, in the same PR. A PR that changes design without updating the docs is not ready.
 - Put known issues and recommended next tasks in `docs/backlog.md`.
 - Keep README focused on setup, workflow, and links to deeper docs.
 - Use [the project research template](docs/project-research-template.md) for project reviews and [the data review checklist](docs/data-review-checklist.md) before releasing evidence-based data changes.
