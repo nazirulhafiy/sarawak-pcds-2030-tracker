@@ -5,8 +5,8 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build && node scripts/prerender.mjs production && node scripts/write-cname.mjs production",
-    "build:preview": "vite build --mode preview && node scripts/prerender.mjs preview && node scripts/write-cname.mjs preview",
+    "build": "vite build && node scripts/sync-environment-root-icons.mjs production && node scripts/prerender.mjs production && node scripts/write-cname.mjs production",
+    "build:preview": "vite build --mode preview && node scripts/sync-environment-root-icons.mjs preview && node scripts/prerender.mjs preview && node scripts/write-cname.mjs preview",
     "check:content": "node scripts/validate-tracker-data.mjs",
     "check:links": "node scripts/check-source-links.mjs",
     "check:release": "node scripts/check-release-readiness.mjs",
