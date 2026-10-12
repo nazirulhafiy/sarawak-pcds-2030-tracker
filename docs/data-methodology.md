@@ -401,9 +401,10 @@ This map records the earlier source-audit set. The 10 provisional additions reva
 - Current next milestone: scheduled sectors submit verified emissions reports annually
 - Sources currently used:
 - [NREB - GHG-MS Phase 1 commenced operations (Feb 2026)](https://www.nreb.gov.my/web/subpage/announcement_view/196) - Publisher: Natural Resources and Environment Board Sarawak; type: official regulator announcement; date: 10 Feb 2026; directly supports the Phase 1 commencement milestone and mandatory system use.
+- [NREB - Flaring and Venting Rules 2025 effective 1 Nov 2025 (Jan 2026)](https://www.nreb.gov.my/web/subpage/news_view/895) - Publisher: Natural Resources and Environment Board Sarawak; type: official regulator news; date: 24 Jan 2026 (body 23 Jan 2026); states the Flaring and Venting Rules 2025 came into force on 1 November 2025 and require prior consent for flaring and venting.
 - [Borneo Post - Climate governance implementation update (Mar 2026)](https://www.theborneopost.com/2026/03/12/sarawak-intensifies-climate-governance-on-path-to-net-zero-2050/) - Publisher: Borneo Post; type: news report quoting NREB; date: 12 Mar 2026; supports annual reporting requirements, accredited external-auditor rules, and the integrated Greenhouse Gas Management System.
 - [FULCRUM - Sarawak's low-carbon future](https://fulcrum.sg/envisioning-a-low-carbon-future-sarawaks-journey-towards-sustainable-development/) - Publisher: FULCRUM; type: policy analysis/public source; date: not encoded in active source label; appears to support the ordinance, carbon-market context, and low-carbon policy framing.
-- Gaps or uncertainty: no official ordinance or gazette source is encoded in active dashboard data; future annual compliance remains an open recurring milestone.
+- Gaps or uncertainty: no official ordinance or gazette source is encoded in active dashboard data; future annual compliance remains an open recurring milestone. Dated decision record: [weekly milestone audit](project-audits/2026-10-12-weekly-milestone.md).
 
 ### Sarawak Cancer Centre
 
