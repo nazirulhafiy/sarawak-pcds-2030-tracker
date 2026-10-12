@@ -176,6 +176,16 @@ const updateDefinitions = [
       "https://www.theborneopost.com/2026/08/10/premier-urges-regency-specialist-hospital-kuching-to-work-with-sidc-on-tropical-disease-research/",
   },
   {
+    date: "2026-08-10",
+    projectName: "Baleh Hydroelectric Project",
+    description: {
+      en: "POWERCHINA reported that first-bay concrete for the Baleh dam face slab was poured on 10 August 2026, marking the start of main face-slab construction. Reservoir impoundment from September 2027 and later generation milestones remain open.",
+      ms: "POWERCHINA melaporkan konkrit petak pertama bagi panel muka empangan Baleh dituang pada 10 Ogos 2026, menandakan bermulanya pembinaan panel muka utama. Penakungan takungan dari September 2027 dan pencapaian penjanaan kemudian kekal terbuka.",
+    },
+    sourceUrl:
+      "https://www.powerchina.cn/zxzx/jcdt/art/2026/art_506324589fd44ef9a916f1763a0d409b.html",
+  },
+  {
     date: "2026-08-03",
     projectName: "Lubok Punggor AgriHub and Mid Sadong 1 Irrigation Project",
     description: {
@@ -653,6 +663,15 @@ const updateDefinitions = [
     sourceUrl: "https://www.nadma.gov.my/bm/media-2/berita/5439-dewan-rakyat-projek-naik-taraf-jalan-serian-tebedu-dijangka-cecah-rm1-bilion",
   },
   {
+    date: "2025-11-01",
+    projectName: "Environment (Reduction of Greenhouse Gases Emission) Ordinance 2023",
+    description: {
+      en: "NREB confirmed that the Flaring and Venting Rules 2025 came into force on 1 November 2025 and require prior consent for flaring and venting. Annual verified emissions reporting remains open.",
+      ms: "NREB mengesahkan Peraturan Flaring dan Venting 2025 berkuat kuasa pada 1 November 2025 dan memerlukan kebenaran terlebih dahulu untuk flaring dan venting. Pelaporan pelepasan tahunan yang disahkan kekal terbuka.",
+    },
+    sourceUrl: "https://www.nreb.gov.my/web/subpage/news_view/895",
+  },
+  {
     date: "2025-09-22",
     projectName: "Bako National Park ASEAN Heritage Park",
     description: {
@@ -669,6 +688,16 @@ const updateDefinitions = [
       ms: "Pusat Biodiversiti ASEAN mengesahkan Taman Negara Bukit Lambir sebagai Taman Warisan ASEAN ke-66, mengiktiraf kepelbagaian tumbuhan dan kepentingan pemuliharaannya yang luar biasa.",
     },
     sourceUrl: "https://www.aseanbiodiversity.org/news-events-jobs/six-natural-wonders-in-malaysia-and-viet-nam-declared-as-asean-heritage-parks/",
+  },
+  {
+    date: "2025-09-14",
+    projectName: "Sarawak Reef Ball Project",
+    description: {
+      en: "At the Phase II final deployment ceremony in Kabong, Sarawak Forestry Corporation said all 5,000 Phase II reef balls had been deployed along the Sarawak coastline. Phase II programme completion in 2027 remains open for monitoring and socio-economic studies. The later July 2026 Kuala Nyalau 80-unit drop is recorded separately as continuing activity.",
+      ms: "Pada majlis penempatan akhir Fasa II di Kabong, Sarawak Forestry Corporation berkata semua 5,000 bebola terumbu Fasa II telah ditempatkan sepanjang pantai Sarawak. Penyiapan program Fasa II pada 2027 kekal terbuka untuk pemantauan dan kajian sosioekonomi. Penempatan 80 unit di Kuala Nyalau pada Julai 2026 direkodkan berasingan sebagai aktiviti berterusan.",
+    },
+    sourceUrl:
+      "https://www.theborneopost.com/2025/09/15/sarawak-deploys-5000-reef-balls-to-anchor-long-term-marine-conservation-blue-economy/",
   },
   {
     date: "2025-09-10",

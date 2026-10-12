@@ -10,7 +10,7 @@ Search syntheses were discovery only. Accepted claims were checked against opene
 
 ## Stage A outcome
 
-46 of 46 Planning or In Progress cards reviewed. Eight cards received page-backed milestone or source changes. The rest are no card change, monitor, or evidence already on the card.
+46 of 46 Planning or In Progress cards reviewed. Eleven cards received page-backed milestone or source changes. The rest are no card change, monitor, or evidence already on the card.
 
 ### Accepted field changes
 
@@ -24,6 +24,9 @@ Search syntheses were discovery only. Accepted claims were checked against opene
 | KUTS — Kuching Urban Transportation System | Final girder installed for 400 m Sungai Kuap ART bridge 28 Aug 2026 | Borneo Post; MOTS |
 | New Kuching International Airport | Physical construction open date set to 2027 | UKAS 41089 |
 | Tanjung Embang Deep-Sea Port | Open milestone for physical works from 2027 | UKAS 41089 |
+| Environment (Reduction of Greenhouse Gases Emission) Ordinance 2023 | Flaring and Venting Rules 2025 came into force 1 Nov 2025 | NREB news 895 |
+| Sarawak Reef Ball Project | Phase II 5,000-unit deployment completed 14 Sep 2025; keep 2027 programme completion open | Borneo Post 15 Sep 2025 |
+| Baleh Hydroelectric Project | Dam concrete face-slab construction began 10 Aug 2026 | POWERCHINA; POWERCHINA International |
 
 ### Evidence enhancements
 
@@ -48,3 +51,5 @@ Independent reopen of key URLs confirmed the accepted claims before edit. `LAST_
 - The pipeline end-2026 gas-supply date rests on Borneo Post's account of the Premier's speech. Sarawak Daily's same-day write-up omits that date. Earlier May 2026 Tribune reporting still said operations from 2027.
 - AgriHub Gedong is treated as the Lubok Punggor / Gedong AgriHub on this combined card. The COSAFS launch also named Layar and Marudi hubs, which are not this card.
 - NKIA and Tanjung Embang 2027 physical-works dates come from one UKAS KLCH winding-up report that names both components.
+- Reef Ball Phase II unit deployment is complete on the Borneo Post final-ceremony account; the open 2027 row stays for programme/monitoring close-out. The July 2026 Kuala Nyalau 80-unit drop remains a separate continuing activity row, not Phase II completion.
+- Baleh face-slab start comes from POWERCHINA contractor pages; Sarawak Energy lifecycle dates for impoundment and generation are unchanged.
