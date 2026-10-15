@@ -385,3 +385,9 @@ social-preview branding.
 - Test any card or typography change on mobile before release.
 - Capture review screenshots with [`tools/shots.mjs`](screenshots.md): 3× phone viewport, crop to
   the affected UI, light and dark themes.
+
+## Analytics
+
+- Google Analytics 4: measurement ID `G-QGCDDHPV9X`, in `<head>` of `index.html` (carried into every prerendered route).
+- Cloudflare Web Analytics beacon is unchanged (injected by the `cloudflareWebAnalytics` Vite plugin in production).
+- No Content-Security-Policy is set; if one is added, allow `www.googletagmanager.com`, `*.google-analytics.com` and `static.cloudflareinsights.com`.
