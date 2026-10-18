@@ -45,6 +45,6 @@ shape, so production promotion is not blocked by the aggregate diff
 ## Related automation
 
 - **Validate changes** (`.github/workflows/validate.yml`) still runs
-  lint, content checks, and builds on PRs.
+  lint, content checks, `npm test`, and builds on PRs.
 - Agents should follow `AGENTS.md` documentation expectations; this
   workflow automates one slice of that policy for UI/build PRs.

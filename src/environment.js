@@ -31,3 +31,12 @@ export function getAppEnvironment() {
 export function shouldShowEnvironmentBadge(environment) {
   return environment.name !== "production";
 }
+
+/**
+ * Hostnames where Google Analytics may load. Preview, localhost, and
+ * other hosts must never load the GA tag — see `src/analytics.js`.
+ */
+export function isProductionAnalyticsHost(hostname) {
+  const host = String(hostname || "").toLowerCase();
+  return host === "pcds2030.com" || host === "www.pcds2030.com";
+}
