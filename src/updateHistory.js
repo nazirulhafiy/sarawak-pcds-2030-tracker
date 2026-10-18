@@ -3,6 +3,35 @@ import { localizeSectors } from "./localization.js";
 
 const updateDefinitions = [
   {
+    date: "2026-10-10",
+    projectName: "Bintulu-Samalaju Gas Pipeline",
+    description: {
+      en: "Premier Abang Johari said PETROS is constructing the about 65 km Kidurong to Samalaju gas pipeline, and that Samalaju would receive gas supply once the project is completed at the end of 2026. That schedule supersedes the earlier progressive commercial operations target from 2027.",
+      ms: "Premier Abang Johari berkata PETROS sedang membina saluran paip gas kira-kira 65 km dari Kidurong ke Samalaju, dan Samalaju akan menerima bekalan gas apabila projek itu siap menjelang akhir 2026. Jadual itu menggantikan sasaran operasi komersial secara berperingkat dari 2027 yang lebih awal.",
+    },
+    sourceUrl:
+      "https://www.theborneopost.com/2026/10/10/premier-sarawak-records-rm11-2-billion-in-approved-investments-in-first-half-of-year/",
+  },
+  {
+    date: "2026-10-08",
+    projectName: "Coastal Road Network and Second Trunk Road (CSTR)",
+    description: {
+      en: "JKR Sarawak completed the final structural connection of the Batang Paloh Bridge on 8 October 2026 during a stitching ceremony. The Coastal Road Package 03 bridge is targeted to open to traffic on 30 October 2026. Sejingkat contractual completion and the remaining major bridges stay open.",
+      ms: "JKR Sarawak menyelesaikan penyambungan struktur akhir Jambatan Batang Paloh pada 8 Oktober 2026 semasa majlis penyambungan. Jambatan Pakej 03 Jalan Pesisir disasarkan dibuka kepada lalu lintas pada 30 Oktober 2026. Penyiapan kontrak Sejingkat dan jambatan utama yang berbaki kekal terbuka.",
+    },
+    sourceUrl: "https://dayakdaily.com/1-7km-batang-paloh-bridge-to-open-to-traffic-on-oct-30-strengthening-coastal-link/",
+  },
+  {
+    date: "2026-10-06",
+    projectName: "RM1 Billion Paddy Infrastructure Programme",
+    description: {
+      en: "Premier Abang Johari said about 7,000 hectares of State land have been gazetted exclusively for paddy production within the wider 14,000-hectare paddy programme. Farmer clustering and land leasing remain open.",
+      ms: "Premier Abang Johari berkata kira-kira 7,000 hektar tanah Kerajaan Negeri telah digazet khas untuk pengeluaran padi dalam program padi seluas 14,000 hektar. Pengelompokan petani dan pajakan tanah kekal terbuka.",
+    },
+    sourceUrl:
+      "https://dayakdaily.com/premier-sarawak-gazettes-7000-hectares-of-state-land-exclusively-for-paddy-production/",
+  },
+  {
     date: "2026-10-05",
     projectName: "Pan Borneo Highway Sarawak Phase 1",
     description: {
@@ -79,6 +108,25 @@ const updateDefinitions = [
       "https://dayakdaily.com/sarawak-infectious-disease-centre-construction-expected-to-complete-by-q3-2027/",
   },
   {
+    date: "2026-09-07",
+    projectName: "Sarawak Agrotechnology Park",
+    description: {
+      en: "M-FICORD, SLDB and the Department of Agriculture opened commercial participant applications for SARTECH Semenggok, closing on 30 September 2026. Site-development completion stays open.",
+      ms: "M-FICORD, SLDB dan Jabatan Pertanian membuka permohonan peserta komersial untuk SARTECH Semenggok, ditutup pada 30 September 2026. Penyiapan pembangunan tapak kekal terbuka.",
+    },
+    sourceUrl: "https://mficord.sarawak.gov.my/web/subpage/announcement_view/157",
+  },
+  {
+    date: "2026-08-28",
+    projectName: "KUTS — Kuching Urban Transportation System",
+    description: {
+      en: "Sarawak Metro said the final girder was installed for the 400-metre dedicated ART bridge across Sungai Kuap. ART pilot service in the fourth quarter of 2026 remains open.",
+      ms: "Sarawak Metro berkata rasuk akhir telah dipasang bagi jambatan ART khas sepanjang 400 meter merentasi Sungai Kuap. Perkhidmatan rintis ART pada suku keempat 2026 kekal terbuka.",
+    },
+    sourceUrl:
+      "https://www.theborneopost.com/2026/08/28/final-girder-installed-for-400m-art-bridge-over-sungai-kuap/",
+  },
+  {
     date: "2026-08-26",
     projectName: "Community Social Support Centre (CSSC) Network",
     description: {
@@ -126,6 +174,26 @@ const updateDefinitions = [
     },
     sourceUrl:
       "https://www.theborneopost.com/2026/08/10/premier-urges-regency-specialist-hospital-kuching-to-work-with-sidc-on-tropical-disease-research/",
+  },
+  {
+    date: "2026-08-10",
+    projectName: "Baleh Hydroelectric Project",
+    description: {
+      en: "POWERCHINA reported that first-bay concrete for the Baleh dam face slab was poured on 10 August 2026, marking the start of main face-slab construction. Reservoir impoundment from September 2027 and later generation milestones remain open.",
+      ms: "POWERCHINA melaporkan konkrit petak pertama bagi panel muka empangan Baleh dituang pada 10 Ogos 2026, menandakan bermulanya pembinaan panel muka utama. Penakungan takungan dari September 2027 dan pencapaian penjanaan kemudian kekal terbuka.",
+    },
+    sourceUrl:
+      "https://www.powerchina.cn/zxzx/jcdt/art/2026/art_506324589fd44ef9a916f1763a0d409b.html",
+  },
+  {
+    date: "2026-08-03",
+    projectName: "Lubok Punggor AgriHub and Mid Sadong 1 Irrigation Project",
+    description: {
+      en: "Premier Abang Johari formally launched AgriHub Gedong at COSAFS2026, alongside AgriHub Layar and AgriHub Marudi. AgriHub and irrigation works completion at Lubok Punggor stays open.",
+      ms: "Premier Abang Johari melancarkan secara rasmi AgriHub Gedong di COSAFS2026, bersama AgriHub Layar dan AgriHub Marudi. Penyiapan kerja AgriHub dan pengairan di Lubok Punggor kekal terbuka.",
+    },
+    sourceUrl:
+      "https://dayakdaily.com/sarawak-aims-to-become-regional-hub-for-sustainable-agriculture-agri-food-innovation/",
   },
   {
     date: "2026-08-01",
@@ -311,6 +379,24 @@ const updateDefinitions = [
     },
     sourceUrl:
       "https://dayakdaily.com/tanjung-embangs-kuching-low-carbon-hub-positioned-as-future-low-carbon-industrial-trade-and-logistic-hub/",
+  },
+  {
+    date: "2026-05-20",
+    projectName: "New Kuching International Airport",
+    description: {
+      en: "UKAS reported the Premier saying KLCH physical and infrastructure works, including the New Kuching International Airport, are expected to begin in 2027 through PPP. Federal Airport Development Request approval stays open.",
+      ms: "UKAS melaporkan Premier berkata kerja fizikal dan infrastruktur KLCH, termasuk Lapangan Terbang Antarabangsa Kuching Baharu, dijangka bermula pada 2027 melalui PPP. Kelulusan Permohonan Pembangunan Lapangan Terbang persekutuan kekal terbuka.",
+    },
+    sourceUrl: "https://ukas.sarawak.gov.my/web/subpage/news_view/41089",
+  },
+  {
+    date: "2026-05-20",
+    projectName: "Tanjung Embang Deep-Sea Port",
+    description: {
+      en: "UKAS reported the Premier saying KLCH physical and infrastructure works, including the deep-sea port, are expected to begin in 2027 through PPP. Port and gas-terminal operations in 2032 stay open.",
+      ms: "UKAS melaporkan Premier berkata kerja fizikal dan infrastruktur KLCH, termasuk pelabuhan laut dalam, dijangka bermula pada 2027 melalui PPP. Operasi pelabuhan dan terminal gas pada 2032 kekal terbuka.",
+    },
+    sourceUrl: "https://ukas.sarawak.gov.my/web/subpage/news_view/41089",
   },
   {
     date: "2026-05-19",
@@ -577,6 +663,15 @@ const updateDefinitions = [
     sourceUrl: "https://www.nadma.gov.my/bm/media-2/berita/5439-dewan-rakyat-projek-naik-taraf-jalan-serian-tebedu-dijangka-cecah-rm1-bilion",
   },
   {
+    date: "2025-11-01",
+    projectName: "Environment (Reduction of Greenhouse Gases Emission) Ordinance 2023",
+    description: {
+      en: "NREB confirmed that the Flaring and Venting Rules 2025 came into force on 1 November 2025 and require prior consent for flaring and venting. Annual verified emissions reporting remains open.",
+      ms: "NREB mengesahkan Peraturan Flaring dan Venting 2025 berkuat kuasa pada 1 November 2025 dan memerlukan kebenaran terlebih dahulu untuk flaring dan venting. Pelaporan pelepasan tahunan yang disahkan kekal terbuka.",
+    },
+    sourceUrl: "https://www.nreb.gov.my/web/subpage/news_view/895",
+  },
+  {
     date: "2025-09-22",
     projectName: "Bako National Park ASEAN Heritage Park",
     description: {
@@ -593,6 +688,16 @@ const updateDefinitions = [
       ms: "Pusat Biodiversiti ASEAN mengesahkan Taman Negara Bukit Lambir sebagai Taman Warisan ASEAN ke-66, mengiktiraf kepelbagaian tumbuhan dan kepentingan pemuliharaannya yang luar biasa.",
     },
     sourceUrl: "https://www.aseanbiodiversity.org/news-events-jobs/six-natural-wonders-in-malaysia-and-viet-nam-declared-as-asean-heritage-parks/",
+  },
+  {
+    date: "2025-09-14",
+    projectName: "Sarawak Reef Ball Project",
+    description: {
+      en: "At the Phase II final deployment ceremony in Kabong, Sarawak Forestry Corporation said all 5,000 Phase II reef balls had been deployed along the Sarawak coastline. Phase II programme completion in 2027 remains open for monitoring and socio-economic studies. The later July 2026 Kuala Nyalau 80-unit drop is recorded separately as continuing activity.",
+      ms: "Pada majlis penempatan akhir Fasa II di Kabong, Sarawak Forestry Corporation berkata semua 5,000 bebola terumbu Fasa II telah ditempatkan sepanjang pantai Sarawak. Penyiapan program Fasa II pada 2027 kekal terbuka untuk pemantauan dan kajian sosioekonomi. Penempatan 80 unit di Kuala Nyalau pada Julai 2026 direkodkan berasingan sebagai aktiviti berterusan.",
+    },
+    sourceUrl:
+      "https://www.theborneopost.com/2025/09/15/sarawak-deploys-5000-reef-balls-to-anchor-long-term-marine-conservation-blue-economy/",
   },
   {
     date: "2025-09-10",

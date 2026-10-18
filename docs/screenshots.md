@@ -8,6 +8,11 @@ Tracker-specific defaults live beside the script (default URL, theme keys, defau
 
 This repo’s config sets `defaultUrl` to preview, `pcds-theme` / `data-theme`, intro skip in `sessionStorage`, default crop `.project-card`, and phone + light/dark.
 
+When capturing **production** (`https://pcds2030.com`) rather than Preview, append
+`?internal=1` so agent/QA hits are marked as internal in GA4 and skip the Cloudflare
+beacon (Preview does not load GA or the beacon).
+Example: `--url 'https://pcds2030.com/?internal=1'`.
+
 ## Quick start
 
 ```bash
