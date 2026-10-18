@@ -23,6 +23,7 @@ jobs:
       - run: npm ci
       - run: npm run check:content
       - run: npm run lint
+      - run: npm test
       - name: Build Preview
         if: github.event_name == 'push' || github.base_ref == 'preview'
         run: npm run build:preview

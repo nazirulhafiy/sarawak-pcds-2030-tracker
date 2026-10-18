@@ -1,8 +1,11 @@
 import { StrictMode } from 'react'
 import { createRoot, hydrateRoot } from 'react-dom/client'
 import './index.css'
+import { initAnalytics } from './analytics.js'
 import Site from './Site.jsx'
 import { resolveRoute } from './routes.js'
+
+initAnalytics()
 
 const navigationEntry = window.performance.getEntriesByType('navigation')[0]
 

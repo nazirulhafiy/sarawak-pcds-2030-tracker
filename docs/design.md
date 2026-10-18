@@ -385,3 +385,18 @@ social-preview branding.
 - Test any card or typography change on mobile before release.
 - Capture review screenshots with [`tools/shots.mjs`](screenshots.md): 3× phone viewport, crop to
   the affected UI, light and dark themes.
+
+## Analytics
+
+- Google Analytics 4 measurement ID: `G-QGCDDHPV9X`. Loaded from `src/analytics.js` (via
+  `src/main.jsx`) only when the page hostname is `pcds2030.com` or `www.pcds2030.com`. Never on
+  Preview, localhost, Vercel preview URLs, or other hosts.
+- Internal / agent traffic: visiting with `?internal=1` sets a first-party cookie
+  `pcds_internal=1` (1 year, `Path=/`, `SameSite=Lax`, `Secure` on HTTPS). `?internal=0` clears
+  it. While the cookie is set, gtag config includes `traffic_type: 'internal'` so GA4 can filter
+  those hits. Cookie sync may run on any host; the GA tag itself still loads only on production
+  hostnames.
+- Cloudflare Web Analytics beacon is unchanged (injected by the `cloudflareWebAnalytics` Vite
+  plugin in production builds only).
+- No Content-Security-Policy is set; if one is added, allow `www.googletagmanager.com`,
+  `*.google-analytics.com`, and `static.cloudflareinsights.com`.

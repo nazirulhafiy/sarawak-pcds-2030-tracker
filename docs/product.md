@@ -117,6 +117,12 @@ It does not use cookies, fingerprint visitors, or collect personally identifiabl
 Development and Preview builds do not load the beacon, and analytics reports remain available only
 through the Cloudflare dashboard.
 
+Production (`pcds2030.com` / `www.pcds2030.com`) also loads Google Analytics 4
+(`G-QGCDDHPV9X`) for traffic reporting. The GA tag never loads on Preview, localhost, or other
+hosts. Agent and QA visits to the live site should use `?internal=1` once so a long-lived
+first-party cookie marks those sessions as `traffic_type: 'internal'` in GA4 (clear with
+`?internal=0`). Details live in `docs/design.md` under Analytics.
+
 ## Current Data Model
 
 Project data lives in `src/trackerData.js`.

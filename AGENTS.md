@@ -35,12 +35,18 @@ This repository is the PCDS 2030 Project Tracker, a Vite and React static site.
 - Install dependencies with `npm install` or `npm ci`.
 - Run local development with `npm run dev`.
 - Run lint checks with `npm run lint`.
+- Run unit tests with `npm test` (Node's built-in test runner; currently `src/analytics.test.js`).
 - Build production with `npm run build`.
 - Build preview with `npm run build:preview`.
 - Serve a built site with `npm run preview`.
 - Run `npm run check:content` for data or editorial-content changes.
 - Run `npm run check:links` for a report-only review of public source availability.
 - For every screenshot, use `tools/shots.mjs` (3× phone, cropped to the change, light and dark).
+- When opening the **live production** site (`https://pcds2030.com`) for agent runs, weekly jobs,
+  QA, or screenshot checks, use `?internal=1` (for example `https://pcds2030.com/?internal=1`) so
+  GA4 marks the session as internal traffic. Preview (`preview.pcds2030.com`) does not load GA;
+  the cookie convention still applies if you later open production in the same browser profile.
+  Clear with `?internal=0` when needed. See `docs/design.md` (Analytics).
 
 ## Documentation Expectations
 
@@ -59,6 +65,7 @@ This repository is the PCDS 2030 Project Tracker, a Vite and React static site.
 - Most UI is currently implemented in `src/App.jsx`.
 - Project data is currently hand-maintained in `src/trackerData.js`.
 - Environment detection lives in `src/environment.js`.
+- Production-only GA4 + internal-traffic cookie logic lives in `src/analytics.js`.
 - Favicon and custom-domain build helpers live in `scripts/`.
 
 ## Safety Notes
