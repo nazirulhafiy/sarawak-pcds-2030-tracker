@@ -393,10 +393,13 @@ social-preview branding.
   Preview, localhost, Vercel preview URLs, or other hosts.
 - Internal / agent traffic: visiting with `?internal=1` sets a first-party cookie
   `pcds_internal=1` (1 year, `Path=/`, `SameSite=Lax`, `Secure` on HTTPS). `?internal=0` clears
-  it. While the cookie is set, gtag config includes `traffic_type: 'internal'` so GA4 can filter
-  those hits. Cookie sync may run on any host; the GA tag itself still loads only on production
-  hostnames.
-- Cloudflare Web Analytics beacon is unchanged (injected by the `cloudflareWebAnalytics` Vite
-  plugin in production builds only).
+  it. While the cookie is set: gtag config includes `traffic_type: 'internal'` so GA4 can filter
+  those hits, and the Cloudflare Web Analytics beacon is **not** loaded. Cookie sync may run on
+  any host; GA and the Cloudflare beacon still load only on production hostnames.
+- Cloudflare Web Analytics beacon is loaded at runtime from `src/analytics.js` (same production
+  hostnames as GA; token `5e17ff78afe6423a8a9834b7870b55fd`, `spa: true`). It is not injected by
+  Cloudflare/Vercel and is no longer injected by a Vite HTML plugin — runtime load is required so
+  the internal cookie can skip it. Public production visits still get the beacon; internal-cookie
+  visits do not.
 - No Content-Security-Policy is set; if one is added, allow `www.googletagmanager.com`,
   `*.google-analytics.com`, and `static.cloudflareinsights.com`.

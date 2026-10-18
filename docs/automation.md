@@ -95,7 +95,8 @@ When the Cloud Agent opens the **live production** tracker
 (`https://pcds2030.com`) for QA, visual checks, or comparison against
 Preview, use `?internal=1` (for example
 `https://pcds2030.com/?internal=1`) so GA4 records the visit as
-internal traffic. Preview does not load the GA tag. See `AGENTS.md` and
+internal traffic and the Cloudflare Web Analytics beacon is skipped.
+Preview does not load GA or the beacon. See `AGENTS.md` and
 `docs/design.md` (Analytics).
 
 ### Run Inputs

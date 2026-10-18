@@ -22,7 +22,8 @@ found in an article.
 
 When opening the live production site (`https://pcds2030.com`) for QA or
 visual checks, use `?internal=1` so GA4 marks the session as internal
-traffic (see `AGENTS.md`).
+traffic and the Cloudflare Web Analytics beacon is skipped (see
+`AGENTS.md`).
 
 ## Stage A: Discovery
 

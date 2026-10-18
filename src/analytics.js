@@ -5,10 +5,15 @@ export { isProductionAnalyticsHost };
 /** GA4 measurement ID for production property. */
 export const GA_MEASUREMENT_ID = "G-QGCDDHPV9X";
 
+/** Cloudflare Web Analytics token (same value formerly in vite.config.js). */
+export const CLOUDFLARE_WEB_ANALYTICS_TOKEN = "5e17ff78afe6423a8a9834b7870b55fd";
+
 /** First-party cookie marking agent/QA/internal traffic. */
 export const INTERNAL_TRAFFIC_COOKIE = "pcds_internal";
 
 const INTERNAL_COOKIE_MAX_AGE_SECONDS = 60 * 60 * 24 * 365; // 1 year
+
+const CLOUDFLARE_BEACON_SRC = "https://static.cloudflareinsights.com/beacon.min.js";
 
 export function readCookie(cookieName, cookieHeader = "") {
   const parts = String(cookieHeader).split(";");
@@ -79,17 +84,40 @@ function injectGtagScript(doc, measurementId) {
   doc.head.appendChild(script);
 }
 
+export function injectCloudflareBeacon(
+  doc,
+  token = CLOUDFLARE_WEB_ANALYTICS_TOKEN,
+) {
+  if (doc.querySelector(`script[src="${CLOUDFLARE_BEACON_SRC}"]`)) return false;
+  const script = doc.createElement("script");
+  script.defer = true;
+  script.src = CLOUDFLARE_BEACON_SRC;
+  script.setAttribute(
+    "data-cf-beacon",
+    JSON.stringify({ token, spa: true }),
+  );
+  const parent = doc.body || doc.head;
+  parent.appendChild(script);
+  return true;
+}
+
 /**
- * Sync internal cookie from the URL, then load GA4 only on production hosts.
- * Safe to call on Preview/localhost — cookie may still sync; the tag does not load.
+ * Sync internal cookie from the URL, then on production hosts:
+ * - load GA4 (with `traffic_type: 'internal'` when the cookie is set)
+ * - load Cloudflare Web Analytics only for non-internal visits
+ *
+ * Safe to call on Preview/localhost — cookie may still sync; tags do not load.
  */
 export function initAnalytics({
   location: loc = typeof window !== "undefined" ? window.location : null,
   document: doc = typeof document !== "undefined" ? document : null,
   window: win = typeof window !== "undefined" ? window : null,
   measurementId = GA_MEASUREMENT_ID,
+  cloudflareToken = CLOUDFLARE_WEB_ANALYTICS_TOKEN,
 } = {}) {
-  if (!loc || !doc) return { loaded: false, reason: "no-dom" };
+  if (!loc || !doc) {
+    return { loaded: false, gaLoaded: false, cloudflareLoaded: false, reason: "no-dom" };
+  }
 
   const secure = loc.protocol === "https:";
   const cookieToSet = cookieFromInternalQuery(loc.search, { secure });
@@ -98,10 +126,17 @@ export function initAnalytics({
   }
 
   if (!isProductionAnalyticsHost(loc.hostname)) {
-    return { loaded: false, reason: "non-production-host" };
+    return {
+      loaded: false,
+      gaLoaded: false,
+      cloudflareLoaded: false,
+      reason: "non-production-host",
+    };
   }
 
-  if (!win) return { loaded: false, reason: "no-window" };
+  if (!win) {
+    return { loaded: false, gaLoaded: false, cloudflareLoaded: false, reason: "no-window" };
+  }
 
   const isInternal = hasInternalTrafficCookie(doc.cookie);
   const gtag = ensureGtag(win);
@@ -109,5 +144,15 @@ export function initAnalytics({
   gtag("js", new Date());
   gtag("config", measurementId, buildGtagConfigFields(isInternal));
 
-  return { loaded: true, internal: isInternal };
+  let cloudflareLoaded = false;
+  if (!isInternal) {
+    cloudflareLoaded = injectCloudflareBeacon(doc, cloudflareToken);
+  }
+
+  return {
+    loaded: true,
+    gaLoaded: true,
+    cloudflareLoaded,
+    internal: isInternal,
+  };
 }

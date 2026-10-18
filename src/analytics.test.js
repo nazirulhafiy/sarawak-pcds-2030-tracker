@@ -1,6 +1,7 @@
 import assert from "node:assert/strict";
 import { describe, it } from "node:test";
 import {
+  CLOUDFLARE_WEB_ANALYTICS_TOKEN,
   GA_MEASUREMENT_ID,
   INTERNAL_TRAFFIC_COOKIE,
   buildGtagConfigFields,
@@ -73,11 +74,30 @@ describe("initAnalytics", () => {
           scripts.push(node);
         },
       },
-      querySelector() {
-        return null;
+      body: {
+        appendChild(node) {
+          scripts.push(node);
+        },
+      },
+      querySelector(selector) {
+        const match = /script\[src="([^"]+)"\]/.exec(selector);
+        if (!match) return null;
+        return scripts.find((s) => s.src === match[1]) || null;
       },
       createElement(tag) {
-        return { tagName: tag, async: false, src: "" };
+        const attrs = {};
+        return {
+          tagName: tag,
+          async: false,
+          defer: false,
+          src: "",
+          setAttribute(name, value) {
+            attrs[name] = value;
+          },
+          getAttribute(name) {
+            return attrs[name];
+          },
+        };
       },
     };
     Object.defineProperty(doc, "cookie", {
@@ -105,20 +125,24 @@ describe("initAnalytics", () => {
     };
   }
 
-  it("does not load GA on preview hosts", () => {
+  it("does not load GA or Cloudflare on preview hosts", () => {
     const env = fakeDom({ hostname: "preview.pcds2030.com", search: "?internal=1" });
     const result = initAnalytics(env);
     assert.equal(result.loaded, false);
+    assert.equal(result.gaLoaded, false);
+    assert.equal(result.cloudflareLoaded, false);
     assert.equal(result.reason, "non-production-host");
     assert.equal(env.scripts.length, 0);
     assert.equal(env.document.cookie, `${INTERNAL_TRAFFIC_COOKIE}=1`);
   });
 
-  it("loads GA on production and sends traffic_type when cookie set", () => {
+  it("loads GA with traffic_type and skips Cloudflare when internal cookie set", () => {
     const env = fakeDom({ hostname: "pcds2030.com", search: "?internal=1" });
     const result = initAnalytics(env);
     assert.equal(result.loaded, true);
     assert.equal(result.internal, true);
+    assert.equal(result.gaLoaded, true);
+    assert.equal(result.cloudflareLoaded, false);
     assert.equal(env.scripts.length, 1);
     assert.equal(
       env.scripts[0].src,
@@ -129,20 +153,33 @@ describe("initAnalytics", () => {
     );
     assert.ok(configCall);
     assert.deepEqual(configCall[2], { traffic_type: "internal" });
+    assert.equal(
+      env.scripts.some((s) => s.src.includes("cloudflareinsights.com")),
+      false,
+    );
   });
 
-  it("loads GA on production without traffic_type for public traffic", () => {
+  it("loads GA and Cloudflare beacon for public production traffic", () => {
     const env = fakeDom({ hostname: "www.pcds2030.com", search: "" });
     const result = initAnalytics(env);
     assert.equal(result.loaded, true);
     assert.equal(result.internal, false);
+    assert.equal(result.gaLoaded, true);
+    assert.equal(result.cloudflareLoaded, true);
     const configCall = env.dataLayer.find(
       (entry) => entry[0] === "config" && entry[1] === GA_MEASUREMENT_ID,
     );
     assert.deepEqual(configCall[2], {});
+    const beacon = env.scripts.find((s) => s.src.includes("cloudflareinsights.com"));
+    assert.ok(beacon);
+    assert.equal(beacon.defer, true);
+    assert.equal(
+      beacon.getAttribute("data-cf-beacon"),
+      JSON.stringify({ token: CLOUDFLARE_WEB_ANALYTICS_TOKEN, spa: true }),
+    );
   });
 
-  it("clears the internal cookie with ?internal=0", () => {
+  it("clears the internal cookie with ?internal=0 and loads Cloudflare again", () => {
     const env = fakeDom({
       hostname: "pcds2030.com",
       search: "?internal=0",
@@ -151,6 +188,7 @@ describe("initAnalytics", () => {
     const result = initAnalytics(env);
     assert.equal(result.loaded, true);
     assert.equal(result.internal, false);
+    assert.equal(result.cloudflareLoaded, true);
     assert.equal(env.document.cookie, "");
   });
 });

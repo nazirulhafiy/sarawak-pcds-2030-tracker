@@ -114,14 +114,15 @@ Production also loads Cloudflare Web Analytics for privacy-first aggregate traff
 including visits, page views, referrers, countries, devices, and Core Web Vitals. The beacon uses
 the app's History API support so navigation between tracker and update-history routes is measured.
 It does not use cookies, fingerprint visitors, or collect personally identifiable information.
-Development and Preview builds do not load the beacon, and analytics reports remain available only
-through the Cloudflare dashboard.
+Development and Preview hosts do not load the beacon. Agent/QA visits that set the
+`?internal=1` cookie also skip the beacon so test traffic is not counted. Analytics reports remain
+available only through the Cloudflare dashboard.
 
 Production (`pcds2030.com` / `www.pcds2030.com`) also loads Google Analytics 4
 (`G-QGCDDHPV9X`) for traffic reporting. The GA tag never loads on Preview, localhost, or other
 hosts. Agent and QA visits to the live site should use `?internal=1` once so a long-lived
-first-party cookie marks those sessions as `traffic_type: 'internal'` in GA4 (clear with
-`?internal=0`). Details live in `docs/design.md` under Analytics.
+first-party cookie marks those sessions as `traffic_type: 'internal'` in GA4 and skips the
+Cloudflare beacon (clear with `?internal=0`). Details live in `docs/design.md` under Analytics.
 
 ## Current Data Model
 

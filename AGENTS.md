@@ -44,9 +44,10 @@ This repository is the PCDS 2030 Project Tracker, a Vite and React static site.
 - For every screenshot, use `tools/shots.mjs` (3× phone, cropped to the change, light and dark).
 - When opening the **live production** site (`https://pcds2030.com`) for agent runs, weekly jobs,
   QA, or screenshot checks, use `?internal=1` (for example `https://pcds2030.com/?internal=1`) so
-  GA4 marks the session as internal traffic. Preview (`preview.pcds2030.com`) does not load GA;
-  the cookie convention still applies if you later open production in the same browser profile.
-  Clear with `?internal=0` when needed. See `docs/design.md` (Analytics).
+  GA4 marks the session as internal traffic and the Cloudflare Web Analytics beacon is skipped.
+  Preview (`preview.pcds2030.com`) does not load GA or the beacon; the cookie convention still
+  applies if you later open production in the same browser profile. Clear with `?internal=0`
+  when needed. See `docs/design.md` (Analytics).
 
 ## Documentation Expectations
 
