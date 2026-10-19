@@ -3,6 +3,24 @@ import { localizeSectors } from "./localization.js";
 
 const updateDefinitions = [
   {
+    date: "2026-10-15",
+    projectName: "Baram Agrovoltaic Project",
+    description: {
+      en: "ADUN Telang Usan urged faster approval of the Temala Line-In-Line-Out (LILO) grid-connection substation so Baram agrovoltaic solar generation can connect to the state grid. The LILO approval remains an open milestone.",
+      ms: "ADUN Telang Usan menggesa kelulusan pencawang sambungan grid Line-In-Line-Out (LILO) Temala dipercepat supaya penjanaan solar agrovoltaik Baram dapat disambungkan ke grid negeri. Kelulusan LILO kekal sebagai pencapaian terbuka.",
+    },
+    sourceUrl: "https://ukas.sarawak.gov.my/web/subpage/news_view/50875",
+  },
+  {
+    date: "2026-10-13",
+    projectName: "Miri Combined Cycle Gas Turbine (CCGT) Power Plant",
+    description: {
+      en: "UKAS reported that the 500MW Miri CCGT project reached 63 percent completion as of the third quarter of 2026. Commercial operations remain targeted for the end of 2027. The displayed value stays RM2 billion; UKAS also stated RM2.5 billion, which is held for manual review.",
+      ms: "UKAS melaporkan projek CCGT Miri 500MW mencapai 63 peratus siap setakat suku ketiga 2026. Operasi komersial kekal disasarkan menjelang akhir 2027. Nilai paparan kekal RM2 bilion; UKAS turut menyatakan RM2.5 bilion, yang ditahan untuk semakan manual.",
+    },
+    sourceUrl: "https://ukas.sarawak.gov.my/web/subpage/news_view/50615",
+  },
+  {
     date: "2026-10-10",
     projectName: "Bintulu-Samalaju Gas Pipeline",
     description: {
@@ -439,6 +457,16 @@ const updateDefinitions = [
   },
   {
     date: "2026-05-12",
+    projectName: "RM1 Billion Paddy Infrastructure Programme",
+    description: {
+      en: "The Sarawak Legislative Assembly passed the Sarawak Padi and Rice Board Bill, 2026, creating the statutory basis for a state padi and rice board. Farmer clustering, land leasing, and the 2030 output target remain open.",
+      ms: "Dewan Undangan Negeri meluluskan Rang Undang-Undang Lembaga Padi dan Beras Sarawak 2026, mewujudkan asas berkanun bagi lembaga padi dan beras negeri. Pengelompokan petani, pajakan tanah, dan sasaran pengeluaran 2030 kekal terbuka.",
+    },
+    sourceUrl:
+      "https://www.theborneopost.com/2026/05/12/dun-passes-bill-to-establish-sarawak-padi-and-rice-board/",
+  },
+  {
+    date: "2026-05-12",
     projectName: "Bintulu-Samalaju Gas Pipeline",
     description: {
       en: "Bintulu Port Authority issued a notice for pipeline pre-commissioning activities. Progressive commercial operations are expected from 2027.",
@@ -524,7 +552,7 @@ const updateDefinitions = [
       ms: "Skop cadangan Projek Agrovoltaik Baram bernilai RM6 bilion diumumkan bagi Temala berhampiran Long Lama, menggabungkan tenaga boleh baharu, pertanian komersial, logistik dan komponen perbandaran.",
     },
     sourceUrl:
-      "https://ukas.sarawak.gov.my/web/subpage/news_view/37208",
+      "https://ukas.sarawak.gov.my/web/subpage/news_view/37205",
   },
   {
     date: "2026-03-27",

@@ -1,5 +1,5 @@
 // ─── DATA ───────────────────────────────────────────────────────────────────
-export const LAST_UPDATED = "2026-10-12";
+export const LAST_UPDATED = "2026-10-19";
 
 const PCDS_SUMMARY = {
   name: "PCDS 2030 — Overarching Framework",
@@ -95,6 +95,7 @@ export const SECTORS = [
         summary: "A statewide programme for paddy irrigation, drainage and farm roads, backed by a RM1 billion allocation. It is intended to strengthen rice production and support Sarawak's food security and rice self-sufficiency.",
         milestones: [
           { date: "2024-06", text: "RM1B allocation announced for paddy cultivation", done: true },
+          { date: "2026-05-12", text: "Sarawak Padi and Rice Board Bill was passed", done: true },
           { date: "2026-09-28", text: "7,000 hectares of State land gazetted exclusively for paddy", done: true },
           { date: "2026", text: "Farmer clustering and paddy land leasing", done: false },
           { date: "2030", text: "Annual rice output reaches 500,000 tonnes", done: false },
@@ -105,6 +106,7 @@ export const SECTORS = [
           { label: "DayakDaily — Minister warns against misuse (Feb 2026)", url: "https://dayakdaily.com/rm1-bln-in-infra-at-stake-minister-warns-against-misuse-of-paddy-facilities-for-oil-palm/" },
           { label: "DayakDaily — 500K tonnes rice target (Aug 2025)", url: "https://dayakdaily.com/sarawak-ups-rice-output-target-to-500000-tonnes-by-2030-in-premiers-bold-food-security-push/" },
           { label: "DayakDaily — Overtake Kedah as rice bowl (Aug 2025)", url: "https://dayakdaily.com/sarawak-to-overtake-kedah-as-nations-rice-bowl-by-2030-eyes-global-export-future/" },
+          { label: "Borneo Post — DUN passes Sarawak Padi and Rice Board Bill (May 2026)", url: "https://www.theborneopost.com/2026/05/12/dun-passes-bill-to-establish-sarawak-padi-and-rice-board/" },
           { label: "DayakDaily — About 7,000 ha identified and gazetted for paddy (Sep 2026)", url: "https://dayakdaily.com/sarawak-to-start-planting-paddy-on-8000ha-from-next-year/" },
           { label: "DayakDaily — Premier: 7,000 ha State land gazetted exclusively for paddy (Oct 2026)", url: "https://dayakdaily.com/premier-sarawak-gazettes-7000-hectares-of-state-land-exclusively-for-paddy-production/" },
         ],
@@ -369,12 +371,13 @@ export const SECTORS = [
           "A three-stage ecotourism and biodiversity-research development in Semenggoh Nature Reserve, covering the Wildlife Centre entrance, visitor facilities, botanical gardens and research infrastructure. It has a RM30 million allocation to strengthen conservation, visitor access and research.",
         milestones: [
           { date: "2020-08-19", text: "Foundation ceremony and RM30M allocation announced", done: true },
-          { date: "TBD", text: "Phase 1 Wildlife Centre Zone reaches completion", done: false },
+          { date: "2026-05", text: "Phase 1 Wildlife Centre Zone reaches completion", done: false },
           { date: "2030", text: "Phase 2 Entrance Zone reaches completion", done: false },
           { date: "2030", text: "Phase 3 Botanical Zone reaches completion", done: false },
         ],
         sources: [
           { label: "Borneo Post — Semenggoh RM30M upgrade and foundation laying (Aug 2020)", url: "https://www.theborneopost.com/2020/08/19/state-govt-pledges-rm30-mln-to-upgrade-semenggoh-wildlife-centre-provide-high-speed-internet/" },
+          { label: "Suara Sarawak — SFC: Semenggoh Phase 1 targeted for May 2026 (Oct 2025)", url: "https://suarasarawak.my/sfc-terima-pengiktirafan-mytqa/" },
         ],
       },
       {
@@ -872,7 +875,7 @@ export const SECTORS = [
         milestones: [
           { date: "2024-08-02", text: "Stakeholder briefing on preliminary works and design was held", done: true },
           { date: "2025-11-05", text: "Preliminary estimate and wider reported scope were disclosed", done: true },
-          { date: "2025-11-13", text: "Federal Works confirmed RM13 million 12MP preliminary works", done: true },
+          { date: "2024-11-13", text: "Federal Works confirmed RM13 million 12MP preliminary works", done: true },
           { date: "2026-06-11", text: "JKR closed C&S consultancy retender including RSA and TIA", done: true },
           { date: "2026-Q4", text: "Preliminary work concludes by end-2026 and actual cost is finalised", done: false },
           { date: "TBD", text: "Four-lane road and bridge upgrading begins", done: false },
@@ -880,7 +883,7 @@ export const SECTORS = [
         sources: [
           { label: "JKR Sarawak - Preliminary design and official 42 km scope (Aug 2024)", url: "https://jkr.sarawak.gov.my/web/subpage/news_view/614" },
           { label: "NADMA / TVS - Preliminary RM500M-RM1B estimate and reported 48 km scope (Nov 2025)", url: "https://www.nadma.gov.my/bm/media-2/berita/5439-dewan-rakyat-projek-naik-taraf-jalan-serian-tebedu-dijangka-cecah-rm1-bilion" },
-          { label: "DayakDaily — Federal Works confirms RM13 million FR21 preliminary works (Nov 2025)", url: "https://dayakdaily.com/works-ministry-calls-on-sarawak-epu-to-submit-applications-for-rural-road-projects/" },
+          { label: "DayakDaily — Federal Works confirms RM13 million FR21 preliminary works (Nov 2024)", url: "https://dayakdaily.com/works-ministry-calls-on-sarawak-epu-to-submit-applications-for-rural-road-projects/" },
           { label: "JKR Sarawak — FR21 C&S consultancy retender T/CTK/004/05/2026", url: "https://jkr.sarawak.gov.my/web/attachment/show/?docid=dytyeG5qUE43OGJMU0poZUNXdTRudz09OjoHlqZszbIwzNRqkuObHR9F" },
         ],
       },
@@ -1025,12 +1028,14 @@ export const SECTORS = [
           { date: "2023-09", text: "Earthworks began", done: true },
           { date: "2026-03", text: "Project reached 45 percent completion", done: true },
           { date: "2026-07", text: "M701F gas turbine was installed", done: true },
+          { date: "2026-Q3", text: "Project reached 63 percent completion", done: true },
           { date: "2027", text: "Power plant reaches completion", done: false },
         ],
         sources: [
           { label: "Miri City Council - Earthworks and PETROS delivery role (Oct 2023)", url: "https://miricouncil.gov.my/web/subpage/news_view/733" },
           { label: "Sarawak Tribune - RM2B value and 45 percent progress (Apr 2026)", url: "https://www.sarawaktribune.com/miri-combined-cycle-gas-turbine-project-reaches-45-completion/" },
           { label: "Mitsubishi Power Asia Pacific - M701F gas turbine installed (Jul 2026)", url: "https://www.linkedin.com/posts/mitsubishi-power-asia-pacific_miri-gas-turbine-on-base-ceremony-activity-7478688984571998209-_gf6" },
+          { label: "UKAS — Miri CCGT 63 percent complete as of Q3 2026 (Oct 2026)", url: "https://ukas.sarawak.gov.my/web/subpage/news_view/50615" },
         ],
       },
       {
@@ -1256,12 +1261,14 @@ export const SECTORS = [
         milestones: [
           { date: "2022-07-20", text: "Initial Commercial Plant collaboration arrangement was signed", done: true },
           { date: "2023-01-20", text: "Microalgae oil technology development agreement was signed", done: true },
+          { date: "2024-03-01", text: "Temporary two-acre Bintulu cultivation site was developed", done: true },
           { date: "2024-09-16", text: "Bintulu studies and 10,000-acre scale-up plan were publicly confirmed", done: true },
           { date: "2030", text: "Cultivation scale-up reaches the planned 10,000-acre scope", done: false },
         ],
         sources: [
           { label: "PETRONAS - Initial Commercial Plant collaboration and party roles (Jul 2022)", url: "https://www.petronas.com/bm/node/40" },
           { label: "PETRONAS - Joint microalgae oil technology development for SAF (Jan 2023)", url: "https://www.petronas.com/media/media-releases/petronas-sedc-energy-develop-microalgae-oil-sustainable-aviation-fuel" },
+          { label: "TVS — SEDC temporary two-acre algae nursery site in Bintulu (Mar 2024)", url: "https://www.tvsarawak.my/2024/03/01/sedc-bangunkan-dua-ekar-tapak-sementara-semai-alga-di-bintulu/" },
           { label: "DayakDaily - Bintulu studies and planned cultivation scale-up (Sep 2024)", url: "https://dayakdaily.com/premier-swak-to-build-bio-refinery-in-bintulu-once-microalgae-cultivation-on-10000-acre-site-starts/" },
         ],
       },
@@ -1411,6 +1418,7 @@ export const SECTORS = [
           { date: "2025-08-11", text: "Heads of Agreement signed for Baram DeepTech Energy Programme partners", done: true },
           { date: "2026-03-29", text: "Project scope and estimate announced", done: true },
           { date: "TBD", text: "Final investment decision and key site approvals", done: false },
+          { date: "TBD", text: "Temala LILO grid-connection substation receives approval", done: false },
           { date: "TBD", text: "Construction begins", done: false },
           { date: "TBD", text: "Agriculture and paddy components enter operation", done: false },
           { date: "TBD", text: "Logistics hub enters operation", done: false },
@@ -1418,7 +1426,8 @@ export const SECTORS = [
           { date: "TBD", text: "Supporting township reaches completion", done: false },
         ],
         sources: [
-          { label: "UKAS - Baram Agrovoltaic Project scope and estimate (Mar 2026)", url: "https://ukas.sarawak.gov.my/web/subpage/news_view/37208" },
+          { label: "UKAS - Baram Agrovoltaic Project scope and estimate (Mar 2026)", url: "https://ukas.sarawak.gov.my/web/subpage/news_view/37205" },
+          { label: "UKAS — ADUN urges Temala LILO grid-connection approval for Baram agrovoltaic (Oct 2026)", url: "https://ukas.sarawak.gov.my/web/subpage/news_view/50875" },
           { label: "Borneo Post - Planet QEOS Baram initiative approval (Jul 2024)", url: "https://www.theborneopost.com/2024/07/25/swak-gives-in-principle-approval-to-baram-solar-agrovoltaic-initiative/" },
           { label: "DayakDaily - Planet QEOS Baram DeepTech programme partners (Aug 2025)", url: "https://dayakdaily.com/historic-rm2-32-bln-solar-plant-planet-qeos-signs-deals-with-cscec-sunlogy-efs-founder-hopewind/" },
           { label: "Digital News Asia - Planet QEOS Baram DeepTech programme (Aug 2025)", url: "https://www.digitalnewsasia.com/business/us548mil-deals-ignite-malaysias-first-247-solar-power-plant-sarawak" },
