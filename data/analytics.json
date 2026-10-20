@@ -1,0 +1,13 @@
+{
+  "version": 1,
+  "internal_cookie": "pcds_internal",
+  "spa": true,
+  "hosts": {
+    "pcds2030.com": {
+      "ga4_measurement_id": "G-QGCDDHPV9X",
+      "cf_beacon_token": "5e17ff78afe6423a8a9834b7870b55fd",
+      "aliases": ["www.pcds2030.com"],
+      "legacy_internal_cookies": []
+    }
+  }
+}

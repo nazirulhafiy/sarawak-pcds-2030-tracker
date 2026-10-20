@@ -35,11 +35,13 @@ This repository is the pcds2030.com Vite and React static tracker.
 - Install dependencies with `npm install` or `npm ci`.
 - Run local development with `npm run dev`.
 - Run lint checks with `npm run lint`.
-- Run unit tests with `npm test` (Node's built-in test runner; currently `src/analytics.test.js`).
+- Run unit tests with `npm test` (Node's built-in test runner; analytics, registry, site copy).
 - Build production with `npm run build`.
 - Build preview with `npm run build:preview`.
 - Serve a built site with `npm run preview`.
 - Run `npm run check:content` for data or editorial-content changes.
+- Run `npm run check:analytics` after a production or preview build to verify the analytics
+  registry marker, IDs, cookie name, and spa flag in `dist/`.
 - Run `npm run check:links` for a report-only review of public source availability.
 - For every screenshot, use `tools/shots.mjs` (3× phone, cropped to the change, light and dark).
 - When opening the **live production** site (`https://pcds2030.com`) for agent runs, weekly jobs,
@@ -66,7 +68,8 @@ This repository is the pcds2030.com Vite and React static tracker.
 - Most UI is currently implemented in `src/App.jsx`.
 - Project data is currently hand-maintained in `src/trackerData.js`.
 - Environment detection lives in `src/environment.js`.
-- Production-only GA4 + internal-traffic cookie logic lives in `src/analytics.js`.
+- Analytics registry lives in `data/analytics.json`; runtime loader in `src/analytics.js`;
+  dist check in `scripts/check-analytics-dist.mjs`.
 - Favicon and custom-domain build helpers live in `scripts/`.
 
 ## Safety Notes
