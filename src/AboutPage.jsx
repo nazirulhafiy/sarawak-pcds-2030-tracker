@@ -2,11 +2,25 @@ import SiteFooter from './SiteFooter.jsx';
 import { getAppEnvironment } from './environment.js';
 import { getUiCopy } from './localization.js';
 import { EnvironmentBadge } from './SiteControls.jsx';
+import { getSiteCopy, renderAboutLeadNodes } from './siteCopy.js';
+
+const site = getSiteCopy();
+const aboutLeadParts = renderAboutLeadNodes(site.about_lead);
+const englishAboutIntro =
+  typeof aboutLeadParts === 'string' ? (
+    aboutLeadParts
+  ) : (
+    <>
+      {aboutLeadParts.before}
+      <span className="concept-about-intro-strategy">{aboutLeadParts.strategy}</span>
+      {aboutLeadParts.after}
+    </>
+  );
 
 const content = {
   en: {
     title: 'About this tracker',
-    intro: <>An independent view of major projects connected to{' '}<span className="concept-about-intro-strategy">Sarawak’s Post COVID-19 Development Strategy 2030.</span></>,
+    intro: englishAboutIntro,
     sections: [
       ['What you can find', 'Compare project status, review milestones, and follow links to public sources. Each card brings together the reported scope, lead parties, value and next milestone where this information is available.'],
       ['Where the information comes from', 'The tracker uses public reports, news outlets and official announcements. Source links are listed on each project card so you can read the original reports. This is a selected project list, not a complete register of every PCDS initiative.'],

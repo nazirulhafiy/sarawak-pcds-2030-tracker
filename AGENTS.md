@@ -1,6 +1,6 @@
 # Agent Instructions
 
-This repository is the PCDS 2030 Project Tracker, a Vite and React static site.
+This repository is the pcds2030.com Vite and React static tracker.
 
 ## Working Rules
 

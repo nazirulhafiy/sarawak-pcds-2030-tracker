@@ -1900,7 +1900,7 @@ export default function App({ language = DEFAULT_LANGUAGE, onNavigate, headingRe
             }}
           >
             <span className="tracker-title-context" style={{ fontSize: "42px", lineHeight: 1.04 }}>
-              PCDS 2030
+              {copy.header.context}
             </span>
             <span
               className="tracker-title-product"

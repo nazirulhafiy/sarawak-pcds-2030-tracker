@@ -3,7 +3,7 @@
 ## Purpose
 
 This contract defines a harness-neutral weekly milestone-audit workflow
-for the independent PCDS 2030 Project Tracker at
+for the independent pcds2030.com tracker at
 [preview.pcds2030.com](https://preview.pcds2030.com) and
 [pcds2030.com](https://pcds2030.com).
 
