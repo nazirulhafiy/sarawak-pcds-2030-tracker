@@ -1,10 +1,16 @@
 // Language resources for the public tracker.  Data IDs, URLs, dates and status
 // keys deliberately remain in trackerData.js; this module only supplies display copy.
+// English site title, tagline, deck, description, and About lead live in data/site.json.
+import { getBrandTitleParts, getSiteCopy } from "./siteCopy.js";
+
 export const DEFAULT_LANGUAGE = "en";
 export const SUPPORTED_LANGUAGES = ["en", "ms"];
 
+const site = getSiteCopy();
+const brand = getBrandTitleParts(site);
+
 const EN = {
-  metadata: { title: "PCDS 2030 Project Tracker", description: "Explore the PCDS 2030 project tracker for the Sarawak Post COVID-19 Development Strategy 2030, with project status, milestones, and public sources." },
+  metadata: { title: site.title, description: site.description },
   languageControl: { label: "Language", current: "English", switchTo: "Bahasa Melayu" },
   navigation: { primary: "Primary navigation", home: "Home", tracker: "Tracker", updates: "Updates" },
   updatesPage: {
@@ -60,9 +66,12 @@ const EN = {
   facts: { lead: "Lead / parties", value: "Reported value", sources: "Sources" },
   card: { sector: "Sector", enabler: "Enabler", viewDetails: "View details +", hideDetails: "Hide details −", expand: (name) => `View details for ${name}`, collapse: (name) => `Hide details for ${name}`, expandAll: "Show details for all projects", collapseAll: "Hide details for all projects" },
   header: {
-    kicker: "Sarawak Development Monitor", title: "Project Tracker", lastUpdated: "Last updated:",
+    kicker: "Sarawak Development Monitor",
+    context: brand.context,
+    title: brand.product,
+    lastUpdated: "Last updated:",
     programmeName: "Sarawak's Post COVID-19 Development Strategy 2030",
-    intro: ["Major projects under Sarawak's Post COVID-19 Development Strategy 2030, in one place.", "An independent tracker with project status, milestones and links to public sources."],
+    intro: [site.tagline, site.deck],
   },
   footer: {
     explore: "Explore",
@@ -137,7 +146,10 @@ const MS = {
   facts: { lead: "Peneraju / pihak terlibat", value: "Nilai dilaporkan", sources: "Sumber" },
   card: { sector: "Sektor", enabler: "Pemboleh", viewDetails: "Lihat butiran +", hideDetails: "Sembunyikan butiran −", expand: (name) => `Lihat butiran ${name}`, collapse: (name) => `Sembunyikan butiran ${name}`, expandAll: "Tunjukkan butiran semua projek", collapseAll: "Sembunyikan butiran semua projek" },
   header: {
-    kicker: "Sarawak Development Monitor", title: "Project Tracker", lastUpdated: "Kemas kini terakhir:",
+    kicker: "Sarawak Development Monitor",
+    context: brand.context,
+    title: brand.product,
+    lastUpdated: "Kemas kini terakhir:",
     programmeName: "Strategi Pembangunan Pasca COVID-19 2030 Sarawak",
     intro: ["Projek utama di bawah Strategi Pembangunan Pasca COVID-19 2030 Sarawak, di satu tempat.", "Platform pemantauan bebas yang memaparkan pencapaian utama, status semasa dan pautan kepada sumber awam."],
   },

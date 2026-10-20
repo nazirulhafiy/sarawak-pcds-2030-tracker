@@ -47,8 +47,10 @@ The introduction uses a maximum reading width of about `720px`. This keeps the t
 connected to the compact title block and avoids an overly wide paragraph slab on desktop.
 The full strategy name is kept together as one typographic phrase above the mobile breakpoint.
 Below `760px`, it returns to normal wrapping so long English and BM names cannot overflow.
-The English second line uses the concise sentence `An independent tracker with project status,
-milestones and links to public sources.` The social-preview card keeps its separate share description.
+English site wording (title, tagline, deck, description, About lead) is owned by
+[`data/site.json`](../data/site.json). Surfaces that show that copy (document head, brand,
+hero, About lead, footer brand) must read from that file; `src/siteCopy.test.js` fails if those
+strings are hand-typed elsewhere. The social-preview card keeps its separate share description.
 
 Summary metric boxes provide simple status navigation before readers scan the project cards. Their
 active, hover, focus, and press states make the filtering behavior discoverable without duplicating

@@ -1,8 +1,9 @@
 import { getRouteHref } from "./routes.js";
+import { getSiteCopy } from "./siteCopy.js";
 
+const site = getSiteCopy();
 const HAFIY_URL = "https://hafiy.my";
-const CONTACT_URL =
-  "mailto:contact@pcds2030.com?subject=PCDS%202030%20Project%20Tracker";
+const CONTACT_URL = `mailto:contact@pcds2030.com?subject=${encodeURIComponent(site.title)}`;
 
 function FooterLink({ children, currentPage, href, onClick, page }) {
   const isCurrentPage = currentPage === page;
@@ -43,7 +44,7 @@ export default function SiteFooter({ copy, currentPage, language, onNavigate, co
     <footer className="site-footer">
       <div className="site-footer-main">
         <div className="site-footer-summary">
-          <p className="site-footer-brand">PCDS 2030 Project Tracker</p>
+          <p className="site-footer-brand">{site.title}</p>
           <p className="site-footer-note">{methodologyNote}</p>
         </div>
 

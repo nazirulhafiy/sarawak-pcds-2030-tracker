@@ -6,7 +6,7 @@ The V2 interface includes English and Malay About pages at `/about/` and
 `/bm/about/`. They explain scope, public sources, status definitions, milestone limits,
 independence and correction contact details. V2 is the current Preview and Production interface.
 
-PCDS 2030 Project Tracker is an independent public tracker for major Sarawak development projects connected to the Post COVID-19 Development Strategy 2030.
+This site is an independent public tracker for major Sarawak development projects connected to the Post COVID-19 Development Strategy 2030. English site title, tagline, deck, description, and About lead are owned by [`data/site.json`](../data/site.json).
 
 The site presents a scan-first view of major projects, their current status, next visible milestone,
 and links to publicly available sources.
@@ -27,7 +27,7 @@ Secondary users:
 
 The current product is a small static React site with:
 
-- Header: "Sarawak Development Monitor" and "PCDS 2030 Project Tracker".
+- Header: "Sarawak Development Monitor" and the site title from `data/site.json`.
 - Summary metrics for tracked projects, ongoing projects, planning projects, completed projects, and milestones.
 - A URL-backed project search below the metrics. Its quiet default state shows only the search icon;
   once a query is entered, a right-aligned × control appears to clear it.
@@ -50,9 +50,9 @@ The current product is a small static React site with:
   progress summary.
 - Two short introductory paragraphs explaining what the tracker covers, its independence, its
   milestone and status content, and its public-source links without adding a separate promotional
-  About section. The English second line is `An independent tracker with project status, milestones
-  and links to public sources.` The full strategy name stays together on tablet and desktop, then
-  wraps normally on narrow screens to prevent overflow.
+  About section. English hero lines come from `data/site.json` (`tagline` and `deck`). The full
+  strategy name stays together on tablet and desktop, then wraps normally on narrow screens to
+  prevent overflow.
 - Plain, direct hero copy that foregrounds the tracker’s public-source value; strategy targets remain
   available in the project and methodology content rather than competing with the first-glance purpose.
 - Plain-language source wording that promises links to publicly available sources rather than

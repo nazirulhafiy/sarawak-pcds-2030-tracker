@@ -12,6 +12,7 @@ import { dirname, join, resolve } from "node:path";
 import { pathToFileURL } from "node:url";
 
 import { build, loadEnv } from "vite";
+import { readFileSync } from "node:fs";
 
 const mode = process.argv[2] || "production";
 const projectRoot = resolve(".");
@@ -22,6 +23,9 @@ const productionOrigin = "https://pcds2030.com";
 const socialOrigin =
   mode === "preview" ? "https://preview.pcds2030.com" : productionOrigin;
 const socialImage = `${socialOrigin}/social-preview-${mode}.png?v=20260805a`;
+const siteCopy = JSON.parse(
+  readFileSync(resolve("data/site.json"), "utf8")
+);
 
 function escapeHtml(value) {
   return value
@@ -42,7 +46,7 @@ function getStructuredData(route) {
     return {
       "@context": "https://schema.org",
       "@type": "WebSite",
-      name: "PCDS 2030 Project Tracker",
+      name: siteCopy.title,
       alternateName: ["PCDS 2030 Dashboard", "Penjejak Projek PCDS 2030"],
       url: canonical,
       description: route.metadata.description,
@@ -59,7 +63,7 @@ function getStructuredData(route) {
     inLanguage: route.language === "ms" ? "ms-MY" : "en-MY",
     isPartOf: {
       "@type": "WebSite",
-      name: "PCDS 2030 Project Tracker",
+      name: siteCopy.title,
       url: `${productionOrigin}/`,
     },
   };

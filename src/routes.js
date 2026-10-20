@@ -1,6 +1,8 @@
 import { getUiCopy } from "./localization.js";
+import { getSiteCopy } from "./siteCopy.js";
 
 const PRODUCTION_ORIGIN = "https://pcds2030.com";
+const site = getSiteCopy();
 
 const trackerAlternates = [
   { hreflang: "en-MY", routeId: "tracker-en" },
@@ -20,8 +22,10 @@ export const STATIC_ROUTES = [
     path: language === 'en' ? '/about/' : '/bm/about/', language,
     locale: language === 'en' ? 'en_MY' : 'ms_MY',
     metadata: {
-      title: language === 'en' ? 'About | PCDS 2030 Project Tracker' : 'Tentang | PCDS 2030 Project Tracker',
-      description: language === 'en' ? 'Purpose, public sources and status definitions for the independent PCDS 2030 Project Tracker.' : 'Tujuan, sumber awam dan takrif status bagi platform pemantauan bebas PCDS 2030.',
+      title: language === 'en' ? `About | ${site.title}` : `Tentang | ${site.title}`,
+      description: language === 'en'
+        ? `Purpose, public sources and status definitions for the independent ${site.title}.`
+        : 'Tujuan, sumber awam dan takrif status bagi platform pemantauan bebas PCDS 2030.',
     },
     alternates: [{ hreflang: 'en-MY', routeId: 'about' }, { hreflang: 'ms-MY', routeId: 'about-ms' }, { hreflang: 'x-default', routeId: 'about' }],
   })),
