@@ -1,4 +1,4 @@
-import site from "../data/site.json";
+import site from "../data/site.json" with { type: "json" };
 
 export const SITE_COPY_FIELDS = [
   "title",
