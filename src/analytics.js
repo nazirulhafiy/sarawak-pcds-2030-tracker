@@ -1,15 +1,23 @@
+import { analyticsRegistry } from "./analyticsRegistry.js";
 import { isProductionAnalyticsHost } from "./environment.js";
 
 export { isProductionAnalyticsHost };
+export { ANALYTICS_LOADER_ATTR } from "./analyticsRegistry.js";
 
-/** GA4 measurement ID for production property. */
-export const GA_MEASUREMENT_ID = "G-QGCDDHPV9X";
+/** GA4 measurement ID for production property (from data/analytics.json). */
+export const GA_MEASUREMENT_ID = analyticsRegistry.primaryGa4Id;
 
-/** Cloudflare Web Analytics token (same value formerly in vite.config.js). */
-export const CLOUDFLARE_WEB_ANALYTICS_TOKEN = "5e17ff78afe6423a8a9834b7870b55fd";
+/** Cloudflare Web Analytics token (from data/analytics.json). */
+export const CLOUDFLARE_WEB_ANALYTICS_TOKEN = analyticsRegistry.primaryCfToken;
 
-/** First-party cookie marking agent/QA/internal traffic. */
-export const INTERNAL_TRAFFIC_COOKIE = "pcds_internal";
+/** First-party cookie marking agent/QA/internal traffic (from data/analytics.json). */
+export const INTERNAL_TRAFFIC_COOKIE = analyticsRegistry.internalCookie;
+
+/** Primary + per-host legacy cookies that mark internal traffic. */
+export const HONOUR_INTERNAL_COOKIES = analyticsRegistry.honourCookies;
+
+/** CF beacon spa flag from data/analytics.json (true for this React SPA). */
+export const ANALYTICS_SPA = analyticsRegistry.spa;
 
 const INTERNAL_COOKIE_MAX_AGE_SECONDS = 60 * 60 * 24 * 365; // 1 year
 
@@ -30,33 +38,47 @@ export function readCookie(cookieName, cookieHeader = "") {
 }
 
 export function hasInternalTrafficCookie(cookieHeader = "") {
-  return readCookie(INTERNAL_TRAFFIC_COOKIE, cookieHeader) === "1";
+  return HONOUR_INTERNAL_COOKIES.some(
+    (name) => readCookie(name, cookieHeader) === "1",
+  );
 }
 
-export function buildInternalTrafficCookie(value, { maxAgeSeconds, secure } = {}) {
+export function buildInternalTrafficCookie(
+  value,
+  { maxAgeSeconds, secure, cookieName = INTERNAL_TRAFFIC_COOKIE } = {},
+) {
   if (value === "0" || value === null || value === undefined) {
-    return `${INTERNAL_TRAFFIC_COOKIE}=; Path=/; Max-Age=0; SameSite=Lax${secure ? "; Secure" : ""}`;
+    return `${cookieName}=; Path=/; Max-Age=0; SameSite=Lax${secure ? "; Secure" : ""}`;
   }
   const age = maxAgeSeconds ?? INTERNAL_COOKIE_MAX_AGE_SECONDS;
-  return `${INTERNAL_TRAFFIC_COOKIE}=1; Path=/; Max-Age=${age}; SameSite=Lax${secure ? "; Secure" : ""}`;
+  return `${cookieName}=1; Path=/; Max-Age=${age}; SameSite=Lax${secure ? "; Secure" : ""}`;
 }
 
 /**
  * Apply `?internal=1` (set) / `?internal=0` (clear) from a query string.
- * Returns the Set-Cookie string to assign, or null when unchanged.
+ * Returns cookie strings to assign (primary set, or clear of every honour name).
  */
-export function cookieFromInternalQuery(search, { secure = false } = {}) {
+export function cookiesFromInternalQuery(search, { secure = false } = {}) {
   const params = new URLSearchParams(
     String(search || "").startsWith("?") ? String(search).slice(1) : search,
   );
   const value = params.get("internal");
   if (value === "1") {
-    return buildInternalTrafficCookie("1", { secure });
+    return [buildInternalTrafficCookie("1", { secure })];
   }
   if (value === "0") {
-    return buildInternalTrafficCookie("0", { secure });
+    return HONOUR_INTERNAL_COOKIES.map((cookieName) =>
+      buildInternalTrafficCookie("0", { secure, cookieName }),
+    );
   }
   return null;
+}
+
+/** Single-cookie helper; returns the first string from cookiesFromInternalQuery. */
+export function cookieFromInternalQuery(search, { secure = false } = {}) {
+  const cookies = cookiesFromInternalQuery(search, { secure });
+  if (!cookies) return null;
+  return cookies[0];
 }
 
 /** gtag config fields when the internal-traffic cookie is present. */
@@ -87,6 +109,7 @@ function injectGtagScript(doc, measurementId) {
 export function injectCloudflareBeacon(
   doc,
   token = CLOUDFLARE_WEB_ANALYTICS_TOKEN,
+  { spa = ANALYTICS_SPA } = {},
 ) {
   if (doc.querySelector(`script[src="${CLOUDFLARE_BEACON_SRC}"]`)) return false;
   const script = doc.createElement("script");
@@ -94,7 +117,7 @@ export function injectCloudflareBeacon(
   script.src = CLOUDFLARE_BEACON_SRC;
   script.setAttribute(
     "data-cf-beacon",
-    JSON.stringify({ token, spa: true }),
+    JSON.stringify({ token, spa }),
   );
   const parent = doc.body || doc.head;
   parent.appendChild(script);
@@ -107,6 +130,7 @@ export function injectCloudflareBeacon(
  * - load Cloudflare Web Analytics only for non-internal visits
  *
  * Safe to call on Preview/localhost — cookie may still sync; tags do not load.
+ * IDs, cookie name, hosts, and spa come from data/analytics.json.
  */
 export function initAnalytics({
   location: loc = typeof window !== "undefined" ? window.location : null,
@@ -120,9 +144,11 @@ export function initAnalytics({
   }
 
   const secure = loc.protocol === "https:";
-  const cookieToSet = cookieFromInternalQuery(loc.search, { secure });
-  if (cookieToSet) {
-    doc.cookie = cookieToSet;
+  const cookiesToSet = cookiesFromInternalQuery(loc.search, { secure });
+  if (cookiesToSet) {
+    for (const cookie of cookiesToSet) {
+      doc.cookie = cookie;
+    }
   }
 
   if (!isProductionAnalyticsHost(loc.hostname)) {

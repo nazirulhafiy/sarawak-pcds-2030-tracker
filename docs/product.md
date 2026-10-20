@@ -119,10 +119,12 @@ Development and Preview hosts do not load the beacon. Agent/QA visits that set t
 available only through the Cloudflare dashboard.
 
 Production (`pcds2030.com` / `www.pcds2030.com`) also loads Google Analytics 4
-(`G-QGCDDHPV9X`) for traffic reporting. The GA tag never loads on Preview, localhost, or other
-hosts. Agent and QA visits to the live site should use `?internal=1` once so a long-lived
-first-party cookie marks those sessions as `traffic_type: 'internal'` in GA4 and skips the
-Cloudflare beacon (clear with `?internal=0`). Details live in `docs/design.md` under Analytics.
+(`G-QGCDDHPV9X`) for traffic reporting. Hosts, measurement ID, Cloudflare token, spa flag, and
+the internal cookie name (`pcds_internal`) live in `data/analytics.json`. The GA tag never loads
+on Preview, localhost, or other hosts. Agent and QA visits to the live site should use
+`?internal=1` once so a long-lived first-party cookie marks those sessions as
+`traffic_type: 'internal'` in GA4 and skips the Cloudflare beacon (clear with `?internal=0`).
+Details live in `docs/design.md` under Analytics.
 
 ## Current Data Model
 

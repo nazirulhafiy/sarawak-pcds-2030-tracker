@@ -1,3 +1,5 @@
+import { analyticsRegistry } from "./analyticsRegistry.js";
+
 const ENVIRONMENTS = {
   development: {
     name: "development",
@@ -35,8 +37,9 @@ export function shouldShowEnvironmentBadge(environment) {
 /**
  * Hostnames where Google Analytics may load. Preview, localhost, and
  * other hosts must never load the GA tag — see `src/analytics.js`.
+ * Host list comes from data/analytics.json (primary + aliases).
  */
 export function isProductionAnalyticsHost(hostname) {
   const host = String(hostname || "").toLowerCase();
-  return host === "pcds2030.com" || host === "www.pcds2030.com";
+  return analyticsRegistry.hostnames.includes(host);
 }

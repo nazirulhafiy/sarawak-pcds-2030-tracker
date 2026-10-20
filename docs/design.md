@@ -390,18 +390,28 @@ social-preview branding.
 
 ## Analytics
 
-- Google Analytics 4 measurement ID: `G-QGCDDHPV9X`. Loaded from `src/analytics.js` (via
-  `src/main.jsx`) only when the page hostname is `pcds2030.com` or `www.pcds2030.com`. Never on
-  Preview, localhost, Vercel preview URLs, or other hosts.
+- Typed registry: `data/analytics.json` (fleet kit shape v1) is the single source for production
+  hostnames, GA4 measurement ID `G-QGCDDHPV9X`, Cloudflare Web Analytics token
+  `5e17ff78afe6423a8a9834b7870b55fd`, internal cookie name `pcds_internal`, and CF `spa: true`.
+  Validated in `src/analyticsRegistry.js`.
+- One runtime loader: `src/analytics.js` (via `src/main.jsx`) reads the registry. GA and the
+  Cloudflare beacon load only when the hostname is a registry primary host or alias
+  (`pcds2030.com`, `www.pcds2030.com`). Never on Preview, localhost, Vercel preview URLs, or
+  other hosts.
 - Internal / agent traffic: visiting with `?internal=1` sets a first-party cookie
   `pcds_internal=1` (1 year, `Path=/`, `SameSite=Lax`, `Secure` on HTTPS). `?internal=0` clears
-  it. While the cookie is set: gtag config includes `traffic_type: 'internal'` so GA4 can filter
-  those hits, and the Cloudflare Web Analytics beacon is **not** loaded. Cookie sync may run on
-  any host; GA and the Cloudflare beacon still load only on production hostnames.
+  the registry primary cookie and any listed `legacy_internal_cookies`. While an honour cookie is
+  set: gtag config includes `traffic_type: 'internal'` so GA4 can filter those hits, and the
+  Cloudflare Web Analytics beacon is **not** loaded. Cookie sync may run on any host; GA and the
+  Cloudflare beacon still load only on production hostnames. Cookie name is `#109`'s
+  `pcds_internal` ( `#106` had no internal cookie).
 - Cloudflare Web Analytics beacon is loaded at runtime from `src/analytics.js` (same production
-  hostnames as GA; token `5e17ff78afe6423a8a9834b7870b55fd`, `spa: true`). It is not injected by
-  Cloudflare/Vercel and is no longer injected by a Vite HTML plugin — runtime load is required so
-  the internal cookie can skip it. Public production visits still get the beacon; internal-cookie
+  hostnames as GA; token and `spa` from the registry). It is not injected by Cloudflare/Vercel
+  and is no longer injected by a Vite HTML beacon plugin — runtime load is required so the
+  internal cookie can skip it. Public production visits still get the beacon; internal-cookie
   visits do not.
+- Build injects exactly one `data-sn-analytics-loader` JSON marker per HTML page (CI hook only;
+  not a second tag loader). `npm run check:analytics` fails the build if a page has zero or two
+  markers, an ID/token not in the registry, the wrong cookie name, or spa drift.
 - No Content-Security-Policy is set; if one is added, allow `www.googletagmanager.com`,
   `*.google-analytics.com`, and `static.cloudflareinsights.com`.
