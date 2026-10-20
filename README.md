@@ -1,6 +1,6 @@
-# PCDS 2030 Project Tracker
+# pcds2030.com tracker
 
-An independent public tracker for major projects tied to Sarawak’s Post COVID-19 Development Strategy 2030 (PCDS 2030).
+An independent public tracker for major projects tied to Sarawak’s Post COVID-19 Development Strategy 2030 (PCDS 2030). English site title, tagline, deck, description, and About lead live only in [`data/site.json`](data/site.json).
 
 It gathers publicly available project details in one place so you can scan status, milestones, and source links without hunting through separate announcements.
 

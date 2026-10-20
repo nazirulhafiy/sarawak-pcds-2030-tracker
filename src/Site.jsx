@@ -14,7 +14,9 @@ import UpdatesPage from "./UpdatesPage.jsx";
 import { LanguageToggle, ThemeToggle } from "./SiteControls.jsx";
 import { applyDocumentTheme } from "./theme.js";
 import { getAppEnvironment } from "./environment.js";
+import { getSiteCopy } from "./siteCopy.js";
 
+const site = getSiteCopy();
 const BRAND_FAVICON_SRC = `/favicon-${getAppEnvironment().name}-browser.png?v=20260804d`;
 
 export default function Site({ route, concept = false }) {
@@ -161,9 +163,9 @@ export default function Site({ route, concept = false }) {
         onAnimationEnd={(event) => {
           if (event.animationName === "concept-logo-enter") setNavIntroDone(true);
         }}>
-        <a className="concept-brand" href={import.meta.env.VITE_DESIGN_CONCEPT === "v2" ? "/" : "/?concept=v2"} onClick={(event) => navigate(event, activeRoute.language === "ms" ? "tracker-ms" : "tracker-en")} aria-label="PCDS 2030 Project Tracker home">
+        <a className="concept-brand" href={import.meta.env.VITE_DESIGN_CONCEPT === "v2" ? "/" : "/?concept=v2"} onClick={(event) => navigate(event, activeRoute.language === "ms" ? "tracker-ms" : "tracker-en")} aria-label={`${site.title} home`}>
           <img src={BRAND_FAVICON_SRC} alt="" width="32" height="32" />
-          <span className="concept-brand-name" aria-hidden="true">{Array.from("PCDS 2030 Project Tracker").map((letter, index) => <span key={index} className="concept-brand-letter" style={{ "--letter-index": index }}>{letter === " " ? "\u00a0" : letter}</span>)}</span>
+          <span className="concept-brand-name" aria-hidden="true">{Array.from(site.title).map((letter, index) => <span key={index} className="concept-brand-letter" style={{ "--letter-index": index }}>{letter === " " ? "\u00a0" : letter}</span>)}</span>
         </a>
         <div id="concept-navigation-links" className={`concept-links${menuOpen ? " concept-links--open" : ""}`}>
           <a aria-current={activeRoute.page === 'tracker' ? 'page' : undefined} href={getRouteHref(activeRoute.language === "ms" ? "tracker-ms" : "tracker-en") + (import.meta.env.VITE_DESIGN_CONCEPT === "v2" ? "" : "?concept=v2")} onClick={(event) => navigate(event, activeRoute.language === "ms" ? "tracker-ms" : "tracker-en")}>{activeRoute.language === "ms" ? "Projek" : "Projects"}</a>
