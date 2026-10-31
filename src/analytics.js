@@ -55,6 +55,15 @@ export function buildInternalTrafficCookie(
 }
 
 /**
+ * True when `internal` query value is exactly `1`, or `1` plus one allowed
+ * trailing stray (backtick, `.`, `)`, `]`). Rejects `10`, `1x`, two strays, etc.
+ */
+export function isInternalFlagOnValue(value) {
+  if (value === "1") return true;
+  return typeof value === "string" && /^1[`.)\]]$/.test(value);
+}
+
+/**
  * Apply `?internal=1` (set) / `?internal=0` (clear) from a query string.
  * Returns cookie strings to assign (primary set, or clear of every honour name).
  */
@@ -63,7 +72,7 @@ export function cookiesFromInternalQuery(search, { secure = false } = {}) {
     String(search || "").startsWith("?") ? String(search).slice(1) : search,
   );
   const value = params.get("internal");
-  if (value === "1") {
+  if (isInternalFlagOnValue(value)) {
     return [buildInternalTrafficCookie("1", { secure })];
   }
   if (value === "0") {

@@ -8,6 +8,7 @@ import {
   buildInternalTrafficCookie,
   cookieFromInternalQuery,
   hasInternalTrafficCookie,
+  isInternalFlagOnValue,
   isProductionAnalyticsHost,
   readCookie,
   initAnalytics,
@@ -53,6 +54,28 @@ describe("internal traffic cookie helpers", () => {
     assert.match(cookieFromInternalQuery("internal=0"), /Max-Age=0/);
     assert.equal(cookieFromInternalQuery("?foo=1"), null);
     assert.equal(cookieFromInternalQuery(""), null);
+  });
+
+  it("accepts ?internal=1 plus one allowed trailing stray character", () => {
+    assert.equal(isInternalFlagOnValue("1"), true);
+    assert.equal(isInternalFlagOnValue("1`"), true);
+    assert.equal(isInternalFlagOnValue("1."), true);
+    assert.equal(isInternalFlagOnValue("1)"), true);
+    assert.equal(isInternalFlagOnValue("1]"), true);
+    assert.equal(isInternalFlagOnValue("10"), false);
+    assert.equal(isInternalFlagOnValue("1x"), false);
+    assert.equal(isInternalFlagOnValue("1``"), false);
+    assert.equal(isInternalFlagOnValue("2"), false);
+    assert.equal(isInternalFlagOnValue(null), false);
+
+    assert.match(cookieFromInternalQuery("?internal=1%60", { secure: true }), /pcds_internal=1/);
+    assert.match(cookieFromInternalQuery("?internal=1.", { secure: true }), /pcds_internal=1/);
+    assert.match(cookieFromInternalQuery("?internal=1)", { secure: true }), /pcds_internal=1/);
+    assert.match(cookieFromInternalQuery("?internal=1]", { secure: true }), /pcds_internal=1/);
+    assert.equal(cookieFromInternalQuery("?internal=10"), null);
+    assert.equal(cookieFromInternalQuery("?internal=1x"), null);
+    assert.equal(cookieFromInternalQuery("?internal=1%60%60"), null);
+    assert.equal(cookieFromInternalQuery("?internal=2"), null);
   });
 });
 

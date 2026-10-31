@@ -1,5 +1,5 @@
 // ─── DATA ───────────────────────────────────────────────────────────────────
-export const LAST_UPDATED = "2026-10-19";
+export const LAST_UPDATED = "2026-10-26";
 
 const PCDS_SUMMARY = {
   name: "PCDS 2030 — Overarching Framework",
@@ -44,6 +44,7 @@ export const SECTORS = [
           { date: "2026-08-13", text: "Linyang integration and commercialisation MoA signed", done: true },
           { date: "2026-10-05", text: "Premier unveiled keteq.GaN at IDECS", done: true },
           { date: "TBD", text: "Global IP registration", done: false },
+          { date: "2027", text: "Linyang keteq.GaN chip integration begins", done: false },
           { date: "TBD", text: "Commercialisation begins", done: false },
         ],
         sources: [
@@ -53,6 +54,7 @@ export const SECTORS = [
           { label: "SMD Semiconductor — Linyang integration and commercialisation MoA (Aug 2026)", url: "https://smdsemiconductor.com/smd-linyang-partner-to-bring-sarawak-semiconductor-technologies-to-global-markets" },
           { label: "DayakDaily — Premier unveiled keteq.GaN at IDECS 2026 (Oct 2026)", url: "https://dayakdaily.com/swak-unveils-keteq-gan-first-locally-designed-gan-power-semiconductor-chip-at-idecs-2026/" },
           { label: "SMD Semiconductor — keteq.GaN unveiled at IDECS 2026 (Oct 2026)", url: "https://smdsemiconductor.com/smd-unveils-first-locally-designed-gan-power-semiconductor-chip-keteq-gan-at-idecs-2026" },
+          { label: "SMD Semiconductor — Linyang keteq.GaN integration planned for 2027 (Oct 2026)", url: "https://smdsemiconductor.com/smd-to-begin-keteq-gan-chip-integration-with-linyang-in-2027" },
         ],
       },
       {
@@ -97,7 +99,9 @@ export const SECTORS = [
           { date: "2024-06", text: "RM1B allocation announced for paddy cultivation", done: true },
           { date: "2026-05-12", text: "Sarawak Padi and Rice Board Bill was passed", done: true },
           { date: "2026-09-28", text: "7,000 hectares of State land gazetted exclusively for paddy", done: true },
+          { date: "2026-10-20", text: "10 projects covering 3,460 hectares under implementation", done: true },
           { date: "2026", text: "Farmer clustering and paddy land leasing", done: false },
+          { date: "2027", text: "Phased project completion begins", done: false },
           { date: "2030", text: "Annual rice output reaches 500,000 tonnes", done: false },
         ],
         sources: [
@@ -109,6 +113,7 @@ export const SECTORS = [
           { label: "Borneo Post — DUN passes Sarawak Padi and Rice Board Bill (May 2026)", url: "https://www.theborneopost.com/2026/05/12/dun-passes-bill-to-establish-sarawak-padi-and-rice-board/" },
           { label: "DayakDaily — About 7,000 ha identified and gazetted for paddy (Sep 2026)", url: "https://dayakdaily.com/sarawak-to-start-planting-paddy-on-8000ha-from-next-year/" },
           { label: "DayakDaily — Premier: 7,000 ha State land gazetted exclusively for paddy (Oct 2026)", url: "https://dayakdaily.com/premier-sarawak-gazettes-7000-hectares-of-state-land-exclusively-for-paddy-production/" },
+          { label: "DayakDaily — 10 projects / 3,460 ha under implementation (Oct 2026)", url: "https://dayakdaily.com/only-11-pct-of-swaks-9900-ha-paddy-schemes-cultivated-rm2-5-bln-needed-for-revival/" },
         ],
       },
       {
@@ -126,13 +131,14 @@ export const SECTORS = [
           { date: "2025-11-24", text: "RM25.1M Budget 2026 allocation for Mid Sadong 1 announced", done: true },
           { date: "2026-03-08", text: "Land compensation was handed to 119 recipients", done: true },
           { date: "2026-08-03", text: "AgriHub Gedong was formally launched", done: true },
-          { date: "TBD", text: "AgriHub and irrigation works reach completion", done: false },
+          { date: "2027", text: "AgriHub and irrigation works reach completion", done: false },
         ],
         sources: [
           { label: "DID Sarawak - RM30M irrigation project and 54.4-hectare scope (Nov 2024)", url: "https://did.sarawak.gov.my/web/subpage/news_view/821" },
           { label: "DayakDaily — RM25.1M Mid Sadong 1 Budget 2026 allocation (Nov 2025)", url: "https://dayakdaily.com/sarawak-budget-2026-nearly-rm300-mil-allocated-to-modernise-agriculture-boost-food-security/" },
           { label: "UKAS - AgriHub compensation and construction scope (Mar 2026)", url: "https://ukas.sarawak.gov.my/web/subpage/news_view/35719" },
           { label: "DayakDaily — AgriHub Gedong formally launched at COSAFS2026 (Aug 2026)", url: "https://dayakdaily.com/sarawak-aims-to-become-regional-hub-for-sustainable-agriculture-agri-food-innovation/" },
+          { label: "DayakDaily — 10 projects / 3,460 ha under implementation (Oct 2026)", url: "https://dayakdaily.com/only-11-pct-of-swaks-9900-ha-paddy-schemes-cultivated-rm2-5-bln-needed-for-revival/" },
         ],
       },
       {
@@ -211,8 +217,8 @@ export const SECTORS = [
           { date: "2021-02-22", text: "State Planning Authority approved the farm site", done: true },
           { date: "2024-11-06", text: "Groundbreaking held at Sungai Selabi", done: true },
           { date: "2025", text: "Land clearing and infrastructure works began", done: true },
+          { date: "2027", text: "Farm begins porker production", done: false },
           { date: "2028", text: "Basic site infrastructure reaches completion", done: false },
-          { date: "TBD", text: "Farm begins porker production", done: false },
         ],
         sources: [
           { label: "M-FICORD — RM300M Selangau pig farm groundbreaking (Nov 2024)", url: "https://mficord.sarawak.gov.my/web/subpage/news_view/1458" },
@@ -220,6 +226,7 @@ export const SECTORS = [
           { label: "DayakDaily — Work underway at Selangau pig farm (May 2025)", url: "https://dayakdaily.com/work-underway-at-selangau-pig-farm-set-to-produce-250000-porkers-a-year/" },
           { label: "M-FICORD — Selangau PFA modern-technology sitting update (May 2025)", url: "https://mficord.sarawak.gov.my/web/subpage/news_view/1605" },
           { label: "DayakDaily — Three pig farming areas, Selangau 2028 works (May 2026)", url: "https://dayakdaily.com/sarawak-to-produce-860000-porkers-valued-at-rm1-29-billion-annually-through-3-pig-farming-areas/" },
+          { label: "Borneo Post — Selangau PFA operations targeted for 2027 (Oct 2026)", url: "https://www.theborneopost.com/2026/10/20/dr-rundi-selangau-pig-farming-area-to-begin-operations-in-2027/" },
         ],
       },
     ],
@@ -288,6 +295,8 @@ export const SECTORS = [
           { date: "2025", text: "Accredited external auditor rules established", done: true },
           { date: "2025-11-01", text: "Flaring and Venting Rules 2025 came into force", done: true },
           { date: "2026-02-10", text: "GHG-MS Phase 1 commenced operations", done: true },
+          { date: "2026-10-12", text: "RM20 million RMK-13 GHGMS Phase 2 allocation announced", done: true },
+          { date: "TBD", text: "GHGMS Phase 2 reaches operations", done: false },
           { date: "Annual", text: "Scheduled sectors submit verified emissions reports", done: false },
         ],
         sources: [
@@ -295,6 +304,7 @@ export const SECTORS = [
           { label: "NREB — Flaring and Venting Rules 2025 effective 1 Nov 2025 (Jan 2026)", url: "https://www.nreb.gov.my/web/subpage/news_view/895" },
           { label: "Borneo Post — Climate governance implementation update (Mar 2026)", url: "https://www.theborneopost.com/2026/03/12/sarawak-intensifies-climate-governance-on-path-to-net-zero-2050/" },
           { label: "FULCRUM — Sarawak's low-carbon future", url: "https://fulcrum.sg/envisioning-a-low-carbon-future-sarawaks-journey-towards-sustainable-development/" },
+          { label: "UKAS — RM20 juta GHGMS Fasa 2 (Oct 2026)", url: "https://ukas.sarawak.gov.my/web/subpage/news_view/50544" },
         ],
       },
       {
@@ -501,7 +511,8 @@ export const SECTORS = [
           { date: "2025-12-16", text: "Prime Minister directed expedited Q1 2026 tendering", done: true },
           { date: "2025-12-17", text: "Sarawak committed RM500M for medical equipment", done: true },
           { date: "2026-07-07", text: "Design-and-build procurement stage confirmed", done: true },
-          { date: "2027-Q1", text: "Construction begins", done: false },
+          { date: "2026-10-20", text: "DUS confirmed design-and-build tender still live", done: true },
+          { date: "2027-Q1", text: "Surat Setuju Terima (SST) is issued", done: false },
           { date: "2032", text: "Cancer centre reaches completion", done: false },
         ],
         sources: [
@@ -510,6 +521,7 @@ export const SECTORS = [
           { label: "DayakDaily — RM500M medical equipment fronted (Dec 2025)", url: "https://dayakdaily.com/patients-cannot-wait-sarawak-fronts-rm500-mln-for-cancer-centre-medical-equipment/" },
           { label: "Sarawak Tribune — Tender stage (May 2026)", url: "https://www.sarawaktribune.com/sarawak-cancer-centre-enters-tender-stage/" },
           { label: "DayakDaily — Tender begins, 2032 completion target (Jul 2026)", url: "https://dayakdaily.com/sarawak-cancer-centre-targets-2032-completion-as-design-and-build-tender-process-begins/" },
+          { label: "DayakDaily — SST Q1 2027; 2032 completion (Oct 2026)", url: "https://dayakdaily.com/rm1-5-bln-sarawak-cancer-centre-targets-2032-completion-with-310-beds/" },
         ],
       },
       {
@@ -769,15 +781,16 @@ export const SECTORS = [
         status: "In Progress",
         statusColor: "#d97706",
         lead: "Sarawak Infectious Disease Centre (SIDC)",
-        value: "RM300 million",
+        value: "RM320 million",
         summary:
-          "The Sarawak Infectious Disease Centre is developing a One Health research campus beside the Sarawak Heart Centre in Samarahan, after a government investment of more than RM300 million. Its laboratories and supporting facilities are designed for disease surveillance, diagnostics, vaccine research and Biosafety Level 3 work.",
+          "The Sarawak Infectious Disease Centre is developing a One Health research campus beside the Sarawak Heart Centre in Samarahan, after a government investment of RM320 million. Its laboratories and supporting facilities are designed for disease surveillance, diagnostics, vaccine research and Biosafety Level 3 work.",
         milestones: [
           { date: "2020", text: "Sarawak Infectious Disease Centre was established", done: true },
           { date: "2024-02", text: "Research organisation began operating", done: true },
           { date: "2024-03", text: "Samarahan campus construction began", done: true },
           { date: "2025-10", text: "Campus construction reached 40.19 percent", done: true },
           { date: "2026-05-18", text: "Headquarters reached 80 percent completion", done: true },
+          { date: "2026-08", text: "Campus reached 90 percent completion", done: true },
           { date: "2027-Q3", text: "Samarahan campus reaches official launch", done: false },
         ],
         sources: [
@@ -789,6 +802,8 @@ export const SECTORS = [
           { label: "Sarawak Tribune — Headquarters reached 80 percent (May 2026)", url: "https://www.sarawaktribune.com/sidc-headquarters-reaches-80-pct-completion/" },
           { label: "DayakDaily — Official launch scheduled for Q3 2027 (Sep 2026)", url: "https://dayakdaily.com/sarawak-infectious-disease-centre-construction-expected-to-complete-by-q3-2027/" },
           { label: "Sarawak Tribune — Official launch scheduled for Q3 2027 (Sep 2026)", url: "https://www.sarawaktribune.com/sidc-targets-2027-launch-eyes-regional-pandemic-preparedness-hub/" },
+          { label: "Borneo Post — RM320 million SIDC 90 percent complete; Q3 2027 opening (Oct 2026)", url: "https://www.theborneopost.com/2026/10/19/rm320mln-sarawak-infectious-disease-centre-90pct-complete-on-track-for-q3-2027-opening/" },
+          { label: "DayakDaily — SIDC Q3 2027 launch; eight surveillance sites planned (Oct 2026)", url: "https://dayakdaily.com/swak-infectious-disease-centre-set-for-3q27-launch-eight-surveillance-sites-in-central-region-planned/" },
         ],
       },
     ],
@@ -850,6 +865,9 @@ export const SECTORS = [
           { date: "2026-10-08", text: "Batang Paloh Bridge final span was connected", done: true },
           { date: "2026-10-22", text: "Sejingkat Bridge reaches contractual completion", done: false },
           { date: "2026-10-30", text: "Batang Paloh Bridge opens to traffic", done: false },
+          { date: "2026-11", text: "Batang Lupar 2 opens to traffic", done: false },
+          { date: "2026-12", text: "Batang Saribas 2 reaches completion", done: false },
+          { date: "2026", text: "Rambungan Bridge opens to traffic", done: false },
           { date: "2027", text: "Remaining nine major bridges reach completion", done: false },
           { date: "TBD", text: "Remaining CSTR road and bridge packages reach completion", done: false },
         ],
@@ -861,6 +879,7 @@ export const SECTORS = [
           { label: "The Star — Sejingkat Bridge opened; remaining bridges targeted for late 2027 (Oct 2026)", url: "https://www.thestar.com.my/news/nation/2026/10/05/sarawak-targets-late-2027-completion-for-remaining-coastal-trunk-road-bridges" },
           { label: "DayakDaily — Batang Paloh Bridge final span connected; traffic opening 30 Oct (Oct 2026)", url: "https://dayakdaily.com/1-7km-batang-paloh-bridge-to-open-to-traffic-on-oct-30-strengthening-coastal-link/" },
           { label: "UKAS — Batang Paloh Bridge final span connection ceremony (Oct 2026)", url: "https://ukas.sarawak.gov.my/web/subpage/news_view/50319" },
+          { label: "UKAS — Batang Lupar 2 and Batang Saribas 2 schedules (Oct 2026)", url: "https://ukas.sarawak.gov.my/web/subpage/news_view/51425" },
         ],
       },
       {
@@ -926,8 +945,10 @@ export const SECTORS = [
           { date: "2025-12-11", text: "PETROS and CJI signed a Framework Agreement", done: true },
           { date: "2025-12-17", text: "PETROS and Sumitomo advanced hub co-development", done: true },
           { date: "2026-10-01", text: "PETROS and Höegh Evi signed Kuching LNG Terminal JDA", done: true },
+          { date: "2026-10-21", text: "Tanjung Embang coordinating task force was established", done: true },
           { date: "TBD", text: "Detailed masterplan reaches finalisation", done: false },
-          { date: "2027", text: "Physical and infrastructure development begins through PPP", done: false },
+          { date: "2027", text: "Physical development begins in early 2027 through PPP", done: false },
+          { date: "2028", text: "Samajaya 2 High Tech Park is ready for investors", done: false },
           { date: "2029", text: "Kuching LNG Terminal reaches first gas", done: false },
         ],
         sources: [
@@ -938,6 +959,8 @@ export const SECTORS = [
           { label: "PETROS — Sumitomo co-development of KLCH (Dec 2025)", url: "https://www.petroleumsarawak.com/publications/2025/17-dec-2025-petros-and-sumitomo-corporation-advance-co-development-of-kuching-low-carbon-hub" },
           { label: "DayakDaily — Detailed masterplan being finalised; 2027 PPP works (May 2026)", url: "https://dayakdaily.com/tanjung-embangs-kuching-low-carbon-hub-positioned-as-future-low-carbon-industrial-trade-and-logistic-hub/" },
           { label: "PETROS — Höegh Evi Kuching LNG Terminal JDA (Oct 2026)", url: "https://www.petroleumsarawak.com/publications/2026/1-october-2026-petros-and-hoegh-evi-partner-to-develop-kuching-lng-terminal" },
+          { label: "UKAS — Tanjung Embang coordinating task force (Oct 2026)", url: "https://ukas.sarawak.gov.my/web/subpage/news_view/51455" },
+          { label: "Suara Sarawak — Tanjung Embang AI and semiconductor investment (Oct 2026)", url: "https://suarasarawak.my/tanjung-embang-tarik-pelaburan-ai-semikonduktor-abang-johari/" },
         ],
       },
       {
@@ -1006,6 +1029,7 @@ export const SECTORS = [
           { date: "2024-11-04", text: "RM1B commitment and pipe manufacturing reported", done: true },
           { date: "2025-10", text: "Offshore pipeline section completed", done: true },
           { date: "2026-05-12", text: "Pipeline pre-commissioning activities notified", done: true },
+          { date: "2026-10-19", text: "Pipeline reached 96 percent completion", done: true },
           { date: "2026", text: "Samalaju Industrial Zone receives gas supply", done: false },
         ],
         sources: [
@@ -1013,6 +1037,7 @@ export const SECTORS = [
           { label: "Bintulu Port Authority — Pipeline pre-commissioning notice (May 2026)", url: "https://www.bpa.gov.my/web/home/notice_view/0/439/" },
           { label: "Sarawak Tribune — Samalaju pipeline operations from 2027 (May 2026)", url: "https://www.sarawaktribune.com/samalaju-power-pipeline-ready-by-2027/" },
           { label: "Borneo Post — Premier: Kidurong–Samalaju pipeline; Samalaju gas by end-2026 (Oct 2026)", url: "https://www.theborneopost.com/2026/10/10/premier-sarawak-records-rm11-2-billion-in-approved-investments-in-first-half-of-year/" },
+          { label: "DayakDaily — Kidurong–Samalaju pipeline 96 percent (Oct 2026 DUN)", url: "https://dayakdaily.com/kuching-low-carbon-hub-in-tanjung-embang-eyes-rm300b-investments-180000-jobs-by-2035/" },
         ],
       },
       {
@@ -1029,13 +1054,14 @@ export const SECTORS = [
           { date: "2026-03", text: "Project reached 45 percent completion", done: true },
           { date: "2026-07", text: "M701F gas turbine was installed", done: true },
           { date: "2026-Q3", text: "Project reached 63 percent completion", done: true },
-          { date: "2027", text: "Power plant reaches completion", done: false },
+          { date: "2027-Q4", text: "Power plant reaches completion", done: false },
         ],
         sources: [
           { label: "Miri City Council - Earthworks and PETROS delivery role (Oct 2023)", url: "https://miricouncil.gov.my/web/subpage/news_view/733" },
           { label: "Sarawak Tribune - RM2B value and 45 percent progress (Apr 2026)", url: "https://www.sarawaktribune.com/miri-combined-cycle-gas-turbine-project-reaches-45-completion/" },
           { label: "Mitsubishi Power Asia Pacific - M701F gas turbine installed (Jul 2026)", url: "https://www.linkedin.com/posts/mitsubishi-power-asia-pacific_miri-gas-turbine-on-base-ceremony-activity-7478688984571998209-_gf6" },
           { label: "UKAS — Miri CCGT 63 percent complete as of Q3 2026 (Oct 2026)", url: "https://ukas.sarawak.gov.my/web/subpage/news_view/50615" },
+          { label: "The Edge Malaysia — Miri CCGT Q4 2027 completion (Oct 2026)", url: "https://theedgemalaysia.com/node/822339" },
         ],
       },
       {
@@ -1070,6 +1096,7 @@ export const SECTORS = [
           { date: "2025-10-17", text: "Singapore EMA conditional approval was obtained", done: true },
           { date: "2025-12", text: "National Security Council approved subsea survey works", done: true },
           { date: "2026-02", text: "Singapore MPA approval was obtained", done: true },
+          { date: "2026-10", text: "Submarine cable survey study was under way", done: true },
           { date: "TBD", text: "Remaining licences and commercial close advance", done: false },
           { date: "2032-2035", text: "Electricity exports begin", done: false },
         ],
@@ -1079,6 +1106,7 @@ export const SECTORS = [
           { label: "The Star — MKN and MPA clearances; commercial talks begun (May 2026)", url: "https://www.thestar.com.my/news/nation/2026/05/18/sarawak-in-talks-to-export-power-to-borneo-singapore" },
           { label: "DayakDaily — Premier on 2032-2035 export window and NSC/MPA support (May 2026)", url: "https://dayakdaily.com/premier-sarawak-singapore-partnership-poised-to-become-asean-green-energy-model/" },
           { label: "Sarawak Rivers Board — Cabinet, EMA and MKN survey milestones (Jul 2026)", url: "https://srb.sarawak.gov.my/web/subpage/news_view/903" },
+          { label: "The Edge Malaysia — Singapore interconnection in submarine cable survey study (Oct 2026)", url: "https://theedgemalaysia.com/node/822339" },
         ],
       },
     ],
@@ -1150,6 +1178,8 @@ export const SECTORS = [
           { date: "2026-04-30", text: "Phase 1 reached 38.2 percent progress", done: true },
           { date: "2026-08-01", text: "First two ART units arrived in Kuching", done: true },
           { date: "2026-08-28", text: "Final girder installed for 400m Sungai Kuap ART bridge", done: true },
+          { date: "2026-09", text: "Phase 1 reached 49 percent progress", done: true },
+          { date: "2026-10-19", text: "Blue Line Phase 1 Rembus to Northbank reached 88 percent physical progress", done: true },
           { date: "2026-Q4", text: "ART pilot service begins", done: false },
           { date: "2026-Q4", text: "Rembus hydrogen plant relocation completes", done: false },
           { date: "2027", text: "ART commercial service begins", done: false },
@@ -1167,6 +1197,8 @@ export const SECTORS = [
           { label: "New Straits Times — RM6B KUTS allocation (May 2025)", url: "https://www.nst.com.my/news/nation/2025/05/1221758/rm6-billion-allocated-kuching-urban-transportation-system" },
           { label: "Borneo Post — Final girder installed for Sungai Kuap ART bridge (Aug 2026)", url: "https://www.theborneopost.com/2026/08/28/final-girder-installed-for-400m-art-bridge-over-sungai-kuap/" },
           { label: "Ministry of Transport Sarawak — Sungai Kuap ART bridge girder (Sep 2026)", url: "https://mot.sarawak.gov.my/web/subpage/news_view/960" },
+          { label: "UKAS — KUTS Phase 1 progress (Oct 2026)", url: "https://ukas.sarawak.gov.my/web/subpage/news_view/51243" },
+          { label: "DayakDaily — ART pilot by end-2026; Phase 1 at 49 percent (Oct 2026)", url: "https://dayakdaily.com/kuching-art-pilot-run-targeted-by-end-2026-as-kuts-phase-1-hits-49-pct-progress/" },
         ],
       },
       {
@@ -1203,6 +1235,7 @@ export const SECTORS = [
         milestones: [
           { date: "2025-05-21", text: "Feasibility-study consultants appointed", done: true },
           { date: "2026-05-18", text: "Site-verification and feasibility study completed", done: true },
+          { date: "2026-05-26", text: "Airport Development Request was submitted to federal Ministry of Transport", done: true },
           { date: "TBD", text: "Federal authorities approve Airport Development Request", done: false },
           { date: "2027", text: "Physical construction of the airport begins", done: false },
         ],
@@ -1213,6 +1246,8 @@ export const SECTORS = [
           { label: "Ministry of Transport Sarawak - Feasibility study and approval phase (May 2026)", url: "https://mot.sarawak.gov.my/web/subpage/news_view/881" },
           { label: "Ministry of Transport Sarawak - Federal airport discussions (Jun 2026)", url: "https://mot.sarawak.gov.my/web/subpage/news_view/889" },
           { label: "UKAS — KLCH physical works expected from 2027; names NKIA (May 2026)", url: "https://ukas.sarawak.gov.my/web/subpage/news_view/41089" },
+          { label: "Borneo Post — Airport Development Request submitted (Oct 2026)", url: "https://www.theborneopost.com/2026/10/20/state-air-passenger-movements-rise-3-61pct-in-q3/" },
+          { label: "Utusan Borneo — Kapasiti penumpang Miri dan ADR Kuching baharu (Oct 2026)", url: "https://www.utusanborneo.com.my/2026/10/19/kapasiti-penumpang-lapangan-terbang-miri-dijangka-meningkat-kepada-empat-juta-setahun" },
         ],
       },
       {

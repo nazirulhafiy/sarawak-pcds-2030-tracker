@@ -3,6 +3,131 @@ import { localizeSectors } from "./localization.js";
 
 const updateDefinitions = [
   {
+    date: "2026-10-26",
+    projectName: "SMD Semiconductor — GaN Chip Development",
+    description: {
+      en: "SMD Semiconductor said Linyang keteq.GaN chip integration is planned to begin in 2027. Global IP registration and commercialisation remain open. The value stays Not disclosed.",
+      ms: "SMD Semiconductor berkata integrasi cip keteq.GaN Linyang dirancang bermula pada 2027. Pendaftaran harta intelek global dan pengkomersialan kekal terbuka. Nilai kekal Tidak didedahkan.",
+    },
+    sourceUrl: "https://smdsemiconductor.com/smd-to-begin-keteq-gan-chip-integration-with-linyang-in-2027",
+  },
+  {
+    date: "2026-10-26",
+    projectName: "Coastal Road Network and Second Trunk Road (CSTR)",
+    description: {
+      en: "UKAS set Batang Lupar 2 traffic opening for November 2026 and Batang Saribas 2 completion for December 2026. Rambungan Bridge opening in 2026 stays open from existing Star coverage. Sejingkat contractual completion, Batang Paloh traffic opening, and the remaining nine major bridges stay open.",
+      ms: "UKAS menetapkan pembukaan lalu lintas Batang Lupar 2 pada November 2026 dan penyiapan Batang Saribas 2 pada Disember 2026. Pembukaan Jambatan Rambungan pada 2026 kekal terbuka daripada liputan Star sedia ada. Penyiapan kontrak Sejingkat, pembukaan lalu lintas Batang Paloh, dan sembilan jambatan utama yang berbaki kekal terbuka.",
+    },
+    sourceUrl: "https://ukas.sarawak.gov.my/web/subpage/news_view/51425",
+  },
+  {
+    date: "2026-10-26",
+    projectName: "Sarawak-Singapore Electricity Interconnection",
+    description: {
+      en: "The Edge Malaysia reported that the Singapore interconnection is in a submarine cable survey study. Remaining licences, commercial close, and the 2032-2035 export window stay open.",
+      ms: "The Edge Malaysia melaporkan sambungan Singapura sedang dalam kajian tinjauan kabel bawah laut. Lesen berbaki, penutupan komersial, dan tingkap eksport 2032-2035 kekal terbuka.",
+    },
+    sourceUrl: "https://theedgemalaysia.com/node/822339",
+  },
+  {
+    date: "2026-10-26",
+    projectName: "Miri Combined Cycle Gas Turbine (CCGT) Power Plant",
+    description: {
+      en: "The Edge Malaysia reported Q4 2027 completion for the Miri CCGT plant, refining the open completion date. The displayed value stays RM2 billion; UKAS RM2.5 billion remains held for manual review.",
+      ms: "The Edge Malaysia melaporkan penyiapan S4 2027 bagi loji CCGT Miri, memperhalusi tarikh penyiapan terbuka. Nilai paparan kekal RM2 bilion; RM2.5 bilion UKAS kekal ditahan untuk semakan manual.",
+    },
+    sourceUrl: "https://theedgemalaysia.com/node/822339",
+  },
+  {
+    date: "2026-10-21",
+    projectName: "Kuching Low-Carbon Hub",
+    description: {
+      en: "UKAS reported that a Tanjung Embang coordinating task force was established. Physical development is targeted to begin in early 2027 through PPP, and Samajaya 2 High Tech Park readiness for investors in 2028 is open. The hub-wide value stays Not disclosed.",
+      ms: "UKAS melaporkan pasukan petugas penyelarasan Tanjung Embang ditubuhkan. Pembangunan fizikal disasarkan bermula pada awal 2027 melalui PPP, dan kesediaan Taman Teknologi Tinggi Samajaya 2 untuk pelabur pada 2028 kekal terbuka. Nilai seluruh hab kekal Tidak didedahkan.",
+    },
+    sourceUrl: "https://ukas.sarawak.gov.my/web/subpage/news_view/51455",
+  },
+  {
+    date: "2026-10-20",
+    projectName: "RM1 Billion Paddy Infrastructure Programme",
+    description: {
+      en: "DayakDaily reported that 10 paddy projects covering 3,460 hectares are under implementation. Phased project completion from 2027 is open. Farmer clustering and the 2030 output target stay open.",
+      ms: "DayakDaily melaporkan 10 projek padi merangkumi 3,460 hektar sedang dilaksanakan. Penyiapan projek secara berperingkat dari 2027 kekal terbuka. Pengelompokan petani dan sasaran pengeluaran 2030 kekal terbuka.",
+    },
+    sourceUrl:
+      "https://dayakdaily.com/only-11-pct-of-swaks-9900-ha-paddy-schemes-cultivated-rm2-5-bln-needed-for-revival/",
+  },
+  {
+    date: "2026-10-20",
+    projectName: "Lubok Punggor AgriHub and Mid Sadong 1 Irrigation Project",
+    description: {
+      en: "The open AgriHub and irrigation completion date is set to 2027 from the same DayakDaily paddy-schemes report. The completion milestone stays open.",
+      ms: "Tarikh penyiapan terbuka AgriHub dan pengairan ditetapkan kepada 2027 daripada laporan skim padi DayakDaily yang sama. Pencapaian penyiapan kekal terbuka.",
+    },
+    sourceUrl:
+      "https://dayakdaily.com/only-11-pct-of-swaks-9900-ha-paddy-schemes-cultivated-rm2-5-bln-needed-for-revival/",
+  },
+  {
+    date: "2026-10-20",
+    projectName: "Selangau Pig Farming Area",
+    description: {
+      en: "Borneo Post reported that Selangau Pig Farming Area operations are targeted for 2027. Basic site infrastructure in 2028 stays open. The displayed value stays RM300 million; a 20 October Borneo Post RM200 million figure is held for manual review.",
+      ms: "Borneo Post melaporkan operasi Kawasan Penternakan Babi Selangau disasarkan pada 2027. Infrastruktur asas tapak pada 2028 kekal terbuka. Nilai paparan kekal RM300 juta; angka RM200 juta Borneo Post 20 Oktober ditahan untuk semakan manual.",
+    },
+    sourceUrl:
+      "https://www.theborneopost.com/2026/10/20/dr-rundi-selangau-pig-farming-area-to-begin-operations-in-2027/",
+  },
+  {
+    date: "2026-10-20",
+    projectName: "Sarawak Cancer Centre",
+    description: {
+      en: "DayakDaily reported that DUS confirmed the design-and-build tender is still live, with Surat Setuju Terima (SST) targeted for Q1 2027 and completion in 2032. The displayed value stays RM1.52 billion.",
+      ms: "DayakDaily melaporkan DUS mengesahkan tender reka dan bina masih dibuka, dengan Surat Setuju Terima (SST) disasarkan pada S1 2027 dan penyiapan pada 2032. Nilai paparan kekal RM1.52 bilion.",
+    },
+    sourceUrl:
+      "https://dayakdaily.com/rm1-5-bln-sarawak-cancer-centre-targets-2032-completion-with-310-beds/",
+  },
+  {
+    date: "2026-10-20",
+    projectName: "New Kuching International Airport",
+    description: {
+      en: "Borneo Post reported that the Airport Development Request was submitted to the federal Ministry of Transport on 26 May 2026. Federal approval and 2027 construction remain open. Status stays Planning.",
+      ms: "Borneo Post melaporkan Permohonan Pembangunan Lapangan Terbang diserahkan kepada Kementerian Pengangkutan Persekutuan pada 26 Mei 2026. Kelulusan persekutuan dan pembinaan 2027 kekal terbuka. Status kekal Perancangan.",
+    },
+    sourceUrl:
+      "https://www.theborneopost.com/2026/10/20/state-air-passenger-movements-rise-3-61pct-in-q3/",
+  },
+  {
+    date: "2026-10-19",
+    projectName: "Sarawak Infectious Disease Centre",
+    description: {
+      en: "Borneo Post and DayakDaily reported that the Samarahan campus reached 90 percent completion and that the project value is RM320 million. Official launch in Q3 2027 remains open.",
+      ms: "Borneo Post dan DayakDaily melaporkan kampus Samarahan mencapai 90 peratus siap dan nilai projek ialah RM320 juta. Pelancaran rasmi pada S3 2027 kekal terbuka.",
+    },
+    sourceUrl:
+      "https://www.theborneopost.com/2026/10/19/rm320mln-sarawak-infectious-disease-centre-90pct-complete-on-track-for-q3-2027-opening/",
+  },
+  {
+    date: "2026-10-19",
+    projectName: "Bintulu-Samalaju Gas Pipeline",
+    description: {
+      en: "A DayakDaily DUN report said the Kidurong–Samalaju pipeline reached 96 percent completion. Samalaju gas supply by end-2026 remains open.",
+      ms: "Laporan DUN DayakDaily berkata saluran paip Kidurong–Samalaju mencapai 96 peratus siap. Bekalan gas Samalaju menjelang akhir 2026 kekal terbuka.",
+    },
+    sourceUrl:
+      "https://dayakdaily.com/kuching-low-carbon-hub-in-tanjung-embang-eyes-rm300b-investments-180000-jobs-by-2035/",
+  },
+  {
+    date: "2026-10-19",
+    projectName: "KUTS — Kuching Urban Transportation System",
+    description: {
+      en: "UKAS and DayakDaily reported Phase 1 at 49 percent progress and Blue Line Phase 1 from Rembus to Northbank at 88 percent physical progress. ART pilot service in Q4 2026 and commercial service in 2027 remain open.",
+      ms: "UKAS dan DayakDaily melaporkan Fasa 1 pada kemajuan 49 peratus dan Laluan Biru Fasa 1 dari Rembus ke Northbank pada kemajuan fizikal 88 peratus. Perkhidmatan rintis ART pada S4 2026 dan perkhidmatan komersial pada 2027 kekal terbuka.",
+    },
+    sourceUrl:
+      "https://dayakdaily.com/kuching-art-pilot-run-targeted-by-end-2026-as-kuts-phase-1-hits-49-pct-progress/",
+  },
+  {
     date: "2026-10-15",
     projectName: "Baram Agrovoltaic Project",
     description: {
@@ -19,6 +144,15 @@ const updateDefinitions = [
       ms: "UKAS melaporkan projek CCGT Miri 500MW mencapai 63 peratus siap setakat suku ketiga 2026. Operasi komersial kekal disasarkan menjelang akhir 2027. Nilai paparan kekal RM2 bilion; UKAS turut menyatakan RM2.5 bilion, yang ditahan untuk semakan manual.",
     },
     sourceUrl: "https://ukas.sarawak.gov.my/web/subpage/news_view/50615",
+  },
+  {
+    date: "2026-10-12",
+    projectName: "Environment (Reduction of Greenhouse Gases Emission) Ordinance 2023",
+    description: {
+      en: "UKAS announced an RM20 million RMK-13 allocation for GHGMS Phase 2. Phase 2 operations and annual verified emissions reporting remain open.",
+      ms: "UKAS mengumumkan peruntukan RM20 juta RMK-13 bagi GHGMS Fasa 2. Operasi Fasa 2 dan pelaporan pelepasan tahunan yang disahkan kekal terbuka.",
+    },
+    sourceUrl: "https://ukas.sarawak.gov.my/web/subpage/news_view/50544",
   },
   {
     date: "2026-10-10",
