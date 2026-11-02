@@ -3,6 +3,51 @@ import { localizeSectors } from "./localization.js";
 
 const updateDefinitions = [
   {
+    date: "2026-11-02",
+    projectName: "Coastal Road Network and Second Trunk Road (CSTR)",
+    description: {
+      en: "Batang Paloh Bridge opened to traffic on 30 October 2026 and Batang Lupar 2 opened on 31 October 2026. Batang Saribas 2 is targeted to open on 5 December 2026. Sejingkat Bridge contractual completion and Rambungan Bridge stay open.",
+      ms: "Jambatan Batang Paloh dibuka kepada lalu lintas pada 30 Oktober 2026 dan Batang Lupar 2 dibuka pada 31 Oktober 2026. Batang Saribas 2 disasarkan dibuka pada 5 Disember 2026. Penyiapan kontrak Jambatan Sejingkat dan Jambatan Rambungan kekal terbuka.",
+    },
+    sourceUrl: "https://dayakdaily.com/rm298-98-mln-batang-paloh-bridge-opens-links-mukah-to-tanjung-manis/",
+  },
+  {
+    date: "2026-11-02",
+    projectName: "One-Stop Early Intervention Centre (OSEIC) Miri",
+    description: {
+      en: "Deputy Minister Rosey Yunus said OSEIC Miri is scheduled to begin operations in November 2026. The open operations milestone was revised from 2027 and stays incomplete until opening is confirmed.",
+      ms: "Timbalan Menteri Rosey Yunus berkata OSEIC Miri dijadualkan mula beroperasi pada November 2026. Pencapaian operasi terbuka disemak daripada 2027 dan kekal belum selesai sehingga pembukaan disahkan.",
+    },
+    sourceUrl: "https://dayakdaily.com/swak-to-expand-early-intervention-services-for-miri-children-with-special-needs-this-month/",
+  },
+  {
+    date: "2026-11-02",
+    projectName: "Bau Gold Project",
+    description: {
+      en: "Besra's September 2026 quarterly reported a preferred three-year investigation and study programme for the Jugan lease. Final mining lease conditions remain open. Status stays Planning.",
+      ms: "Laporan suku tahun September 2026 Besra melaporkan program penyiasatan dan kajian tiga tahun pilihan bagi pajakan Jugan. Syarat pajakan perlombongan muktamad kekal terbuka. Status kekal Merancang.",
+    },
+    sourceUrl: "https://www.besra.com/september-2026-quarterly-activities-appendix-5b-cash-flow-report/",
+  },
+  {
+    date: "2026-11-02",
+    projectName: "Sarawak-Sabah Link Road",
+    description: {
+      en: "UKAS reported SSLR Phase 1 at 78.07 percent and Phase 2 at 23.38 percent as of 21 October 2026. The open Phase 2 completion target moves to 2030. Phase 1 completion in March 2027 stays open. The displayed value stays RM7.6 billion for Phase 2 only.",
+      ms: "UKAS melaporkan SSLR Fasa 1 pada 78.07 peratus dan Fasa 2 pada 23.38 peratus setakat 21 Oktober 2026. Sasaran penyiapan terbuka Fasa 2 beralih kepada 2030. Penyiapan Fasa 1 pada Mac 2027 kekal terbuka. Nilai paparan kekal RM7.6 bilion bagi Fasa 2 sahaja.",
+    },
+    sourceUrl: "https://ukas.sarawak.gov.my/web/subpage/news_view/51420",
+  },
+  {
+    date: "2026-11-02",
+    projectName: "RM1 Billion Paddy Infrastructure Programme",
+    description: {
+      en: "Budget 2027 allocated RM20.47 million for paddy expansion. The open 2027 milestone now names Phase 1 across seven areas covering about 2,000 hectares. Farmer clustering and the 2030 output target stay open.",
+      ms: "Belanjawan 2027 memperuntukkan RM20.47 juta bagi perluasan padi. Pencapaian terbuka 2027 kini menamakan Fasa 1 merentasi tujuh kawasan meliputi kira-kira 2,000 hektar. Pengelompokan petani dan sasaran pengeluaran 2030 kekal terbuka.",
+    },
+    sourceUrl: "https://suarasarawak.my/belanjawan-sarawak-2027-rm20-47-juta-perkukuh-pengeluaran-padi/",
+  },
+  {
     date: "2026-10-26",
     projectName: "SMD Semiconductor — GaN Chip Development",
     description: {
