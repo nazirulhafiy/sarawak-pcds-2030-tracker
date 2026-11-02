@@ -871,7 +871,7 @@ export const SECTORS = [
           { date: "2026-10-08", text: "Batang Paloh Bridge final span was connected", done: true },
           { date: "2026-10-30", text: "Batang Paloh Bridge opened to traffic", done: true },
           { date: "2026-10-31", text: "Batang Lupar 2 opened to traffic", done: true },
-          { date: "2026-10-22", text: "Sejingkat Bridge reaches contractual completion", done: false },
+          { date: "TBD", text: "Sejingkat Bridge reaches contractual completion", done: false },
           { date: "2026-12-05", text: "Batang Saribas 2 opens to traffic", done: false },
           { date: "2026", text: "Rambungan Bridge opens to traffic", done: false },
           { date: "2027", text: "Remaining nine major bridges reach completion", done: false },
