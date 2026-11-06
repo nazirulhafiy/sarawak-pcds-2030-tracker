@@ -383,7 +383,7 @@ export const SECTORS = [
           "A three-stage ecotourism and biodiversity-research development in Semenggoh Nature Reserve, covering the Wildlife Centre entrance, visitor facilities, botanical gardens and research infrastructure. It has a RM30 million allocation to strengthen conservation, visitor access and research.",
         milestones: [
           { date: "2020-08-19", text: "Foundation ceremony and RM30M allocation announced", done: true },
-          { date: "2026-05", text: "Phase 1 Wildlife Centre Zone reaches completion", done: false },
+          { date: "TBD", text: "Phase 1 Wildlife Centre Zone reaches completion", done: false },
           { date: "2030", text: "Phase 2 Entrance Zone reaches completion", done: false },
           { date: "2030", text: "Phase 3 Botanical Zone reaches completion", done: false },
         ],
@@ -728,7 +728,7 @@ export const SECTORS = [
           { date: "2025-10", text: "30-year power purchase agreement signed", done: true },
           { date: "2026-05-16", text: "Phase 1 site preparation reached 150 cleared acres", done: true },
           { date: "2026-07-24", text: "RM328M Phase 1 EPCC contract awarded", done: true },
-          { date: "2026-08", text: "Phase 1 site clearing completes", done: false },
+          { date: "TBD", text: "Phase 1 site clearing completes", done: false },
           { date: "2027-12", text: "Commercial operations begin", done: false },
           { date: "2028-08", text: "Permanent Sungai Serai bridge reaches completion", done: false },
         ],
