@@ -164,6 +164,81 @@ function applyRouteMetadata(template, route, allRoutes) {
   return output;
 }
 
+/**
+ * GitHub Pages serves /404.html at nested missing URLs while keeping that URL in
+ * the address bar. Root-absolute /assets/... paths keep CSS/JS/images working.
+ */
+function forceRootAbsoluteUrls(html) {
+  return html.replace(
+    /\b(href|src|poster)=(["'])(?!\/|https?:|mailto:|tel:|#|data:)([^"']+)\2/gi,
+    (_match, attr, quote, value) => {
+      const normalized = value.replace(/^\.\//, "");
+      return `${attr}=${quote}/${normalized}${quote}`;
+    }
+  );
+}
+
+function applyNotFoundMetadata(template) {
+  const title = escapeHtml(NOT_FOUND_TITLE);
+  const description = escapeHtml(NOT_FOUND_DESCRIPTION);
+  let output = template
+    .replace(/<html lang="[^"]*">/, '<html lang="en">')
+    .replace(/<title>[\s\S]*?<\/title>/, `<title>${title}</title>`)
+    .replace(
+      /<meta name="description" content="[^"]*" \/>/,
+      `<meta name="description" content="${description}" />`
+    )
+    .replace(
+      /<link rel="canonical" href="[^"]*" \/>/,
+      ""
+    )
+    .replace(
+      /<meta property="og:title" content="[^"]*" \/>/,
+      `<meta property="og:title" content="${title}" />`
+    )
+    .replace(
+      /<meta property="og:description" content="[^"]*" \/>/,
+      `<meta property="og:description" content="${description}" />`
+    )
+    .replace(
+      /<meta property="og:url" content="[^"]*" \/>/,
+      `<meta property="og:url" content="${productionOrigin}/" />`
+    )
+    .replace(
+      /<meta property="og:image:alt" content="[^"]*" \/>/,
+      `<meta property="og:image:alt" content="${title}" />`
+    )
+    .replace(
+      /<meta name="twitter:title" content="[^"]*" \/>/,
+      `<meta name="twitter:title" content="${title}" />`
+    )
+    .replace(
+      /<meta name="twitter:description" content="[^"]*" \/>/,
+      `<meta name="twitter:description" content="${description}" />`
+    )
+    .replace(
+      /<meta name="twitter:image:alt" content="[^"]*" \/>/,
+      `<meta name="twitter:image:alt" content="${title}" />`
+    )
+    .replace(
+      /<script type="application\/ld\+json">[\s\S]*?<\/script>/,
+      ""
+    );
+
+  if (!output.includes('name="robots"')) {
+    output = output.replace(
+      "</head>",
+      '    <meta name="robots" content="noindex" />\n  </head>'
+    );
+  }
+
+  return output;
+}
+
+const NOT_FOUND_TITLE = `Page not found | ${siteCopy.title}`;
+const NOT_FOUND_DESCRIPTION =
+  "The page you're looking for doesn't exist or has moved.";
+
 try {
   await build({
     root: projectRoot,
@@ -223,6 +298,24 @@ try {
     await writeFile(outputPath, output);
     console.log(`Prerendered ${mode} ${route.path} into ${outputPath}.`);
   }
+
+  // GitHub Pages custom 404 at dist root. Not a STATIC_ROUTES entry / not in sitemap.
+  const notFoundAppHtml = render("/__missing__/");
+  let notFoundTemplate = applyNotFoundMetadata(template);
+  if (concept) {
+    notFoundTemplate = notFoundTemplate
+      .replace(/<html lang="([^"]*)">/, '<html lang="$1" data-concept="v2">')
+      .replace(
+        "</head>",
+        `    <link rel="stylesheet" crossorigin href="/assets/${conceptStylesheet}" />\n  </head>`
+      );
+  }
+  const notFoundOutput = forceRootAbsoluteUrls(
+    notFoundTemplate.replace(rootMarker, `<div id="root">${notFoundAppHtml}</div>`)
+  );
+  const notFoundPath = resolve("dist/404.html");
+  await writeFile(notFoundPath, notFoundOutput);
+  console.log(`Prerendered ${mode} 404 page into ${notFoundPath}.`);
 } finally {
   await rm(serverOutDir, { recursive: true, force: true });
 }

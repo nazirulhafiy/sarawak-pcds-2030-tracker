@@ -94,7 +94,8 @@ Production at `https://pcds2030.com` is the canonical, indexable public site. It
 includes route-specific canonical and social metadata, structured data, `robots.txt`, and a
 sitemap. Both tracker and update-history language pairs include reciprocal `hreflang` references.
 The pre-rendered tracker and update history give search engines meaningful content before
-client-side React runs.
+client-side React runs. Unknown production paths use a branded GitHub Pages `404.html` with
+`noindex`; that shell is not listed in the sitemap.
 
 Shared links use an explicit 1200 by 630 social-preview image instead of allowing messaging apps
 to choose a favicon or Apple touch icon as a fallback. Production uses the teal tracker mark and

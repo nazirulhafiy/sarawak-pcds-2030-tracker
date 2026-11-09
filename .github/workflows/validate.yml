@@ -33,3 +33,6 @@ jobs:
       - name: Check analytics dist
         if: github.event_name == 'push' || github.base_ref == 'preview' || github.base_ref == 'main'
         run: npm run check:analytics
+      - name: Check 404 page dist
+        if: github.event_name == 'push' || github.base_ref == 'preview' || github.base_ref == 'main'
+        run: npm run check:404
