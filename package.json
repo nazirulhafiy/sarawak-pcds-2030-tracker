@@ -9,6 +9,7 @@
     "build:preview": "vite build --mode preview && node scripts/sync-environment-root-icons.mjs preview && node scripts/prerender.mjs preview && node scripts/write-cname.mjs preview",
     "check:content": "node scripts/validate-tracker-data.mjs",
     "check:analytics": "node scripts/check-analytics-dist.mjs",
+    "check:404": "node scripts/check-404-dist.mjs",
     "check:links": "node scripts/check-source-links.mjs",
     "check:release": "node scripts/check-release-readiness.mjs",
     "icons:generate": "node scripts/generate-environment-favicons.mjs",

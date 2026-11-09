@@ -75,7 +75,24 @@ export const STATIC_ROUTES = [
   },
 ];
 
+/** Soft/hard 404 shell. Not listed in STATIC_ROUTES or sitemap.xml. */
+export const NOT_FOUND_ROUTE = {
+  id: "not-found",
+  page: "not-found",
+  path: "/404.html",
+  language: "en",
+  locale: "en_MY",
+  metadata: {
+    title: `Page not found | ${site.title}`,
+    description: "The page you're looking for doesn't exist or has moved.",
+  },
+  alternates: [],
+};
+
 export function getRouteById(routeId) {
+  if (routeId === NOT_FOUND_ROUTE.id) {
+    return NOT_FOUND_ROUTE;
+  }
   return STATIC_ROUTES.find((route) => route.id === routeId) || STATIC_ROUTES.find((route) => route.id === 'tracker-en');
 }
 
@@ -106,7 +123,7 @@ export function resolveRoute(pathname = "/", base = "/") {
 
   return (
     STATIC_ROUTES.find((route) => route.path === normalizedPath) ||
-    STATIC_ROUTES.find((route) => route.id === 'tracker-en')
+    NOT_FOUND_ROUTE
   );
 }
 

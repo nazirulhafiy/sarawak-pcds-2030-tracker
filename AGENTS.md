@@ -42,6 +42,8 @@ This repository is the pcds2030.com Vite and React static tracker.
 - Run `npm run check:content` for data or editorial-content changes.
 - Run `npm run check:analytics` after a production or preview build to verify the analytics
   registry marker, IDs, cookie name, and spa flag in `dist/`.
+- Run `npm run check:404` after a production or preview build to verify `dist/404.html` exists
+  with the branded heading, `noindex` meta, and root-absolute asset paths.
 - Run `npm run check:links` for a report-only review of public source availability.
 - For every screenshot, use `tools/shots.mjs` (3× phone, cropped to the change, light and dark).
 - When opening the **live production** site (`https://pcds2030.com`) for agent runs, weekly jobs,
