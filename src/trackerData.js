@@ -1,5 +1,5 @@
 // ─── DATA ───────────────────────────────────────────────────────────────────
-export const LAST_UPDATED = "2026-11-02";
+export const LAST_UPDATED = "2026-11-09";
 
 const PCDS_SUMMARY = {
   name: "PCDS 2030 — Overarching Framework",
@@ -100,8 +100,9 @@ export const SECTORS = [
           { date: "2026-05-12", text: "Sarawak Padi and Rice Board Bill was passed", done: true },
           { date: "2026-09-28", text: "7,000 hectares of State land gazetted exclusively for paddy", done: true },
           { date: "2026-10-12", text: "Budget 2027 allocated RM20.47 million for paddy expansion", done: true },
+          { date: "2026-10-13", text: "LCDA leased 143 hectares in Meradong for hybrid paddy", done: true },
           { date: "2026-10-20", text: "10 projects covering 3,460 hectares under implementation", done: true },
-          { date: "2026", text: "Farmer clustering and paddy land leasing", done: false },
+          { date: "2026", text: "Farmer clustering for large-scale paddy", done: false },
           { date: "2027", text: "Phase 1 begins across seven areas covering about 2,000 hectares", done: false },
           { date: "2030", text: "Annual rice output reaches 500,000 tonnes", done: false },
         ],
@@ -115,6 +116,8 @@ export const SECTORS = [
           { label: "DayakDaily — About 7,000 ha identified and gazetted for paddy (Sep 2026)", url: "https://dayakdaily.com/sarawak-to-start-planting-paddy-on-8000ha-from-next-year/" },
           { label: "DayakDaily — Premier: 7,000 ha State land gazetted exclusively for paddy (Oct 2026)", url: "https://dayakdaily.com/premier-sarawak-gazettes-7000-hectares-of-state-land-exclusively-for-paddy-production/" },
           { label: "Suara Sarawak — Budget 2027 RM20.47M paddy expansion (Oct 2026)", url: "https://suarasarawak.my/belanjawan-sarawak-2027-rm20-47-juta-perkukuh-pengeluaran-padi/" },
+          { label: "UKAS — LCDA Meradong 143 ha hybrid paddy lease (Oct 2026)", url: "https://ukas.sarawak.gov.my/web/subpage/news_view/50672" },
+          { label: "DayakDaily — 143 ha Meradong hybrid paddy lease (Oct 2026)", url: "https://dayakdaily.com/143ha-of-land-approved-for-hybrid-paddy-cultivation-potential-to-yield-up-to-11-08-metric-tonnes-of-rice-per-ha/" },
           { label: "DayakDaily — 10 projects / 3,460 ha under implementation (Oct 2026)", url: "https://dayakdaily.com/only-11-pct-of-swaks-9900-ha-paddy-schemes-cultivated-rm2-5-bln-needed-for-revival/" },
         ],
       },
@@ -991,7 +994,7 @@ export const SECTORS = [
         sources: [
           { label: "The Edge Malaysia — RM16.5B construction cost explained (Feb 2020)", url: "https://theedgemalaysia.com/article/rm165b-represents-only-sarawaks-pan-borneo-highway-construction-cost" },
           { label: "Sarawak Tribune — Earlier Q1 2029 WP11 schedule (Dec 2025)", url: "https://www.sarawaktribune.com/pan-borneo-highway-phase-1-in-sarawak-nears-full-completion/" },
-          { label: "DanaInfra — Ten of 11 packages complete as of Jun 2026", url: "https://www.danainfra.com.my/index.php/pan-borneo-sarawak-project" },
+          { label: "DanaInfra — Phase 1 at 99.98 percent as of 30 Sep 2026; ten packages complete", url: "https://www.danainfra.com.my/index.php/pan-borneo-sarawak-project" },
           { label: "The Edge — AG report: WP11 at 99.9 percent, completion extended to 31 December 2028 (Oct 2026)", url: "https://theedgemalaysia.com/node/820481" },
           { label: "Malay Mail — JAN: WP11 at 99.9 percent as of 31 March 2026 (Oct 2026)", url: "https://www.malaymail.com/news/malaysia/2026/10/05/audit-dept-flags-continued-delays-rm514m-in-unauthorised-variation-orders-on-sabah-pan-borneo-highway/237748" },
         ],
@@ -1110,7 +1113,8 @@ export const SECTORS = [
           { date: "2025-12", text: "National Security Council approved subsea survey works", done: true },
           { date: "2026-02", text: "Singapore MPA approval was obtained", done: true },
           { date: "2026-10", text: "Submarine cable survey study was under way", done: true },
-          { date: "TBD", text: "Remaining licences and commercial close advance", done: false },
+          { date: "2026-11-04", text: "Technical and power purchase agreements were signed", done: true },
+          { date: "TBD", text: "Indonesian government approves the undersea cable route", done: false },
           { date: "2032-2035", text: "Electricity exports begin", done: false },
         ],
         sources: [
@@ -1120,6 +1124,7 @@ export const SECTORS = [
           { label: "DayakDaily — Premier on 2032-2035 export window and NSC/MPA support (May 2026)", url: "https://dayakdaily.com/premier-sarawak-singapore-partnership-poised-to-become-asean-green-energy-model/" },
           { label: "Sarawak Rivers Board — Cabinet, EMA and MKN survey milestones (Jul 2026)", url: "https://srb.sarawak.gov.my/web/subpage/news_view/903" },
           { label: "The Edge Malaysia — Singapore interconnection in submarine cable survey study (Oct 2026)", url: "https://theedgemalaysia.com/node/822339" },
+          { label: "The Malaysian Reserve — Technical and PPAs signed; Indonesia approval pending (Nov 2026)", url: "https://themalaysianreserve.com/2026/11/04/sarawak-singapore-power-link-awaits-indonesias-nod-despite-signed-agreements/" },
         ],
       },
     ],
