@@ -3,6 +3,33 @@ import { localizeSectors } from "./localization.js";
 
 const updateDefinitions = [
   {
+    date: "2026-11-09",
+    projectName: "Sarawak-Singapore Electricity Interconnection",
+    description: {
+      en: "Deputy Minister Hazland said technical and power purchase agreements for the undersea Singapore link have been signed. Indonesian government approval for the cable route stays open. The 2032-2035 export window stays open.",
+      ms: "Timbalan Menteri Hazland berkata perjanjian teknikal dan belian kuasa bagi sambungan bawah laut Singapura telah ditandatangani. Kelulusan kerajaan Indonesia bagi laluan kabel kekal terbuka. Tingkap eksport 2032-2035 kekal terbuka.",
+    },
+    sourceUrl: "https://themalaysianreserve.com/2026/11/04/sarawak-singapore-power-link-awaits-indonesias-nod-despite-signed-agreements/",
+  },
+  {
+    date: "2026-11-09",
+    projectName: "RM1 Billion Paddy Infrastructure Programme",
+    description: {
+      en: "UKAS and DayakDaily reported that LCDA leased 143 hectares in Meradong to Onemas Agriculture for hybrid paddy on 13 October 2026. Statewide farmer clustering stays open. Phase 1 from 2027 and the 2030 output target stay open.",
+      ms: "UKAS dan DayakDaily melaporkan LCDA memajak 143 hektar di Meradong kepada Onemas Agriculture untuk padi hibrid pada 13 Oktober 2026. Pengelompokan petani seluruh negeri kekal terbuka. Fasa 1 dari 2027 dan sasaran pengeluaran 2030 kekal terbuka.",
+    },
+    sourceUrl: "https://ukas.sarawak.gov.my/web/subpage/news_view/50672",
+  },
+  {
+    date: "2026-11-09",
+    projectName: "Pan Borneo Highway Sarawak Phase 1",
+    description: {
+      en: "DanaInfra's project page now states Phase 1 at 99.98 percent as of 30 September 2026 with ten packages complete. The open Work Package 11 full-completion date stays 31 December 2028 from the Auditor General report.",
+      ms: "Halaman projek DanaInfra kini menyatakan Fasa 1 pada 99.98 peratus setakat 30 September 2026 dengan sepuluh pakej siap. Tarikh penyiapan penuh terbuka Pakej Kerja 11 kekal 31 Disember 2028 daripada laporan Ketua Audit Negara.",
+    },
+    sourceUrl: "https://www.danainfra.com.my/index.php/pan-borneo-sarawak-project",
+  },
+  {
     date: "2026-11-02",
     projectName: "Coastal Road Network and Second Trunk Road (CSTR)",
     description: {
