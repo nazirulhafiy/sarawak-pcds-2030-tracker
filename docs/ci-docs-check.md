@@ -4,6 +4,15 @@ Pull requests into `preview` or `main` run the **Docs check** workflow
 (`.github/workflows/docs-check.yml`) on `opened`, `synchronize`,
 `reopened`, `labeled`, and `unlabeled` events.
 
+Two jobs:
+
+- **`docs-check`** — the required check. Read-only token (`contents: read`,
+  `pull-requests: read`). Checks out the pull request with
+  `persist-credentials: false`, then runs `scripts/check-pr-docs.mjs`.
+- **`ensure-no-docs-needed-label`** — creates the `no-docs-needed` label if
+  missing. This is the only job with `issues: write`. It does not check out
+  the repository or run repository scripts.
+
 ## What it enforces
 
 If a PR changes files that affect how the site **looks or behaves**, it
@@ -26,8 +35,8 @@ Those PRs are not blocked by this check.
 ## Escape hatch
 
 Add the GitHub label **`no-docs-needed`** when the PR touches watched
-files but genuinely needs no documentation update. The workflow creates
-this label in the repository if it is missing.
+files but genuinely needs no documentation update. The
+`ensure-no-docs-needed-label` job creates the label if it is missing.
 
 ## Failure message
 
