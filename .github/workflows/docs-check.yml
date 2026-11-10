@@ -20,6 +20,7 @@ jobs:
       - name: Ensure no-docs-needed label exists
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_REPO: ${{ github.repository }}
         run: |
           gh label create "no-docs-needed" \
             --description "Skip the Docs check when a PR changes UI/build files but needs no docs/ update." \
