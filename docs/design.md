@@ -388,6 +388,17 @@ social-preview branding.
 - Capture review screenshots with [`tools/shots.mjs`](screenshots.md): 3× phone viewport, crop to
   the affected UI, light and dark themes.
 
+## Missing pages (GitHub Pages 404)
+
+Production on GitHub Pages serves `dist/404.html` for unknown paths while keeping the requested URL
+in the address bar. The page reuses the V2 concept header and shared footer, with a short
+`Page not found` heading, one supporting line, and a Home link back to `/`. CSS, JS, images, and
+in-page links use root-absolute paths so nested missing URLs still load site assets. The document
+includes `<meta name="robots" content="noindex">`, keeps the normal analytics loader marker (no
+synthetic 404 events), and stays out of `sitemap.xml`. Preview/Vercel 404 handling is out of scope;
+the file is still emitted by both builds so local preview and CI can verify it. `npm run check:404`
+asserts the file exists in `dist/` with the heading, noindex meta, and absolute asset paths.
+
 ## Analytics
 
 - Typed registry: `data/analytics.json` (fleet kit shape v1) is the single source for production
@@ -411,7 +422,8 @@ social-preview branding.
   internal cookie can skip it. Public production visits still get the beacon; internal-cookie
   visits do not.
 - Build injects exactly one `data-sn-analytics-loader` JSON marker per HTML page (CI hook only;
-  not a second tag loader). `npm run check:analytics` fails the build if a page has zero or two
-  markers, an ID/token not in the registry, the wrong cookie name, or spa drift.
+  not a second tag loader), including the production `404.html` shell. `npm run check:analytics`
+  fails the build if a page has zero or two markers, an ID/token not in the registry, the wrong
+  cookie name, or spa drift.
 - No Content-Security-Policy is set; if one is added, allow `www.googletagmanager.com`,
   `*.google-analytics.com`, and `static.cloudflareinsights.com`.

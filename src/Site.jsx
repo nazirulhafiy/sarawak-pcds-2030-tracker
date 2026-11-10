@@ -3,6 +3,7 @@ import { useEffect, useRef, useState } from "react";
 import App from "./App.jsx";
 import AboutPage from "./AboutPage.jsx";
 import BackToTop from "./BackToTop.jsx";
+import NotFoundPage from "./NotFoundPage.jsx";
 import { applyDocumentRouteMetadata } from "./documentMetadata.js";
 import { getUiCopy } from "./localization.js";
 import {
@@ -136,7 +137,9 @@ export default function Site({ route, concept = false }) {
     }
   };
 
-  const page = activeRoute.page === "about"
+  const page = activeRoute.page === "not-found"
+    ? <NotFoundPage onNavigate={navigate} headingRef={pageHeadingRef} />
+    : activeRoute.page === "about"
     ? <AboutPage language={activeRoute.language} onNavigate={navigate} headingRef={pageHeadingRef} />
     : activeRoute.page === "updates"
     ? (
@@ -156,6 +159,19 @@ export default function Site({ route, concept = false }) {
       />
     );
 
+  const englishRouteId =
+    activeRoute.page === "about"
+      ? "about"
+      : activeRoute.page === "updates"
+        ? "updates"
+        : "tracker-en";
+  const malayRouteId =
+    activeRoute.page === "about"
+      ? "about-ms"
+      : activeRoute.page === "updates"
+        ? "updates-ms"
+        : "tracker-ms";
+
   return (
     <>
       {concept && <nav ref={navRef} className={`concept-nav${navIntroDone ? " concept-nav--ready" : ""}${skipIntro ? " concept-nav--skip-intro" : ""}`} aria-label="Primary navigation"
@@ -172,12 +188,12 @@ export default function Site({ route, concept = false }) {
           <a aria-current={activeRoute.page === 'updates' ? 'page' : undefined} href={getRouteHref(activeRoute.language === "ms" ? "updates-ms" : "updates") + (import.meta.env.VITE_DESIGN_CONCEPT === "v2" ? "" : "?concept=v2")} onClick={(event) => navigate(event, activeRoute.language === "ms" ? "updates-ms" : "updates")}>{activeRoute.language === "ms" ? "Kemas kini" : "Updates"}</a>
           <a aria-current={activeRoute.page === 'about' ? 'page' : undefined} href={getRouteHref(activeRoute.language === "ms" ? "about-ms" : "about") + (import.meta.env.VITE_DESIGN_CONCEPT === "v2" ? "" : "?concept=v2")} onClick={(event) => navigate(event, activeRoute.language === "ms" ? "about-ms" : "about")}>{activeRoute.language === "ms" ? "Tentang" : "About"}</a>
           <div className="concept-language-menu">
-            <LanguageToggle copy={copy} language={activeRoute.language} englishRouteId={activeRoute.page === "about" ? "about" : activeRoute.page === "updates" ? "updates" : "tracker-en"} malayRouteId={activeRoute.page === "about" ? "about-ms" : activeRoute.page === "updates" ? "updates-ms" : "tracker-ms"} onNavigate={navigate} />
+            <LanguageToggle copy={copy} language={activeRoute.language} englishRouteId={englishRouteId} malayRouteId={malayRouteId} onNavigate={navigate} />
           </div>
         </div>
         <div className="concept-utilities">
           <div className="concept-language-desktop">
-            <LanguageToggle copy={copy} language={activeRoute.language} englishRouteId={activeRoute.page === "about" ? "about" : activeRoute.page === "updates" ? "updates" : "tracker-en"} malayRouteId={activeRoute.page === "about" ? "about-ms" : activeRoute.page === "updates" ? "updates-ms" : "tracker-ms"} onNavigate={navigate} />
+            <LanguageToggle copy={copy} language={activeRoute.language} englishRouteId={englishRouteId} malayRouteId={malayRouteId} onNavigate={navigate} />
           </div>
           <ThemeToggle copy={copy} onThemeToggle={(theme) => {
             applyDocumentTheme(theme);
