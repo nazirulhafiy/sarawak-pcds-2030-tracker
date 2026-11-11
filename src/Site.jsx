@@ -23,7 +23,7 @@ const BRAND_FAVICON_SRC = `/favicon-${getAppEnvironment().name}-browser.png?v=20
 export default function Site({ route, concept = false }) {
   const [activeRoute, setActiveRoute] = useState(route);
   const [menuOpen, setMenuOpen] = useState(false);
-  const [navIntroDone, setNavIntroDone] = useState(false);
+  const [navIntroDone, setNavIntroDone] = useState(true);
   const [skipIntro, setSkipIntro] = useState(false);
   const introChecked = useRef(false);
   useEffect(() => {
@@ -32,7 +32,6 @@ export default function Site({ route, concept = false }) {
     try {
       if (sessionStorage.getItem('pcds-v2-intro-seen') === '1') {
         queueMicrotask(() => {
-          setNavIntroDone(true);
           setSkipIntro(true);
         });
       }
@@ -174,11 +173,7 @@ export default function Site({ route, concept = false }) {
 
   return (
     <>
-      {concept && <nav ref={navRef} className={`concept-nav${navIntroDone ? " concept-nav--ready" : ""}${skipIntro ? " concept-nav--skip-intro" : ""}`} aria-label="Primary navigation"
-        onFocusCapture={() => setNavIntroDone(true)}
-        onAnimationEnd={(event) => {
-          if (event.animationName === "concept-logo-enter") setNavIntroDone(true);
-        }}>
+      {concept && <nav ref={navRef} className={`concept-nav${navIntroDone ? " concept-nav--ready" : ""}${skipIntro ? " concept-nav--skip-intro" : ""}`} aria-label="Primary navigation">
         <a className="concept-brand" href={import.meta.env.VITE_DESIGN_CONCEPT === "v2" ? "/" : "/?concept=v2"} onClick={(event) => navigate(event, activeRoute.language === "ms" ? "tracker-ms" : "tracker-en")} aria-label={`${site.title} home`}>
           <img src={BRAND_FAVICON_SRC} alt="" width="32" height="32" />
           <span className="concept-brand-name" aria-hidden="true">{Array.from(site.title).map((letter, index) => <span key={index} className="concept-brand-letter" style={{ "--letter-index": index }}>{letter === " " ? "\u00a0" : letter}</span>)}</span>

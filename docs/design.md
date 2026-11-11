@@ -7,6 +7,10 @@ V2 is the default local and Preview interface. Its active behavior is documented
 V2 is approved for Production. Internal `concept` identifiers select the interface
 during builds; V2 is not an optional Preview mode.
 
+The primary V2 navbar appears instantly on first paint in its compact ready state
+(logo, Projects / Updates / About, EN / BM). It does not run a load or brand-entrance
+animation. Hero and page content entrances remain as documented in [the V2 guide](v2.md).
+
 ## Current Design Direction
 
 The current site is a compact civic-data tracker. It should feel clear, restrained, and evidence-oriented rather than promotional.
