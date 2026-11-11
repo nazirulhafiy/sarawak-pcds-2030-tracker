@@ -80,54 +80,11 @@ html[data-concept="v2"]:not([data-theme="dark"]) {
 .concept-language-menu { display:none; }
 .concept-language-desktop { display:flex; align-items:center; }
 .concept-nav > .concept-utilities { margin-left:auto; gap:8px; align-items:center; }
-/* These persistent elements animate after the hero lead-in, not on route changes. */
-@media (prefers-reduced-motion: no-preference) {
-  .concept-nav .concept-brand { --brand-expanded:230px; justify-content:flex-start; animation:concept-brand-width 2200ms cubic-bezier(.65,0,.25,1) 300ms both; }
-  .concept-brand-name { left:0; font-size:16px; max-width:none; white-space:nowrap; line-height:1.15; animation:concept-brand-contract 2200ms linear 300ms both; }
-  .concept-brand-letter { display:inline-block; animation:concept-letter-fold 700ms cubic-bezier(.65,0,.25,1) calc(1730ms + var(--letter-index) * 3ms) both; }
-  .concept-brand img { animation:concept-logo-enter 2200ms cubic-bezier(.22,1,.36,1) 300ms both; }
-  .concept-nav > .concept-utilities { animation:concept-nav-enter 300ms ease-out both; }
-}
-@media (prefers-reduced-motion: no-preference) and (min-width:761px) {
-  .concept-nav > .concept-links { animation:concept-nav-enter 300ms ease-out both; }
-}
-/* Keyboard use takes priority over the decorative entrance. */
-.concept-nav--ready .concept-brand-name,
-.concept-nav.concept-nav--ready .concept-brand,
-.concept-nav--ready .concept-brand-letter,
-.concept-nav--ready .concept-brand img,
-.concept-nav.concept-nav--ready > .concept-links,
-.concept-nav.concept-nav--ready > .concept-utilities { animation:none; }
+/* Compact navbar paints ready immediately; no load/entrance transition. */
 .concept-nav--ready .concept-brand-name { opacity:0; visibility:hidden; }
 .concept-nav--ready .concept-brand img { opacity:1; visibility:visible; transform:none; }
 .concept-nav.concept-nav--ready > .concept-links,
 .concept-nav.concept-nav--ready > .concept-utilities { opacity:1; visibility:visible; }
-@keyframes concept-brand-contract {
-  0% { opacity:0; visibility:visible; clip-path:inset(0 0 0 0); transform:translateX(0); }
-  15%, 65% { opacity:1; visibility:visible; clip-path:inset(0 0 0 0); transform:translateX(0); }
-  100% { opacity:0; visibility:hidden; clip-path:inset(0 0 0 0); transform:none; }
-}
-@keyframes concept-brand-width {
-  0%, 65% { flex-basis:var(--brand-expanded); }
-  100% { flex-basis:32px; }
-}
-@keyframes concept-letter-fold {
-  from { opacity:1; transform:none; }
-  to { opacity:0; transform:translateX(calc(var(--letter-index) * -7px)) translateY(-3px) rotateY(85deg) scale(.3); }
-}
-@keyframes concept-logo-enter {
-  0%, 65% { opacity:0; clip-path:inset(0 100% 0 0); transform:none; filter:hue-rotate(80deg); }
-  83% { opacity:1; filter:hue-rotate(160deg); }
-  100% { opacity:1; clip-path:inset(0 0 0 0); transform:none; filter:none; }
-}
-@media (max-width:760px) and (prefers-reduced-motion:no-preference) {
-  .concept-nav .concept-brand { --brand-expanded:min(200px, calc(100vw - 140px)); }
-  .concept-brand-name { font-size:clamp(10px, 3vw, 14px); }
-}
-@keyframes concept-nav-enter {
-  from { opacity:0; visibility:hidden; }
-  to { opacity:1; visibility:visible; }
-}
 .concept-nav { position:sticky; top:0; z-index:40; background:var(--page-bg); }
 .concept-nav::before { content:""; position:absolute; inset:0 calc((100% - 100vw) / 2); background:var(--page-bg); border-bottom:1px solid var(--border); z-index:-1; pointer-events:none; }
 html[data-concept="v2"] { scroll-padding-top:80px; }

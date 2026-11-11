@@ -11,7 +11,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="theme-color" content="#ffffff" />
     <style>
-      /* Keep the concept navbar stable while its route-specific stylesheet loads. */
+      /* Reserve the compact navbar layout on first paint; no entrance hide. */
       .concept-nav {
         box-sizing: border-box;
         display: flex;
@@ -39,7 +39,8 @@
         width: 32px;
         height: 32px;
         object-fit: contain;
-        opacity: 0;
+        opacity: 1;
+        visibility: visible;
       }
       .concept-brand-name {
         position: absolute;
@@ -54,8 +55,8 @@
       .concept-nav > div { display: flex; gap: 30px; }
       .concept-nav > .concept-links,
       .concept-nav > .concept-utilities {
-        opacity: 0;
-        visibility: hidden;
+        opacity: 1;
+        visibility: visible;
       }
       .concept-nav > .concept-links { flex: 1; align-items: center; }
       .concept-nav > .concept-utilities { margin-left: auto; gap: 8px; align-items: center; }
