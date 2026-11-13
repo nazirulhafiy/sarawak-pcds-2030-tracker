@@ -131,7 +131,7 @@ html[data-concept="v2"] .updates-main > header > .tracker-kicker { margin:0 0 20
 html[data-concept="v2"] .updates-main > header > p:not(.tracker-kicker) { max-width:100% !important; margin:24px auto 0 !important; font-size:17px !important; line-height:1.7 !important; }
 html[data-concept="v2"] .tracker-title-product::after { content:""; display:block; width:38%; margin:10px auto 0; height:2px; background:linear-gradient(90deg,#0f766e,#a8d1b9,transparent); }
 html[data-concept="v2"] .tracker-description { margin:24px auto 0 !important; max-width:100% !important; font-size:17px !important; line-height:1.7 !important; }
-html[data-concept="v2"] .tracker-description p + p { font-size:14px; margin-top:6px !important; }
+html[data-concept="v2"] .tracker-description p + p { margin-top:6px !important; }
 html[data-concept="v2"] .tracker-last-updated { text-align:center; margin-bottom:36px !important; }
 html[data-concept="v2"] .tracker-last-updated > span { display:inline-block; padding:12px 0; font-size:12px; font-weight:600; color:var(--text-secondary); }
 @media (prefers-reduced-motion: no-preference) {
