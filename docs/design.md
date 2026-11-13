@@ -120,7 +120,9 @@ Current type style:
   with a `1.7` line height in V2. Keep the hero language plain and direct, with no inline
   emphasis treatment, so the tracker purpose and source basis remain easy to scan.
 - A compact `11px` linked last-updated pill so freshness metadata remains visible without competing
-  with the introduction.
+  with the introduction. In V2, header bottom padding keeps a modest gap above that line
+  (`17px` desktop / `12px` mobile, about two thirds of the prior space) while the gap below it
+  to the stats row stays unchanged (`36px` / `24px` margin plus the control’s own padding).
 - No decorative display font.
 
 ## Color

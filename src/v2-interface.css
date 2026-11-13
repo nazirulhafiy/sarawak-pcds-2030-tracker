@@ -100,7 +100,7 @@ html[data-concept="v2"] { scroll-padding-top:80px; }
   .concept-links > a { display:inline-flex; align-items:center; min-height:32px; }
 }
 html[data-concept="v2"] main { max-width:1180px !important; padding-top:0 !important; }
-html[data-concept="v2"] main > header { position:relative; text-align:center; padding:72px 0 32px; margin-bottom:0 !important; }
+html[data-concept="v2"] main > header { position:relative; text-align:center; padding:72px 0 17px; margin-bottom:0 !important; }
 html[data-concept="v2"] .concept-about > header { max-width:824px; margin:0 auto; padding:80px 0 48px; text-align:left; border-bottom:1px solid var(--border); }
 html[data-concept="v2"] .concept-about > header h1 { margin:0; font-size:clamp(36px,5vw,52px); line-height:1.12; font-weight:500; }
 html[data-concept="v2"] .concept-about > header p { max-width:720px; margin:28px 0 0; font-size:clamp(19px,2.2vw,22px); line-height:1.55; color:var(--text-secondary); }
@@ -287,7 +287,7 @@ html[data-concept="v2"] .site-footer { margin-top:70px; background:transparent; 
   .concept-nav > div { gap:12px; font-size:12px; }
   .concept-nav > .concept-utilities { gap:4px; }
   .concept-nav .concept-nav-action { padding:7px 12px; font-size:11px; }
-  html[data-concept="v2"] main > header { padding:48px 0 24px; }
+  html[data-concept="v2"] main > header { padding:48px 0 12px; }
   html[data-concept="v2"] .tracker-title { letter-spacing:-2px !important; }
   html[data-concept="v2"] .tracker-description { font-size:16px !important; }
   html[data-concept="v2"] .tracker-last-updated { margin-bottom:24px !important; }
