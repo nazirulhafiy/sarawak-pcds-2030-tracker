@@ -116,8 +116,9 @@ Current type style:
   programme context, while `Project Tracker` remains the dominant product label.
 - Small uppercase labels for metadata.
 - Compact body text for project summaries and milestones.
-- Introductory copy at `16px` with a `1.6` line height. Keep the hero language plain and direct,
-  with no inline emphasis treatment, so the tracker purpose and source basis remain easy to scan.
+- Introductory hero description lines share one size: `17px` on desktop and `16px` on mobile,
+  with a `1.7` line height in V2. Keep the hero language plain and direct, with no inline
+  emphasis treatment, so the tracker purpose and source basis remain easy to scan.
 - A compact `11px` linked last-updated pill so freshness metadata remains visible without competing
   with the introduction.
 - No decorative display font.
