@@ -1,5 +1,5 @@
 // ─── DATA ───────────────────────────────────────────────────────────────────
-export const LAST_UPDATED = "2026-11-09";
+export const LAST_UPDATED = "2026-11-14";
 
 const PCDS_SUMMARY = {
   name: "PCDS 2030 — Overarching Framework",
@@ -876,7 +876,7 @@ export const SECTORS = [
           { date: "2026-10-31", text: "Batang Lupar 2 opened to traffic", done: true },
           { date: "TBD", text: "Sejingkat Bridge reaches contractual completion", done: false },
           { date: "2026-12-05", text: "Batang Saribas 2 opens to traffic", done: false },
-          { date: "2026", text: "Rambungan Bridge opens to traffic", done: false },
+          { date: "2027-Q4", text: "Rambungan Bridge opens to traffic", done: false },
           { date: "2027", text: "Remaining nine major bridges reach completion", done: false },
           { date: "TBD", text: "Remaining CSTR road and bridge packages reach completion", done: false },
         ],
@@ -893,6 +893,9 @@ export const SECTORS = [
           { label: "The Star — Batang Lupar 2 officially opens (Oct 2026)", url: "https://www.thestar.com.my/news/nation/2026/10/31/batang-lupar-2-bridge-officially-opens-to-cut-drive-time-between-simanggang-betong" },
           { label: "Borneo Post — Batang Saribas 2 set to open 5 Dec (Oct 2026)", url: "https://www.theborneopost.com/2026/10/17/premier-batang-saribas-2-bridge-set-to-open-this-dec-5/" },
           { label: "UKAS — Batang Lupar 2 and Batang Saribas 2 schedules (Oct 2026)", url: "https://ukas.sarawak.gov.my/web/subpage/news_view/51425" },
+          { label: "DayakDaily — Batang Rambungan Bridge Q4 2027 completion (Sep 2026)", url: "https://dayakdaily.com/batang-rambungan-bridge-project-to-complete-by-q4-2027/" },
+          { label: "UKAS — Jambatan Rambungan Dijangka Siap Suku Keempat 2027 (Sep 2026)", url: "https://ukas.sarawak.gov.my/web/subpage/news_view/49466" },
+          { label: "UKAS — Premier: Rambungan disasarkan siap pada 2027 (Sep 2026)", url: "https://ukas.sarawak.gov.my/web/subpage/news_view/49468" },
         ],
       },
       {
