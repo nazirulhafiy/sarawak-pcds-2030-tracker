@@ -6,8 +6,8 @@ const updateDefinitions = [
     date: "2026-11-14",
     projectName: "Coastal Road Network and Second Trunk Road (CSTR)",
     description: {
-      en: "CSTR milestones use a single 'opens to public' wording for the 16 verified CRN/STR bridges. Pending dates for Limbang, Saribas 2, Rambungan and Samarahan 2 are sourced target or completion dates to replace with announced openings when known. Sungai Lingga is undated last; Sejingkat package wording removed from the summary.",
-      ms: "Pencapaian CSTR menggunakan teks seragam 'dibuka kepada orang awam' bagi 16 jambatan CRN/STR yang disahkan. Tarikh terbuka Limbang, Saribas 2, Rambungan dan Samarahan 2 ialah sasaran atau penyiapan daripada sumber, diganti dengan tarikh pembukaan rasmi apabila diketahui. Sungai Lingga tanpa tarikh di akhir; rujukan pakej Sejingkat digugurkan daripada ringkasan.",
+      en: "CSTR milestones use a single 'opens to public' wording for the 16 verified CRN/STR bridges. Numbered bridges follow the official '{Name} {N} Bridge' form (e.g. Batang Saribas 1 Bridge). Pending dates for Limbang, Saribas 2, Rambungan and Samarahan 2 are sourced target or completion dates to replace with announced openings when known. Sungai Lingga is undated last; Sejingkat package wording removed from the summary.",
+      ms: "Pencapaian CSTR menggunakan teks seragam 'dibuka kepada orang awam' bagi 16 jambatan CRN/STR yang disahkan. Jambatan bernombor mengikut bentuk rasmi '{Nama} {N} Bridge' (contoh: Batang Saribas 1 Bridge / Jambatan Batang Saribas 1). Tarikh terbuka Limbang, Saribas 2, Rambungan dan Samarahan 2 ialah sasaran atau penyiapan daripada sumber, diganti dengan tarikh pembukaan rasmi apabila diketahui. Sungai Lingga tanpa tarikh di akhir; rujukan pakej Sejingkat digugurkan daripada ringkasan.",
     },
     sourceUrl: "https://ukas.sarawak.gov.my/web/subpage/news_view/51425",
   },

@@ -2,7 +2,7 @@
 
 - Review date: 2026-11-14
 - Reviewer: Cursor Cloud Agent (`bc-db5730f0-b5c3-5005-bdb9-aad24cff26cc`)
-- Review type: event-driven (Nazirul revisions to draft PR #141; tasks `cstr-bridge-milestones-v2` / `cstr-bridge-milestones-v3` / PCDS-28)
+- Review type: event-driven (Nazirul revisions to draft PR #141; tasks `cstr-bridge-milestones-v2` / `cstr-bridge-milestones-v3` / PCDS-28 / `cstr-bridge-names-v4` / PCDS-29)
 - Current dashboard identity: Basic Infrastructure; Coastal Road Network and Second Trunk Road (CSTR); In Progress
 - Tracked unit: combined card (Coastal Road Network + Second Trunk Road programme)
 - Project identity checked: bridges that belong to CRN / STR packages only
@@ -58,9 +58,11 @@ Draft PR #141 first expanded per-bridge milestones, then restricted the card to 
 
 Wording: every EN line is `<Bridge name> opens to public`; every BM line is `Jambatan … dibuka kepada orang awam`.
 
-Done openings: Batang Lassa (2025-01-09), Bintulu-Jepak (2025-03-23), Batang Rajang (2025-03-27), Batang Saribas 1 (2025-05-25), Batang Kemena (2025-12-06), Batang Igan (2026-03-16), Sungai Krian (2026-03-18), Batang Lupar 1 (2026-05-21), Sejingkat (2026-10-05), Batang Paloh (2026-10-30), Batang Lupar 2 (2026-10-31).
+Numbered-bridge naming (PCDS-29 / v4): official EN form is **`{Name} {N} Bridge`** (not `… Bridge {N}`). Backed by JKR press via DayakDaily (`Batang Saribas 1 Bridge`), UKAS / Premier Dept (`Batang Saribas 1 Bridge`, `Batang Saribas 2 Bridge`, `Batang Lupar 2 Bridge`), and UKAS BM `Jambatan Batang Lupar 1`. Applied to Saribas 1/2, Lupar 1/2, and Samarahan 2. BM already matches (`Jambatan Batang Saribas 1`, etc.).
 
-Open: Sungai Limbang (`2026-12`), Batang Saribas 2 (`2026-12-05`), Rambungan (`2027-Q4`), Batang Samarahan 2 (`2027-12`), Sungai Lingga (`TBD`, last).
+Done openings: Batang Lassa (2025-01-09), Bintulu-Jepak (2025-03-23), Batang Rajang (2025-03-27), Batang Saribas 1 Bridge (2025-05-25), Batang Kemena (2025-12-06), Batang Igan (2026-03-16), Sungai Krian (2026-03-18), Batang Lupar 1 Bridge (2026-05-21), Sejingkat (2026-10-05), Batang Paloh (2026-10-30), Batang Lupar 2 Bridge (2026-10-31).
+
+Open: Sungai Limbang (`2026-12`), Batang Saribas 2 Bridge (`2026-12-05`), Rambungan (`2027-Q4`), Batang Samarahan 2 Bridge (`2027-12`), Sungai Lingga (`TBD`, last).
 
 **Pending-date note:** Limbang, Saribas 2, Rambungan, and Samarahan 2 dates are sourced **target or completion** dates. Replace each with an announced public-opening date when one is published. Samarahan 2 keeps `2027-12` from UKAS Package A1-A completion targeting even though the line now reads opens to public.
 
