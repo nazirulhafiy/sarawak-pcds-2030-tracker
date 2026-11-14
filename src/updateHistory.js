@@ -252,7 +252,7 @@ const updateDefinitions = [
       en: "JKR Sarawak completed the final structural connection of the Batang Paloh Bridge on 8 October 2026 during a stitching ceremony. The Coastal Road Package 03 bridge is targeted to open to traffic on 30 October 2026. Sejingkat contractual completion and the remaining major bridges stay open.",
       ms: "JKR Sarawak menyelesaikan penyambungan struktur akhir Jambatan Batang Paloh pada 8 Oktober 2026 semasa majlis penyambungan. Jambatan Pakej 03 Jalan Pesisir disasarkan dibuka kepada lalu lintas pada 30 Oktober 2026. Penyiapan kontrak Sejingkat dan jambatan utama yang berbaki kekal terbuka.",
     },
-    sourceUrl: "https://dayakdaily.com/1-7km-batang-paloh-bridge-to-open-to-traffic-on-oct-30-strengthening-coastal-link/",
+    sourceUrl: "https://dayakdaily.com/rm298-98-mln-batang-paloh-bridge-opens-links-mukah-to-tanjung-manis/",
   },
   {
     date: "2026-10-06",
@@ -308,7 +308,7 @@ const updateDefinitions = [
       en: "JKR Sarawak said the Sejingkat Bridge will open to road users at 10am on 5 October 2026, following a pre-opening ceremony. The earlier 1 October traffic target is superseded.",
       ms: "JKR Sarawak berkata Jambatan Sejingkat akan dibuka kepada pengguna jalan raya pada pukul 10 pagi 5 Oktober 2026, selepas majlis pra-pembukaan. Sasaran lalu lintas 1 Oktober yang lebih awal digantikan.",
     },
-    sourceUrl: "https://dayakdaily.com/sejingkat-bridge-to-open-to-road-users-on-oct-5/",
+    sourceUrl: "https://dayakdaily.com/sejingkat-bridge-opens-to-public-12-of-sarawaks-21-mega-bridges-now-complete/",
   },
   {
     date: "2026-09-21",
@@ -376,7 +376,7 @@ const updateDefinitions = [
       ms: "Jambatan Sejingkat bernilai RM365.74 juta di bawah Rangkaian Jalan Pesisir kekal mengikut jadual untuk dibuka kepada lalu lintas menjelang 1 Oktober 2026.",
     },
     sourceUrl:
-      "https://dayakdaily.com/sejingkat-bridge-on-track-to-open-to-traffic-by-oct-1/",
+      "https://dayakdaily.com/sejingkat-bridge-opens-to-public-12-of-sarawaks-21-mega-bridges-now-complete/",
   },
   {
     date: "2026-08-13",
