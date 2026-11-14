@@ -49,19 +49,19 @@ Every bridge-opening milestone still has at least one retained live source. No m
 
 `src/localization.js` stores BM display fields only for this card (displayName, lead, value, summary, milestones). Source citation labels remain English in `src/trackerData.js`. No matching source entries existed to remove; milestone BM strings are unchanged.
 
-## Update-history source retargets
+## Update-history entries removed
 
-`check:content` requires every `updateHistory` `sourceUrl` to exist on the live card. Three historical CSTR entries pointed at removed URLs and were retargeted to the retained opening pages (descriptions unchanged):
+Rather than retargeting `sourceUrl` values, these three superseded CSTR Updates entries were removed entirely from `src/updateHistory.js` (each entry carried both EN and BM descriptions; BM is not stored separately in `src/localization.js`):
 
-| Date | Former sourceUrl | Retargeted to |
+| Date | EN summary | BM removed |
 | --- | --- | --- |
-| 2026-10-08 | Paloh final-span / 30 Oct target page | DayakDaily Batang Paloh opens to traffic |
-| 2026-09-30 | JKR sets Sejingkat 5 October page | DayakDaily Sejingkat opened to the public |
-| 2026-08-17 | Sejingkat on-track / 1 Oct target page | DayakDaily Sejingkat opened to the public |
+| 2026-10-08 | Batang Paloh Bridge targeted to open 30 Oct (final-span / stitching update) | yes (same entry) |
+| 2026-09-30 | Sejingkat Bridge 5 October opening set (JKR schedule) | yes (same entry) |
+| 2026-08-17 | Sejingkat Bridge on track for 1 Oct | yes (same entry) |
 
 ## Implementation
 
 - `src/trackerData.js`: remove the five sources above; 20 sources remain; milestones and other fields unchanged; `LAST_UPDATED` stays `2026-11-14`
-- `src/updateHistory.js`: retarget three CSTR `sourceUrl` values to retained opening pages
-- `src/localization.js`: no change (no BM source labels on this card)
+- `src/updateHistory.js`: remove the three CSTR Updates entries listed above (EN + BM)
+- `src/localization.js`: no change (no BM source labels or Updates copy for these entries)
 - `docs/data-methodology.md`: review-cadence pointer and CSTR source-map note updated for this trim

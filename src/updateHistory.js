@@ -246,15 +246,6 @@ const updateDefinitions = [
       "https://www.theborneopost.com/2026/10/10/premier-sarawak-records-rm11-2-billion-in-approved-investments-in-first-half-of-year/",
   },
   {
-    date: "2026-10-08",
-    projectName: "Coastal Road Network and Second Trunk Road (CSTR)",
-    description: {
-      en: "JKR Sarawak completed the final structural connection of the Batang Paloh Bridge on 8 October 2026 during a stitching ceremony. The Coastal Road Package 03 bridge is targeted to open to traffic on 30 October 2026. Sejingkat contractual completion and the remaining major bridges stay open.",
-      ms: "JKR Sarawak menyelesaikan penyambungan struktur akhir Jambatan Batang Paloh pada 8 Oktober 2026 semasa majlis penyambungan. Jambatan Pakej 03 Jalan Pesisir disasarkan dibuka kepada lalu lintas pada 30 Oktober 2026. Penyiapan kontrak Sejingkat dan jambatan utama yang berbaki kekal terbuka.",
-    },
-    sourceUrl: "https://dayakdaily.com/rm298-98-mln-batang-paloh-bridge-opens-links-mukah-to-tanjung-manis/",
-  },
-  {
     date: "2026-10-06",
     projectName: "RM1 Billion Paddy Infrastructure Programme",
     description: {
@@ -300,15 +291,6 @@ const updateDefinitions = [
     },
     sourceUrl:
       "https://www.petroleumsarawak.com/publications/2026/1-october-2026-petros-and-hoegh-evi-partner-to-develop-kuching-lng-terminal",
-  },
-  {
-    date: "2026-09-30",
-    projectName: "Coastal Road Network and Second Trunk Road (CSTR)",
-    description: {
-      en: "JKR Sarawak said the Sejingkat Bridge will open to road users at 10am on 5 October 2026, following a pre-opening ceremony. The earlier 1 October traffic target is superseded.",
-      ms: "JKR Sarawak berkata Jambatan Sejingkat akan dibuka kepada pengguna jalan raya pada pukul 10 pagi 5 Oktober 2026, selepas majlis pra-pembukaan. Sasaran lalu lintas 1 Oktober yang lebih awal digantikan.",
-    },
-    sourceUrl: "https://dayakdaily.com/sejingkat-bridge-opens-to-public-12-of-sarawaks-21-mega-bridges-now-complete/",
   },
   {
     date: "2026-09-21",
@@ -367,16 +349,6 @@ const updateDefinitions = [
       ms: "Lembaga Kemajuan Bintulu menyerahkan kunci pusat sokongan komuniti kepada kementerian, yang memberi kuasa kepada SORCS untuk mengurus pusat itu. Operasi dijangka menjelang akhir 2026.",
     },
     sourceUrl: "https://sarawak.sinchew.com.my/news/20260827/sarawak/7792203",
-  },
-  {
-    date: "2026-08-17",
-    projectName: "Coastal Road Network and Second Trunk Road (CSTR)",
-    description: {
-      en: "The RM365.74 million Sejingkat Bridge within the Coastal Road Network remained on track to open to traffic by 1 October 2026.",
-      ms: "Jambatan Sejingkat bernilai RM365.74 juta di bawah Rangkaian Jalan Pesisir kekal mengikut jadual untuk dibuka kepada lalu lintas menjelang 1 Oktober 2026.",
-    },
-    sourceUrl:
-      "https://dayakdaily.com/sejingkat-bridge-opens-to-public-12-of-sarawaks-21-mega-bridges-now-complete/",
   },
   {
     date: "2026-08-13",
