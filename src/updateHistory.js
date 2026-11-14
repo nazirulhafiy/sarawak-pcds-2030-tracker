@@ -277,8 +277,8 @@ const updateDefinitions = [
     date: "2026-10-05",
     projectName: "Coastal Road Network and Second Trunk Road (CSTR)",
     description: {
-      en: "The Sejingkat Bridge opened to the public on 5 October 2026 after a soft-opening ceremony. Contractual completion on 22 October and the rest of the CSTR programme remain open. The remaining nine major bridges are targeted for late 2027.",
-      ms: "Jambatan Sejingkat dibuka kepada orang ramai pada 5 Oktober 2026 selepas majlis pra-pembukaan. Penyiapan kontrak pada 22 Oktober dan program CSTR yang selebihnya kekal terbuka. Sembilan jambatan utama yang berbaki disasarkan menjelang akhir 2027.",
+      en: "The Sejingkat Bridge opened to the public on 5 October 2026 after a soft-opening ceremony. Contractual completion on 22 October and the rest of the CSTR programme remain open.",
+      ms: "Jambatan Sejingkat dibuka kepada orang ramai pada 5 Oktober 2026 selepas majlis pra-pembukaan. Penyiapan kontrak pada 22 Oktober dan program CSTR yang selebihnya kekal terbuka.",
     },
     sourceUrl: "https://dayakdaily.com/sejingkat-bridge-opens-to-public-12-of-sarawaks-21-mega-bridges-now-complete/",
   },
