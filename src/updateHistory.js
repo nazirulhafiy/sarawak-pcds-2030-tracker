@@ -6,10 +6,10 @@ const updateDefinitions = [
     date: "2026-11-14",
     projectName: "Coastal Road Network and Second Trunk Road (CSTR)",
     description: {
-      en: "UKAS and DayakDaily report that Rambungan Bridge is targeted for completion in the fourth quarter of 2027, revising the open traffic-opening date from 2026. Sejingkat Bridge contractual completion, Batang Saribas 2, and the remaining nine major bridges stay open.",
-      ms: "UKAS dan DayakDaily melaporkan Jambatan Rambungan disasarkan siap pada suku keempat 2027, menyemak semula tarikh pembukaan lalu lintas terbuka daripada 2026. Penyiapan kontrak Jambatan Sejingkat, Batang Saribas 2, dan sembilan jambatan utama yang berbaki kekal terbuka.",
+      en: "Rambungan Bridge open traffic target moves to Q4 2027. Per-bridge milestones replace the stale remaining-nine row: dated openings through Batang Lupar 2, Achieved Sungai Lingga, and open Limbang (Dec 2026 public opening), Saribas 2, Samarahan 2 (Dec 2027), Marina (May 2029), and undated Kuala Lawas.",
+      ms: "Sasaran pembukaan lalu lintas Jambatan Rambungan beralih ke suku keempat 2027. Pencapaian mengikut jambatan menggantikan baris sembilan berbaki: pembukaan bertarikh hingga Batang Lupar 2, Sungai Lingga Dicapai, serta Limbang terbuka (pembukaan awam Dis 2026), Saribas 2, Samarahan 2 (Dis 2027), Marina (Mei 2029), dan Kuala Lawas tanpa tarikh.",
     },
-    sourceUrl: "https://dayakdaily.com/batang-rambungan-bridge-project-to-complete-by-q4-2027/",
+    sourceUrl: "https://ukas.sarawak.gov.my/web/subpage/news_view/51425",
   },
   {
     date: "2026-11-09",
