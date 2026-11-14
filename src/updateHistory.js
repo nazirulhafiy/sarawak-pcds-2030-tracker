@@ -6,8 +6,8 @@ const updateDefinitions = [
     date: "2026-11-14",
     projectName: "Coastal Road Network and Second Trunk Road (CSTR)",
     description: {
-      en: "CSTR milestones are bridge openings only. Non-bridge rows and non-CSTR bridges (Marudi, Juma'ani, Marina, Kuala Lawas) are removed. Next open is Sungai Limbang public opening in December 2026; Sungai Lingga stays undated pending after the Premier said it was still to follow on 31 October 2026.",
-      ms: "Pencapaian CSTR ialah pembukaan jambatan sahaja. Baris bukan jambatan dan jambatan bukan CSTR (Marudi, Juma'ani, Marina, Kuala Lawas) digugurkan. Sasaran terbuka seterusnya ialah pembukaan awam Sungai Limbang pada Disember 2026; Sungai Lingga kekal tanpa tarikh selepas Premier berkata ia masih menyusul pada 31 Oktober 2026.",
+      en: "CSTR milestones use a single 'opens to public' wording for the 16 verified CRN/STR bridges. Pending dates for Limbang, Saribas 2, Rambungan and Samarahan 2 are sourced target or completion dates to replace with announced openings when known. Sungai Lingga is undated last; Sejingkat package wording removed from the summary.",
+      ms: "Pencapaian CSTR menggunakan teks seragam 'dibuka kepada orang awam' bagi 16 jambatan CRN/STR yang disahkan. Tarikh terbuka Limbang, Saribas 2, Rambungan dan Samarahan 2 ialah sasaran atau penyiapan daripada sumber, diganti dengan tarikh pembukaan rasmi apabila diketahui. Sungai Lingga tanpa tarikh di akhir; rujukan pakej Sejingkat digugurkan daripada ringkasan.",
     },
     sourceUrl: "https://ukas.sarawak.gov.my/web/subpage/news_view/51425",
   },
