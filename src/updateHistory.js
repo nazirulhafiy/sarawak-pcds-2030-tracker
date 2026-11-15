@@ -94,15 +94,6 @@ const updateDefinitions = [
   },
   {
     date: "2026-10-26",
-    projectName: "Coastal Road Network and Second Trunk Road (CSTR)",
-    description: {
-      en: "UKAS set Batang Lupar 2 traffic opening for November 2026 and Batang Saribas 2 completion for December 2026. Rambungan Bridge opening in 2026 stays open from existing Star coverage. Sejingkat contractual completion, Batang Paloh traffic opening, and the remaining nine major bridges stay open.",
-      ms: "UKAS menetapkan pembukaan lalu lintas Batang Lupar 2 pada November 2026 dan penyiapan Batang Saribas 2 pada Disember 2026. Pembukaan Jambatan Rambungan pada 2026 kekal terbuka daripada liputan Star sedia ada. Penyiapan kontrak Sejingkat, pembukaan lalu lintas Batang Paloh, dan sembilan jambatan utama yang berbaki kekal terbuka.",
-    },
-    sourceUrl: "https://ukas.sarawak.gov.my/web/subpage/news_view/51425",
-  },
-  {
-    date: "2026-10-26",
     projectName: "Sarawak-Singapore Electricity Interconnection",
     description: {
       en: "The Edge Malaysia reported that the Singapore interconnection is in a submarine cable survey study. Remaining licences, commercial close, and the 2032-2035 export window stay open.",
