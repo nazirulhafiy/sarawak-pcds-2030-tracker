@@ -21,6 +21,7 @@ This repository is the pcds2030.com Vite and React static tracker.
 ## Branch Workflow
 
 - `preview` is the normal development branch.
+- `preview` and `main` are protected by the "Keep preview and main" ruleset (no deletion, no force-push). Merged PR branches are auto-deleted; never recreate `preview` or `main`.
 - V2 is the default interface on Preview and in local development. Start new work from the latest `origin/preview`, not `codex/v2-review`.
 - Cursor data updates use focused branches and pull requests into `preview`. Follow `docs/data-methodology.md`; preserve the V2 interface and build configuration.
 - Codex maintains interface behavior and release workflow. See `docs/v2.md` for the migration and release contract.
