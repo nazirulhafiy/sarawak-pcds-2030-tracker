@@ -337,6 +337,9 @@ Event-driven CSTR per-bridge milestone expansion (14 November 2026):
 Event-driven CSTR sources trim (14 November 2026):
 `docs/project-audits/2026-11-14-cstr-sources-trim.md`. Removes five superseded or redundant live sources (Kemena restatement; Sejingkat pre-opening ×2; Paloh final-span target; Star Lupar 2 duplicate). Milestones, dates, wording, and summary unchanged. 20 sources remain; every bridge-opening milestone retains at least one source.
 
+Event-driven CSTR Updates removal (15 November 2026):
+`docs/project-audits/2026-11-15-cstr-26oct-updates-remove.md`. Removes the superseded 26 October 2026 CSTR Updates entry (UKAS 51425 prospective Lupar 2 November / Saribas 2 December schedules). Card sources and milestones unchanged; UKAS 51425 remains a live CSTR source for open Sungai Limbang.
+
 ## Project Summary Writing Standard
 
 - Write each summary as a concise introduction to what the project is, where it is, its defining scope or capacity, its purpose, and why it matters. Two short sentences are usually enough.
