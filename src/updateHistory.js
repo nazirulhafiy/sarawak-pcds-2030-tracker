@@ -3,6 +3,33 @@ import { localizeSectors } from "./localization.js";
 
 const updateDefinitions = [
   {
+    date: "2026-11-16",
+    projectName: "Bintulu-Samalaju Gas Pipeline",
+    description: {
+      en: "Borneo Post reported that PETROS and OCI TerraSus signed a gas sales agreement on 11 November 2026, naming OCI TerraSus as the first Samalaju Industrial Park industrial customer. Physical gas supply to the industrial zone stays open for end-2026.",
+      ms: "Borneo Post melaporkan PETROS dan OCI TerraSus menandatangani perjanjian jualan gas pada 11 November 2026, menamakan OCI TerraSus sebagai pelanggan industri pertama Taman Perindustrian Samalaju. Bekalan gas fizikal ke zon perindustrian kekal terbuka untuk hujung 2026.",
+    },
+    sourceUrl: "https://www.theborneopost.com/2026/11/12/oci-terrasus-inks-gas-sales-partnership-with-petros/",
+  },
+  {
+    date: "2026-11-16",
+    projectName: "Community Social Support Centre (CSSC) Network",
+    description: {
+      en: "Utusan Borneo and Borneo Post reported that the completed Bintulu TTG, which also functions as CSSC, is expected to begin operations in the first quarter of 2027. The open Bintulu operations date moves from the fourth quarter of 2026. Additional divisional centres stay open.",
+      ms: "Utusan Borneo dan Borneo Post melaporkan TTG Bintulu yang juga berfungsi sebagai CSSC telah siap dan dijangka mula beroperasi pada suku pertama 2027. Tarikh operasi terbuka Bintulu beralih daripada suku keempat 2026. Pusat bahagian tambahan kekal terbuka.",
+    },
+    sourceUrl: "https://www.utusanborneo.com.my/2026/11/11/ttg-di-bintulu-miri-siap-dibina-dijangka-beroperasi-suku-pertama-2027",
+  },
+  {
+    date: "2026-11-16",
+    projectName: "Miri Port Kuala Baram Capital Dredging",
+    description: {
+      en: "UKAS reported Miri Port Authority's expectation that Sungai Baram deepening finishes by the end of 2026, subject to weather. The open fourth-quarter 2026 completion milestone stays incomplete.",
+      ms: "UKAS melaporkan jangkaan Pihak Berkuasa Pelabuhan Miri bahawa pendalaman Sungai Baram siap menjelang hujung 2026, tertakluk kepada cuaca. Pencapaian penyiapan terbuka suku keempat 2026 kekal belum selesai.",
+    },
+    sourceUrl: "https://ukas.sarawak.gov.my/web/subpage/news_view/52864",
+  },
+  {
     date: "2026-11-14",
     projectName: "Coastal Road Network and Second Trunk Road (CSTR)",
     description: {
