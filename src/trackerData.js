@@ -1,5 +1,5 @@
 // ─── DATA ───────────────────────────────────────────────────────────────────
-export const LAST_UPDATED = "2026-11-14";
+export const LAST_UPDATED = "2026-11-16";
 
 const PCDS_SUMMARY = {
   name: "PCDS 2030 — Overarching Framework",
@@ -589,7 +589,7 @@ export const SECTORS = [
           { date: "2026-03-17", text: "Kuching centre operational", done: true },
           { date: "2026-07-02", text: "Bintulu furniture-supply quotation was called", done: true },
           { date: "2026-08-26", text: "Bintulu centre keys were handed to the ministry and SORCS", done: true },
-          { date: "2026-Q4", text: "Bintulu centre begins operations", done: false },
+          { date: "2027-Q1", text: "Bintulu centre begins operations", done: false },
           { date: "TBD", text: "Additional divisional centres begin operations", done: false },
         ],
         sources: [
@@ -598,6 +598,8 @@ export const SECTORS = [
           { label: "UKAS - Kuching operations and Sibu-Bintulu rollout (Mar 2026)", url: "https://ukas.sarawak.gov.my/web/subpage/news_view/36445" },
           { label: "JKR Sarawak - Bintulu furniture-supply quotation (Jul 2026)", url: "https://jkr.sarawak.gov.my/web/subpage/webpage_view/465" },
           { label: "Sin Chew - Bintulu CSS and TTG keys handed to the ministry (Aug 2026)", url: "https://sarawak.sinchew.com.my/news/20260827/sarawak/7792203" },
+          { label: "Utusan Borneo — TTG Bintulu cum CSSC ops Q1 2027 (Nov 2026)", url: "https://www.utusanborneo.com.my/2026/11/11/ttg-di-bintulu-miri-siap-dibina-dijangka-beroperasi-suku-pertama-2027" },
+          { label: "Borneo Post — Bintulu TTG cum CSSC ops Q1 2027 (Nov 2026)", url: "https://www.theborneopost.com/2026/11/12/bintulu-miri-homeless-transit-centres-set-to-open-in-q1-2027/" },
         ],
       },
     ],
@@ -1060,6 +1062,7 @@ export const SECTORS = [
           { date: "2025-10", text: "Offshore pipeline section completed", done: true },
           { date: "2026-05-12", text: "Pipeline pre-commissioning activities notified", done: true },
           { date: "2026-10-19", text: "Pipeline reached 96 percent completion", done: true },
+          { date: "2026-11-11", text: "Gas sales agreement signed with first Samalaju industrial customer", done: true },
           { date: "2026", text: "Samalaju Industrial Zone receives gas supply", done: false },
         ],
         sources: [
@@ -1068,6 +1071,7 @@ export const SECTORS = [
           { label: "Sarawak Tribune — Samalaju pipeline operations from 2027 (May 2026)", url: "https://www.sarawaktribune.com/samalaju-power-pipeline-ready-by-2027/" },
           { label: "Borneo Post — Premier: Kidurong–Samalaju pipeline; Samalaju gas by end-2026 (Oct 2026)", url: "https://www.theborneopost.com/2026/10/10/premier-sarawak-records-rm11-2-billion-in-approved-investments-in-first-half-of-year/" },
           { label: "DayakDaily — Kidurong–Samalaju pipeline 96 percent (Oct 2026 DUN)", url: "https://dayakdaily.com/kuching-low-carbon-hub-in-tanjung-embang-eyes-rm300b-investments-180000-jobs-by-2035/" },
+          { label: "Borneo Post — OCI TerraSus gas sales agreement with PETROS (Nov 2026)", url: "https://www.theborneopost.com/2026/11/12/oci-terrasus-inks-gas-sales-partnership-with-petros/" },
         ],
       },
       {
@@ -1174,6 +1178,7 @@ export const SECTORS = [
           { label: "Sarawak Rivers Board — 69% progress as of 30 June (Jul 2026)", url: "https://srb.sarawak.gov.my/web/subpage/news_view/896" },
           { label: "DayakDaily — About 90% physical progress (Sep 2026)", url: "https://dayakdaily.com/kuala-baram-dredging-works-near-completion-at-90-pct-ahead-of-schedule/" },
           { label: "DayakDaily — End-2026 completion expected (Sep 2026)", url: "https://dayakdaily.com/kuala-baram-dredging-project-eyes-end-2026-finish-ahead-of-march-2027-deadline/" },
+          { label: "UKAS — MPA end-2026 dredging finish, weather-qualified (Nov 2026)", url: "https://ukas.sarawak.gov.my/web/subpage/news_view/52864" },
         ],
       },
       {
