@@ -3,6 +3,24 @@ import { localizeSectors } from "./localization.js";
 
 const updateDefinitions = [
   {
+    date: "2026-11-23",
+    projectName: "Miri Port Kuala Baram Capital Dredging",
+    description: {
+      en: "DredgingToday and Baird Maritime report that Miri Port Authority now expects the Kuala Baram dredging project to finish in early 2027. The open completion milestone moves from the fourth quarter of 2026 to the first quarter of 2027.",
+      ms: "DredgingToday dan Baird Maritime melaporkan Pihak Berkuasa Pelabuhan Miri kini menjangka projek pengorekan Kuala Baram siap pada awal 2027. Pencapaian penyiapan terbuka beralih daripada suku keempat 2026 kepada suku pertama 2027.",
+    },
+    sourceUrl: "https://www.dredgingtoday.com/2026/11/20/miri-port-strengthens-operational-readiness-dredging-nears-end",
+  },
+  {
+    date: "2026-11-23",
+    projectName: "Coastal Road Network and Second Trunk Road (CSTR)",
+    description: {
+      en: "Bernama and Borneo Post reported that the Premier officially opened Sejingkat Bridge on 20 November 2026. The card already records the 5 October 2026 public opening. Open Limbang, Saribas 2, Rambungan, Samarahan 2 and Lingga milestones stay incomplete.",
+      ms: "Bernama dan Borneo Post melaporkan Premier merasmikan Jambatan Sejingkat pada 20 November 2026. Kad sudah merekodkan pembukaan kepada orang awam pada 5 Oktober 2026. Pencapaian terbuka Limbang, Saribas 2, Rambungan, Samarahan 2 dan Lingga kekal belum selesai.",
+    },
+    sourceUrl: "https://www.bernama.com/en/news.php?id=2637321",
+  },
+  {
     date: "2026-11-16",
     projectName: "Bintulu-Samalaju Gas Pipeline",
     description: {
