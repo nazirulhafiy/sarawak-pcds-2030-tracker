@@ -84,15 +84,17 @@ Collapsed desktop titles reserve a shared two-line, `44px` title area at the exi
 
 Milestone dates are stored as compact source values but formatted consistently in the interface. Full dates use day, full month, and year; month targets use full month and year; and quarter targets use `Quarter # YYYY` in English and `Suku # YYYY` in BM. A completed milestone whose date has never been published uses the `Achieved` label, rendered as `Achieved` in English and `Dicapai` in BM. Milestones without a published date, including continuous work without a single completion date, omit the date label and render as compact bullet points under the existing `Remaining Milestones` heading. Reserve `Ongoing` for project status rather than milestone timing. Do not add a second title for undated milestone lists. The next-milestone date is visually separated from its description so readers can scan timing and outcome independently.
 
-Segmented milestone indicators follow the milestone-array order. Completed segments must remain
-contiguous from the left, followed by open segments, so the visual sequence agrees with the
-completed count shown beside it. On mobile, the count stays beside the label and segments, shrinking
-the segments slightly and wrapping within the remaining inline space instead of dropping below the
-indicator row. Active projects use a compact `1/5 complete` count; cards already marked `Completed`
-use only the ratio, such as `4/4`, because the status badge already supplies the meaning. The full
-milestone wording remains available to assistive technology. A completed card's final callout uses
-`Final milestone` in English and `Pencapaian Akhir` in BM so it does not repeat the project status.
-Expanded cards retain the `Milestones` label and detailed timeline for added context.
+Segmented milestone indicators use short rounded **dashes** (not dots), following the milestone-array
+order. Completed dashes must remain contiguous from the left, followed by open dashes, so the visual
+sequence agrees with the completed count shown beside it. Desktop keeps the original dash sizes
+(`18px` × `6px` expanded, `15px` × `5px` collapsed). On mobile, the count stays with the label and
+dash row; when many dashes cannot fit on one line inside the card, the dash row wraps within the
+card width instead of squashing dashes into dots or overflowing the page. Active projects use a
+compact `1/5 complete` count; cards already marked `Completed` use only the ratio, such as `4/4`,
+because the status badge already supplies the meaning. The full milestone wording remains available
+to assistive technology. A completed card's final callout uses `Final milestone` in English and
+`Pencapaian Akhir` in BM so it does not repeat the project status. Expanded cards retain the
+`Milestones` label and detailed timeline for added context.
 
 Collapsed desktop cards use a shared minimum height so every two-column row remains visually
 aligned even when titles or milestone copy vary. The narrower two-column range from `761px` to
@@ -103,7 +105,12 @@ row. The visible classification control and final milestone callout keep matchin
 bottom insets on collapsed desktop cards; collapsed detail panels do not add invisible grid gaps
 around the callout. Mobile cards return to content-driven heights and `18px` insets in the one-column
 layout, and their internal grid and flex rows must be allowed to shrink so narrow screens do not clip
-card content.
+card content. Expanded cards keep milestone dates, milestone copy, next-milestone labels, remaining-
+milestone headings, and source titles inside the card width on phones from `320px` to `430px`: grid and
+flex children use `min-width: 0`, long text uses `overflow-wrap: anywhere`, and the dash-shaped
+milestone indicators wrap inside the card instead of forcing a wider min-content size. `npm run
+check:layout` expands every card at those widths and fails if any card or the page overflows
+horizontally.
 
 ## Typography
 
@@ -286,7 +293,8 @@ Current interactions:
   disclaimer. A separate copyright line is omitted because it repeats both the site identity and
   owner credit without adding useful context. Do not show links for unbuilt pages or duplicate
   external destinations in a separate link group.
-- Environment badge is fixed at the bottom-right in non-production environments.
+- Environment badge is fixed at the bottom-right on desktop in non-production environments, and at the
+  bottom-left on phones so it does not cover card content.
 
 The expansion animation respects `prefers-reduced-motion`.
 
@@ -330,7 +338,9 @@ Current mobile changes:
   both filter targets through the same press and focus states. The selected classification keeps the
   active accent surface visible after the press so the filter state is not lost.
 - Fixed non-production environment badges add the device safe-area inset to their normal bottom-right
-  offset so they remain clear of home indicators and rounded display edges without moving on desktop.
+  offset on desktop so they remain clear of home indicators and rounded display edges. Below `760px`,
+  the badge moves to the bottom-left corner and uses a slightly tighter type treatment so it does not
+  cover the right edge of project cards; the mobile Back to top control keeps the bottom-right corner.
 
 The update history uses a date column and content column on desktop, then becomes a single-column
 entry list below `760px`. It uses the same neutral surfaces, typography, theme control, and
@@ -347,6 +357,8 @@ Environment indicators are intentionally small and unobtrusive:
 - Development shows `DEV`.
 - Preview shows `PREVIEW`.
 - Production shows no badge.
+- Desktop keeps the badge fixed at the bottom-right. Phones move it to the bottom-left with a
+  slightly tighter label so it cannot cover the right edge of a project card.
 
 Browser favicons use a simplified transparent `S` so the mark remains clear at every declared size.
 The mark is orange in Development, purple in Preview, and teal in Production. Each `.ico` contains
