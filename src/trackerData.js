@@ -1,5 +1,5 @@
 // ─── DATA ───────────────────────────────────────────────────────────────────
-export const LAST_UPDATED = "2026-11-16";
+export const LAST_UPDATED = "2026-11-23";
 
 const PCDS_SUMMARY = {
   name: "PCDS 2030 — Overarching Framework",
@@ -899,6 +899,8 @@ export const SECTORS = [
           { label: "UKAS — Sungai Krian Bridge opened (Mar 2026)", url: "https://ukas.sarawak.gov.my/web/subpage/news_view/36562" },
           { label: "UKAS — Batang Lupar 1 opened to the public (May 2026)", url: "https://ukas.sarawak.gov.my/web/subpage/news_view/41130" },
           { label: "DayakDaily — Sejingkat Bridge opened to the public (Oct 2026)", url: "https://dayakdaily.com/sejingkat-bridge-opens-to-public-12-of-sarawaks-21-mega-bridges-now-complete/" },
+          { label: "Bernama — Premier officially opens Sejingkat Bridge (Nov 2026)", url: "https://www.bernama.com/en/news.php?id=2637321" },
+          { label: "Borneo Post — Premier officiates Sejingkat Bridge; 15th of 22 (Nov 2026)", url: "https://www.theborneopost.com/2026/11/21/sarawaks-bridge-network-to-boost-coastal-connectivity-economic-opportunities/" },
           { label: "DayakDaily — Batang Paloh Bridge opens to traffic (Oct 2026)", url: "https://dayakdaily.com/rm298-98-mln-batang-paloh-bridge-opens-links-mukah-to-tanjung-manis/" },
           { label: "UKAS — Batang Lupar 2 opened to the public (Oct 2026)", url: "https://ukas.sarawak.gov.my/web/subpage/news_view/52144" },
           { label: "Borneo Post — Batang Saribas 2 set to open 5 Dec (Oct 2026)", url: "https://www.theborneopost.com/2026/10/17/premier-batang-saribas-2-bridge-set-to-open-this-dec-5/" },
@@ -1167,7 +1169,7 @@ export const SECTORS = [
           { date: "2026-04-25", text: "Physical progress reached about 55 percent", done: true },
           { date: "2026-06-30", text: "Physical progress reached 69 percent", done: true },
           { date: "2026-09-21", text: "Physical progress reached about 90 percent", done: true },
-          { date: "2026-Q4", text: "Dredging reaches completion", done: false },
+          { date: "2027-Q1", text: "Dredging reaches completion", done: false },
         ],
         sources: [
           { label: "Dredging Today — Kuala Baram contract award (Jun 2024)", url: "https://www.dredgingtoday.com/2024/06/19/malaysian-chinese-jv-wins-miri-port-dredging-contract/" },
@@ -1179,6 +1181,8 @@ export const SECTORS = [
           { label: "DayakDaily — About 90% physical progress (Sep 2026)", url: "https://dayakdaily.com/kuala-baram-dredging-works-near-completion-at-90-pct-ahead-of-schedule/" },
           { label: "DayakDaily — End-2026 completion expected (Sep 2026)", url: "https://dayakdaily.com/kuala-baram-dredging-project-eyes-end-2026-finish-ahead-of-march-2027-deadline/" },
           { label: "UKAS — MPA end-2026 dredging finish, weather-qualified (Nov 2026)", url: "https://ukas.sarawak.gov.my/web/subpage/news_view/52864" },
+          { label: "DredgingToday — MPA anticipates early-2027 dredging completion (Nov 2026)", url: "https://www.dredgingtoday.com/2026/11/20/miri-port-strengthens-operational-readiness-dredging-nears-end" },
+          { label: "Baird Maritime — MPA expects Kuala Baram dredging early 2027 (Nov 2026)", url: "https://www.bairdmaritime.com/shipping/ports/miri-port-equipment-channel-deepening" },
         ],
       },
       {
