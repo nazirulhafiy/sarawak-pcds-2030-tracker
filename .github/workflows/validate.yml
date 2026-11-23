@@ -36,3 +36,15 @@ jobs:
       - name: Check 404 page dist
         if: github.event_name == 'push' || github.base_ref == 'preview' || github.base_ref == 'main'
         run: npm run check:404
+      - name: Install Chrome for layout check
+        id: setup-chrome
+        if: github.event_name == 'push' || github.base_ref == 'preview'
+        uses: browser-actions/setup-chrome@48ad923757ca74d66703209fe939badbdf80f2f4 # v2.2.0
+      - name: Install layout-check tooling
+        if: github.event_name == 'push' || github.base_ref == 'preview'
+        run: npm install --prefix tools
+      - name: Check mobile card overflow
+        if: github.event_name == 'push' || github.base_ref == 'preview'
+        run: npm run check:layout
+        env:
+          CHROME_PATH: ${{ steps.setup-chrome.outputs.chrome-path }}

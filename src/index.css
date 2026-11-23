@@ -1242,6 +1242,19 @@ html[data-theme="dark"] .back-to-top {
   transform: translateY(1px) scale(0.98);
 }
 
+.environment-badge {
+  position: fixed;
+  right: calc(12px + env(safe-area-inset-right, 0px));
+  bottom: calc(12px + env(safe-area-inset-bottom, 0px));
+  z-index: 50;
+  padding: 5px 8px;
+  border-radius: 4px;
+  font-size: 10px;
+  font-weight: 850;
+  letter-spacing: 0.08em;
+  line-height: 1;
+}
+
 body:has(.environment-badge) .back-to-top {
   bottom: calc(48px + env(safe-area-inset-bottom, 0px));
 }
@@ -1274,6 +1287,14 @@ body:has(.environment-badge) .back-to-top {
     padding: 16px 20px;
   }
 
+  .environment-badge {
+    left: calc(12px + env(safe-area-inset-left, 0px));
+    right: auto;
+    padding: 4px 6px;
+    font-size: 9px;
+    letter-spacing: 0.06em;
+  }
+
   .back-to-top {
     right: calc(12px + env(safe-area-inset-right, 0px));
     bottom: calc(12px + env(safe-area-inset-bottom, 0px));
@@ -1290,8 +1311,9 @@ body:has(.environment-badge) .back-to-top {
     font-size: 16px;
   }
 
+  /* Badge sits bottom-left on phones; back-to-top keeps the bottom-right corner. */
   body:has(.environment-badge) .back-to-top {
-    bottom: calc(48px + env(safe-area-inset-bottom, 0px));
+    bottom: calc(12px + env(safe-area-inset-bottom, 0px));
   }
 }
 
