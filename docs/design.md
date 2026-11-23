@@ -103,7 +103,12 @@ row. The visible classification control and final milestone callout keep matchin
 bottom insets on collapsed desktop cards; collapsed detail panels do not add invisible grid gaps
 around the callout. Mobile cards return to content-driven heights and `18px` insets in the one-column
 layout, and their internal grid and flex rows must be allowed to shrink so narrow screens do not clip
-card content.
+card content. Expanded cards keep milestone dates, milestone copy, next-milestone labels, remaining-
+milestone headings, and source titles inside the card width on phones from `320px` to `430px`: grid and
+flex children use `min-width: 0`, long text uses `overflow-wrap: anywhere`, and segmented milestone
+indicators shrink their bars within the remaining inline space instead of forcing a wider min-content
+size. `npm run check:layout` expands every card at those widths and fails if any card or the page
+overflows horizontally.
 
 ## Typography
 
@@ -286,7 +291,8 @@ Current interactions:
   disclaimer. A separate copyright line is omitted because it repeats both the site identity and
   owner credit without adding useful context. Do not show links for unbuilt pages or duplicate
   external destinations in a separate link group.
-- Environment badge is fixed at the bottom-right in non-production environments.
+- Environment badge is fixed at the bottom-right on desktop in non-production environments, and at the
+  bottom-left on phones so it does not cover card content.
 
 The expansion animation respects `prefers-reduced-motion`.
 
@@ -330,7 +336,9 @@ Current mobile changes:
   both filter targets through the same press and focus states. The selected classification keeps the
   active accent surface visible after the press so the filter state is not lost.
 - Fixed non-production environment badges add the device safe-area inset to their normal bottom-right
-  offset so they remain clear of home indicators and rounded display edges without moving on desktop.
+  offset on desktop so they remain clear of home indicators and rounded display edges. Below `760px`,
+  the badge moves to the bottom-left corner and uses a slightly tighter type treatment so it does not
+  cover the right edge of project cards; the mobile Back to top control keeps the bottom-right corner.
 
 The update history uses a date column and content column on desktop, then becomes a single-column
 entry list below `760px`. It uses the same neutral surfaces, typography, theme control, and
@@ -347,6 +355,8 @@ Environment indicators are intentionally small and unobtrusive:
 - Development shows `DEV`.
 - Preview shows `PREVIEW`.
 - Production shows no badge.
+- Desktop keeps the badge fixed at the bottom-right. Phones move it to the bottom-left with a
+  slightly tighter label so it cannot cover the right edge of a project card.
 
 Browser favicons use a simplified transparent `S` so the mark remains clear at every declared size.
 The mark is orange in Development, purple in Preview, and teal in Production. Each `.ico` contains

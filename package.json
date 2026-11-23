@@ -10,6 +10,7 @@
     "check:content": "node scripts/validate-tracker-data.mjs",
     "check:analytics": "node scripts/check-analytics-dist.mjs",
     "check:404": "node scripts/check-404-dist.mjs",
+    "check:layout": "node scripts/check-mobile-card-overflow.mjs",
     "check:links": "node scripts/check-source-links.mjs",
     "check:release": "node scripts/check-release-readiness.mjs",
     "icons:generate": "node scripts/generate-environment-favicons.mjs",

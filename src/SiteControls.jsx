@@ -324,21 +324,11 @@ export function EnvironmentBadge({ environment, copy }) {
       className="environment-badge"
       aria-label={copy.accessibility.environment(environment.name)}
       style={{
-        position: "fixed",
-        right: "calc(12px + env(safe-area-inset-right, 0px))",
-        bottom: "calc(12px + env(safe-area-inset-bottom, 0px))",
-        zIndex: 50,
-        padding: "5px 8px",
         border: `1px solid ${environment.badgeColor}`,
-        borderRadius: "4px",
         backgroundColor: "var(--surface)",
         color: environment.badgeColor,
         boxShadow: "0 6px 16px var(--shadow)",
         fontFamily: FONT_STACK,
-        fontSize: "10px",
-        fontWeight: 850,
-        letterSpacing: "0.08em",
-        lineHeight: 1,
         pointerEvents: "none",
       }}
     >

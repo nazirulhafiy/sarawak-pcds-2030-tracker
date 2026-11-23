@@ -611,6 +611,8 @@ function MilestoneIndicator({ row, copy }) {
         alignItems: "center",
         gap: "9px",
         flexWrap: "wrap",
+        minWidth: 0,
+        maxWidth: "100%",
       }}
     >
       <span
@@ -622,17 +624,32 @@ function MilestoneIndicator({ row, copy }) {
           fontWeight: 800,
           letterSpacing: "0.1em",
           textTransform: "uppercase",
+          flex: "0 0 auto",
         }}
       >
         {copy.milestones.label}
       </span>
-      <div className="project-milestone-bars" style={{ display: "flex", alignItems: "center", gap: "4px" }} aria-hidden="true">
+      <div
+        className="project-milestone-bars"
+        style={{
+          display: "flex",
+          alignItems: "center",
+          gap: "4px",
+          flex: "1 1 96px",
+          minWidth: 0,
+          maxWidth: "100%",
+        }}
+        aria-hidden="true"
+      >
         {row.milestones.map((milestone, index) => (
           <span
             className="project-milestone-segment"
             key={`${row.id}-indicator-${index}`}
             style={{
-              width: "18px",
+              flex: "1 1 0",
+              width: "auto",
+              minWidth: "3px",
+              maxWidth: "18px",
               height: "6px",
               borderRadius: "999px",
               backgroundColor: milestone.done ? "var(--text-icon)" : "var(--border)",
@@ -649,6 +666,8 @@ function MilestoneIndicator({ row, copy }) {
           fontSize: "11px",
           fontWeight: 700,
           whiteSpace: "nowrap",
+          flex: "0 1 auto",
+          minWidth: 0,
         }}
       >
         <span aria-hidden="true">
@@ -665,20 +684,22 @@ function MilestoneIndicator({ row, copy }) {
 function CollapsedMilestoneSummary({ row, copy }) {
   return (
     <span
+      className="project-collapsed-milestone-summary"
       style={{
         display: "inline-flex",
         alignItems: "center",
         gap: "7px",
         minHeight: "24px",
+        minWidth: 0,
+        maxWidth: "100%",
         color: "var(--text-muted)",
         fontFamily: FONT_STACK,
         fontSize: "11px",
         fontWeight: 750,
         lineHeight: 1.2,
-        whiteSpace: "nowrap",
       }}
     >
-      <span aria-hidden={row.totalMilestones > 0 ? "true" : undefined}>
+      <span aria-hidden={row.totalMilestones > 0 ? "true" : undefined} style={{ flex: "0 0 auto" }}>
         {getMilestoneCountLabel(row, copy)}
       </span>
       {row.totalMilestones > 0 && (
@@ -686,12 +707,20 @@ function CollapsedMilestoneSummary({ row, copy }) {
           {copy.milestones.progress(row.doneMilestones, row.totalMilestones)}
         </span>
       )}
-      <span style={{ display: "inline-flex", alignItems: "center", gap: "4px" }} aria-hidden="true">
+      <span
+        className="project-collapsed-milestone-bars"
+        style={{ display: "inline-flex", alignItems: "center", gap: "4px", flex: "1 1 72px", minWidth: 0 }}
+        aria-hidden="true"
+      >
         {row.milestones.map((milestone, index) => (
           <span
+            className="project-collapsed-milestone-segment"
             key={`${row.id}-collapsed-indicator-${index}`}
             style={{
-              width: "15px",
+              flex: "1 1 0",
+              width: "auto",
+              minWidth: "3px",
+              maxWidth: "15px",
               height: "5px",
               borderRadius: "999px",
               backgroundColor: milestone.done ? "var(--text-icon)" : "var(--border)",
@@ -787,6 +816,8 @@ function SourceLinks({ sources, interactive = true }) {
             gridTemplateColumns: "20px minmax(0, 1fr) auto",
             alignItems: "center",
             gap: "9px",
+            minWidth: 0,
+            maxWidth: "100%",
             padding: "7px 9px",
             border: "1px solid var(--border-soft)",
             borderRadius: "6px",
@@ -816,8 +847,8 @@ function SourceLinks({ sources, interactive = true }) {
           >
             {index + 1}
           </span>
-          <span>{source.label}</span>
-          <span style={{ color: "var(--text-faint)", fontSize: "12px" }}>↗</span>
+          <span style={{ minWidth: 0, overflowWrap: "anywhere" }}>{source.label}</span>
+          <span style={{ color: "var(--text-faint)", fontSize: "12px", flexShrink: 0 }}>↗</span>
         </a>
       ))}
     </div>
@@ -893,7 +924,7 @@ function formatMilestoneDate(value, language = DEFAULT_LANGUAGE) {
 
 function MilestoneList({ milestones, language }) {
   return (
-    <div role="list" style={{ display: "grid", gap: "0" }}>
+    <div role="list" className="project-milestone-list" style={{ display: "grid", gap: "0", minWidth: 0, maxWidth: "100%" }}>
       {milestones.map((milestone, index) => {
         const formattedDate = formatMilestoneDate(milestone.date, language);
 
@@ -902,11 +933,13 @@ function MilestoneList({ milestones, language }) {
             <div
               role="listitem"
               key={`${milestone.date}-${index}`}
+              className="project-milestone-row project-milestone-row--undated"
               style={{
                 display: "grid",
                 gridTemplateColumns: "8px minmax(0, 1fr)",
                 alignItems: "start",
                 gap: "10px",
+                minWidth: 0,
                 padding: "7px 0",
               }}
             >
@@ -920,7 +953,10 @@ function MilestoneList({ milestones, language }) {
                   backgroundColor: "var(--text-icon)",
                 }}
               />
-              <span style={{ color: "var(--text-secondary)", fontSize: "13px", lineHeight: 1.45 }}>
+              <span
+                className="project-milestone-text"
+                style={{ color: "var(--text-secondary)", fontSize: "13px", lineHeight: 1.45, minWidth: 0, overflowWrap: "anywhere" }}
+              >
                 {milestone.text}
               </span>
             </div>
@@ -931,25 +967,33 @@ function MilestoneList({ milestones, language }) {
           <div
             role="listitem"
             key={`${milestone.date}-${index}`}
+            className="project-milestone-row"
             style={{
               display: "grid",
-              gridTemplateColumns: "118px minmax(0, 1fr)",
+              gridTemplateColumns: "minmax(0, 118px) minmax(0, 1fr)",
               gap: "12px",
+              minWidth: 0,
               padding: "9px 0",
               borderTop: index === 0 ? "1px solid var(--border)" : "1px solid var(--border-faint)",
             }}
           >
             <span
+              className="project-milestone-date"
               style={{
                 color: milestone.done ? "var(--text-secondary)" : "var(--text-faint)",
                 fontFamily: FONT_STACK,
                 fontSize: "11px",
                 fontWeight: 700,
+                minWidth: 0,
+                overflowWrap: "anywhere",
               }}
             >
               {formattedDate}
             </span>
-            <span style={{ color: "var(--text-secondary)", fontSize: "13px", lineHeight: 1.45 }}>
+            <span
+              className="project-milestone-text"
+              style={{ color: "var(--text-secondary)", fontSize: "13px", lineHeight: 1.45, minWidth: 0, overflowWrap: "anywhere" }}
+            >
               {milestone.text}
             </span>
           </div>
@@ -1002,16 +1046,28 @@ function NextMilestoneCallout({ row, expanded, copy, language }) {
 
   return (
     <div
+      className="project-next-milestone"
       style={{
         display: "grid",
         gap: "5px",
+        minWidth: 0,
+        maxWidth: "100%",
         padding: expanded ? "10px 12px" : "9px 11px",
         border: "1px solid var(--border)",
         borderRadius: "6px",
         backgroundColor: "var(--surface)",
       }}
     >
-      <div style={{ display: "flex", alignItems: "baseline", justifyContent: "space-between", gap: "12px" }}>
+      <div
+        style={{
+          display: "flex",
+          alignItems: "baseline",
+          justifyContent: "space-between",
+          gap: "12px",
+          minWidth: 0,
+          flexWrap: "wrap",
+        }}
+      >
         <span
           style={{
             color: "var(--text-secondary)",
@@ -1020,6 +1076,9 @@ function NextMilestoneCallout({ row, expanded, copy, language }) {
             fontWeight: 850,
             letterSpacing: "0.1em",
             textTransform: "uppercase",
+            flex: "0 1 auto",
+            minWidth: 0,
+            overflowWrap: "anywhere",
           }}
         >
           {isComplete ? copy.milestones.final : copy.milestones.next}
@@ -1033,6 +1092,9 @@ function NextMilestoneCallout({ row, expanded, copy, language }) {
               fontWeight: 750,
               lineHeight: 1.3,
               textAlign: "right",
+              flex: "1 1 auto",
+              minWidth: 0,
+              overflowWrap: "anywhere",
             }}
           >
             {content.date}
@@ -1045,6 +1107,7 @@ function NextMilestoneCallout({ row, expanded, copy, language }) {
           fontSize: "13px",
           fontWeight: expanded ? 700 : 650,
           lineHeight: 1.45,
+          minWidth: 0,
           overflowWrap: "anywhere",
         }}
       >
@@ -1080,6 +1143,8 @@ function ProjectCard({
       style={{
         "--project-filter-delay": `${FILTER_ENTER_LEAD_MS + filterIndex * FILTER_ENTER_STAGGER_MS}ms`,
         position: "relative",
+        minWidth: 0,
+        maxWidth: "100%",
         border: `1px solid ${cardBorderColor}`,
         borderTop: `1px solid ${cardBorderColor}`,
         borderRadius: "8px",
@@ -1167,16 +1232,19 @@ function ProjectCard({
           </span>
         </div>
 
-        <div>
+        <div style={{ minWidth: 0, maxWidth: "100%" }}>
           <h2
             className="project-card-title"
             style={{
               margin: 0,
+              minWidth: 0,
+              maxWidth: "100%",
               minHeight: expanded ? 0 : "44px",
               display: expanded ? "block" : "-webkit-box",
               WebkitBoxOrient: "vertical",
               WebkitLineClamp: expanded ? "unset" : 2,
               overflow: "hidden",
+              overflowWrap: "anywhere",
               color: "var(--text-strong)",
               fontSize: "18px",
               fontWeight: 800,
@@ -1191,6 +1259,7 @@ function ProjectCard({
               alignItems: "center",
               gap: "8px",
               flexWrap: "wrap",
+              minWidth: 0,
               marginTop: expanded ? "12px" : "10px",
             }}
           >
@@ -1214,14 +1283,14 @@ function ProjectCard({
           </AccordionReveal>
         </div>
 
-        <div style={{ display: "grid", gap: expanded ? "12px" : 0 }}>
+        <div style={{ display: "grid", gap: expanded ? "12px" : 0, minWidth: 0, maxWidth: "100%" }}>
           {expanded && <MilestoneIndicator row={row} copy={copy} />}
           <AccordionReveal expanded={expanded} className="project-card-completed-reveal" id={detailIds.completed}>
             <CompletedMilestoneRows row={row} language={language} />
           </AccordionReveal>
           <NextMilestoneCallout row={row} expanded={expanded} copy={copy} language={language} />
           <AccordionReveal expanded={expanded} className="project-card-timeline-reveal" id={detailIds.remaining}>
-            <div style={{ display: "grid", gap: "12px", paddingTop: "2px" }}>
+            <div style={{ display: "grid", gap: "12px", paddingTop: "2px", minWidth: 0 }}>
               <FollowingMilestones row={row} copy={copy} language={language} />
             </div>
           </AccordionReveal>
@@ -1232,6 +1301,8 @@ function ProjectCard({
         <div
           style={{
             display: "grid",
+            minWidth: 0,
+            maxWidth: "100%",
             padding: "18px",
             borderTop: "1px solid var(--border)",
           }}
@@ -1704,6 +1775,11 @@ export default function App({ language = DEFAULT_LANGUAGE, onNavigate, headingRe
             grid-template-rows 260ms cubic-bezier(0.22, 1, 0.36, 1),
             opacity 160ms ease;
         }
+        .accordion-reveal,
+        .accordion-reveal-inner {
+          min-width: 0;
+          max-width: 100%;
+        }
         .accordion-reveal-inner {
           min-height: 0;
           overflow: hidden;
@@ -1800,26 +1876,75 @@ export default function App({ language = DEFAULT_LANGUAGE, onNavigate, headingRe
             text-overflow: clip;
             white-space: normal;
           }
-          .project-milestone-indicator {
-            flex-wrap: nowrap !important;
-            gap: 6px !important;
+          .project-card,
+          .project-card-button,
+          .project-card-button > *,
+          .accordion-reveal,
+          .accordion-reveal-inner,
+          .project-milestone-list,
+          .project-milestone-row,
+          .project-next-milestone,
+          .project-facts,
+          .source-link {
+            min-width: 0;
+            max-width: 100%;
           }
-          .project-milestone-indicator .project-milestone-label,
-          .project-milestone-indicator .project-milestone-bars {
+          .project-card-title,
+          .project-milestone-text,
+          .project-milestone-date,
+          .project-next-milestone,
+          .source-link,
+          .detail-section-title {
+            overflow-wrap: anywhere;
+          }
+          .project-milestone-indicator {
+            flex-wrap: wrap !important;
+            gap: 6px 8px !important;
+            min-width: 0;
+            max-width: 100%;
+          }
+          .project-milestone-indicator .project-milestone-label {
             flex: 0 0 auto;
           }
           .project-milestone-indicator .project-milestone-bars {
+            flex: 1 1 96px !important;
+            min-width: 0 !important;
+            max-width: 100%;
             gap: 3px !important;
           }
           .project-milestone-indicator .project-milestone-segment {
-            width: 15px !important;
+            flex: 1 1 0 !important;
+            width: auto !important;
+            min-width: 3px !important;
+            max-width: 15px !important;
           }
           .project-milestone-indicator .project-milestone-count {
             min-width: 0;
-            flex: 1 1 auto;
+            flex: 0 1 auto;
             white-space: normal !important;
             font-size: 10px !important;
             line-height: 1.2 !important;
+            overflow-wrap: anywhere;
+          }
+          .project-milestone-row {
+            grid-template-columns: minmax(0, 7.25rem) minmax(0, 1fr) !important;
+            gap: 10px !important;
+          }
+          .project-milestone-row--undated {
+            grid-template-columns: 8px minmax(0, 1fr) !important;
+          }
+          .project-collapsed-milestone-summary {
+            min-width: 0;
+            max-width: 100%;
+          }
+          .project-collapsed-milestone-bars {
+            min-width: 0;
+          }
+          .project-collapsed-milestone-segment {
+            flex: 1 1 0 !important;
+            width: auto !important;
+            min-width: 3px !important;
+            max-width: 15px !important;
           }
           .tracker-title-context {
             font-size: 32px !important;
