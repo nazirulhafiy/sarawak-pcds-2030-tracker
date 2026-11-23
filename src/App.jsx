@@ -634,6 +634,7 @@ function MilestoneIndicator({ row, copy }) {
         style={{
           display: "flex",
           alignItems: "center",
+          flexWrap: "wrap",
           gap: "4px",
           flex: "1 1 96px",
           minWidth: 0,
@@ -646,10 +647,8 @@ function MilestoneIndicator({ row, copy }) {
             className="project-milestone-segment"
             key={`${row.id}-indicator-${index}`}
             style={{
-              flex: "1 1 0",
-              width: "auto",
-              minWidth: "3px",
-              maxWidth: "18px",
+              flex: "0 0 auto",
+              width: "18px",
               height: "6px",
               borderRadius: "999px",
               backgroundColor: milestone.done ? "var(--text-icon)" : "var(--border)",
@@ -709,7 +708,15 @@ function CollapsedMilestoneSummary({ row, copy }) {
       )}
       <span
         className="project-collapsed-milestone-bars"
-        style={{ display: "inline-flex", alignItems: "center", gap: "4px", flex: "1 1 72px", minWidth: 0 }}
+        style={{
+          display: "inline-flex",
+          alignItems: "center",
+          flexWrap: "wrap",
+          gap: "4px",
+          flex: "1 1 72px",
+          minWidth: 0,
+          maxWidth: "100%",
+        }}
         aria-hidden="true"
       >
         {row.milestones.map((milestone, index) => (
@@ -717,10 +724,8 @@ function CollapsedMilestoneSummary({ row, copy }) {
             className="project-collapsed-milestone-segment"
             key={`${row.id}-collapsed-indicator-${index}`}
             style={{
-              flex: "1 1 0",
-              width: "auto",
-              minWidth: "3px",
-              maxWidth: "15px",
+              flex: "0 0 auto",
+              width: "15px",
               height: "5px",
               borderRadius: "999px",
               backgroundColor: milestone.done ? "var(--text-icon)" : "var(--border)",
@@ -1910,12 +1915,14 @@ export default function App({ language = DEFAULT_LANGUAGE, onNavigate, headingRe
             flex: 1 1 96px !important;
             min-width: 0 !important;
             max-width: 100%;
+            flex-wrap: wrap !important;
             gap: 3px !important;
           }
           .project-milestone-indicator .project-milestone-segment {
-            flex: 1 1 0 !important;
-            width: auto !important;
-            min-width: 3px !important;
+            flex: 0 0 auto !important;
+            width: 15px !important;
+            height: 6px !important;
+            min-width: 15px !important;
             max-width: 15px !important;
           }
           .project-milestone-indicator .project-milestone-count {
@@ -1939,11 +1946,15 @@ export default function App({ language = DEFAULT_LANGUAGE, onNavigate, headingRe
           }
           .project-collapsed-milestone-bars {
             min-width: 0;
+            max-width: 100%;
+            flex-wrap: wrap !important;
+            gap: 3px !important;
           }
           .project-collapsed-milestone-segment {
-            flex: 1 1 0 !important;
-            width: auto !important;
-            min-width: 3px !important;
+            flex: 0 0 auto !important;
+            width: 15px !important;
+            height: 5px !important;
+            min-width: 15px !important;
             max-width: 15px !important;
           }
           .tracker-title-context {

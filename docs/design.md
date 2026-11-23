@@ -84,15 +84,17 @@ Collapsed desktop titles reserve a shared two-line, `44px` title area at the exi
 
 Milestone dates are stored as compact source values but formatted consistently in the interface. Full dates use day, full month, and year; month targets use full month and year; and quarter targets use `Quarter # YYYY` in English and `Suku # YYYY` in BM. A completed milestone whose date has never been published uses the `Achieved` label, rendered as `Achieved` in English and `Dicapai` in BM. Milestones without a published date, including continuous work without a single completion date, omit the date label and render as compact bullet points under the existing `Remaining Milestones` heading. Reserve `Ongoing` for project status rather than milestone timing. Do not add a second title for undated milestone lists. The next-milestone date is visually separated from its description so readers can scan timing and outcome independently.
 
-Segmented milestone indicators follow the milestone-array order. Completed segments must remain
-contiguous from the left, followed by open segments, so the visual sequence agrees with the
-completed count shown beside it. On mobile, the count stays beside the label and segments, shrinking
-the segments slightly and wrapping within the remaining inline space instead of dropping below the
-indicator row. Active projects use a compact `1/5 complete` count; cards already marked `Completed`
-use only the ratio, such as `4/4`, because the status badge already supplies the meaning. The full
-milestone wording remains available to assistive technology. A completed card's final callout uses
-`Final milestone` in English and `Pencapaian Akhir` in BM so it does not repeat the project status.
-Expanded cards retain the `Milestones` label and detailed timeline for added context.
+Segmented milestone indicators use short rounded **dashes** (not dots), following the milestone-array
+order. Completed dashes must remain contiguous from the left, followed by open dashes, so the visual
+sequence agrees with the completed count shown beside it. Desktop keeps the original dash sizes
+(`18px` × `6px` expanded, `15px` × `5px` collapsed). On mobile, the count stays with the label and
+dash row; when many dashes cannot fit on one line inside the card, the dash row wraps within the
+card width instead of squashing dashes into dots or overflowing the page. Active projects use a
+compact `1/5 complete` count; cards already marked `Completed` use only the ratio, such as `4/4`,
+because the status badge already supplies the meaning. The full milestone wording remains available
+to assistive technology. A completed card's final callout uses `Final milestone` in English and
+`Pencapaian Akhir` in BM so it does not repeat the project status. Expanded cards retain the
+`Milestones` label and detailed timeline for added context.
 
 Collapsed desktop cards use a shared minimum height so every two-column row remains visually
 aligned even when titles or milestone copy vary. The narrower two-column range from `761px` to
@@ -105,10 +107,10 @@ around the callout. Mobile cards return to content-driven heights and `18px` ins
 layout, and their internal grid and flex rows must be allowed to shrink so narrow screens do not clip
 card content. Expanded cards keep milestone dates, milestone copy, next-milestone labels, remaining-
 milestone headings, and source titles inside the card width on phones from `320px` to `430px`: grid and
-flex children use `min-width: 0`, long text uses `overflow-wrap: anywhere`, and segmented milestone
-indicators shrink their bars within the remaining inline space instead of forcing a wider min-content
-size. `npm run check:layout` expands every card at those widths and fails if any card or the page
-overflows horizontally.
+flex children use `min-width: 0`, long text uses `overflow-wrap: anywhere`, and the dash-shaped
+milestone indicators wrap inside the card instead of forcing a wider min-content size. `npm run
+check:layout` expands every card at those widths and fails if any card or the page overflows
+horizontally.
 
 ## Typography
 
